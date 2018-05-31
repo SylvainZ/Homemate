@@ -1,0 +1,89 @@
+@font-face
+{
+    font-family: 'Quando';
+    src: url('quando/Quando-Regular.ttf');
+}
+
+
+img{
+    width: 120px;
+}
+.cd{
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    right: 900px;
+    margin-left: 10px;
+}
+
+.posMenu{
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+.barreMenu{
+    /*margin-right: 40px;
+    margin-left: 30px;*/
+    /*display: inline-block;*/
+    display: flex !important;
+    vertical-align: 60px;
+    justify-content: space-between;
+    background-color: #2f0c1b;
+}
+#menu, #menu ul{
+    padding : 0; /* pas de marge intérieure */
+    margin : 0; /* ni extérieure */
+    list-style : none; /* on supprime le style par défaut de la liste */
+    line-height : 40px; /* on définit une hauteur pour chaque élément */
+    text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menu {
+    font-weight : bold; /* on met le texte en gras */
+    font-family: Quando;
+    font-size: 12px;
+}
+
+#menu a{
+    display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+    padding : 0; /* aucune marge intérieure */
+    background : #6b5e5e; /* couleur de fond */
+    border: black 3px solid;
+    color : #fff; /* couleur du texte */
+    text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+    width : 144px; /* largeur */
+    height: 40px;
+}
+
+#menu li /* Éléments des listes */
+{
+    float : left;
+    /* pour IE qui ne reconnaît pas "transparent" */
+    border-right : 1px solid transparent; /* on met une bordure blanche à droite de chaque élément */
+}
+
+#menu li ul /* Sous-listes */
+{
+    position: absolute; /* Position absolue */
+    width: 144px; /* Largeur des sous-listes */
+    left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu li ul li /* Eléments de sous-listes */
+{
+    /* pour ie qui ne reconnaît pas "transparent" (comme précédemment) */
+    border-top : 1px solid transparent; /* on met une bordure blanche en haut de chaque élément d'une sous-liste */
+}
+
+#menu a:hover /* Lorsque la souris passe sur un des liens */
+{
+    color: #000; /* On passe le texte en noir... */
+    background: #fff; /* ... et au contraire, le fond en blanc */
+    border: none;
+}
+
+#menu li:hover ul, #menu li.sfhover ul /* Sous-listes lorsque la souris passe sur un élément de liste*/
+{
+    left: auto; /* Repositionnement normal */
+    min-height: 0; /* Corrige un bug sous IE */
+}

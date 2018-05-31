@@ -1,0 +1,38 @@
+
+
+
+.titre{
+	font-family: Quando;
+	text-align: center;
+	font-size: 3em;
+    font-weight: bold;
+    color: #6a1b3d;
+}
+.block1{
+	background: #9998b2;
+	height: 200px;
+    width: 92.5%;
+    position: relative;
+    left: 40px;
+	opacity: 0.6;
+	border: 6px white solid;
+
+}
+.block3{
+	background: #9998b2;
+	display: inline-block;
+	height: 200px;
+	width: 30%;
+	opacity: 0.6;
+	border: 6px white solid;
+	position: relative;
+    left: 40px;
+	top: 10px;
+}
+
+
+footer p{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}

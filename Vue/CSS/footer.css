@@ -1,0 +1,11 @@
+@font-face
+{
+    font-family: 'Quando';
+    src: url('../quando/Quando-Regular.ttf');
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}

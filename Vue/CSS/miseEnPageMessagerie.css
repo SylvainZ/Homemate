@@ -1,0 +1,83 @@
+
+h1
+{
+    color: purple;
+    border-left: 165px solid transparent;
+    
+
+}
+
+
+
+p
+{
+    font-size: 26px;
+    color: purple;
+    border-left: 150px solid transparent;
+}
+
+
+
+.zoneTexte
+{
+    border-radius: 4px;
+    border: none;
+    width: 60%;
+    height: 30px;
+    background: #9997b1;
+    margin-bottom: 1.2%;
+}
+
+.zoneMessage
+{
+    border-radius: 4px;
+    background: #9997b1;
+
+}
+
+.zoneEnvoie
+{
+    border-radius: 4px;
+    
+    height: 30px;
+    background: #cccccc;
+    margin-left: 52%;
+    color: purple;
+    font-size: 21px;
+}
+
+/*Personnalisation de l'icone lettre*/
+.iconeLettre
+{
+    border-radius: 4px;
+    width: 6em;
+    height: 5em;
+    position: relative;
+    left: 13%;
+   
+    
+}
+
+.en_tete
+{
+    display:flex;
+}
+
+.logo
+{
+    position: absolute;
+    top: 2%;
+    left: 80%;
+    width: 10%;
+    
+}
+
+.nomSite
+{
+    position: absolute;
+    top: 12.8%;
+    left: 80.3%;
+    color: purple;
+    font-size:1.5em;
+}
+

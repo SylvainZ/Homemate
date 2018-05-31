@@ -1,0 +1,157 @@
+
+/*Positionnement du logo
+#logo
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:14em;
+
+}*/
+
+/*Positionnemnt du titre Bienvenur sur votre boîte de réception*/
+h1
+{
+	text-align:center;
+}
+
+/*Style de Liste des messages dans le menu*/
+.liste
+{
+	text-shadow: -1px -1px white, 2px 2px blue;
+	color:white;
+	text-decoration:none;
+	
+
+}
+
+
+/*Style de corbeille*/
+.corbeille
+{
+	color:white;
+	text-decoration:none;
+}
+
+/*Positionnement du menu et de le liste des messages*/
+.listeMessage
+{
+	display:flex;
+	
+}
+
+/*Personnalisation du menu */
+.menu
+{
+
+	background-color:#6a1b3d;
+	margin-left:2em;
+	padding-left:1.5em;
+	padding-right:1.3em;
+	padding-top:1.5em;
+	border-radius:10px;
+	width:13em;
+	height:10em;
+	color:white;
+	font-size:1em;
+}
+
+/*Personnalisation du bloc Listes des messages*/
+.rectangle
+{
+	background-color:#6a1b3d;
+	margin:auto;
+	padding-left:60px;
+	padding-right:60px;
+	padding-top:20px;
+	border-radius:10px;
+	width:40em;
+	height:20em;
+	color:white;
+	font-size:1em;
+
+}
+
+/*Positionnement des messages les uns en dessous des autres*/
+.rectanglebis
+{
+	display:flex;
+	flex-direction: column;
+}
+
+/*Personnalisation de la liste déroulante*/
+#selection
+{
+	border-radius:5px;
+}
+
+/*Personnalisation du boutton Nouveau message*/
+.nouveau
+{
+	border-radius:5px;
+	height:27px;
+	background-color:#635c8e;
+	color:white;
+	background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
+	box-shadow:none;
+}
+
+/*Personnalisation de l'en-tête (Sujet, Expéditeur,Date)*/
+.en_tete
+{
+	display:flex;
+	justify-content: space-between;
+	background-color: #9998b2;
+	padding-left:1.5em;
+	padding-right:1.5em;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	border-radius:5px;
+	border:solid black;
+	font-style:bold;
+	font-size: 1.3em;
+}
+
+/*Personnalisation de la ligne d'un message*/
+.message
+{
+	text-decoration:none;
+	color:white;
+	display:flex;
+	justify-content: space-between;
+	background-color: #9998b2;
+	padding-left:1.5em;
+	padding-right:1.5em;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	border-radius:5px;
+	border:solid black;
+}
+
+.messageIndividuel
+{
+	text-decoration:none;
+	color:white;
+}
+
+/*Titre Listes des messages et liste déroulante(supprimer, marquer comme lu,...)*/
+.debut
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.page
+{
+	text-align:center;
+	color:white;	
+}
+
+/*Ecriture des droits d'auteurs*/
+.droit
+{
+	text-align:center;
+	color:white;
+}
+
+

@@ -1,0 +1,138 @@
+/*Ajout de la poilice Quando*/
+@font-face 
+{
+    font-family: 'Quando';
+    src: url('quando/Quando-Regular.ttf');
+}
+
+/*Ajout de la police Raleway-SemiBold
+@font-face {
+    font-family: 'Raleway-SemiBold';
+    src: url('raleway/Raleway-SemiBold.ttf');
+}*/
+
+/*Mise en place de l'image du fond*/
+body
+{
+	background:url("images/BLUMYS.png") fixed no-repeat center;
+	background-size:cover;
+	margin:auto;
+
+}
+
+/*Positionnement du logo*/
+#logo
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:15%;
+
+}
+
+/*Positionnement du HOMEMATE
+.nom_du_site
+{
+	position:absolute;
+	left:44%;
+	color:#6a1b3d;
+	font-size:1.7em;
+	font-family:Raleway-Black;
+}*/
+
+/*Positionnement du point d'inerrogation d'aide à côté des champs*/
+.interrogation
+{
+	width:0.7em;
+	height:0.7em;
+}
+
+/*Personnalisation du bloc Ajouter un capteur*/
+.ajout
+{
+	background-color:#6a1b3d;
+	margin:auto;
+	padding-left:60px;
+	padding-top:20px;
+	border-radius:10px;
+	width:60%;
+	height:600px;
+	color:white;
+	font-family:Quando;
+	font-size:1em;
+}
+
+/*Personnalisation du titre Ajouter un capteur*/
+h1
+{
+	font-size:2em;
+}
+
+/*Personnalisation du champ Nom du capteur*/
+#nom_du_capteur
+{
+	border-radius:5px;
+	width:30%;
+	height:25px;
+}
+
+/*Personnalisation du champ Numéro de série*/
+#numero_de_serie
+{
+	border-radius:5px;
+	width:30%;
+	height:20px;
+}
+
+/*Personnalisation du champ Seuil*/
+#seuil
+{
+	border-radius:5px;
+	width:30%;
+	height:20px;
+}
+
+/*Personnalisation du champ Pièce*/
+#piece
+{
+	border-radius:5px;
+	width:30%;
+	height:25px;
+}
+
+/*Personnalisation du champ Description*/
+#description
+{
+	border-radius:5px;
+	width:60%;
+	height:150px;
+}
+
+/*Ecriture des droits d'auteurs*/
+.droit
+{
+	text-align:center;
+	color:white;
+}
+
+/*Personnalisation des boutons envoyer et effacer*/
+.bouton
+{
+	border-radius:5px;
+	width:10%;
+	height:27px;
+	background-color:#635c8e;
+	color:white;
+	background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
+	box-shadow:none;
+}
+
+/*#effacer
+{
+	border-radius:5px;
+	width:10%;
+	height:25px;
+}*/
+
+
+

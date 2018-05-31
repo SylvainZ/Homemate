@@ -1,0 +1,105 @@
+
+
+
+
+
+.profil
+{
+    position:absolute;
+    color: black;
+    margin-left:46%;
+    top:10%;
+    font-size: 3.5em;
+    font-family: Quando, serif;
+}
+
+.iconeProfil
+{
+    border-radius: 4px;
+    width: 4%;
+    position: relative;
+    top: 10%;
+    left: 40%;
+    
+}
+.logo
+{
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    width: 20%;
+    
+}
+
+.boutonDeconnection
+{
+    position: absolute;
+    top: 7%;
+    left: 84%;
+    width: 5%;
+    
+}
+
+p
+{
+    font-size: 26px;
+    color: white;
+    border-left: 4em solid transparent;
+}
+
+.rectangle
+{
+    display: flex;
+    background-color: #6a1b3d;
+    height: 440px;
+    width:80%;
+    margin-left:10%;
+    border-radius: 40px;
+    position:relative;
+    top:30%;
+}
+
+.valeurImporte
+{
+	margin-left:1.5em;
+}
+
+.positionModifProfil
+{
+	margin-top:-1em;
+    margin-left: 6.7em;
+}
+
+.modifProfil
+{
+    border-radius: 7px;
+    width: 40%;
+    height: 40px;
+    margin-left: 0.5%;
+    background: #625c8e;
+    color: white;
+    font-size: 23px;
+}
+
+.image
+{
+    left: 7%;
+    width: 5%;
+    
+}
+.col1
+{
+    width: 86.5%;
+    height: 40px;
+	margin-left:1%;
+}
+.col2
+{
+	    font-size: 1.9em;
+}
+
+button a
+{
+    text-decoration: none;
+    color: black;
+}
