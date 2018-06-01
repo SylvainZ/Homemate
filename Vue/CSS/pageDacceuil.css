@@ -10,11 +10,11 @@
 }
 .block1{
 	background: #9998b2;
-	height: 200px;
-    width: 92.5%;
+	height: 19vw;
+    width: 92vw;
     position: relative;
     left: 40px;
-	opacity: 0.6;
+	opacity: 1;
 	border: 6px white solid;
 
 }
@@ -22,8 +22,8 @@
 	background: #9998b2;
 	display: inline-block;
 	height: 200px;
-	width: 30%;
-	opacity: 0.6;
+	width: 30vw;
+	opacity: 1;
 	border: 6px white solid;
 	position: relative;
     left: 40px;
@@ -36,3 +36,16 @@ footer p{
     color: white;
     text-align: center;
 }
+
+.images
+{
+	height:19vw;
+	width: 92vw;
+}
+
+.images3
+{
+	height:13vw;
+	width: 30vw;
+}
+	
