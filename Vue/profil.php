@@ -16,7 +16,7 @@
         </header>
     	<br />
     	
-    	<img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" href="index.php?cible=accueil"/> <span class="profil">Profil</span>
+    	<a href="index.php?cible=accueil"><img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" /></a> <span class="profil">Profil</span>
 
     	
     	<div class="rectangle">
@@ -39,14 +39,14 @@
 	    	</div>
 	    	<div class="col2">
 				<p>
-					<img src="Vue/images/iconeMail.png" class="image" alt="image du mail" href="pageDAccueil.php"/>
-					<span href="pageDAccueil.php">Boîte de réception</span><br/><br/>
-					<img src="Vue/images/iconeFacture.png" class="image" alt="image du facture" href="pageDAccueil.php"/>
+					<a href="index.php?cible=boiteMailReception"><img src="Vue/images/iconeMail.png" class="image" alt="image du mail"/></a>
+					<a href="index.php?cible=boiteMailReception"><span>Boîte de réception</span></a><br/><br/>
+					<!--  <img src="Vue/images/iconeFacture.png" class="image" alt="image du facture" href="pageDAccueil.php"/>
 					<span href="Vue/pageDAccueil.php">Facture</span><br/><br/>
 					<img src="images/iconeAutorisation.png" class="image" alt="icône d'une famille" href="pageDAccueil.php"/>
-					<span href="Vue/pageDAccueil.php">Autorisation</span><br/><br/> 
-					<img src="images/iconeMaisonArbre.png" class="image" alt="icône du maison" href="pageDAccueil.php"/>
-					<span href="Vue/pageDAccueil.php">Gérer la maison</span><br/><br/>
+					<span href="Vue/pageDAccueil.php">Autorisation</span><br/><br/> -->
+					<a href="index.php?cible=capteurActionneursHabitations"><img src="Vue/images/iconeMaisonArbre.png" class="image" alt="icône du maison" /></a>
+					<a href="index.php?cible=capteurActionneursHabitations"><span>Gérer la maison</span></a><br/><br/>
 		    	</p>
 	    	</div>
     	<div/>

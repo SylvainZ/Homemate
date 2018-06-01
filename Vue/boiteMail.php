@@ -1,12 +1,10 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title>Boîte de réception</title>
-        <link rel="stylesheet" href="Vue/styleBoiteMail.css" />
+        <link rel="stylesheet" href="Vue/CSS/styleBoiteMail.css" />
         <link rel="stylesheet" href="Vue/CSS/all.css" />
 
         
@@ -15,7 +13,7 @@ session_start();
     <body>
 		<!--Mise en place de la barre de conexion-->
 		<header>
-			<?php include("header.php"); ?>
+			<?php include("header.php") ?>
 		</header>
 
     	<!--Logo
@@ -28,9 +26,9 @@ session_start();
     		<!--Menu-->
 	    	<section class="menu">
 	    		<p>
-		    		<a href="messagerie.php"><input type="button" value="Nouveau message" class="nouveau"/></a>
-		    		<div><a href='boiteReceptionRecherche.php' class="liste">Liste des messages</a></div><br/>
-		    		<div><a href="corbeille.php" class="corbeille">Corbeille</a></div>
+		    		<a href="index.php?cible=messagerie"><input type="button" value="Nouveau message" class="nouveau"/></a>
+		    		<div><a href="index.php?cible=boiteMailReception" class="liste">Liste des messages</a></div><br/>
+		    		<div><a href="index.php?cible=corbeille" class="corbeille">Corbeille</a></div>
 	    		</p>
 	    	</section>
 
@@ -83,11 +81,11 @@ session_start();
 										echo '<div class="message">';
 
 											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
-											<a href="pageMessage.php?message='.$i.'">
+											<a href="index.php?cible=pageMessage&message='.$i.'">
 												<span class="messageIndividuel">'.$_SESSION['sujet'][$i].'</span> </a>
-											<a href="pageMessage.php?message='.$i.'">	
+											<a href="index.php?cible=pageMessagep&message='.$i.'">	
 												<span class="messageIndividuel">'.$_SESSION['expediteur'][$i].'</span></a>
-											<a href="pageMessage.php?message='.$i.'">	
+											<a href="index.php?cible=pageMessage&message='.$i.'">	
 												<span class="messageIndividuel">'.$_SESSION['date'][$i].'</span></a>
 											</a>';
 										echo '</div>';
@@ -112,7 +110,7 @@ session_start();
 
 
     	<footer>
-    		<?php include("footer.php"); ?>
+    		<?php include("footer.php") ?>
     	</footer>
 
 		<script type="text/javascript" src="cocher.js"></script>
