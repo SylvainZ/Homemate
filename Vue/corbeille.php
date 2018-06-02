@@ -112,6 +112,6 @@
     		<p class="droit">Copyright 2018 HomeMate, Tous droits réservés</p>
     	</footer>
 
-		<script type="text/javascript" src="cocher.js"></script>
+		<script type="text/javascript" src="Controleur/JS/cocher.js"></script>
     </body>
 </html>

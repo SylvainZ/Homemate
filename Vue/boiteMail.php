@@ -35,7 +35,7 @@
 	    	<!--Liste des messages-->
 	    	<section class="rectangle">
 	    		<!--Début du formulaire-->
-	    		<form action="gestionBoiteMail.php" method="post" name="F1">
+	    		<form action="Modele/gestionBoiteMail.php" method="post" name="F1">
 	    			<p>
 		    			<!--En-tête du bloc Liste des messages-->
 						<div class="debut">
@@ -82,11 +82,11 @@
 
 											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
 											<a href="index.php?cible=pageMessage&message='.$i.'">
-												<span class="messageIndividuel">'.$_SESSION['sujet'][$i].'</span> </a>
+												<span class="messageIndSujet">'.$_SESSION['sujet'][$i].'</span> </a>
 											<a href="index.php?cible=pageMessagep&message='.$i.'">	
-												<span class="messageIndividuel">'.$_SESSION['expediteur'][$i].'</span></a>
+												<span class="messageIndExp">'.$_SESSION['expediteur'][$i].'</span></a>
 											<a href="index.php?cible=pageMessage&message='.$i.'">	
-												<span class="messageIndividuel">'.$_SESSION['date'][$i].'</span></a>
+												<span class="messageIndDate">'.$_SESSION['date'][$i].'</span></a>
 											</a>';
 										echo '</div>';
 									}
@@ -113,6 +113,6 @@
     		<?php include("footer.php") ?>
     	</footer>
 
-		<script type="text/javascript" src="cocher.js"></script>
+		<script type="text/javascript" src="Controleur/JS/cocher.js"></script>
     </body>
 </html>

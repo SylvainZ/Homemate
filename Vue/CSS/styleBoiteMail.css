@@ -13,6 +13,12 @@
 h1
 {
 	text-align:center;
+	font-family:Quando, sans-serif;
+}
+
+body
+{
+    font-family:Quando, sans-serif;
 }
 
 /*Style de Liste des messages dans le menu*/
@@ -21,7 +27,6 @@ h1
 	text-shadow: -1px -1px white, 2px 2px blue;
 	color:white;
 	text-decoration:none;
-	
 
 }
 
@@ -66,7 +71,6 @@ h1
 	padding-top:20px;
 	border-radius:10px;
 	width:40em;
-	height:20em;
 	color:white;
 	font-size:1em;
 
@@ -77,6 +81,7 @@ h1
 {
 	display:flex;
 	flex-direction: column;
+
 }
 
 /*Personnalisation de la liste déroulante*/
@@ -108,7 +113,7 @@ h1
 	padding-bottom:0.5em;
 	border-radius:5px;
 	border:solid black;
-	font-style:bold;
+	font-weight:bold;
 	font-size: 1.3em;
 }
 
@@ -117,7 +122,7 @@ h1
 {
 	text-decoration:none;
 	color:white;
-	display:flex;
+
 	justify-content: space-between;
 	background-color: #9998b2;
 	padding-left:1.5em;
@@ -126,12 +131,35 @@ h1
 	padding-bottom:0.5em;
 	border-radius:5px;
 	border:solid black;
+
 }
 
-.messageIndividuel
+.messageIndSujet
 {
-	text-decoration:none;
-	color:white;
+    text-align:left;
+    margin-left:7vw;
+    position:absolute;
+    color:white;
+    text-decoration:none;
+}
+
+.messageIndExp
+{
+    text-align:left;
+    position: absolute;
+    margin-left:22vw;
+    color:white;
+    text-decoration:none;
+}
+
+.messageIndDate
+{
+    text-align:left;
+    margin-left:37vw ;
+    position: absolute;
+    color:white;
+    text-decoration:none;
+
 }
 
 /*Titre Listes des messages et liste déroulante(supprimer, marquer comme lu,...)*/
