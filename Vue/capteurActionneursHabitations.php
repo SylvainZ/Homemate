@@ -1,10 +1,10 @@
 <?php
-session_start();
+
 try
     {
         $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
     }
-
+    
     catch(Exception $e)
     {
         die('Erreur : '.$e->getMessage());
@@ -20,22 +20,19 @@ try
 	<title>HOMEMATE</title>
 	<link rel="stylesheet" href="Vue/CSS/capteurActionneursHabitation.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
-    <link rel="stylesheet" href="Vue/CSS/header.css">
-    <link rel="stylesheet" href="Vue/CSS/footer.css">
 </head>
 
 <body>
 
-    <header>
-        <?php include("Vue/header.php") ?>
-    </header>
+	<header>
+			<?php include("header.php") ?>
+	</header>
 
+	
+	
 	<div class = "entete">
 	<div class="A"><p>Habitation(s)</p></div>
 	<div class="B"><p>Capteurs/</br>Actionneurs</p></div>
-	<p class="logo"> <img src="images/cloche.png" width="37" height="37" /> </p>
-	<p class="logo2"> <img src="images/profil.png" width="30" height="30" /> </p>
-	<p class="logo3"> <img src="images/logo.png" width="150" height="75 " /> </p>
 	</div>
 
 	<div class="menu"> <!--bouton 1 et background-->
@@ -44,7 +41,7 @@ try
 		
 			<div id="tonDiv1" class="tonDiv1">
 				<div class=couleur1>
-					<button id="bouton_tonDiv2" class="marche" onclick="javascript:afficher_cacher('tonDiv2');">Luminositï¿½</button>
+					<button id="bouton_tonDiv2" class="marche" onclick="javascript:afficher_cacher('tonDiv2');">Luminosité</button>
 						<div id="tonDiv2" class="tonDiv2">
 							<div class="luminosite">
 	 							<table class="tableau" border="1">
@@ -69,7 +66,7 @@ try
 						</div>
 				</div>
 				<div class=couleur1>
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Tempï¿½rature</button>
+	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Température</button>
 	 					<div id="tonDiv3" class="tonDiv3">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -80,7 +77,7 @@ try
 										?>
 										
 										<td>
-										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> ï¿½C</span>'; ?>
+										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> °C</span>'; ?>
 										</td>
 										<?php }?>
 											<td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
@@ -91,7 +88,7 @@ try
 						</div>
 				</div>
 				<div class=couleur1>
-					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">Dï¿½tecteur de mouvement</button>
+					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">Détecteur de mouvement</button>
 	 					<div id="tonDiv4" class="tonDiv4">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -121,18 +118,20 @@ try
 		<button id="bouton">Actionneurs</button>
 			<div id="tondiv">
 				<br/>
-					<button id="bouton2">Lumiï¿½re</button>
-	 					<div id="tondiv2"><ul> <li> Piï¿½ce1 </li><li> Piï¿½ce2 </li><li> Piï¿½ce3 </li></ul></div>
+					<button id="bouton2">Lumière</button>
+	 					<div id="tondiv2"><ul> <li> Pièce1 </li><li> Pièce2 </li><li> Pièce3 </li></ul></div>
 	 				<button id="bouton3">Volets</button>
-	 					<div id="tondiv3"><ul> <li> Piï¿½ce1 </li><li> Piï¿½ce2 </li><li> Piï¿½ce3 </li></ul></div>
+	 					<div id="tondiv3"><ul> <li> Pièce1 </li><li> Pièce2 </li><li> Pièce3 </li></ul></div>
 					
 	 	 	</div>	
    	</div>
-
-
-    <footer>
-        <?php include("Vue/footer.php") ?>
+   	
+   	<footer>
+            <?php include("Vue/footer.php") ?>
     </footer>
+    
+
+
 <script>
 
 	function afficher_cacher(id)
@@ -152,6 +151,38 @@ try
 </script>
 
 
+	<!--  <script type="text/javascript">
+
+	function ouvrir_fenetre()
+	{
+
+			document.getElementById("form").showModal();
+	}
+
+	function fermer_fenetre()
+	{
+			document.getElementById("form").close();
+	}
+
+	
+	
+
+
+	function ajouterLigne(id)
+	{
+	var tableau = document.getElementById(id);
+
+	var ligne = document.getElementById(id);//on a ajouté une ligne
+
+	var colonne1 = ligne.insertCell(0);//on a une ajouté une cellule
+	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
+	
+	//document.location.href='test.html';
+	}
+	
+	</script>
+	
+	-->
 
 
 
