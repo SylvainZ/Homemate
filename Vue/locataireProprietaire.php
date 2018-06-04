@@ -12,7 +12,7 @@
 <body >
 
 <figure>
-    <img src="Images/homemate2.png" alt="image du logo">
+    <a href="index.php?cible=accueil"><img src="Vue/Images/homemate2.png" alt="image du logo"></a>
 
 </figure>
 
@@ -22,7 +22,8 @@
     <h1 class="center">Locataire/Propriétaire</h1>
 
     <section>
-        <h2>Données personnelles</h2>
+        <div id="block1">
+        <h2 id="titre1">Données personnelles</h2>
         <form name = "form" action="../Modele/locataireProprietaire.php" method="post" onsubmit="return cgu()">
 
             <div id="ligne1">
@@ -44,8 +45,11 @@
                     <option value="locataire">locataire</option>
                 </select><br /><br/>
             </div>
+        </form>
+        </div>
 
-            <h2>Adresse personnelle</h2>
+        <div id="block2">
+            <h2 id="titre2">Adresse personnelle</h2>
 
             <div id="ligne3">
 
@@ -124,8 +128,10 @@
                 </div>
 
             </div>
+        </div>
 
-            <h2>Informations sur l'habitation</h2>
+        <div id="block3">
+        <h2 id="titre3">Informations sur l'habitation</h2>
 
             <div id="ligne7">
                 <div class="typeHab">
@@ -159,10 +165,11 @@
             <div id ="cgu">
             
             			<input id="CGU" type="checkbox" name="CGU" value="1" />
-                        <label for = "CGU" class="CGU">En cochant, vous acceptez nos Conditions G�n�rales d'Utilisation</label>
+                        <label for = "CGU" class="CGU">En cochant, vous acceptez nos Conditions G�n�rales d'Utilisation</label>
                         <div id="nonCoche"></div>
                    
             </div>
+        </div>
             <br>
             <p class="center"> <input type="submit" value="Valider" class="Valider" size="1000"></p>
         </form>
@@ -170,7 +177,7 @@
     <br>
 </div>
 
-<script type="text/javascript" src="../Controleur/locataireproprietaire.js"></script>
+<script type="text/javascript" src="../Controleur/JS/locataireproprietaire.js"></script>
 <footer>
     <p>Copyright 2018 HomeMate | Tous droits réservés</p>
 </footer>

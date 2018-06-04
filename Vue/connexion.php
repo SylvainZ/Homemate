@@ -10,7 +10,7 @@
     </head>
  <body >
 
-        <img class="image"   src="Vue/images/homemate2.png" alt="image logo"><br>
+ <a href="index.php?cible=accueil"><img class="image"   src="Vue/images/homemate2.png" alt="image logo"></a><br>
 
    <div class="connection">
         <h2>CONNEXION</h2>
@@ -35,20 +35,20 @@
             <input id="password"  class=champs type="password" name="password" required/>
 
                 <br /><br/>
-            
+
             <input id="valider" type="submit" value="VALIDER"">
                 
                 <br/>
         </form>
-         <a href= "index.php?cible=mdpOublie" target="_blank"> Mot de passe oublié ?</a><br/>
+         <a href= "index.php?cible=mdpOublie" target="_blank"> Mot de passe oubliÃ© ?</a><br/>
          <a href="index.php?cible=creerUnCompte">Pas encore de compte?</a> <br/><br/>
     </div>
         <br/>
     <footer>
-            <p>Copyright 2018 HomeMate | Tous droits réservés</p>
+            <p>Copyright 2018 HomeMate | Tous droits rÃ©servÃ©s</p>
     </footer>
  <br/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script src="Controleur/connexion.js" type="text/javascript"></script>
+        <script src="Controleur/JS/connexion.js" type="text/javascript"></script>
  </body>
 </html>

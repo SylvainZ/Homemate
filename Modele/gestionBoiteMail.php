@@ -6,14 +6,7 @@ session_start();
 switch($_POST["selection"]){
 	case 'supprimer' :
 
-	try
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-	}
-	catch(Exception $e)
-	{
-			die('Erreur : '.$e->getMessage());
-	}
+	include('connexionBD.php');
 
 	// Récupération des 10 derniers messages
 
@@ -43,6 +36,8 @@ switch($_POST["selection"]){
 	
 	break;
 }
+
+//include('Vue/boiteMail.php');
 /*header('Location: boiteReceptionRecherche.php');
 */
 ?>

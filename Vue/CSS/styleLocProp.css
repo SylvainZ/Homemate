@@ -36,6 +36,22 @@ input[type=text]
 	box-sizing: border-box;
 }
 
+#block1, #block2, #block3
+{
+	margin-right: 20px;
+	margin-left: 20px;
+}
+#titre1, #titre2, #titre3
+{
+	margin-left: 30px;
+	margin-right: 72px;
+	border: white solid 2px;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	font-family: Quando, serif;
+}
+
 h2
 {
 	margin-left: 40px;
@@ -63,20 +79,33 @@ h2
 #ligne2
 {
 	position: relative;
-	left: 35px;
+	left: 31px;
 }
 
 #ligne3
 {
 	position: relative;
-	left: 35px;
+	left: 30px;
 }
 
 #ligne4
 {
 	position: relative;
-	left: 35px;
+	left: 13px;
 }
+
+#ligne5, #ligne6
+{
+	position: relative;
+	left: 10px;
+}
+
+#ligne7
+{
+	position: relative;
+	left: 5px;
+}
+
 
 .bis
 {
@@ -172,12 +201,12 @@ h2
 
 #cgu{
 	position: relative;
-	left: 50px;	
+	left: 30px;
 }
 
 .CGU
 {
-	font-size : 1vw;
+	font-size : 1.2vw;
 }
 
 

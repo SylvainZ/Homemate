@@ -16,7 +16,7 @@
         </header>
     	<br />
     	
-    	<a href="index.php?cible=accueil"><img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" /></a> <span class="profil">Profil</span>
+    	<img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" /><span class="profil">Profil</span>
 
     	
     	<div class="rectangle">
@@ -39,7 +39,7 @@
 	    	</div>
 	    	<div class="col2">
 				<p>
-					<a href="index.php?cible=boiteMailReception"><img src="Vue/images/iconeMail.png" class="image" alt="image du mail"/></a>
+					<a href="index.php?cible=boiteMailReception"><img src="Vue/images/IconeMail.png" class="image" alt="image du mail"/></a>
 					<a href="index.php?cible=boiteMailReception"><span>Boîte de réception</span></a><br/><br/>
 					<!--  <img src="Vue/images/iconeFacture.png" class="image" alt="image du facture" href="pageDAccueil.php"/>
 					<span href="Vue/pageDAccueil.php">Facture</span><br/><br/>

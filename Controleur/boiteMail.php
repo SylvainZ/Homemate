@@ -1,1 +1,3 @@
-<?php include('Vue/boiteMail.php');?>
+
+
+    <?php include('Vue/boiteMail.php');?>
