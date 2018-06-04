@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Connexion</title>
+        <title>HOMEMATE</title>
         <link rel="stylesheet" href="Vue/CSS/pageDacceuil.css">
         <link rel="stylesheet" href="Vue/CSS/header.css">
         <link rel="stylesheet" href="Vue/CSS/footer.css">
