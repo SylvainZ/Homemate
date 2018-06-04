@@ -3,35 +3,11 @@
 
 
 
-body
-{
-overflow:auto;	
-}
 
-/*logo cloche*/
-.logo
-{
-	position:relative;
-	left: 66%;
-	top: -105px;
-}
 
-/*logo profil*/
-.logo2
-{
-	position:relative; 
-	left: 66.2%;
-	top:-195px;
-}
 
-/*logo homemate*/
-.logo3
-{
-	position: relative;
-	left: 3%;
-	top:-250px;
-	
-}
+
+
 /*couleur de la marge en dessous du bouton capteur*/
  .luminosite
 {
@@ -46,14 +22,14 @@ overflow:auto;
 
 	background-color: rgb(4,43,123);
 	position: relative;
-	left: 70%;
+	margin-right:2vw;
 	color:white;
-	border:100px;
+	border:100vw;
 	text-align:center;
-	padding-top:7px;
-	padding-bottom:11px;
-	top:15px;
-	width:8%;
+	padding-top:1vw;
+	padding-bottom:1vw;
+	
+	width:9%;
 	border-color: rgb(0,0,0);
 	
 
@@ -63,14 +39,14 @@ overflow:auto;
 {
 background-color: rgb(4,43,123);
 	position: relative;
-	left: 80%;
+	
 	color:white;
-	border:100px;
+	border:100vw;
 	text-align:center;
-	padding: 0.5px;
-	padding-top: 0.5px;
-	top: -55px  ;
-	width:8%;
+	padding: 0.5vw;
+	padding-top: 0.5vw;
+	margin-right: 2vw;
+	width:9%;
 	border-color: rgb(0,0,0);
 
 }
@@ -196,9 +172,19 @@ border:none;
 	background-color: #2f0c1b;
 
 }
+
+#grandmenu{
+	margin-right:2vw;
+	margin-left:2vw;
+}
 .entete
 {
 	background: none;
+	display :flex;
+	justify-content :center;
+	margin-bottom:2vw;
+	
+	
 }
 
 
@@ -238,9 +224,9 @@ h1
 /*Personnalisation du champ Nom du capteur*/
 #nom_du_capteur
 {
-	border-radius:5px;
+	border-radius:5vw;
 	width:50%;
-	height:25px;
+	height:25vw;
 	position: relative;
 	left: 9%;
 }
