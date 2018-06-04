@@ -41,7 +41,7 @@ try
 		
 			<div id="tonDiv1" class="tonDiv1">
 				<div class=couleur1>
-					<button id="bouton_tonDiv2" class="marche" onclick="javascript:afficher_cacher('tonDiv2');">Luminosité</button>
+					<button id="bouton_tonDiv2" class="marche" onclick="javascript:afficher_cacher('tonDiv2');">Luminositï¿½</button>
 						<div id="tonDiv2" class="tonDiv2">
 							<div class="luminosite">
 	 							<table class="tableau" border="1">
@@ -66,7 +66,7 @@ try
 						</div>
 				</div>
 				<div class=couleur1>
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Température</button>
+	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Tempï¿½rature</button>
 	 					<div id="tonDiv3" class="tonDiv3">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -77,7 +77,7 @@ try
 										?>
 										
 										<td>
-										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> °C</span>'; ?>
+										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> ï¿½C</span>'; ?>
 										</td>
 										<?php }?>
 											<td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
@@ -88,7 +88,7 @@ try
 						</div>
 				</div>
 				<div class=couleur1>
-					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">Détecteur de mouvement</button>
+					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">Dï¿½tecteur de mouvement</button>
 	 					<div id="tonDiv4" class="tonDiv4">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -113,15 +113,15 @@ try
 	 	 </div>	
    	</div>
 
-   	<div class="menu2"> bouton 1 et background
+   	<div class="menu2">
 	
-		<button id="bouton">Actionneurs</button>
-			<div id="tondiv">
+		<button id="bouton1" onclick="javascript:afficher_cacher('tondiv1');">Actionneurs</button>
+			<div id="tondiv1">
 				<br/>
-					<button id="bouton2">Lumière</button>
-	 					<div id="tondiv2"><ul> <li> Pièce1 </li><li> Pièce2 </li><li> Pièce3 </li></ul></div>
-	 				<button id="bouton3">Volets</button>
-	 					<div id="tondiv3"><ul> <li> Pièce1 </li><li> Pièce2 </li><li> Pièce3 </li></ul></div>
+					<button id="bouton_tondiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumiï¿½re</button>
+	 					<div id="tondiv2"><ul> <li> Piï¿½ce1 </li><li> Piï¿½ce2 </li><li> Piï¿½ce3 </li></ul></div>
+	 				<button id="bouto_tondiv3" onclick="javascript:afficher_cacher('tondiv3');">Volets</button>
+	 					<div id="tondiv3"><ul> <li> Piï¿½ce1 </li><li> Piï¿½ce2 </li><li> Piï¿½ce3 </li></ul></div>
 					
 	 	 	</div>	
    	</div>
@@ -172,9 +172,9 @@ try
 	{
 	var tableau = document.getElementById(id);
 
-	var ligne = document.getElementById(id);//on a ajouté une ligne
+	var ligne = document.getElementById(id);//on a ajoutï¿½ une ligne
 
-	var colonne1 = ligne.insertCell(0);//on a une ajouté une cellule
+	var colonne1 = ligne.insertCell(0);//on a une ajoutï¿½ une cellule
 	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
 	
 	//document.location.href='test.html';
