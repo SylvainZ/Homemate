@@ -25,9 +25,7 @@ switch($_POST["selection"]){
 			}
 			catch(Exception $e)
 			{
-				die('Erreur : '.$e->getMessage());
-				$bdd->exec('UPDATE `messagerie` SET `Corbeille`=0 WHERE ID='.$_SESSION['id'][$key]-1);
-				$bdd->exec('UPDATE `messagerie` SET `Corbeille`=0 WHERE ID='.$_SESSION['id'][$key]);
+				echo 'Message non restoré !';
 			}
 
 		}

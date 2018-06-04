@@ -4,5 +4,5 @@ if (isset($_POST) && !empty($_POST)){
 	echo "Les liens de la BDD ont bien été modifié";
 }
 else{
-	 include('Vue/persoAccueil.php');
+	 include('../Vue/persoAccueil.php');
 }?>
