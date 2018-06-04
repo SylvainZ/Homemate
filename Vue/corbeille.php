@@ -26,7 +26,7 @@
     		<!--Menu-->
 	    	<section class="menu">
 	    		<p>
-		    		<a href="index.php?cible=messagerie"><input type="button" value="Nouveau message" class="nouveau"/></a>
+		    		<a href="index.php?cible=corbeille"><input type="button" value="Nouveau message" class="nouveau"/></a>
 		    		<div><a href="index.php?cible=boiteMailReception" class="liste">Liste des messages</a></div><br/>
 		    		<div><a href="index.php?cible=corbeille" class="corbeille">Corbeille</a></div>
 	    		</p>
@@ -35,7 +35,7 @@
 	    	<!--Liste des messages-->
 	    	<section class="rectangle">
 	    		<!--Début du formulaire-->
-	    		<form action="gestionCorbeille.php" method="post" name="F1">
+	    		<form action="Modele/gestionCorbeille.php" method="post" name="F1">
 	    			<p>
 		    			<!--En-tête du bloc Liste des messages-->
 						<div class="debut">
@@ -44,7 +44,7 @@
 								<label for="selection">Pour la sélection : </label>
 									<input type='submit'>
 										<select name="selection" id="selection">
-											<option value="restorer">Restorer</option>
+											<option value="restaurer">Restorer</option>
 											<option value="supprimer">Supprimer définitivement</option>
 										</select><br/>
 									</input>

@@ -1,1 +1,4 @@
-<?php include('Vue/corbeille.php')?>
+<?php 
+
+include('Vue/corbeille.php')
+?>
