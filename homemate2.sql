@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 18 mai 2018 à 16:37
+-- Généré le :  lun. 04 juin 2018 à 15:11
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -25,16 +25,57 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `actionneur`
+--
+
+CREATE TABLE `actionneur` (
+  `ID` int(50) NOT NULL,
+  `Type` varchar(11) NOT NULL,
+  `NomActionneur` varchar(11) NOT NULL,
+  `NumeroSerie` varchar(11) NOT NULL,
+  `Etat` varchar(11) NOT NULL,
+  `PositionVolet` varchar(11) NOT NULL,
+  `PositionInterrupeur` varchar(11) NOT NULL,
+  `IdPiece` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `capteur`
+--
+
+CREATE TABLE `capteur` (
+  `ID` int(255) NOT NULL,
+  `Type` varchar(255) NOT NULL,
+  `Nom` varchar(255) NOT NULL,
+  `NumeroSerie` varchar(255) NOT NULL,
+  `Etat` varchar(255) NOT NULL,
+  `Description` varchar(255) NOT NULL,
+  `SeuilTemperature` int(255) NOT NULL,
+  `TemperatureRelevee` int(255) NOT NULL,
+  `Presence` varchar(255) NOT NULL,
+  `SeuilDistance` int(255) NOT NULL,
+  `Luminosite` varchar(255) NOT NULL,
+  `SeuilLuminosite` int(255) NOT NULL,
+  `IntensiteSonore` int(255) NOT NULL,
+  `IdPiece` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `logement`
 --
 
 CREATE TABLE `logement` (
-  `type` varchar(100) NOT NULL,
-  `addresse` varchar(100) NOT NULL,
-  `ville` varchar(100) NOT NULL,
-  `superficie` int(100) NOT NULL,
-  `piece` int(100) NOT NULL,
-  `postal` int(100) NOT NULL
+  `Type` varchar(100) NOT NULL,
+  `Adresse` varchar(100) NOT NULL,
+  `Ville` varchar(100) NOT NULL,
+  `Superficie` int(100) NOT NULL,
+  `NombrePiece` int(100) NOT NULL,
+  `CodePostal` int(100) NOT NULL,
+  `IdUser` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -44,19 +85,21 @@ CREATE TABLE `logement` (
 --
 
 CREATE TABLE `piece` (
-  `nom` varchar(30) NOT NULL,
-  `type` varchar(30) NOT NULL,
-  `superficie` int(30) NOT NULL
+  `Nom` varchar(30) NOT NULL,
+  `Type` varchar(30) NOT NULL,
+  `Superficie` int(30) NOT NULL,
+  `ID_logement` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `piece`
 --
 
-INSERT INTO `piece` (`nom`, `type`, `superficie`) VALUES
-('dhsg', 'sxvj', 78),
-('dhsg', 'sxvj', 78),
-('dhsgBKHSV', 'sxvjVCKSJBV ', 7878952);
+INSERT INTO `piece` (`Nom`, `Type`, `Superficie`, `ID_logement`) VALUES
+('dhsg', 'sxvj', 78, 0),
+('dhsg', 'sxvj', 78, 0),
+('dhsgBKHSV', 'sxvjVCKSJBV ', 7878952, 0),
+('nfdq', 'fndqj', 79, 0);
 
 -- --------------------------------------------------------
 
