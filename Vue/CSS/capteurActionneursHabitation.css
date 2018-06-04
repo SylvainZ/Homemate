@@ -84,7 +84,7 @@ footer
 
 
 
-#tonDiv1, #tondiv1{
+#tonDiv1{
 
 
 background-color:#6a1b3d;
@@ -110,7 +110,7 @@ border:none;
 
 }
 
-/*bouton luminositï¿½*/
+/*bouton luminosité*/
 #bouton_tonDiv2{
 	position: relative;
 	left:0%;
@@ -127,7 +127,7 @@ border:none;
 	margin-left: 3%;
 }
 
-/*bouton tempï¿½rature*/
+/*bouton température*/
 #bouton_tonDiv3{
 	position: relative;
 	left: 0%;
@@ -146,7 +146,7 @@ border:none;
 	background-color: #471229 ;
 
 }
-#bouton, #bouton1{
+#bouton{
 
 	right:100%;
 	border-radius: 5%;
@@ -202,7 +202,7 @@ border:none;
 }
 
 
-/*Positionnement du point d'inerrogation d'aide ï¿½ cï¿½tï¿½ des champs*/
+/*Positionnement du point d'inerrogation d'aide à côté des champs*/
 .interrogation
 {
 	width:0.7em;
@@ -252,7 +252,7 @@ h1
 	font-family: quando;
 }
 
-/*Personnalisation du champ Numï¿½ro de sï¿½rie*/
+/*Personnalisation du champ Numéro de série*/
 #numero_de_serie
 {
 	border-radius:5px;
@@ -272,7 +272,7 @@ h1
 	left: 9%;
 }
 
-/*Personnalisation du champ Piï¿½ce*/
+/*Personnalisation du champ Pièce*/
 #piece
 {
 	border-radius:5px;
