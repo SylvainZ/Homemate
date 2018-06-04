@@ -1,1 +1,2 @@
-<?php include('Vue/profil.php')?>
+<?php
+include('Vue/profil.php')?>

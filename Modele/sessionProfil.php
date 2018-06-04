@@ -19,5 +19,37 @@ $_SESSION['datedenaissance']=$donnees['Datedenaissance'];
 $_SESSION['numLogement']=$donnees['NumeroLogement'];
 $_SESSION['surface']=$donnees['surface'];
 $_SESSION['codePostal']=$donnees['CodePostal'];
-$_SESSION['numPiece']=$donnees['NumeroPi�ce'];
-header('Location:../index.php?cible=accueil');?>
+$_SESSION['numPiece']=$donnees['NumeroPi�ce'];
+/*echo $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')];
+
+if ($donnees[MONTH('Datedenaissance')] > date('m')) {
+    $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')]-1;
+}
+elseif ($donnees[MONTH('Datedenaissance')] == date('m')){
+
+    if ($donnees[DAY('Datedenaissance')] > date('d')) {
+        $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')]-1;
+    }
+    else{
+        $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')];
+    }
+}
+else {
+    $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')];
+}*/
+
+$date_courante = new DateTime(date("Y-m-d"));
+$date_naissance = new DateTime($_SESSION['datedenaissance']);
+$interval = date_diff($date_courante,$date_naissance);
+if ($date_courante>$date_naissance) {
+    echo "Vous êtes en retard, dépêchez-vous !!!";
+}
+else {
+    echo "Il ne reste plus que ".$interval->format('%R')." jour(s).";
+}
+
+$_SESSION['age']=$interval->format('%Y');
+
+header('Location:../index.php?cible=accueil');
+
+?>

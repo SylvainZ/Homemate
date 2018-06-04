@@ -22,7 +22,26 @@ $_SESSION['datedenaissance']=$donnees['Datedenaissance'];
 $_SESSION['numLogement']=$donnees['NumeroLogement'];
 $_SESSION['surface']=$donnees['surface'];
 $_SESSION['codePostal']=$donnees['CodePostal'];
-$_SESSION['numPiece']=$donnees['NumeroPièce'];
+$_SESSION['numPiece']=$donnees['NumeroPiï¿½ce'];
+$_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')];
+
+
+if ($donnees[MONTH('Datedenaissance')] > date('m')) {
+    $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')]-1;
+}
+elseif ($donnees[MONTH('Datedenaissance')] == date('m')){
+
+    if ($donnees[DAY('Datedenaissance')] > date('d')) {
+        $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')]-1;
+    }
+    else{
+        $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')];
+    }
+}
+else {
+    $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')];
+}
+
 
 header('Location: index.php?cible=profil');
 ?>

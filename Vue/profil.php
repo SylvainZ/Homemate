@@ -24,16 +24,16 @@
 				<p>
 					Nom, Prénom, Statut: <br/>
 					<span class="valeurImporte"> <?php echo $_SESSION['nom'].', '.$_SESSION['prenom'];?></span><br/>
-					<span class="valeurImporte"> <?php echo $_SESSION['datedenaissance'];?></span><br/>
-					<span class="valeurImporte"> <?php echo $_SESSION['statut'];?></span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['age'];?> ans </span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['statut'];?></span><br/><br/>
 					Adresse complète:<br/>
-					<span class="valeurImporte"> Batiment <?php echo $_SESSION['numLogement'].', Etage '.$_SESSION['numEtage'];?></span><br/>
+					<span class="valeurImporte"> Appartement <?php echo $_SESSION['numLogement'].', Etage '.$_SESSION['numEtage'];?></span><br/>
 					<span class="valeurImporte"> <?php echo $_SESSION['numRue'].' '.$_SESSION['numBis'].' '.$_SESSION['nomRueBdAve'];?>  </span><br/>
-					<span class="valeurImporte"> <?php echo $_SESSION['codePostal'].' '.$_SESSION['ville'];?> </span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['codePostal'].' '.$_SESSION['ville'];?> </span><br/><br/>
 					Mail:<br/>
-					<span class="valeurImporte"> <?php echo $_SESSION['email'];?></span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['email'];?></span><br/><br/>
 					Numéro de téléphone:<br/>
-					<span class="valeurImporte"> <?php echo $_SESSION['numTel'];?></span>
+					<span class="valeurImporte"> <?php echo $_SESSION['numTel'];?></span><br/>
 						
 					<a href="index.php?cible=modifieProfil	" ><input type=button value = "Modifier le profil" class= "modifProfil"/></a> 
 	    	</div>
@@ -49,7 +49,7 @@
 					<a href="index.php?cible=capteurActionneursHabitations"><span>Gérer la maison</span></a><br/><br/>
 		    	</p>
 	    	</div>
-    	<div/>
+    	</div>
     	
     	    <footer>
             <?php include("Vue/footer.php") ?>
