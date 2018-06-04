@@ -4,17 +4,9 @@ session_start();
 if(!empty($_POST['dateDeNaissance']&&!empty($_POST['tel'])&&!empty($_POST['statut'])&&!empty($_POST['numLogement'])&&!empty($_POST['numEtage'])
     &&!empty($_POST['numRue'])&&!empty($_POST['prefixRueBdAve'])&&!empty($_POST['nomRoute'])&&!empty($_POST['postal'])
     &&!empty($_POST['Ville'])&&!empty($_POST['pays'])
-    &&!empty($_POST['typedHab'])&&!empty($_POST['surface'])&&!empty($_POST['pièce'])))
+    &&!empty($_POST['typedHab'])&&!empty($_POST['surface'])&&!empty($_POST['piece'])))
 {
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-    }
-    
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
+    include('connexionBD.php');
     
     
     
@@ -53,19 +45,19 @@ if(!empty($_POST['dateDeNaissance']&&!empty($_POST['tel'])&&!empty($_POST['statu
             $_POST['pays'],
             $_POST['typedHab'],
             $_POST['surface'],
-            $_POST['pièce'],
+            $_POST['piece'],
             $_SESSION['Email']
             
         ));
             
-        echo $_SESSION['Email'];
-        echo $_POST['tel'];
+        /*echo $_SESSION['Email'];
+        echo $_POST['tel'];*/
     
-    //header('Location:../Vue/profil.php');
+    header('Location:index.php?cible=accueil');
 
 }   
     else
     {
-    header('Location:../Vue/locataireProprietaire.php');
+    header('Location:index.php?cible=locataireProprietaire');
     }
 ?>

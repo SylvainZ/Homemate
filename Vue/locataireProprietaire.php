@@ -11,10 +11,10 @@
 
 <body >
 
-<figure>
-    <a href="index.php?cible=accueil"><img src="Vue/Images/homemate2.png" alt="image du logo"></a>
+<header>
+    <?php include("Vue/header.php") ?>
 
-</figure>
+</header>
 
 
 <div id="bloc">
@@ -24,7 +24,7 @@
     <section>
         <div id="block1">
         <h2 id="titre1">Données personnelles</h2>
-        <form name = "form" action="../Modele/locataireProprietaire.php" method="post" onsubmit="return cgu()">
+        <form name = "form" action="index.php?cible=creerUnCompteBis" method="post" onsubmit="return cgu()">
 
             <div id="ligne1">
 
@@ -45,7 +45,7 @@
                     <option value="locataire">locataire</option>
                 </select><br /><br/>
             </div>
-        </form>
+
         </div>
 
         <div id="block2">
@@ -155,7 +155,7 @@
                 <div class="nbPiece">
                     <label for="pièce">
                         Nombre de pièce <br>
-                        <input type="number" name="pièce" size="25" class="champ"/>
+                        <input type="number" name="piece" size="25" class="champ"/>
                     </label>
                 </div>
 
@@ -177,9 +177,10 @@
     <br>
 </div>
 
-<script type="text/javascript" src="../Controleur/JS/locataireproprietaire.js"></script>
+<script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
+
 <footer>
-    <p>Copyright 2018 HomeMate | Tous droits réservés</p>
+    <?php include("Vue/footer.php") ?>
 </footer>
 </body>
 </html>
