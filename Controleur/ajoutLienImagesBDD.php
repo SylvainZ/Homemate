@@ -1,6 +1,8 @@
-
-<?php include('Modele/ajouterImageBDD.php');?>
-
-<?php echo "Les liens de la BDD ont bien été modifier"?>
-
-<?php echo "<a href= "index.php" target="_blank"> Retour à la page d'acceuil ?</a>" ?>
+<?php
+if (isset($_POST) && !empty($_POST)){
+	include('Modele/ajouterImageBDD.php');
+	echo "Les liens de la BDD ont bien été modifié";
+}
+else{
+	 include('Vue/persoAccueil.php');
+}?>
