@@ -1,18 +1,18 @@
 <?php
 
 try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-    }
-    
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
-    $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece = \'1\'');
-    $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece = \'1\'');
-    $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece = \'1\'');
-    ?>
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
+}
+
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+$temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece = \'1\'');
+$lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece = \'1\'');
+$pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece = \'1\'');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +34,7 @@ try
 	<div class="A"><p>Habitation(s)</p></div>
 	<div class="B"><p>Capteurs/</br>Actionneurs</p></div>
 	</div>
-
+	<div id="grandmenu" >
 	<div class="menu"> <!--bouton 1 et background-->
 	
 		<button  id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
@@ -57,7 +57,7 @@ try
 										<?php }?>
 										
 										
-										 <td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+										 <td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 
 										</tr>
 									</tbody>
@@ -80,7 +80,7 @@ try
 										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> °C</span>'; ?>
 										</td>
 										<?php }?>
-											<td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+											<td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -103,7 +103,7 @@ try
 										</td>
 										<?php }?>
 										
-											<td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+											<td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -119,7 +119,7 @@ try
 		
 			<div id="tondiv1" class="tondiv1">
 				<div class=couleur1>
-					<button id="bouton_tondiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumière</button>
+					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumière</button>
 						<div id="tondiv2" class="tondiv2">
 							<div class="luminosite">
 	 							<table class="tableau" border="1">
@@ -135,7 +135,7 @@ try
 										<?php }?>
 										
 										
-										 <td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+										 <td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 
 										</tr>
 									</tbody>
@@ -158,7 +158,7 @@ try
 										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> °C</span>'; ?>
 										</td>
 										<?php }?>
-											<td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+											 <td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -167,7 +167,7 @@ try
 				</div>
 	 	 </div>	
    	</div>
-   
+   </div>
    	
    	<footer>
             <?php include("Vue/footer.php") ?>
