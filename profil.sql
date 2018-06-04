@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 04 juin 2018 à 15:04
+-- Généré le :  lun. 04 juin 2018 à 16:26
 -- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.3
+-- Version de PHP :  7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,7 +33,6 @@ CREATE TABLE `profil` (
   `Nom` char(50) NOT NULL,
   `Prenom` char(50) NOT NULL,
   `Statut` tinytext NOT NULL,
-  `NumeroAppartement` int(100) NOT NULL,
   `NumeroEtage` tinyint(200) NOT NULL,
   `NumeroRue` int(200) NOT NULL,
   `Bis` tinytext,
@@ -41,29 +40,39 @@ CREATE TABLE `profil` (
   `NumeroDepartement` int(20) NOT NULL,
   `Ville` char(50) NOT NULL,
   `Email` char(50) NOT NULL,
-  `NumeroTelephone` int(30) NOT NULL,
+  `NumeroTelephone` int(10) NOT NULL,
   `password` varchar(255) NOT NULL,
   `Datedenaissance` date NOT NULL,
   `NumeroLogement` int(11) NOT NULL,
   `surface` int(255) NOT NULL,
   `CodePostal` int(5) NOT NULL,
-  `NumeroPièce` int(255) NOT NULL
+  `Pieces` int(255) NOT NULL,
+  `Pays` text NOT NULL,
+  `PrefixRue` varchar(255) NOT NULL,
+  `TypeHab` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `profil`
 --
 
-INSERT INTO `profil` (`ID`, `Nom`, `Prenom`, `Statut`, `NumeroAppartement`, `NumeroEtage`, `NumeroRue`, `Bis`, `NomRueAveBd`, `NumeroDepartement`, `Ville`, `Email`, `NumeroTelephone`, `password`, `Datedenaissance`, `NumeroLogement`, `surface`, `CodePostal`, `NumeroPièce`) VALUES
-(1, 'nom', 'preomn', 'Gérant', 5, 5, 46, NULL, 'Champs de Mars', 71, 'Paris', 'fr@fr.fr', 32, '0', '0000-00-00', 0, 0, 0, 0),
-(2, 'ce', 'bji', 'proprietaire', 2, 95, 6, 'bis', 'pk', 9559, 'Panam', 'lpszsz@szop.de', 156497, '0', '0000-00-00', 0, 0, 0, 0),
-(3, 'zhou', 'sylvain', '', 0, 0, 0, NULL, '', 0, '', 'srre@hotmail.fr', 0, 'azerty', '0000-00-00', 0, 0, 0, 0),
-(4, 'sylvain', 'zhou', '', 0, 0, 0, NULL, '', 0, '', 'sylvainzhou@hotmail.fr', 0, 'azeztesg', '0000-00-00', 0, 0, 0, 0),
-(5, 'sylvain', 'zhou', '', 0, 0, 0, NULL, '', 0, '', 'sylvainzhou@hotmail.fr', 0, 'azeztesg', '0000-00-00', 0, 0, 0, 0),
-(7, 'efgez', 'zdgzer', '', 0, 0, 0, NULL, '', 0, '', 'dszgzer', 0, 'gzg', '0000-00-00', 0, 0, 0, 0),
-(8, 'cz', '', '', 0, 0, 0, NULL, '', 0, '', '', 0, '', '0000-00-00', 0, 0, 0, 0),
-(10, 'deddezdz', 'dedede', '', 0, 0, 0, NULL, '', 0, '', 'beatrice.tesor@gmail.com', 0, 'azertyuiop', '0000-00-00', 0, 0, 0, 0),
-(11, 'Tésor', 'Béatrice', 'locataire', 0, 1, 27, 'NONE', 'Jean', 0, 'Vanves', 'beatrice.tesor@isep.fr', 769296947, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '0000-00-00', 118, 0, 92170, 0);
+INSERT INTO `profil` (`ID`, `Nom`, `Prenom`, `Statut`, `NumeroEtage`, `NumeroRue`, `Bis`, `NomRueAveBd`, `NumeroDepartement`, `Ville`, `Email`, `NumeroTelephone`, `password`, `Datedenaissance`, `NumeroLogement`, `surface`, `CodePostal`, `Pieces`, `Pays`, `PrefixRue`, `TypeHab`) VALUES
+(117, 'dam', 'oi', 'locataire', 2, 5, NULL, '5', 0, '5', 'ggggg@erf.fr', 32767, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '0055-05-05', 13, 5, 5, 5, '5', 'ave', 'Appartement'),
+(116, 'Zhou', 'Sylvain', 'locataire', 5, 5, NULL, '5', 0, '5', 'dfg@gh.fr', 32767, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-02', 5, 5, 5, 5, '5', 'bd', 'Appartement'),
+(115, 'Zhou', 'Sylvain', '', 0, 0, NULL, '', 0, '', 'rshg@hezg.fr', 0, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '0000-00-00', 0, 0, 0, 0, '', '', ''),
+(114, 'Zhou', 'Sylvain', 'proprietaire', 127, 6, NULL, 'Sylvain Zhou', 0, 'TORCY', 'sylvainzhou@hotmail.fr', 623875844, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-10', 13, 1, 77200, 1, 'France', 'rue', 'Appartement'),
+(113, 'Zhou', 'Sylvain', 'proprietaire', 127, 6, NULL, 'Sylvain Zhou', 0, 'TORCY', 'sylvainzhou@hotmail.fr', 623875844, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-10', 13, 1, 77200, 1, 'France', 'rue', 'Appartement'),
+(112, 'Zhou', 'Sylvain', 'proprietaire', 127, 6, NULL, 'Sylvain Zhou', 0, 'TORCY', 'sylvainzhou@hotmail.fr', 623875844, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-10', 13, 1, 77200, 1, 'France', 'rue', 'Appartement'),
+(111, 'dam', 'oi', 'locataire', 2, 5, NULL, '5', 0, '5', 'ggggg@erf.fr', 32767, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '0055-05-05', 13, 5, 5, 5, '5', 'ave', 'Appartement'),
+(110, 'Zhou', 'Béatrice', 'proprietaire', 0, 0, 'NONE', '/', 0, '/', 'beatrice.tesor@isep.fr', 0, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '0000-00-00', 0, 0, 0, 0, '', '', ''),
+(105, 'Zhou', 'Sylvain', 'locataire', 2, 5, NULL, '5', 0, '5', 'ggggg@erf.fr', 32767, '79e476001b0a1bb18a3d4d765c981efb301c2d12', '0055-05-05', 13, 5, 5, 5, '5', 'ave', 'Appartement'),
+(106, 'Zhou', 'Sylvain', 'proprietaire', 127, 6, NULL, 'Sylvain Zhou', 0, 'TORCY', 'sylvainzhou@hotmail.fr', 623875844, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-10', 13, 1, 77200, 1, 'France', 'rue', 'Appartement'),
+(107, 'Mahaut', 'sylviana', 'locataire', 3, 20, 'bis', 'Colonel Pierre Avia', 0, '', 'sylviana.mahaut@isep.fr', 32767, '66c2ea21fffb2ad70dabe90f9144d4fcc73109c6', '1997-12-20', 312, 22, 75015, 1, 'France', 'rue', 'Appartement'),
+(121, 'xu', 'leon', '', 0, 0, NULL, '', 0, '', 'leon.xu@isep.fr', 0, 'bfe54caa6d483cc3887dce9d1b8eb91408f1ea7a', '0000-00-00', 0, 0, 0, 0, '', '', ''),
+(122, 'ezg', 'zeg', 'locataire', 2, 2, NULL, 'paris', 0, 'Paris', 'zeg@ezgezg.fr', 342314569, 'bfe54caa6d483cc3887dce9d1b8eb91408f1ea7a', '2014-06-04', 2, 45, 75001, 54, 'France', 'bd', 'Maison'),
+(103, 'Zhou', 'Sylvain', 'proprietaire', 127, 6, NULL, 'Sylvain Zhou', 0, 'TORCY', 'sylvainzhou@hotmail.fr', 623875844, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-10', 13, 1, 77200, 1, 'France', 'rue', 'Appartement'),
+(104, 'Zhou', 'Sylvain', 'proprietaire', 127, 6, NULL, 'Sylvain Zhou', 0, 'TORCY', 'sylvainzhou@hotmail.fr', 623875844, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-10', 13, 1, 77200, 1, 'France', 'rue', 'Appartement'),
+(118, 'Zhou', 'Sylvain', 'proprietaire', 127, 6, NULL, 'Sylvain Zhou', 0, 'TORCY', 'sylvainzhou@hotmail.fr', 623875844, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '2018-05-10', 13, 1, 77200, 1, 'France', 'rue', 'Appartement');
 
 --
 -- Index pour les tables déchargées
@@ -83,7 +92,7 @@ ALTER TABLE `profil`
 -- AUTO_INCREMENT pour la table `profil`
 --
 ALTER TABLE `profil`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
