@@ -17,7 +17,7 @@ try
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>HOMEMATE</title>
+	<title>Gérer la maison</title>
 	<link rel="stylesheet" href="Vue/CSS/capteurActionneursHabitation.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
@@ -113,6 +113,7 @@ try
 	 	 </div>	
    	</div>
 
+<<<<<<< HEAD
    	<div class="menu2">
 	
 		<button id="bouton1" onclick="javascript:afficher_cacher('tondiv1');">Actionneurs</button>
@@ -124,7 +125,63 @@ try
 	 					<div id="tondiv3"><ul> <li> Piï¿½ce1 </li><li> Piï¿½ce2 </li><li> Piï¿½ce3 </li></ul></div>
 					
 	 	 	</div>	
+=======
+   	<div class="menu2"> <!--bouton 1 et background-->
+	
+		<button  id="bouton" onclick="javascript:afficher_cacher('tondiv1');">Actionneurs</button>
+		
+			<div id="tondiv1" class="tondiv1">
+				<div class=couleur1>
+					<button id="bouton_tondiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumière</button>
+						<div id="tondiv2" class="tondiv2">
+							<div class="luminosite">
+	 							<table class="tableau" border="1">
+									<tbody>
+										<tr id="ligne1">
+										<?php 
+										while ($donnees1 = $lumi->fetch()){
+										?>
+										
+										<td>
+										<?php echo $donnees1['nom'],$donnees1['piece'], $donnees1['Luminosite']; ?>
+										</td>
+										<?php }?>
+										
+										
+										 <td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+				</div>
+				<div class=couleur1>
+	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tondiv3');">Volets</button>
+	 					<div id="tondiv3" class="tondiv3">
+	 						<div class="luminosite">
+		 						<table class="tableau" border="1">
+									<tbody>
+										<tr id="ligne2">
+										<?php 
+										while ($donnees = $temp->fetch()){
+										?>
+										
+										<td>
+										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> °C</span>'; ?>
+										</td>
+										<?php }?>
+											<td><a href ="ajouterUnCapteur.php"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+				</div>
+	 	 </div>	
+>>>>>>> 890862fca0ceb0726ca299cc9a57f272b5ced777
    	</div>
+   
    	
    	<footer>
             <?php include("Vue/footer.php") ?>
@@ -186,6 +243,6 @@ try
 
 
 
-<footer>Copyright 2018 HomeMate, All Rights Reserved</footer>
+
 </body>
 </html>
