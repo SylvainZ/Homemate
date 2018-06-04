@@ -1,9 +1,11 @@
 
 
 
-html
+
+
+body
 {
-height: 100%;
+overflow:auto;	
 }
 
 /*logo cloche*/
@@ -184,7 +186,6 @@ border:none;
 .menu
 {
 	
-	margin-top: -200px;
 	background-color: #2f0c1b;
 
 }
