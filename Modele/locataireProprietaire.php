@@ -57,11 +57,9 @@ if(!empty($_POST['dateDeNaissance']&&!empty($_POST['tel'])&&!empty($_POST['statu
             $_SESSION['Email']
             
         ));
-            
-        echo $_SESSION['Email'];
-        echo $_POST['tel'];
+       
     
-    //header('Location:../Vue/profil.php');
+    header('Location:index.php?cible=accueil');
 
 }   
     else

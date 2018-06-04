@@ -59,11 +59,11 @@ if(!empty($_POST['numero_de_serie'])&&!empty($_POST['seuil']))
         ));
     }
     
-    header('Location:../Vue/capteurActionneursHabitations.php');
+    header('Location:index.php?cible=capteurActionneursHabitations');
 
 }   
     else
     {
-    header('Location:../Vue/ajouterUnCapteur.php');
+    header('Location:index.php?cible=ajouterUnCapteur');
     }
 ?>

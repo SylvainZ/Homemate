@@ -3,16 +3,18 @@
     <head>
         <meta charset="utf-8" />
         <title>Ajouter un capteur</title>
-        <link rel="stylesheet" href="styleNouveauCapteur.css"/>
+        <link rel="stylesheet" href="Vue/CSS/styleNouveauCapteur.css"/>
         <link rel="stylesheet" href="Vue/CSS/all.css" />
     </head>
 
     <body>
-    	<img src="Vue/images/homemate2.png" alt="logo HomeMate" id="logo"/>
-    	<!--<span class="nom_du_site">HOMEMATE</span><br/>-->
-    	<section class="ajout">
+    
+    <header>
+			<?php include("header.php") ?>
+	</header>
+	    	<section class="ajout">
 	        <h1>Ajouter un capteur</h1>
-	        <form method="post" action="Modele/ajoutCapteur.php">
+	        <form method="post" action="index.php?cible=ajoutCapteur2">
 	        	<p> 
 					<label for="nom_du_capteur" class="nom_capteur">Nom du capteur* : </label><br/>
 					<select name="nom_du_capteur" id="nom_du_capteur" required>
@@ -69,7 +71,9 @@ Ex: Derrière le canapé"/></textarea><br/><br/>
 	        </form>
 	    </section>
 
-        <p class="droit">Copyright 2018 HomeMate, Tous droits réservés</p>
+        	<footer>
+            <?php include("Vue/footer.php") ?>
+    </footer>
     </body>
 
 </html>

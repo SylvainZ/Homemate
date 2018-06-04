@@ -24,7 +24,7 @@
     <section>
         <div id="block1">
         <h2 id="titre1">Données personnelles</h2>
-        <form name = "form" action="../Modele/locataireProprietaire.php" method="post" onsubmit="return cgu()">
+        <form name = "form" action="index.php?cible=creerUnCompteBis" method="post" onsubmit="return cgu()">
 
             <div id="ligne1">
 
@@ -45,7 +45,7 @@
                     <option value="locataire">locataire</option>
                 </select><br /><br/>
             </div>
-        </form>
+        
         </div>
 
         <div id="block2">
