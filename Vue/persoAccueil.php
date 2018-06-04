@@ -3,7 +3,7 @@
 <head>
     <title>Personnalisation ACCUEIL</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="stylePersoAccueil.css">
+    <link rel="stylesheet" href="/stylePersoAccueil.css">
 </head>
 
 <body>

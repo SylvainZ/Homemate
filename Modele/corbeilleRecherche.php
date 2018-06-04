@@ -34,5 +34,6 @@ $_SESSION['message']=$message;
 $_SESSION['reception']=$reception;
 $_SESSION['id']=$id;
 $_SESSION['corbeille']=$corbeille;
-header('Location: boiteMail.php');
+
+header('Location: ..	/index.php?cible=corbeille');
 ?>

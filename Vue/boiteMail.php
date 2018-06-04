@@ -35,7 +35,7 @@
 	    	<!--Liste des messages-->
 	    	<section class="rectangle">
 	    		<!--Début du formulaire-->
-	    		<form action="Modele/gestionBoiteMail.php" method="post" name="F1">
+	    		<form action="index.php?cible=gestionBoiteMail" method="post" name="F1">
 	    			<p>
 		    			<!--En-tête du bloc Liste des messages-->
 						<div class="debut">

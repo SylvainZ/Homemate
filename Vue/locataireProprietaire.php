@@ -11,10 +11,10 @@
 
 <body >
 
-<figure>
-    <a href="index.php?cible=accueil"><img src="Vue/Images/homemate2.png" alt="image du logo"></a>
+<header>
+    <?php include("Vue/header.php") ?>
 
-</figure>
+</header>
 
 
 <div id="bloc">
@@ -45,7 +45,11 @@
                     <option value="locataire">locataire</option>
                 </select><br /><br/>
             </div>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> fef29c5aef269e173b14f0dcbcd3bb034c647572
         </div>
 
         <div id="block2">
@@ -155,7 +159,7 @@
                 <div class="nbPiece">
                     <label for="pièce">
                         Nombre de pièce <br>
-                        <input type="number" name="pièce" size="25" class="champ"/>
+                        <input type="number" name="piece" size="25" class="champ"/>
                     </label>
                 </div>
 
@@ -177,9 +181,10 @@
     <br>
 </div>
 
-<script type="text/javascript" src="../Controleur/JS/locataireproprietaire.js"></script>
+<script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
+
 <footer>
-    <p>Copyright 2018 HomeMate | Tous droits réservés</p>
+    <?php include("Vue/footer.php") ?>
 </footer>
 </body>
 </html>
