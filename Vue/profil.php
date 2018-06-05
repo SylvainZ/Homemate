@@ -11,9 +11,10 @@
 
     <body>
     	<header>
+            <?php include("Vue/header.php") ?>
 
         </header>
-    	<br/>
+    	<br />
     	
     	<img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" /><span class="profil">Profil</span>
 
@@ -23,23 +24,18 @@
 				<p>
 					Nom, Prénom, Statut: <br/>
 					<span class="valeurImporte"> <?php echo $_SESSION['nom'].', '.$_SESSION['prenom'];?></span><br/>
-					<span class="valeurImporte"> <?php echo $age;?> ans </span><br/>
-					<span class="valeurImporte"> <?php echo $donnees['Statut'];?></span><br/><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['age'];?> ans </span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['statut'];?></span><br/><br/>
 					Adresse complète:<br/>
-					<span class="valeurImporte"> Appartement <?php echo $donnees['NumeroAppartement'].', Etage '.$donnees['NumeroEtage'];?></span><br/>
-					<span class="valeurImporte"> <?php echo $donnees['NumeroRue'].' '.$donnees['Bis'].' '.$donnees['NomRueAveBd'];?>  </span><br/>
-					<span class="valeurImporte"> <?php echo $donnees['CodePostal'].' '.$donnees['Ville'];?> </span><br/><br/>
+					<span class="valeurImporte"> Appartement <?php echo $_SESSION['numLogement'].', Etage '.$_SESSION['numEtage'];?></span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['numRue'].' '.$_SESSION['numBis'].' '.$_SESSION['nomRueBdAve'];?>  </span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['codePostal'].' '.$_SESSION['ville'];?> </span><br/><br/>
 					Mail:<br/>
-					<span class="valeurImporte"> <?php echo $donnees['Email'];?></span><br/><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['email'];?></span><br/><br/>
 					Numéro de téléphone:<br/>
-					<span class="valeurImporte"> <?php echo $donnees['NumeroTelephone'];?></span><br/>
+					<span class="valeurImporte"> <?php echo $_SESSION['numTel'];?></span><br/>
 						
-<<<<<<< HEAD
 					<a href="index.php?cible=modifieProfil	" ><input type=button value = "Modifier le profil" class= "modifProfil"/></a> 
-					</p>
-=======
-					<a href="index.php?cible=profilModifie" ><input type=button value = "Modifier le profil" class= "modifProfil"/></a> 
->>>>>>> 0c8159295d2774599ae2ffbf2c2fd8155853b5b4
 	    	</div>
 	    	<div class="col2">
 				<p>

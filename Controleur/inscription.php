@@ -1,1 +1,3 @@
-<?php include('Modele/creationCompteBis.php');?>
+<?php 
+session_start();
+include('Modele/creationCompteBis.php');?>

@@ -33,7 +33,7 @@ body
 	font-family: Quando;
 	padding-top: 15px;
 	border-radius:20px;
-	
+	border: 10px solid white;
 	list-style-type:none;
 	margin-bottom: 10px; 
 }

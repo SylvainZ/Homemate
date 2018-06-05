@@ -1,1 +1,3 @@
-<?php  include("Vue/pageMessage.php")?>
+<?php  
+session_start();
+include("Vue/pageMessage.php")?>

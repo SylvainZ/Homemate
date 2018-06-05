@@ -45,7 +45,11 @@
                     <option value="locataire">locataire</option>
                 </select><br /><br/>
             </div>
+<<<<<<< HEAD
+        
+=======
 
+>>>>>>> fef29c5aef269e173b14f0dcbcd3bb034c647572
         </div>
 
         <div id="block2">

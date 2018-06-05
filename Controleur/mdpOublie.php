@@ -1,1 +1,3 @@
-<?php include("Vue/mdpOublie.php")?>
+<?php 
+session_start();
+include("Vue/mdpOublie.php")?>

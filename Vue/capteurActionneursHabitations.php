@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 0c8159295d2774599ae2ffbf2c2fd8155853b5b4
 <?php
 
 try
@@ -21,11 +17,7 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<<<<<<< HEAD
-	<title>Capteurs/Actionneurs</title>
-=======
 	<title>G�rer la maison</title>
->>>>>>> 0c8159295d2774599ae2ffbf2c2fd8155853b5b4
 	<link rel="stylesheet" href="Vue/CSS/capteurActionneursHabitation.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
@@ -238,8 +230,6 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 
 
 
-<<<<<<< HEAD
-=======
 </body>
 =======
 <?php
@@ -472,9 +462,8 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 	-->
 
 
->>>>>>> 0c8159295d2774599ae2ffbf2c2fd8155853b5b4
 
 
 </body>
-
+>>>>>>> fef29c5aef269e173b14f0dcbcd3bb034c647572
 </html>
