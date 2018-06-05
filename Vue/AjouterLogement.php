@@ -3,7 +3,7 @@
 <head>
 	<title>Ajouter un logement</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="vue/css/ajouterLogement.css">
+	<link rel="stylesheet" href="css/ajouterLogement.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 			</div>
 			
 			<div class="champnom ligne3">			
-				<label for="piece" class="inputNom">Nombre de pièces</label><br>
+				<label for="piece" class="inputNom">Nombre de piÃ¨ces</label><br>
 				<input type="text" name="piece" id="piece"/>
 			</div>
 			
@@ -69,7 +69,7 @@
 </section>
 
 <footer>
-	<p>Copyright 2018 HomeMate | Tous droits réservés</p>
+	<p>Copyright 2018 HomeMate | Tous droits rÃ©servÃ©s</p>
 </footer>
 
 </body>
