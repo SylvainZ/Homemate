@@ -11,7 +11,7 @@
 
 <body>
 		<header>
-            <?php include("Vue/header.php") ?>
+            <?php include("Vue/headerSansSession.php") ?>
 
         </header>
 
@@ -19,7 +19,7 @@
 
 <div class="rectangle">
 
-    <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data">
+    <form action="index.php?cible=modifieProfil" method="post" enctype="multipart/form-data">
         <p>
             Nom, Prénom, Statut: <br/>
             <input type="text" name="nom" placeholder="nom" value= <?php echo $_SESSION['nom'];?> />
@@ -31,9 +31,9 @@
                 <option value="gestionnaire">gestionnaire</option>
             </select><br /><br/>
             Adresse complète:<br/>
-            <input type="text" name="numLogement" placeholder="numéro d'appartement" value=<?php echo $_SESSION['numLogement'];?> />
-            <input type="text" name="numEtage" placeholder="numéro d'étage" value= <?php echo $_SESSION['numEtage'];?> /><br />
-            <input type="text" name="numRue" placeholder="numéro de rue" value=<?php echo $_SESSION['numRue'];?> />
+            <input type="text" name="numLogement" placeholder="numéro d'appartement" value=<?php echo $donnees['NumeroAppartement'];?> />
+            <input type="text" name="numEtage" placeholder="numéro d'étage" value= <?php echo $donnees['NumeroEtage'];?> /><br />
+            <input type="text" name="numRue" placeholder="numéro de rue" value=<?php echo $donnees['NumeroRue'];?> />
             <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label>
             <select name="prefixeRueBdAve">
                 <option value="rue">rue</option>
@@ -43,13 +43,13 @@
                 <option value="pond">pond</option>
             </select>
 
-            <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue"  value=<?php echo $_SESSION['nomRueBdAve'];?> /><br/>
-            <input type="text" name="codePostal" placeholder="département"  value=<?php echo $_SESSION['codePostal'];?> />
-            <input type="text" name="ville" placeholder="ville" value=<?php echo $_SESSION['ville'];?> /></span><br/>
+            <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue"  value=<?php echo $donnees['NomRueAveBd'];?> /><br/>
+            <input type="text" name="codePostal" placeholder="département"  value=<?php echo $donnees['CodePostal'];?> />
+            <input type="text" name="ville" placeholder="ville" value=<?php echo $donnees['Ville'];?> /></span><br/>
             Mail:<br/>
-            <input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?> /><br/>
+            <input type="text" name="email" placeholder="email" value=<?php echo $donnees['Email'];?> /><br/>
             Numéro de téléphone:<br/>
-            <input type="text" name="numTel" placeholder="numéro de téléphone" value=<?php echo $_SESSION['numTel'];?> /><br />
+            <input type="text" name="numTel" placeholder="numéro de téléphone" value=<?php echo $donnees['NumeroTelephone'];?> /><br />
             <input type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/><br />
             <a href="index.php?cible=profil" >annuler</a>
         </p>

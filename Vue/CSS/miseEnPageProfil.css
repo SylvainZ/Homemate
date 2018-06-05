@@ -5,10 +5,10 @@
 
 .profil
 {
-    position:absolute;
+    position:relative;
     color: black;
     margin-left:46%;
-    top:10%;
+    margin-top:10%;
     font-size: 3.5em;
     font-family: Quando, serif;
 }
@@ -51,7 +51,7 @@ p
 {
     display: flex;
     background-color: #6a1b3d;
-    height: 440px;
+    height: 37vw;
     width:80%;
     margin-left:10%;
     border-radius: 40px;

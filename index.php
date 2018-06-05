@@ -2,14 +2,14 @@
 
 
 if(isset($_GET['cible']) && !empty($_GET['cible'])) {
-    // Si la variable cible est passé en GET
+    // Si la variable cible est passï¿½ en GET
     $url = $_GET['cible']; //user, sensor, etc.
 } else {
-    // Si aucun contrôleur défini en GET, on bascule sur utilisateurs
+    // Si aucun contrï¿½leur dï¿½fini en GET, on bascule sur utilisateurs
     $url = 'accueil';
 }
 
-// On appelle le contrôleur
+// On appelle le contrï¿½leur
 if(isset($_GET['message']) && !empty($_GET['message'])){
 include('Controleur/'.$url.'.php?message='.$_GET['message']);    
 }
@@ -18,3 +18,5 @@ else {
  
 include('Controleur/' . $url . '.php');
 }
+
+?>

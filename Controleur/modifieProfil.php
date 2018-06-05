@@ -1,1 +1,2 @@
-<?php include('Vue/modifierProfil.php');?>
+<?php 
+include('Modele/modifieProfil.php');?>
