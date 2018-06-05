@@ -1,2 +1,4 @@
-<?php include('Modele/ajoutCapteur.php');
+<?php 
+session_start();
+include('Modele/ajoutCapteur.php');
 ?>

@@ -1,1 +1,3 @@
-<?php include('Modele/sessionProfilActualisation.php');?>
+<?php 
+session_start();
+include('Modele/sessionProfilActualisation.php');?>

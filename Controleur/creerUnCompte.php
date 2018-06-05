@@ -1,1 +1,3 @@
-<?php include("Vue/creerUnCompte.php")?>
+<?php 
+session_start();
+include("Vue/creerUnCompte.php")?>

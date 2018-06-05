@@ -1,1 +1,3 @@
-<?php include('Vue/locataireProprietaire.php');?>
+<?php 
+session_start();
+include('Vue/locataireProprietaire.php');?>

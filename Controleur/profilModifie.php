@@ -1,1 +1,3 @@
-<?php include('Modele/modifieProfil.php');?>
+<?php 
+session_start();
+include('Modele/modifieProfil.php');?>

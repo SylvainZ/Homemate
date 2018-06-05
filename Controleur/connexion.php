@@ -1,2 +1,4 @@
 
-<?php include('Vue/connexion.php');?>
+<?php 
+session_start();
+include('Vue/connexion.php');?>

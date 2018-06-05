@@ -1,1 +1,3 @@
-<?php include('Vue/modifierProfil.php');?>
+<?php 
+session_start();
+include('Vue/modifierProfil.php');?>
