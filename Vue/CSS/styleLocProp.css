@@ -249,9 +249,11 @@ footer p{
 	text-align: center;
 }
 
-#nonCoche{
+#nonCoche, #nonAge {
 	font-family:quando;
 	font-weight:bold;
 	color:red;
 	text-align:center;
+	font-size:0.8em;
 }
+

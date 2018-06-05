@@ -30,7 +30,8 @@
 
                 <label for="dateDeNaissance">
                     Date de naissance<br>
-                    <input type="date" name="dateDeNaissance" class="champ">
+                    <input type="date" name="dateDeNaissance" id="naissance" class="champ">
+                    <div id="nonAge"></div>
                 </label><br><br>
 
                 <label for="tel">
@@ -45,11 +46,7 @@
                     <option value="locataire">locataire</option>
                 </select><br /><br/>
             </div>
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> fef29c5aef269e173b14f0dcbcd3bb034c647572
         </div>
 
         <div id="block2">
