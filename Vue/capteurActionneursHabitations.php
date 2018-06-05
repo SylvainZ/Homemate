@@ -35,9 +35,9 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 	
 	
 	<div class="entete">
-	<div class="A"><p>Habitation(s)</p></div>
-	<div class="B"><p>Capteurs/<br>Actionneurs</p></div>
-	</div>
+    <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p>Habitation(s)</p></a></button>
+    <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
+</div>
 	<div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
 

@@ -4,13 +4,13 @@
 	<title>Ajouter un logement</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="Vue/CSS/ajouterLogement.css">
-	<link rel="stylesheet" href="Vue/CSS/all.css">
+    <link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
 
 <body>
 
 <header>
-        <?php include("header.php") ?>;
+        <?php include("header.php") ?>
 
 </header>
 
@@ -18,12 +18,16 @@
 
 	<div class="logement">
 
-		<form class="form1" method="post"  action="ajoutLogement2.php">
+		<form class="form1" method="post"  action="index.php?cible=ajouterLogement2">
 			<span class="log">Ajouter un logement</span>
 
 			<div class="champnom ligne1">
 				<label for="type" class="inputNom">Type <br></label>
-				<input type="text" name="type" id="type"/><br>	
+				<select name="type" id="type" required/>
+					<option value="appartement">Appartement</option>
+					<option value="maison">Maison</option>
+				</select>
+			<br>	
 			</div>
 
 			<div class="champnom ligne1 colonne1">
