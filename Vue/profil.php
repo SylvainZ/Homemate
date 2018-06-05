@@ -11,7 +11,7 @@
 
     <body>
     	<header>
-            <?php include("Vue/headerSansSession.php") ?>
+            <?php include("Vue/header.php") ?>
 
         </header>
     	<br/>
@@ -34,13 +34,11 @@
 					<span class="valeurImporte"> <?php echo $donnees['Email'];?></span><br/><br/>
 					Numéro de téléphone:<br/>
 					<span class="valeurImporte"> <?php echo $donnees['NumeroTelephone'];?></span><br/>
-						
-<<<<<<< HEAD
+
 					<a href="index.php?cible=modifieProfil	" ><input type=button value = "Modifier le profil" class= "modifProfil"/></a> 
 					</p>
-=======
-					<a href="index.php?cible=profilModifie" ><input type=button value = "Modifier le profil" class= "modifProfil"/></a> 
->>>>>>> 0c8159295d2774599ae2ffbf2c2fd8155853b5b4
+
+
 	    	</div>
 	    	<div class="col2">
 				<p>
