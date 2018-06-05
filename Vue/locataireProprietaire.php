@@ -45,9 +45,11 @@
                     <option value="locataire">locataire</option>
                 </select><br /><br/>
             </div>
-
 <<<<<<< HEAD
+        
 =======
+
+>>>>>>> fef29c5aef269e173b14f0dcbcd3bb034c647572
         </div>
 
         <div id="block2">
@@ -185,5 +187,4 @@
     <?php include("Vue/footer.php") ?>
 </footer>
 </body>
->>>>>>> 0cf6ae6669eba26a79acef4b2faf5ea979381325
 </html>
