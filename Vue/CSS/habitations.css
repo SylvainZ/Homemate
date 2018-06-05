@@ -52,3 +52,32 @@ button.active
 {
 	border: 6px solid #6a1b3d;
 }
+
+td
+{
+	border: thin solid transparent;
+}
+
+.case
+{
+	border: 3px solid black;
+	background: white;
+	height: 16vw;
+	width: 16vw;
+
+}
+
+.info
+{
+	border-top: 3px solid black;
+	overflow: auto;
+	width: 16vw;
+	height: 5vw;
+}
+
+.styleHabitation
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

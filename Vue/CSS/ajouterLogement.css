@@ -1,16 +1,4 @@
-﻿@font-face{
-	font-family: "Quando";
-	src:url("quando/Quando-Regular.ttf");
-}
-
-body{
-	background-image: url("images/BLUMYS.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: auto;
-	background-position: center;
-}
-
+﻿
 html{
 	height: 100%;
 	width: 100%;
