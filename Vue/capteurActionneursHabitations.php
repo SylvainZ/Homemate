@@ -41,6 +41,92 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 	</div>
 	<div id="grandmenu" >
 	<div class="menu"> <!--bouton 1 et background-->
+
+		<button  id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
+
+			<div id="tonDiv1" class="tonDiv1">
+				<div class=couleur1>
+					<button id="bouton_tonDiv2" class="marche" onclick="javascript:afficher_cacher('tonDiv2');">Luminosit�</button>
+						<div id="tonDiv2" class="tonDiv2">
+							<div class="luminosite">
+	 							<table class="tableau" border="1">
+									<tbody>
+										<tr id="ligne1">
+										<?php
+										while ($donnees1 = $lumi->fetch()){
+										?>
+
+										<td>
+										<?php echo $donnees1['nom'],$donnees1['piece'], $donnees1['Luminosite']; ?>
+										</td>
+										<?php }?>
+
+
+<<<<<<< HEAD
+=======
+	function ajouterLigne(id)
+	{
+	var tableau = document.getElementById(id);
+
+	var ligne = document.getElementById(id);//on a ajout� une ligne
+
+	var colonne1 = ligne.insertCell(0);//on a une ajout� une cellule
+	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
+	
+	//document.location.href='test.html';
+	}
+	
+	</script>
+	
+	-->
+
+
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+</body>
+=======
+<?php
+
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
+}
+
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+$temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece = \'1\'');
+$lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece = \'1\'');
+$pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece = \'1\'');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>G�rer la maison</title>
+	<link rel="stylesheet" href="Vue/CSS/capteurActionneursHabitation.css">
+	<link rel="stylesheet" href="Vue/CSS/all.css">
+</head>
+
+<body>
+
+	<header>
+			<?php include("header.php") ?>
+	</header>
+
+	
+	
+	<div class = "entete">
+	<div class="A"><p>Habitation(s)</p></div>
+	<div class="B"><p>Capteurs/</br>Actionneurs</p></div>
+	</div>
+	<div id="grandmenu" >
+	<div class="menu"> <!--bouton 1 et background-->
 	
 		<button  id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
 		
@@ -62,6 +148,7 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 										<?php }?>
 										
 										
+>>>>>>> 0cf6ae6669eba26a79acef4b2faf5ea979381325
 										 <td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 
 										</tr>
@@ -77,10 +164,10 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne2">
-										<?php 
+										<?php
 										while ($donnees = $temp->fetch()){
 										?>
-										
+
 										<td>
 										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> �C</span>'; ?>
 										</td>
@@ -99,15 +186,15 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne3">
-											<?php 
+											<?php
 										while ($donnees2 = $pres  ->fetch()){
 										?>
-										
+
 										<td>
 										<?php echo $donnees2['nom'],$donnees2['piece'], $donnees2 ['Presence']; ?>
 										</td>
 										<?php }?>
-										
+
 											<td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 										</tr>
 									</tbody>
@@ -115,13 +202,13 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 							</div>
 	 					</div>
 	 			</div>
-	 	 </div>	
+	 	 </div>
    	</div>
 
-   	<div class="menu2"> <!--bouton 1 et background-->
-	
+   	<div class="menu2"> <!--bouton 1 et background
+
 		<button  id="bouton" onclick="javascript:afficher_cacher('tondiv1');">Actionneurs</button>
-		
+
 			<div id="tondiv1" class="tondiv1">
 				<div class=couleur1>
 					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumi�re</button>
@@ -130,16 +217,16 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 	 							<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne1">
-										<?php 
+										<?php
 										while ($donnees1 = $lumi->fetch()){
 										?>
-										
+
 										<td>
 										<?php echo $donnees1['nom'],$donnees1['piece'], $donnees1['Luminosite']; ?>
 										</td>
 										<?php }?>
-										
-										
+
+
 										 <td><a href ="index.php?cible=ajouterUnCapteur"> <input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 
 										</tr>
@@ -155,10 +242,10 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne2">
-										<?php 
+										<?php
 										while ($donnees = $temp->fetch()){
 										?>
-										
+
 										<td>
 										<?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> �C</span>'; ?>
 										</td>
@@ -170,7 +257,7 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 							</div>
 						</div>
 				</div>
-	 	 </div>	
+	 	 </div>
    	</div>
    </div>
    	
@@ -233,10 +320,13 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 	-->
 
 
+>>>>>>> 0c8159295d2774599ae2ffbf2c2fd8155853b5b4
+>>>>>>> da77990103812eea939e2116f995b75fbcb23a3d
 
 
-
-
+<<<<<<< HEAD
+=======
 </body>
 
+>>>>>>> 0cf6ae6669eba26a79acef4b2faf5ea979381325
 </html>
