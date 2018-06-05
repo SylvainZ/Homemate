@@ -20,6 +20,7 @@ $_SESSION['numLogement']=$donnees['NumeroLogement'];
 $_SESSION['surface']=$donnees['surface'];
 $_SESSION['codePostal']=$donnees['CodePostal'];
 $_SESSION['numPiece']=$donnees['NumeroPi�ce'];
+$_SESSION['ID']=$donnees['ID'];
 /*echo $_SESSION['age']=date('Y')-$donnees[YEAR('Datedenaissance')];
 
 if ($donnees[MONTH('Datedenaissance')] > date('m')) {
@@ -41,12 +42,7 @@ else {
 $date_courante = new DateTime(date("Y-m-d"));
 $date_naissance = new DateTime($_SESSION['datedenaissance']);
 $interval = date_diff($date_courante,$date_naissance);
-if ($date_courante>$date_naissance) {
-    echo "Vous êtes en retard, dépêchez-vous !!!";
-}
-else {
-    echo "Il ne reste plus que ".$interval->format('%R')." jour(s).";
-}
+
 
 $_SESSION['age']=$interval->format('%Y');
 
