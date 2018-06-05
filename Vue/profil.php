@@ -28,14 +28,25 @@
 					<span class="valeurImporte"> <?php echo $_SESSION['statut'];?></span><br/><br/>
 					Adresse complète:<br/>
 					<span class="valeurImporte"> Appartement <?php echo $_SESSION['numLogement'].', Etage '.$_SESSION['numEtage'];?></span><br/>
-					<span class="valeurImporte"> <?php echo $_SESSION['numRue'].' '.$_SESSION['numBis'].' '.$_SESSION['nomRueBdAve'];?>  </span><br/>
+					<span class="valeurImporte"> 
+					<?php if($_SESSION['numBis'] != 'NONE'){
+					    echo $_SESSION['numRue'].' '.$_SESSION['numBis'].' '.$_SESSION['nomRueBdAve'];?>  </span><br/>
+					<?php 
+					}
+					else
+					{
+					    echo $_SESSION['numRue'].' '.$_SESSION['nomRueBdAve'];?>  </span><br/>
+					    <?php 
+					}
+					?>
+					    
 					<span class="valeurImporte"> <?php echo $_SESSION['codePostal'].' '.$_SESSION['ville'];?> </span><br/><br/>
-					Mail:<br/>
+					Mail:
 					<span class="valeurImporte"> <?php echo $_SESSION['email'];?></span><br/><br/>
-					Numéro de téléphone:<br/>
-					<span class="valeurImporte"> <?php echo $_SESSION['numTel'];?></span><br/>
+					Numéro de téléphone:
+					<span class="valeurImporte"> 0<?php echo $_SESSION['numTel'];?></span><br/>
 						
-					<a href="index.php?cible=modifieProfil	" ><input type=button value = "Modifier le profil" class= "modifProfil"/></a> 
+					<a href="index.php?cible=modifieProfil	" ><input type=button value = "Modifier" class= "modifProfil"/></a> 
 	    	</div>
 	    	<div class="col2">
 				<p>
@@ -50,6 +61,7 @@
 		    	</p>
 	    	</div>
     	</div>
+    	
     	
     	    <footer>
             <?php include("Vue/footer.php") ?>
