@@ -45,10 +45,8 @@ if (isset($_POST['nom'])/*
 		$_SESSION['email']
 		));
 	}
-	$req->closeCursor();
-	echo 'vous avez bien enregistrer les modification';
-	header('Location: index.php?cible=sessionProfilActualisation');
 }
-else{
-    header('Location: Vue/modifierProfil.php');
-} ?>
+$req->closeCursor();
+header('Location: index.php?cible=profil');
+
+	?>
