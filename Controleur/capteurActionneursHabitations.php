@@ -1,3 +1,4 @@
 <?php 
 session_start();
-include('Vue/capteurActionneursHabitations.php')?>
+include('Vue/capteurActionneursHabitations.php');
+?>

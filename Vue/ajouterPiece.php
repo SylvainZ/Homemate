@@ -15,7 +15,7 @@
 
 		<div class="piece">
 
-		<form class="form1" method="post" action="ajoutPiece2.php">
+		<form class="form1" method="post" action="index.php?ajouterPiece">
 			<span class="piece2">Ajouter une pièce</span>
 
 			<div class="champnom ligne1">

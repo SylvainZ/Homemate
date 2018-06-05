@@ -32,14 +32,22 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 	
 	
 	<div class = "entete">
-	<div class="A"><p>Habitation(s)</p></div>
-	<div class="B"><p>Capteurs/</br>Actionneurs</p></div>
+	<button class="A active"><p>Habitation(s)</p></button>
+	<button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>
 	</div>
 	
 	<table class="tableau" border="1">
 		<tbody>
 			<tr id="ligne1">
-				 <td><input type="button" name="bu" id="bu" value="+" class="bouton1"></td>
+                <?php
+                while ($donnees = $temp->fetch()){
+                    ?>
+
+                    <td>
+                        <?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> ï¿½C</span>'; ?>
+                    </td>
+                <?php }?>
+                <td><a href="index.php?cible=ajouterLogement"><input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -55,9 +63,9 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 	{
 	var tableau = document.getElementById(id);
 
-	var ligne = document.getElementById(id);//on a ajouté une ligne
+	var ligne = document.getElementById(id);//on a ajoutï¿½ une ligne
 
-	var colonne1 = ligne.insertCell(0);//on a une ajouté une cellule
+	var colonne1 = ligne.insertCell(0);//on a une ajoutï¿½ une cellule
 	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
 	
 	//document.location.href='test.html';
