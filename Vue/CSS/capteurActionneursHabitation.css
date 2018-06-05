@@ -1,10 +1,19 @@
 
 
 
+td
+{
+	border:thin solid transparent;
+}
 
 
-
-
+.case
+{
+	background-color:#9998b2;
+	padding:10px;
+	margin:10px;
+	border-radius:6px;
+}
 
 
 
@@ -297,7 +306,7 @@ h1
 	float: right;
 
 }
-=======
+
 
 
 
