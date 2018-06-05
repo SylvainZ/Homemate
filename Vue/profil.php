@@ -11,7 +11,6 @@
 
     <body>
     	<header>
-            <?php include("Vue/headerSansSession.php") ?>
 
         </header>
     	<br/>
