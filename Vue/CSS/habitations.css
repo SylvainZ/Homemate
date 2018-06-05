@@ -1,0 +1,45 @@
+/*carre habitation*/
+.A
+{
+
+	background-color: rgb(4,43,123);
+	position: relative;
+	margin-right:2vw;
+	color:white;
+	border-color:white;
+	border:100vw;
+	text-align:center;
+	padding-top:1vw;
+	padding-bottom:1vw;
+	
+	width:9%;
+	border-color: rgb(0,0,0);
+	
+
+}
+/*carre capteur actionneurs*/
+.B
+{
+background-color: rgb(4,43,123);
+	position: relative;
+	
+	color:white;
+	border:100vw;
+	text-align:center;
+	padding: 0.5vw;
+	padding-top: 0.5vw;
+	margin-right: 2vw;
+	width:9%;
+	border-color: rgb(0,0,0);
+
+}
+
+.entete
+{
+	background: none;
+	display :flex;
+	justify-content :center;
+	margin-bottom:2vw;
+	
+	
+}

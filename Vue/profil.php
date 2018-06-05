@@ -14,7 +14,7 @@
             <?php include("Vue/header.php") ?>
 
         </header>
-    	<br />
+    	<br/>
     	
     	<img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" /><span class="profil">Profil</span>
 
@@ -36,6 +36,7 @@
 					<span class="valeurImporte"> <?php echo $_SESSION['numTel'];?></span>
 						
 					<a href="index.php?cible=modifieProfil	" ><input type=button value = "Modifier le profil" class= "modifProfil"/></a> 
+					</p>
 	    	</div>
 	    	<div class="col2">
 				<p>
@@ -49,7 +50,7 @@
 					<a href="index.php?cible=capteurActionneursHabitations"><span>Gérer la maison</span></a><br/><br/>
 		    	</p>
 	    	</div>
-    	<div/>
+    	</div>
     	
     	    <footer>
             <?php include("Vue/footer.php") ?>
