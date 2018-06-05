@@ -1,0 +1,1 @@
+<?php include('Modele/ajoutPiece2.php')?>

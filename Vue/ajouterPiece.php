@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Ajouter un capteur</title>
-        <link rel="stylesheet" href="ajouterPiece.css"/>
+        <link rel="stylesheet" href="Vue/CSS/ajouterPiece.css"/>
     </head>
 
     <body>
@@ -15,7 +15,7 @@
 
 		<div class="piece">
 
-		<form class="form1" method="post" action="ajoutPiece2.php">
+		<form class="form1" method="post" action="index.php?cible=ajoutPiece">
 			<span class="piece2">Ajouter une pièce</span>
 
 			<div class="champnom ligne1">
