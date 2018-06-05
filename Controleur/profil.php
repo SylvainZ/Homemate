@@ -1,6 +1,3 @@
 <?php
-
-include('Modele/sessionPageProfil.php');
-include('Vue/profil.php');
-
-?>
+session_start();
+include('Vue/profil.php')?>

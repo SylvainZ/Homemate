@@ -1,3 +1,3 @@
-
-
-    <?php include('Vue/boiteMail.php');?>
+<?php 
+session_start();
+include('Vue/boiteMail.php');?>

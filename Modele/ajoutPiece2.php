@@ -23,7 +23,7 @@ if(!empty($_POST['nom'])&&!empty($_POST['type'])&&!empty($_POST['superficie']))
     }
 
 
-    header('Location:ajouterLogement.php');
+    header('ajouterLogement.php');
 
 }
 else

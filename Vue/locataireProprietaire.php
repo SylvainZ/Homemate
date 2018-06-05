@@ -47,7 +47,6 @@
             </div>
 
 <<<<<<< HEAD
-=======
         </div>
 
         <div id="block2">
@@ -185,5 +184,4 @@
     <?php include("Vue/footer.php") ?>
 </footer>
 </body>
->>>>>>> 0cf6ae6669eba26a79acef4b2faf5ea979381325
 </html>

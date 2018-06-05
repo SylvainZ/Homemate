@@ -3,7 +3,8 @@
 <head>
 	<title>Ajouter un logement</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="ajouterLogement.css">
+	<link rel="stylesheet" href="Vue/CSS/ajouterLogement.css">
+	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
 
 <body>

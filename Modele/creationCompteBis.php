@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 if(isset($_POST['nom']))
 {   
 include('connexionBD.php');
@@ -15,10 +15,12 @@ include('connexionBD.php');
             $message="Ce mail est déjà utilisé";
             include('Vue/creerUnCompte.php');          
             $existence=false;
+            break;
         }
 
         else {
             $existence = true;
+            break;
         }
     }
         

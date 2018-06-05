@@ -1,10 +1,19 @@
 
 
 
+td
+{
+	border:thin solid transparent;
+}
 
 
-
-
+.case
+{
+	background-color:#9998b2;
+	padding:10px;
+	margin:10px;
+	border-radius:6px;
+}
 
 
 
@@ -50,6 +59,13 @@ background-color: rgb(4,43,123);
 	width:9%;
 	border-color: rgb(0,0,0);
 
+}
+
+footer
+{
+	position: relative;
+	left: 40%;
+	bottom:0%;
 }
 
 
@@ -290,7 +306,7 @@ h1
 	float: right;
 
 }
-=======
+
 
 
 

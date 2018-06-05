@@ -1,4 +1,4 @@
 <?php 
-        include("Vue/messagerie.php");
-        
-    ?>
+session_start();
+include("Vue/messagerie.php");
+?>

@@ -49,13 +49,11 @@ if(!empty($_POST['dateDeNaissance']&&!empty($_POST['tel'])&&!empty($_POST['statu
             $_SESSION['Email']
             
         ));
-<<<<<<< HEAD
-       
-=======
-            
+
+                   
         /*echo $_SESSION['Email'];
         echo $_POST['tel'];*/
->>>>>>> fef29c5aef269e173b14f0dcbcd3bb034c647572
+
     
     header('Location:index.php?cible=accueil');
 
