@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dabfda98-210d-475e-b79a-3e9fbb537381" name="Default" comment="Merge branch 'master' of https://github.com/SylvainZ/Homemate&#10;&#10;# Conflicts:&#10;#&#9;Vue/capteurActionneursHabitations.php">
-      <change afterPath="$PROJECT_DIR$/.buildpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controleur/ajouterLogement2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controleur/piece.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue/images/appart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue/images/maison.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue/pieces.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controleur/ajouterLogement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/ajouterLogement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controleur/ajouterPiece.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controleur/capteurActionneursHabitations.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/capteurActionneursHabitations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controleur/creerUnCompteBis.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/creerUnCompteBis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controleur/deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/deconnexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modele/ajouterLogement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modele/ajouterLogement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modele/locataireProprietaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modele/locataireProprietaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/AjouterLogement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/AjouterLogement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/ajouterLogement.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/ajouterLogement.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/capteurActionneursHabitation.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/capteurActionneursHabitation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/habitations.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/habitations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/ajouterPiece.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/ajouterPiece.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/capteurActionneursHabitations.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/capteurActionneursHabitations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/habitations.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/habitations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue/locataireProprietaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/locataireProprietaire.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="locataireProprietaire.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="locataireProprietaire.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/locataireProprietaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="986">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
@@ -63,24 +43,31 @@
       <file leaf-file-name="locataireProprietaire.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="26" column="104" selection-start-line="26" selection-start-column="104" selection-end-line="26" selection-end-column="104" />
+            <state relative-caret-position="850">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="locataireproprietaire.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-146" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="styleLocProp.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
+            <state relative-caret-position="432">
               <caret line="256" column="20" selection-start-line="256" selection-start-column="20" selection-end-line="256" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styleBoiteMail.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -106,11 +93,12 @@
         <option value="$PROJECT_DIR$/Vue/CSS/styleAdminPerso.css" />
         <option value="$PROJECT_DIR$/Vue/CSS/styleAdminUser.css" />
         <option value="$PROJECT_DIR$/Controleur/deconnexion.php" />
-        <option value="$PROJECT_DIR$/Vue/locataireProprietaire.php" />
         <option value="$PROJECT_DIR$/Controleur/creerUnCompteBis.php" />
-        <option value="$PROJECT_DIR$/Modele/locataireProprietaire.php" />
         <option value="$PROJECT_DIR$/Vue/capteurActionneursHabitations.php" />
         <option value="$PROJECT_DIR$/Controleur/ajoutCapteur2.php" />
+        <option value="$PROJECT_DIR$/Modele/locataireProprietaire.php" />
+        <option value="$PROJECT_DIR$/Vue/locataireProprietaire.php" />
+        <option value="$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css" />
       </list>
     </option>
   </component>
@@ -133,7 +121,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1059" />
@@ -147,7 +135,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,8 +164,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,6 +259,7 @@
       <workItem from="1528141388665" duration="695000" />
       <workItem from="1528142119975" duration="273000" />
       <workItem from="1528142426410" duration="312000" />
+      <workItem from="1528310432122" duration="795000" />
     </task>
     <task id="LOCAL-00001" summary="changement emplacement fichier js">
       <created>1528114606579</created>
@@ -283,65 +272,45 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25075000" />
+    <option name="totallyTimeSpent" value="25833000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info id="Image Layers" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50121456" side_tool="true" weight="0.3291592" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49878544" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.225605" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32955465" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50121456" side_tool="true" weight="0.3291592" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.32793522" />
-      <window_info id="Learn" order="6" weight="0.32955465" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24939272" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32955465" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50121456" side_tool="true" weight="0.3291592" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32955465" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32955465" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49878544" visible="true" weight="0.3283582" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49878544" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32955465" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22014052" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32955465" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24939272" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32955465" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
+      <window_info id="Learn" order="6" weight="0.32955465" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32955465" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,13 +365,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="171" column="14" selection-start-line="171" selection-start-column="14" selection-end-line="171" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3655">
@@ -429,13 +391,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/inscription.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="256" column="20" selection-start-line="256" selection-start-column="20" selection-end-line="256" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/messagerie.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -614,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Modele/locataireProprietaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="986">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -638,18 +593,6 @@
         <state>
           <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="26" column="104" selection-start-line="26" selection-start-column="104" selection-end-line="26" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/creerUnCompte.php">
@@ -680,6 +623,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homemate2.sql">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="256" column="20" selection-start-line="256" selection-start-column="20" selection-end-line="256" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
