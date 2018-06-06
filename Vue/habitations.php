@@ -23,6 +23,12 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
 	<header>
 			<?php include("header.php") ?>
 	</header>
+	
+	<dialog id='form'>
+	<a href="index.php?cible=ajoutPiece"><input type="button" id="save" name="" value="+"></a>
+	<input type="button" id="save" name="" value="x" onclick="javascript:fermer_fenetre();">
+	
+	</dialog>
 
 	
 	
@@ -37,7 +43,7 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
                 <?php
                 while ($donnees1 = $habitation->fetch()){
                     ?>
-                    <td>
+	                  <td>
                         <div class="case">
                             <span> </span><?php
                             if ($donnees1['Type']=='appartement')
@@ -70,6 +76,21 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
    	<footer>
             <?php include("Vue/footer.php") ?>
     </footer>
+    
+    <script type="text/javascript">
+
+	function ouvrir_fenetre()
+	{
+
+			document.getElementById("form").showModal();
+	}
+
+	function fermer_fenetre()
+	{
+			document.getElementById("form").close();
+	}
+
+	</script>
    
 	<!--<script>
 	function ajouterLigne(id)
