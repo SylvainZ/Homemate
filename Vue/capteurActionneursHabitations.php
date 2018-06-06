@@ -19,7 +19,6 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 
 	<title>Capteurs/Actionneurs</title>
 
-
 	<link href="Vue/CSS/capteurActionneursHabitation.css" rel="stylesheet">
 	<link href="Vue/CSS/all.css" rel="stylesheet">
 </head>

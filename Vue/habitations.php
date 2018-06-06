@@ -48,12 +48,12 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
                             <span> </span><?php
                             if ($donnees1['Type']=='appartement')
                             {?>
-                                <img class="styleHabitation" src="Vue/images/appart.png" alt="image appartement">
+                               <a href ="index.php?cible=piece&ID=<?php echo $donnees1['ID']?>"> <img class="styleHabitation" src="Vue/images/appart.png" alt="image appartement"></a>
                             <?php
                             }
                             elseif ($donnees1['Type']=='maison')
                             {?>
-                                <img class="styleHabitation" src="Vue/images/maison.png" alt="image maison" height="112">
+                              <a href ="index.php?cible=piece&ID=<?php echo $donnees1['ID']?>">  <img class="styleHabitation" src="Vue/images/maison.png" alt="image maison" height="112"></a>
                             <?php
                             }
                             ?>
@@ -62,6 +62,7 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
                             <span><?php echo $donnees1['Adresse']?></span><br>
                             <span> Nombre de Pièce : </span><?php echo $donnees1['NombrePiece']?> <br>
                             <span> Surface : </span><?php echo $donnees1['Superficie']; ?> <span>m²</span>
+ 
                             </div>
                         </div>
                     </td>

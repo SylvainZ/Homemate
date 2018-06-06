@@ -1,3 +1,3 @@
 <?php
 session_start();
-include('Vue/pieces.php');?>
+include('Vue/piece.php');?>
