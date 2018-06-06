@@ -23,6 +23,12 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
 	<header>
 			<?php include("header.php") ?>
 	</header>
+	
+	<dialog id='form'>
+	<a href="index.php?cible=ajoutPiece"><input type="button" id="save" name="" value="+"></a>
+	<input type="button" id="save" name="" value="x" onclick="javascript:fermer_fenetre();">
+	
+	</dialog>
 
 	
 	
@@ -37,17 +43,17 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
                 <?php
                 while ($donnees1 = $habitation->fetch()){
                     ?>
-                    <td>
+	                  <td>
                         <div class="case">
                             <span> </span><?php
                             if ($donnees1['Type']=='appartement')
                             {?>
-                                <img class="styleHabitation" src="Vue/images/appart.png" alt="image appartement">
+                               <a href ="index.php?cible=piece&ID=<?php echo $donnees1['ID']?>"> <img class="styleHabitation" src="Vue/images/appart.png" alt="image appartement"></a>
                             <?php
                             }
                             elseif ($donnees1['Type']=='maison')
                             {?>
-                                <img class="styleHabitation" src="Vue/images/maison.png" alt="image maison" height="112">
+                              <a href ="index.php?cible=piece&ID=<?php echo $donnees1['ID']?>">  <img class="styleHabitation" src="Vue/images/maison.png" alt="image maison" height="112"></a>
                             <?php
                             }
                             ?>
@@ -56,6 +62,7 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
                             <span><?php echo $donnees1['Adresse']?></span><br>
                             <span> Nombre de Pièce : </span><?php echo $donnees1['NombrePiece']?> <br>
                             <span> Surface : </span><?php echo $donnees1['Superficie']; ?> <span>m²</span>
+ 
                             </div>
                         </div>
                     </td>
@@ -70,6 +77,21 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
    	<footer>
             <?php include("Vue/footer.php") ?>
     </footer>
+    
+    <script type="text/javascript">
+
+	function ouvrir_fenetre()
+	{
+
+			document.getElementById("form").showModal();
+	}
+
+	function fermer_fenetre()
+	{
+			document.getElementById("form").close();
+	}
+
+	</script>
    
 	<!--<script>
 	function ajouterLigne(id)

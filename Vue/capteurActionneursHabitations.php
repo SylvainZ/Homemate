@@ -19,8 +19,6 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 
 	<title>Capteurs/Actionneurs</title>
 
-	<title>G�rer la maison</title>
-
 	<link href="Vue/CSS/capteurActionneursHabitation.css" rel="stylesheet">
 	<link href="Vue/CSS/all.css" rel="stylesheet">
 </head>
@@ -56,7 +54,10 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 										?>
 										<td>
 										<div class="case">
-										<span> Nom : </span><?php echo $donnees1['nom']?><br>
+										<?php 
+										$type1 = explode('-',$donnees1['nom']);
+                                        $type = $type1[1];
+                                        echo $type ?><br>
 										<span> Pièce : </span><?php echo $donnees1['piece']?> <br>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
@@ -84,7 +85,10 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 										?>
 										<td>
 										<div class="case">
-										<span> Nom : </span><?php echo $donnees1['nom']?><br>
+										<?php
+										$type1 = explode('-',$donnees1['nom']);
+                                        $type = $type1[1];
+                                        echo $type ?><br>
 										<span> Pièce : </span><?php echo $donnees1['piece']?> <br>
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
@@ -109,7 +113,10 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 										?>
 										<td>
 										<div class="case">
-										<span> Nom : </span><?php echo $donnees1['nom']?><br>
+										<?php
+										$type1 = explode('-',$donnees1['nom']);
+										$type = $type1[1];
+										echo $type?><br>
 										<span> Pièce : </span><?php echo $donnees1['piece']?> <br>
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>

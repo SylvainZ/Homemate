@@ -14,8 +14,6 @@
 			<?php include("header.php"); ?>
 		</header>
 
-			<img class="imageLettre" src="images/lettre.png" alt="image logo">
-			<img class="logo" src="images/logo_nouvo.png" alt="image logo">
 			<h2>Message</h2>
 			<div class="case">	
 				<div class="positionColonne">		
