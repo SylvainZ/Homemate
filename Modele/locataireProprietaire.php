@@ -50,7 +50,11 @@ if(!empty($_POST['dateDeNaissance']&&!empty($_POST['tel'])&&!empty($_POST['statu
             
         ));
 
+<<<<<<< HEAD
 
+=======
+                   
+>>>>>>> 593c0cfccc6c43b9314e40517b0acfeca5d8c98a
         /*echo $_SESSION['Email'];
         echo $_POST['tel'];*/
 

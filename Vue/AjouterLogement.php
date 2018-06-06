@@ -3,13 +3,14 @@
 <head>
 	<title>Ajouter un logement</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/ajouterLogement.css">
+	<link rel="stylesheet" href="Vue/CSS/ajouterLogement.css">
+    <link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
 
 <body>
 
 <header>
-        <?php include("header.php") ?>;
+        <?php include("header.php") ?>
 
 </header>
 
@@ -17,15 +18,14 @@
 
 	<div class="logement">
 
-		<form class="form1" method="post"  action="index.php?cible=ajoutLogement">
+		<form class="form1" method="post"  action="index.php?cible=ajouterLogement2">
 			<span class="log">Ajouter un logement</span>
 
 			<div class="champnom ligne1">
 				<label for="type" class="inputNom">Type <br></label>
 				<select name="type" id="type" required/>
 					<option value="appartement">Appartement</option>
-					<option value="Maison>Maison</option>
-					<option value="Immeuble">Immeuble</option>
+					<option value="maison">Maison</option>
 				</select>
 			<br>	
 			</div>
@@ -46,7 +46,7 @@
 			</div>
 			
 			<div class="champnom ligne3">			
-				<label for="piece" class="inputNom">Nombre de piÃ¨ces</label><br>
+				<label for="piece" class="inputNom">Nombre de pièces</label><br>
 				<input type="text" name="piece" id="piece"/>
 			</div>
 			
@@ -69,7 +69,7 @@
 </section>
 
 <footer>
-	<p>Copyright 2018 HomeMate | Tous droits rÃ©servÃ©s</p>
+	<p>Copyright 2018 HomeMate | Tous droits réservés</p>
 </footer>
 
 </body>

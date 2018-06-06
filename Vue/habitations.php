@@ -1,18 +1,13 @@
-
 <?php
-
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
 }
-
 catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-$temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece = \'1\'');
-$lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece = \'1\'');
-$pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece = \'1\'');
+$habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['ID'].'\'\'1\'');
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,15 +31,33 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
 	<button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>
 	</div>
 	
-	<table class="tableau" border="1">
+	<table class="tableau">
 		<tbody>
 			<tr id="ligne1">
                 <?php
-                while ($donnees = $temp->fetch()){
+                while ($donnees1 = $habitation->fetch()){
                     ?>
-
                     <td>
-                        <?php echo $donnees['nom'].'<span> Dans la </span>'.$donnees['piece'].' <span>, il fait </span>'.$donnees['temperature'].'<span> �C</span>'; ?>
+                        <div class="case">
+                            <span> </span><?php
+                            if ($donnees1['Type']=='appartement')
+                            {?>
+                                <img class="styleHabitation" src="Vue/images/appart.png" alt="image appartement">
+                            <?php
+                            }
+                            elseif ($donnees1['Type']=='maison')
+                            {?>
+                                <img class="styleHabitation" src="Vue/images/maison.png" alt="image maison" height="112">
+                            <?php
+                            }
+                            ?>
+                                <br>
+                            <div class="info">
+                            <span><?php echo $donnees1['Adresse']?></span><br>
+                            <span> Nombre de Pièce : </span><?php echo $donnees1['NombrePiece']?> <br>
+                            <span> Surface : </span><?php echo $donnees1['Superficie']; ?> <span>m²</span>
+                            </div>
+                        </div>
                     </td>
                 <?php }?>
                 <td><a href="index.php?cible=ajouterLogement"><input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
@@ -58,20 +71,18 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece
             <?php include("Vue/footer.php") ?>
     </footer>
    
-	<script>
+	<!--<script>
 	function ajouterLigne(id)
 	{
 	var tableau = document.getElementById(id);
-
 	var ligne = document.getElementById(id);//on a ajout� une ligne
-
 	var colonne1 = ligne.insertCell(0);//on a une ajout� une cellule
 	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
 	
 	//document.location.href='test.html';
 	}
 	
-	</script>
+	</script>-->
 
 </body>
 
