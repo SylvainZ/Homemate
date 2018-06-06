@@ -89,7 +89,7 @@
                         <option value="bd">boulevard</option>
                         <option value="ave">avenue</option>
                         <option value="imp">impasse</option>
-                        <option value="pont">pont/option>
+                        <option value="pont">pont</option>
                     </select>
                 </div>
 

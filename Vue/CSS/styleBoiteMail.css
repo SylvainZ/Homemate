@@ -122,7 +122,8 @@ body
 {
 	text-decoration:none;
 	color:white;
-
+	display:flex;
+	text-align: left;
 	justify-content: space-between;
 	background-color: #9998b2;
 	padding-left:1.5em;
@@ -155,8 +156,8 @@ body
 .messageIndDate
 {
     text-align:left;
-    margin-left:34vw ;
-    position: absolute;
+    margin-left:32vw ;
+    position: relative;
     color:white;
     text-decoration:none;
 

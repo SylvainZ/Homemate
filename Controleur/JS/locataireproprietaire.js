@@ -58,6 +58,7 @@ function cgu() {
         return false;
     }
     if (age < 18) {
+        document.getElementById("naissance").focus();
         document.getElementById("nonAge").innerHTML="Vous devez avoir plus de 18 ans";
     	return false;
     }
