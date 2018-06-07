@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -9,37 +10,36 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-$temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND iduser =\''.$_SESSION['ID'].'\'');
-$lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
-$pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
-$rows=array();
-$i=0;
+if(isset($_GET['ID'])){
+    $id=$_GET['ID'];
+    $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece =\''.$_GET['ID'].'\'');
+    $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece=\''.$_GET['ID'].'\'');
+    $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece=\''.$_GET['ID'].'\'');
+}
+
+
 ?>
+
+<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<title>Capteurs/Actionneurs</title>
-
-	<link href="Vue/CSS/capteurActionneursHabitation.css" rel="stylesheet">
-	<link href="Vue/CSS/all.css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Habitations</title>
+	<link rel="stylesheet" href="Vue/CSS/capteur.css">
+	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
 
 <body>
 
 	<header>
-			<?php include("header.php"); ?>
+			<?php include("header.php") ?>
 	</header>
 	
-	<div id="en-tete" class="entete">
-    <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>
-    <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
-</div>
 	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
-		<div class="bouton">
+
 		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
-		</div>
+
 			<div class="tonDiv1" id="tonDiv1">
 				<div class="couleur1">
 					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');">Luminosit�</button>
@@ -78,7 +78,7 @@ $i=0;
 										<?php }?>
 
 
-										 <td id="case"></td>
+										 <td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td> 
 
 										</tr>
 									</tbody>
@@ -121,7 +121,7 @@ $i=0;
 										</div>
 										</td>
 										<?php }?>
-										<td></td>
+										<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -162,7 +162,7 @@ $i=0;
 										</td>
 										<?php }?>
 										
-											<td></td>
+											<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -236,29 +236,4 @@ $i=0;
     return true;
 }
 </script>
-
-
-<!--
-
-
-	function ajouterLigne(id)
-	{
-	var tableau = document.getElementById(id);
-
-	var ligne = document.getElementById(id);//on a ajout� une ligne
-
-	var colonne1 = ligne.insertCell(0);//on a une ajout� une cellule
-	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
-	
-	//document.location.href='test.html';
-	}
-	
-	</script>
-	
-	-->
-
-
-
-
-</body>
 </html>

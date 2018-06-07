@@ -10,13 +10,13 @@
     <body>
     
 <header>
-        <?php include("header.php") ?>;
+        <?php include("header.php") ?>
 
 </header>
 
 		<div class="piece">
 
-		<form class="form1" method="post" action="index.php?cible=ajoutPiece2">
+		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>">
 			<span class="piece2">Ajouter une pièce</span>
 
 			<div class="champnom ligne1">
@@ -26,8 +26,16 @@
 
 			<div class="champnom ligne1 colonne1">
 				<label for="type" class="inputNom">Type</label><br>
-				<input type="text" name="type" id="type"/>
-			</div>
+					<select name="type" id="type" required/>
+					<option value="salon">Salon</option>
+					<option value="salle de bain">Salle de bain</option>
+					<option value="cuisine">Cuisine</option>
+					<option value="chambre">Chambre</option>
+					<option value="garage">Garage</option>
+					<option value="toilettes">Toilettes</option>
+					<option value="autres">Autres</option>
+				</select>			
+				</div>
 
 			<div class="champnom ligne2">
 				<label for="Superficie" class="inputNom">Superficie</label><br>
@@ -41,6 +49,7 @@
 			</div>
 
 		</form>	
+	
 
 	</div>
 	    <footer>
