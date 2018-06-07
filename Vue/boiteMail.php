@@ -81,12 +81,12 @@
 										echo '<div class="message">';
 
 											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
-											<a href="index.php?cible=pageMessage&message='.$i.'">
-												<span class="messageIndSujet">'.$_SESSION['sujet'][$i].'</span> </a>
-											<a href="index.php?cible=pageMessage&message='.$i.'">	
-												<span class="messageIndExp">'.$_SESSION['expediteur'][$i].'</span></a>
-											<a href="index.php?cible=pageMessage&message='.$i.'">	
-												<span class="messageIndDate">'.$_SESSION['date'][$i].'</span></a>
+											<a href="index.php?cible=pageMessage&message='.$i.'" class="messageIndSujet">
+												<span >'.$_SESSION['sujet'][$i].'</span> </a>
+											<a href="index.php?cible=pageMessage&message='.$i.'" class="messageIndExp">	
+												<span >'.$_SESSION['expediteur'][$i].'</span></a>
+											<a href="index.php?cible=pageMessage&message='.$i.'" class="messageIndDate">	
+												<span >'.$_SESSION['date'][$i].'</span>
 											</a>';
 										echo '</div>';
 									}
