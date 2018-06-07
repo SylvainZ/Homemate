@@ -12,8 +12,12 @@ catch(Exception $e)
 $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND iduser =\''.$_SESSION['ID'].'\'');
 $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
 $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
-$rows=array();
-$i=0;
+$nbLigne=0;
+$nbLigne2=0;
+$nbLigne3=0;
+$nbColonne=5;
+$nbColonne2=5;
+$nbColonne3=5;
 ?>
 <html>
 <head>
@@ -45,12 +49,14 @@ $i=0;
 					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');">Luminosit�</button>
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
-	 							<table class="tableau" border="1">
-									<tbody>
-										<tr id="ligne1">
-										<?php 
+	 					<?php echo 	'<table class="tableau"><tbody>
+										<tr id="ligne1">';
 										while ($donnees1 = $lumi->fetch()){
-										   // $rows[]=
+										  if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0){
+										      echo '</tr><tr>';
+										      $nbLigne=0;
+                                          }
+
 										?>
 										<td>
 										<div class="case">
@@ -75,27 +81,31 @@ $i=0;
 										</div>
 										</td>
 
-										<?php }?>
+										<?php $nbLigne++;}?>
 
 
 										 <td id="case"></td>
 
-										</tr>
-									</tbody>
-								</table>
+								<?php echo "</tbody>
+								</table>";?>
 							</div>
 						</div>
 				</div>
+
 				<div class="couleur1">
 	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Temp�rature</button>
 	 					<div class="tonDiv3" id="tonDiv3">
 	 						<div class="luminosite">
-		 						<table class="tableau" border="1">
+		 				<?php echo	'<table class="tableau">
 									<tbody>
-										<tr id="ligne2">
-										<?php 
+										<tr id="ligne2">';
 										while ($donnees1 = $temp->fetch()){
                                             $id=$donnees1['id'];
+                                            if (($nbLigne2 % $nbColonne2) ==0 && $nbLigne2 !=0) {
+                                                echo '</tr><tr>';
+                                                $nbLigne2 = 0;
+                                            }
+
 										?>
 										<td>
 										<div class="case">
@@ -114,17 +124,23 @@ $i=0;
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                            <span><?php echo $donnees1['piece']?></span> <br>
+                                        <span><?php echo $donnees1['piece']?></span> <br>
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
 										</td>
+<<<<<<< HEAD
 										<?php }?>
 										<td></td>
 										</tr>
 									</tbody>
 								</table>
+=======
+                                            <?php $nbLigne2++;}?>
+										<td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+
+							<?php	echo	'</tbody>
+								</table>';?>
+>>>>>>> be3021b4dc5afd096559780f905fcd4c8855ca05
 							</div>
 						</div>
 				</div>
@@ -132,12 +148,16 @@ $i=0;
 					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">D�tecteur de mouvement</button>
 	 					<div class="tonDiv4" id="tonDiv4">
 	 						<div class="luminosite">
-		 						<table class="tableau" border="1">
+		 				<?php	echo	'<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne3">
-										<?php 
+										<tr id="ligne3">';
+
 										while ($donnees1 = $pres->fetch()){
 										    $id=$donnees1['id'];
+                                            if (($nbLigne3 % $nbColonne3) ==0 && $nbLigne3 !=0) {
+                                                echo '</tr><tr>';
+                                                $nbLigne3 = 0;
+                                            }
 										?>
 										<td>
 										<div class="case">
@@ -160,12 +180,18 @@ $i=0;
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
-										<?php }?>
+                                            <?php $nbLigne3++;}?>
 										
+<<<<<<< HEAD
 											<td></td>
 										</tr>
 									</tbody>
 								</table>
+=======
+											<td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+                                <?php	echo '</tbody>
+								</table>';?>
+>>>>>>> be3021b4dc5afd096559780f905fcd4c8855ca05
 							</div>
 	 					</div>
 	 			</div>
