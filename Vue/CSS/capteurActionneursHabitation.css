@@ -1,6 +1,12 @@
-.bouton
+.centre
 {
-	
+	position:absolute;
+	right:48vw;
+	padding-bottom:2vw;;
+}
+.bande
+{
+	height:3vw;
 }
 
 td
@@ -136,13 +142,13 @@ border:none;
 
 }
 #bouton{
-	
+
 	right:100%;
 	border-radius: 5%;
-	border-style:solid;
-	border-color: white;
+	border:none;
 	color: white;
 	background-color: #2f0c1b;
+	height:3vw;
 
 }
 #bouton2{
@@ -174,7 +180,6 @@ border:none;
 }
 .menu
 {
-	
 	background-color: #2f0c1b;
 }
 
@@ -297,4 +302,3 @@ button.active
     position: relative;
 bottom: 8px;
 }
-

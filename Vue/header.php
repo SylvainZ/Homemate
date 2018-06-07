@@ -45,12 +45,13 @@
                             <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
                         <ul>
                             <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
+                            <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">Gérer la maison</a> </li>
                             <li><a href="index.php?cible=deconnexion" class="barre">Deconnexion</a> </li>
                         </ul>
                         </li>
 
                         <li>
-                            <a href="#">Besoin d'aide ?</a>
+                            <a href="Vue/faq.php">Besoin d'aide ?</a>
                         </li>
                 </ul>
                 </div>
@@ -76,7 +77,7 @@
                         </li>
 
                         <li>
-                               <a href="#" class="barre">Besoin d'aide ?</a>
+                               <a href="Vue/faq.php" class="barre">Besoin d'aide ?</a>
                         </li>
                 </ul>
             </div>

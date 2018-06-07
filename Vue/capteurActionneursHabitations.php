@@ -42,7 +42,11 @@ $nbColonne3=5;
 	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
 		<div class="bouton">
-		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
+		<div class="bande">
+		<div class="centre">
+		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');"><h2>Capteurs</h2></button>
+		</div>
+		</div>
 		</div>
 			<div class="tonDiv1" id="tonDiv1">
 				<div class="couleur1">
@@ -128,19 +132,13 @@ $nbColonne3=5;
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
 										</td>
-<<<<<<< HEAD
-										<?php }?>
-										<td></td>
-										</tr>
-									</tbody>
-								</table>
-=======
+
                                             <?php $nbLigne2++;}?>
-										<td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										
 
 							<?php	echo	'</tbody>
 								</table>';?>
->>>>>>> be3021b4dc5afd096559780f905fcd4c8855ca05
+
 							</div>
 						</div>
 				</div>
@@ -181,17 +179,16 @@ $nbColonne3=5;
 										</div>
 										</td>
                                             <?php $nbLigne3++;}?>
-										
-<<<<<<< HEAD
+
 											<td></td>
 										</tr>
 									</tbody>
 								</table>
-=======
-											<td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+
+											
                                 <?php	echo '</tbody>
 								</table>';?>
->>>>>>> be3021b4dc5afd096559780f905fcd4c8855ca05
+
 							</div>
 	 					</div>
 	 			</div>
