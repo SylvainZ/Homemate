@@ -11,7 +11,7 @@ catch(Exception $e)
 }
 if(isset($_GET['ID'])){
     $id=$_GET['ID'];
-
+    $piece = $bdd->query('SELECT * FROM logement WHERE ID =\''.$_GET['ID'].'\'');
 }
 
 ?>
@@ -21,7 +21,7 @@ if(isset($_GET['ID'])){
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Habitations</title>
-	<link rel="stylesheet" href="Vue/CSS/habitations.css">
+	<link rel="stylesheet" href="Vue/CSS/piece.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
 
@@ -30,12 +30,26 @@ if(isset($_GET['ID'])){
 	<header>
 			<?php include("header.php") ?>
 	</header>
+	
 <?php 
-$piece = $bdd->query('SELECT * FROM logement WHERE ID_logement =\''.$id.'\'');
-	 for($i=1;$i<=$piece['NombrePiece'];$i++){  
+    while($donnees = $piece->fetch()){
+	 for($i=1;$i<=$donnees['NombrePiece'];$i++){  
 	     $y=$i+1;?>
-			
-		<?php }?>
+	     <div class="menu"> <!--bouton 1 et background-->
+
+		<button class="Bouton" onclick="javascript:afficher_cacher('tonDiv1');"><?php echo 'Piece '.$i.''?></button>
+
+			<div class="tonDiv1" id="tonDiv<?php echo ".$i."?>">
+				<div class="couleur1">
+						<div class="tonDiv2" id="tonDiv<?php echo ".$y."?>">
+							<div class="luminosite">
+	 							<span>nhdfhndf</span>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<?php }}?>
 	
 	
 	

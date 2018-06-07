@@ -1,0 +1,54 @@
+.menu
+{
+	
+	background-color: #2f0c1b;
+
+}
+/*Personnalisation des boutons envoyer et effacer*/
+.bouton
+{
+	border-radius:5px;
+	width:30%;
+	height:27px;
+	background-color:#635c8e;
+	color:white;
+	background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
+	box-shadow:none;
+	position: relative;
+	left: 20%;
+}
+.Bouton{
+
+	right:100%;
+	border-radius: 5%;
+	border-style:solid;
+	border-color: white;
+	color: white;
+	background-color: #2f0c1b;
+
+}
+/*couleur pour la bande des boutons*/
+.couleur1
+{
+
+	background-color: #471229 ;
+	margin-left: 3%;
+}
+
+
+#tonDiv1{
+
+
+background-color:#6a1b3d;
+border:none;
+
+}
+/*bouton luminosité*/
+#bouton_tonDiv2{
+	position: relative;
+	left:0%;
+	border:none;
+	color: white;
+	background-color: #471229;
+
+}
