@@ -15,6 +15,7 @@
 			<?php include("header.php"); ?>
 		</header>
 
+        <div id="page">
     	<br />
     	<div class="en_tete">
     		<img src="Vue/images/lettre.png" class="iconeLettre" alt="Icône lettre"/> <h1>Envoyer un message</h1>
@@ -36,7 +37,7 @@
 	       		<input type="submit"  class="zoneEnvoie" name="Envoyer" value="Envoyer"/>
 	    	</p>
 	    </div>
-
+        </div>
 	    <footer>
 			<?php include("footer.php"); ?>
     	</footer>

@@ -17,6 +17,8 @@
             <?php include("Vue/header.php") ?>
 
         </header>
+
+        <div id="page">
         <div class="titre">BIENVENUE CHEZ HOMEMATE</div>
 
         <br/><br/>
@@ -30,7 +32,7 @@
             <br/>
 
         </section>
-
+        </div>
         <br/> <br/>
 
         <footer>

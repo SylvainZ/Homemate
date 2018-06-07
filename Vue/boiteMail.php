@@ -15,7 +15,7 @@
 		<header>
 			<?php include("header.php") ?>
 		</header>
-
+<div id="page">
     	<!--Logo
     		<img src="images/homemate2.png" alt="logo HomeMate" id="logo"/>-->
 
@@ -105,13 +105,13 @@
 	    	</section>
 	    </div>
 
-	    
+
+</div>
 
 
 
-    	<footer>
     		<?php include("footer.php") ?>
-    	</footer>
+
 
 		<script type="text/javascript" src="Controleur/JS/cocher.js"></script>
     </body>
