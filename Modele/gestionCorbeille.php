@@ -1,19 +1,12 @@
 
 <?php
-session_start();
+
 
 // Connexion à la base de données
 switch($_POST["selection"]){
-	case 'restorer' :
+	case 'restaurer' :
 
-	try
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-	}
-	catch(Exception $e)
-	{
-			die('Erreur : '.$e->getMessage());
-	}
+	include('connexionBD.php');
 
 	// Récupération des 10 derniers messages
 
@@ -25,7 +18,7 @@ switch($_POST["selection"]){
 			}
 			catch(Exception $e)
 			{
-				echo 'Message non restoré !';
+				echo 'Message non restauré !';
 			}
 
 		}
@@ -40,5 +33,5 @@ switch($_POST["selection"]){
 	
 
 }
-header('Location: corbeilleRecherche.php');
+header('Location: index.php?cible=corbeilleRecherche');
 ?>

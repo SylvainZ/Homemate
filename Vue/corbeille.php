@@ -28,14 +28,14 @@
 	    		<p>
 		    		<a href="index.php?cible=corbeille"><input type="button" value="Nouveau message" class="nouveau"/></a>
 		    		<div><a href="index.php?cible=boiteMailReception" class="liste">Liste des messages</a></div><br/>
-		    		<div><a href="index.php?cible=corbeille" class="corbeille">Corbeille</a></div>
+		    		<div><a href="index.php?cible=corbeilleRecherche" class="corbeille">Corbeille</a></div>
 	    		</p>
 	    	</section>
 
 	    	<!--Liste des messages-->
 	    	<section class="rectangle">
 	    		<!--Début du formulaire-->
-	    		<form action="Modele/gestionCorbeille.php" method="post" name="F1">
+	    		<form action="index.php?cible=gestionCorbeille" method="post" name="F1">
 	    			<p>
 		    			<!--En-tête du bloc Liste des messages-->
 						<div class="debut">
@@ -44,7 +44,7 @@
 								<label for="selection">Pour la sélection : </label>
 									<input type='submit'>
 										<select name="selection" id="selection">
-											<option value="restaurer">Restorer</option>
+											<option value="restaurer">Restaurer</option>
 											<option value="supprimer">Supprimer définitivement</option>
 										</select><br/>
 									</input>
@@ -75,17 +75,17 @@
 							for ($i = 0; $i < 10; $i++){
 								/*Vérification de l'existence des variables*/
 								if (isset($_SESSION['sujet'][$i])&& isset($_SESSION['expediteur'][$i])&&isset($_SESSION['date'][$i])){
-									if($_SESSION['corbeille'][$i]){
+									if($_SESSION['corbeille'][$i]==1){
 										/*Ligne d'un message*/
 										echo '<div class="message">';
 
 											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
 											<a href="index.php?cible=pageMessage.php?message='.$i.'">
-												<span class="messageIndividuel">'.$_SESSION['sujet'][$i].'</span> </a>
+												<span class="messageIndSujet">'.$_SESSION['sujet'][$i].'</span> </a>
 											<a href="index.php?cible=pageMessage.php?message='.$i.'">	
-												<span class="messageIndividuel">'.$_SESSION['expediteur'][$i].'</span></a>
+												<span class="messageIndExp">'.$_SESSION['expediteur'][$i].'</span></a>
 											<a href="index.php?cible=pageMessage.php?message='.$i.'">	
-												<span class="messageIndividuel">'.$_SESSION['date'][$i].'</span></a>
+												<span class="messageIndDate">'.$_SESSION['date'][$i].'</span></a>
 											</a>';
 										echo '</div>';
 									}

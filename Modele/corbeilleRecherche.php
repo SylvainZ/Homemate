@@ -35,5 +35,5 @@ $_SESSION['reception']=$reception;
 $_SESSION['id']=$id;
 $_SESSION['corbeille']=$corbeille;
 
-header('Location: ..	/index.php?cible=corbeille');
+header('Location: index.php?cible=corbeille');
 ?>

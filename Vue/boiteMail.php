@@ -28,7 +28,7 @@
 	    		<p>
 		    		<a href="index.php?cible=messagerie"><input type="button" value="Nouveau message" class="nouveau"/></a>
 		    		<div><a href="index.php?cible=boiteMailReception" class="liste">Liste des messages</a></div><br/>
-		    		<div><a href="index.php?cible=corbeille" class="corbeille">Corbeille</a></div>
+		    		<div><a href="index.php?cible=corbeilleRecherche" class="corbeille">Corbeille</a></div>
 	    		</p>
 	    	</section>
 
@@ -76,7 +76,7 @@
 							for ($i = 0; $i < 10; $i++){
 								/*Vérification de l'existence des variables*/
 								if (isset($_SESSION['sujet'][$i])&& isset($_SESSION['expediteur'][$i])&&isset($_SESSION['date'][$i])){
-									if(!$_SESSION['corbeille'][$i]){
+									if($_SESSION['corbeille'][$i]==0){
 										/*Ligne d'un message*/
 										echo '<div class="message">';
 
