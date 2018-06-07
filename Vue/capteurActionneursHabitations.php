@@ -12,6 +12,7 @@ catch(Exception $e)
 $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND iduser =\''.$_SESSION['ID'].'\'');
 $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
 $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
+
 $nbLigne=0;
 $nbLigne2=0;
 $nbLigne3=0;
@@ -39,12 +40,13 @@ $nbColonne3=5;
     <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>
     <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
 </div>
-	<div id="global"><div id="grandmenu">
+	<div id="global">
+	<div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
 		<div class="bouton">
 		<div class="bande">
 		<div class="centre">
-		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');"><h2>Capteurs</h2></button>
+		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');"><span class="style">Capteurs</span></button>
 		</div>
 		</div>
 		</div>
@@ -60,6 +62,7 @@ $nbColonne3=5;
 										      echo '</tr><tr>';
 										      $nbLigne=0;
                                           }
+                                          
 
 										?>
 										<td>
@@ -79,8 +82,11 @@ $nbColonne3=5;
                                                 </div>
                                             </div>
 
-
-                                            <span><?php echo $donnees1['piece']?></span> <br>
+										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
+                                         
+                                            while ($donnees2 = $nomPiece->fetch()){?>
+                                            
+                                                <span><?php echo $donnees2['Nom'];}?></span> <br>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
@@ -128,7 +134,11 @@ $nbColonne3=5;
                                                     </div>
                                                 </div>
                                             </div>
-                                        <span><?php echo $donnees1['piece']?></span> <br>
+                                   <?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
+                                         
+                                            while ($donnees2 = $nomPiece->fetch()){?>
+                                            
+                                        <span><?php echo $donnees2['Nom'];}?></span> <br>
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
 										</td>
@@ -172,9 +182,11 @@ $nbColonne3=5;
                                                     </div>
                                                 </div>
                                             </div>
-
-
-                                            <span><?php echo $donnees1['piece']?> </span><br>
+										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
+                                         
+                                            while ($donnees2 = $nomPiece->fetch()){?>
+                                            
+                                        <span><?php echo $donnees2['Nom'];}?></span> <br>
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>

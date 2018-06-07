@@ -1,4 +1,12 @@
 <?php 
 session_start();
-include("Vue/messagerie.php");
+
+if(isset($_POST['nom']) && !empty($_POST['nom'])){
+	include("Modele/envoieMessage.php");
+	
+}
+else{
+	include("Vue/messagerie.php");
+}
+
 ?>
