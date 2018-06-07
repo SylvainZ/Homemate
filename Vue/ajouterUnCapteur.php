@@ -50,17 +50,6 @@
 						<option value="neuf">Neuf</option>
 					</select> 	Le nouveau capteur est neuf par défaut--> 
 
-					<label for="piece">Pièce* : </label><br/>
-					<select name="piece" id="piece" required>
-						<option value="salon">Salon</option>
-						<option value="cuisine">Cuisine</option>
-						<option value="chambre1">Chambre parentale</option>
-						<option value="chambre2">Chambre des enfants</option>
-						<option value="salle_de_bain1">Salle de bain parentale</option>
-						<option value="salle_de_bain2">Salle de bain des enfants</option>
-						<option value="toilettes">Toilettes des enfants</option>
-					</select>
-					<img src="Vue/images/interrogation.png" alt="un point d'interrogation" title="Où se situe le capteur ?" class="interrogation"/><br/><br/>
 
 					<label for="description">Description de la localisation (facultatif) : </label><br/>
 					<textarea name="description" id="description" rows="10" cols="40" placeholder="Vous pouvez ajouter un descriptif qui vous permettra de savoir où se situe le capteur précisemment dans la pièce.

@@ -1,12 +1,22 @@
+.style
+{
+	padding-bottom:5vw;
+	font-size:1.5vw;
+}
 .centre
 {
 	position:absolute;
 	right:48vw;
-	padding-bottom:2vw;;
+	padding-bottom:5vw;
 }
+
 .bande
 {
 	height:3vw;
+	border:solid;
+	border-color:white;
+	border-radius:1vw;
+	
 }
 
 td
@@ -181,6 +191,7 @@ border:none;
 .menu
 {
 	background-color: #2f0c1b;
+	border-radius:1vw;
 
 }
 
@@ -196,6 +207,7 @@ border:none;
 {
     display: flex;
     justify-content: center;
+    border-radius:1vw;
 }
 
 #grandmenu{
