@@ -12,4 +12,6 @@ body {
 	margin: auto;
 	background-position: center;
 	font-family: Quando, sans-serif;
+	height: 100%;
+	width: 100%;
 }

@@ -8,10 +8,10 @@
 
 <body>
 <br><br><br><br><br>
-<div class="footer">
+<footer class="footer">
     <p>Copyright 2018 HomeMate | Tous droits réservés</p>
     <p>Conditions générales d'utilisations</p>
     <p>Mentions légales</p>
-</div>
+</footer>
 </body>
 </html>

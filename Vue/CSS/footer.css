@@ -11,8 +11,7 @@ p {
     text-align: center;
 }
 
-.footer
-{
+.footer {
     border: 3px solid whitesmoke;
     border-radius: 25px 25px 0 0;
     border-right: none;
@@ -23,5 +22,6 @@ p {
     color: white;
     font-family: Quando;
     text-align: center;
-
 }
+
+

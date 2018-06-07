@@ -93,7 +93,7 @@ border:none;
 	color: white;
 	background-color: #2f0c1b;
 	border-radius: 50px;
-
+	height: 10vw;
 }
 
 /*bouton luminosit�*/
@@ -173,7 +173,6 @@ border:none;
 {
 	
 	background-color: #2f0c1b;
-
 }
 
 .menu2
