@@ -34,7 +34,7 @@ if(isset($_GET['ID'])){
 	<header>
 			<?php include("header.php") ?>
 	</header>
-	
+<div id="page">
 	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
 
@@ -212,6 +212,7 @@ if(isset($_GET['ID'])){
    	</div>
    </div>
     </div>
+</div>
    	
    	 <footer>
 			<?php include("footer.php"); ?>

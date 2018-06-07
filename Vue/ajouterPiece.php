@@ -13,7 +13,7 @@
         <?php include("header.php") ?>
 
 </header>
-
+<div id="page">
 		<div class="piece">
 
 		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>">
@@ -52,6 +52,7 @@
 	
 
 	</div>
+</div>
 	    <footer>
 	    	<p>
 	Copyright 2018 HomeMate | Tous droits réservés

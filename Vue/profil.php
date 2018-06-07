@@ -10,16 +10,17 @@
     </head>
 
     <body>
+
     	<header>
             <?php include("Vue/header.php") ?>
 
         </header>
     	<br />
-    	
+        <div id="page">
     	<img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" /><span class="profil">Profil</span>
 
     	
-    	        <div class="bar">
+        <div class="bar">
          <div class="aff">
         
             <h1>Votre profil</h1>
@@ -38,7 +39,7 @@
 			
 			<a href="index.php?cible=capteurActionneursHabitations"><input type=button value = "Gerer la maison"/></a><br/><br/>           
         </div>
-    	
+        </div>
     	
 
             <?php include("Vue/footer.php") ?>

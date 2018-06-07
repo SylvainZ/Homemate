@@ -13,7 +13,7 @@
             <?php include("header.php") ?>
         </header>
 
-
+<div id="page">
 
     	<h1>Bienvenue sur la FAQ !</h1>
     	<section class="question">
@@ -31,7 +31,7 @@
     		<p>
 
     	</section>
-
+</div>
         <footer>
             <?php include("footer.php") ?>
         </footer>

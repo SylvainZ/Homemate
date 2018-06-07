@@ -25,7 +25,7 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
 	</header>
 	
 
-	
+	<div id="page">
 	
 	<div class = "entete">
 	<button class="A active"><p>Habitation(s)</p></button>
@@ -67,11 +67,11 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
 		</tbody>
 	</table>
 	
-	
+    </div>
    	
-   	<footer>
+
             <?php include("Vue/footer.php") ?>
-    </footer>
+
     
     <script type="text/javascript">
 

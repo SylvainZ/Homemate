@@ -18,7 +18,7 @@
 
     	<!--Logo
     		<img src="images/homemate2.png" alt="logo HomeMate" id="logo"/>-->
-
+<div id="page">
     	<h1>Bienvenue sur votre corbeille !</h1>
 
     	<!--Positionnement menu et liste des messages-->
@@ -104,13 +104,10 @@
 	    	</section>
 	    </div>
 
-	    
+</div>
 
 
-
-    	<footer>
-    		<p class="droit">Copyright 2018 HomeMate, Tous droits réservés</p>
-    	</footer>
+        <?php include('Vue/footer.php');?>
 
 		<script type="text/javascript" src="Controleur/JS/cocher.js"></script>
     </body>

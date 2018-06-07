@@ -31,7 +31,7 @@ if(isset($_GET['ID'])){
 	<header>
 			<?php include("header.php") ?>
 	</header>
-	
+	<div id="page">
 	<table class="tableau">
 		<tbody>
 			<tr id="ligne1">
@@ -101,7 +101,7 @@ if(isset($_GET['ID'])){
 			</tr>
 		</tbody>
 	</table>
-	
+    </div>
 	
 	
         

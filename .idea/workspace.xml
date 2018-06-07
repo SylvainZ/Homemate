@@ -3,11 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="dabfda98-210d-475e-b79a-3e9fbb537381" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/AjouterLogement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/AjouterLogement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue/CSS/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/capteurActionneursHabitation.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/capteurActionneursHabitation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/CSS/miseEnPageMessage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/miseEnPageMessage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/CSS/pageDacceuil.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/pageDacceuil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/CSS/piece.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/piece.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/ajouterPiece.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/ajouterPiece.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/ajouterUnCapteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/ajouterUnCapteur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/boiteMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/boiteMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/capteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/capteur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/corbeille.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/corbeille.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/faq.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/faq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/habitations.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/habitations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/locataireProprietaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/locataireProprietaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/messagerie.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/messagerie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/pageDaccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/pageDaccueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/pageMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/pageMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/piece.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/piece.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/pieces.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/pieces.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/profil.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,56 +49,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="capteurActionneursHabitations.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/capteurActionneursHabitations.php">
+      <file leaf-file-name="messagerie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/messagerie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1192">
-              <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+            <state relative-caret-position="111">
+              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miseEnPageProfil.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css">
+      <file leaf-file-name="pageMessage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/pageMessage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="159">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/CSS/footer.css">
+      <file leaf-file-name="locataireProprietaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="77">
+              <caret line="179" column="6" selection-start-line="179" selection-start-column="6" selection-end-line="179" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profil.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/profil.php">
+      <file leaf-file-name="habitations.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/habitations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="204">
+              <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/footer.php">
+      <file leaf-file-name="faq.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/faq.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="74">
+              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vue/CSS/all.css">
+      <file leaf-file-name="ajouterUnCapteur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/ajouterUnCapteur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajouterPiece.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/ajouterPiece.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AjouterLogement.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/AjouterLogement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="corbeille.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/corbeille.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="106" column="6" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="miseEnPageMessage.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/CSS/miseEnPageMessage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1734">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
             </state>
           </provider>
         </entry>
@@ -111,44 +162,57 @@
         <option value="MahautSylviana &lt;37834164+mahautsylviana@users.noreply.github.com&gt;" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Vue/pageDaccueil.php" />
         <option value="$PROJECT_DIR$/Modele/creationCompteBis.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/styleLocProp.css" />
         <option value="$PROJECT_DIR$/Controleur/ajoutLienImagesBDD.php" />
-        <option value="$PROJECT_DIR$/Vue/connexion.php" />
         <option value="$PROJECT_DIR$/Vue/administrateurCA.php" />
         <option value="$PROJECT_DIR$/Vue/administrateurPersonnalisation.php" />
         <option value="$PROJECT_DIR$/Vue/administrateurUser.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/styleAdminCA.css" />
         <option value="$PROJECT_DIR$/Vue/CSS/styleAdminPerso.css" />
         <option value="$PROJECT_DIR$/Vue/CSS/styleAdminUser.css" />
-        <option value="$PROJECT_DIR$/Vue/locataireProprietaire.php" />
         <option value="$PROJECT_DIR$/Controleur/creerUnCompteBis.php" />
         <option value="$PROJECT_DIR$/Modele/locataireProprietaire.php" />
         <option value="$PROJECT_DIR$/Controleur/ajoutCapteur2.php" />
-        <option value="$PROJECT_DIR$/Vue/habitations.php" />
-        <option value="$PROJECT_DIR$/Vue/ajouterUnCapteur.php" />
         <option value="$PROJECT_DIR$/Controleur/supprimerControleur.php" />
         <option value="$PROJECT_DIR$/Controleur/supprimerCapteurActionneur.php" />
         <option value="$PROJECT_DIR$/Modele/ajoutCapteur.php" />
-        <option value="$PROJECT_DIR$/Vue/boiteMail.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Modele/supprimerCapteurActionneur.php" />
         <option value="$PROJECT_DIR$/Controleur/deconnexion.php" />
         <option value="$PROJECT_DIR$/Controleur/authentification.php" />
         <option value="$PROJECT_DIR$/Vue/modifierProfil.php" />
-        <option value="$PROJECT_DIR$/Vue/capteurActionneursHabitations.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/capteurActionneursHabitation.css" />
         <option value="$PROJECT_DIR$/Vue/footer.php" />
-        <option value="$PROJECT_DIR$/Vue/profil.php" />
-        <option value="$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css" />
         <option value="$PROJECT_DIR$/Vue/CSS/footer.css" />
+        <option value="$PROJECT_DIR$/Vue/capteurActionneursHabitations.php" />
+        <option value="$PROJECT_DIR$/Vue/profil.php" />
+        <option value="$PROJECT_DIR$/Vue/piece.php" />
+        <option value="$PROJECT_DIR$/Vue/capteur.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/all.css" />
+        <option value="$PROJECT_DIR$/Vue/CSS/piece.css" />
+        <option value="$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css" />
+        <option value="$PROJECT_DIR$/Vue/pieces.php" />
+        <option value="$PROJECT_DIR$/Vue/connexion.php" />
+        <option value="$PROJECT_DIR$/Vue/pageDaccueil.php" />
+        <option value="$PROJECT_DIR$/Vue/CSS/pageDacceuil.css" />
+        <option value="$PROJECT_DIR$/Vue/boiteMail.php" />
+        <option value="$PROJECT_DIR$/Vue/messagerie.php" />
+        <option value="$PROJECT_DIR$/Vue/corbeille.php" />
+        <option value="$PROJECT_DIR$/Vue/CSS/miseEnPageMessage.css" />
+        <option value="$PROJECT_DIR$/Vue/pageMessage.php" />
+        <option value="$PROJECT_DIR$/Vue/locataireProprietaire.php" />
+        <option value="$PROJECT_DIR$/Vue/habitations.php" />
+        <option value="$PROJECT_DIR$/Vue/faq.php" />
+        <option value="$PROJECT_DIR$/Vue/ajouterUnCapteur.php" />
+        <option value="$PROJECT_DIR$/Vue/ajouterPiece.php" />
+        <option value="$PROJECT_DIR$/Vue/AjouterLogement.php" />
       </list>
     </option>
   </component>
@@ -344,37 +408,37 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66704000" />
+    <option name="totallyTimeSpent" value="69179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50121456" side_tool="true" weight="0.3291592" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32955465" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49878544" weight="0.3283582" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.36356276" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32955465" />
-      <window_info id="Learn" order="6" weight="0.32955465" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32955465" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24939272" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49878544" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.36356276" />
+      <window_info id="Learn" order="6" weight="0.32955465" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32955465" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -474,76 +538,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.buildpath">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur/accueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homemate2.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur/ajoutCapteur2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/messagerie.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur/supprimerControleur.php" />
-    <entry file="file://$PROJECT_DIR$/Modele/corbeilleRecherche.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/ajoutCapteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur/locataireProprietaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/lienImagesBDD.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/gestionCorbeille.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/pageMessage.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modele/boiteReceptionRecherche.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -554,13 +548,6 @@
     <entry file="file://$PROJECT_DIR$/Modele/gestionBoiteMail.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="85" column="80" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/pageMessage.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -569,13 +556,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/profilModifie.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/ajouterUnCapteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/CSS/header.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -588,13 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/habitations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -616,13 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -727,43 +693,181 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/capteurActionneursHabitations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1192">
-          <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+        <state relative-caret-position="-2320">
+          <caret line="138" column="51" lean-forward="true" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="153">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/piece.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/CSS/miseEnPageProfil.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/CSS/footer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="159">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/CSS/all.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="214" column="6" selection-start-line="214" selection-start-column="6" selection-end-line="214" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/piece.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="107" column="4" lean-forward="true" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/pieces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/persoAccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/pageDacceuil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/pageDaccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/messagerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/corbeille.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="106" column="6" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/miseEnPageMessage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/pageMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="179" column="6" selection-start-line="179" selection-start-column="6" selection-end-line="179" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/habitations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/faq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/ajouterUnCapteur.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/ajouterPiece.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/AjouterLogement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
         </state>
       </provider>
     </entry>
