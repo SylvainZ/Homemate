@@ -1,7 +1,4 @@
-.bouton
-{
-	
-}
+
 
 td
 {
@@ -96,7 +93,7 @@ border:none;
 	color: white;
 	background-color: #2f0c1b;
 	border-radius: 50px;
-	height: 10vw;
+
 }
 
 /*bouton luminosit�*/
@@ -136,7 +133,7 @@ border:none;
 
 }
 #bouton{
-	
+
 	right:100%;
 	border-radius: 5%;
 	border-style:solid;
@@ -176,6 +173,7 @@ border:none;
 {
 	
 	background-color: #2f0c1b;
+
 }
 
 .menu2
@@ -297,4 +295,3 @@ button.active
     position: relative;
 bottom: 8px;
 }
-

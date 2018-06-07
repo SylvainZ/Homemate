@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -9,54 +10,47 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-$temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND iduser =\''.$_SESSION['ID'].'\'');
-$lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
-$pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
-$nbLigne=0;
-$nbLigne2=0;
-$nbLigne3=0;
-$nbColonne=5;
-$nbColonne2=5;
-$nbColonne3=5;
+if(isset($_GET['ID'])){
+    $id=$_GET['ID'];
+    $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece =\''.$_GET['ID'].'\'');
+    $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece=\''.$_GET['ID'].'\'');
+    $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece=\''.$_GET['ID'].'\'');
+}
+
+
 ?>
+
+<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<title>Capteurs/Actionneurs</title>
-
-	<link href="Vue/CSS/capteurActionneursHabitation.css" rel="stylesheet">
-	<link href="Vue/CSS/all.css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Habitations</title>
+	<link rel="stylesheet" href="Vue/CSS/capteur.css">
+	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
 
 <body>
 
 	<header>
-			<?php include("header.php"); ?>
+			<?php include("header.php") ?>
 	</header>
 	
-	<div id="en-tete" class="entete">
-    <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>
-    <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
-</div>
 	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
-		<div class="bouton">
+
 		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
-		</div>
+
 			<div class="tonDiv1" id="tonDiv1">
 				<div class="couleur1">
 					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');">Luminosit�</button>
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
-	 					<?php echo 	'<table class="tableau"><tbody>
-										<tr id="ligne1">';
+	 							<table class="tableau" border="1">
+									<tbody>
+										<tr id="ligne1">
+										<?php 
 										while ($donnees1 = $lumi->fetch()){
-										  if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0){
-										      echo '</tr><tr>';
-										      $nbLigne=0;
-                                          }
-
+										   // $rows[]=
 										?>
 										<td>
 										<div class="case">
@@ -81,31 +75,27 @@ $nbColonne3=5;
 										</div>
 										</td>
 
-										<?php $nbLigne++;}?>
+										<?php }?>
 
 
-										 <td id="case"></td>
+										 <td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td> 
 
-								<?php echo "</tbody>
-								</table>";?>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 				</div>
-
 				<div class="couleur1">
 	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Temp�rature</button>
 	 					<div class="tonDiv3" id="tonDiv3">
 	 						<div class="luminosite">
-		 				<?php echo	'<table class="tableau">
+		 						<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne2">';
+										<tr id="ligne2">
+										<?php 
 										while ($donnees1 = $temp->fetch()){
                                             $id=$donnees1['id'];
-                                            if (($nbLigne2 % $nbColonne2) ==0 && $nbLigne2 !=0) {
-                                                echo '</tr><tr>';
-                                                $nbLigne2 = 0;
-                                            }
-
 										?>
 										<td>
 										<div class="case">
@@ -124,23 +114,17 @@ $nbColonne3=5;
                                                     </div>
                                                 </div>
                                             </div>
-                                        <span><?php echo $donnees1['piece']?></span> <br>
+
+
+                                            <span><?php echo $donnees1['piece']?></span> <br>
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
 										</td>
-<<<<<<< HEAD
 										<?php }?>
-										<td></td>
+										<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>
-=======
-                                            <?php $nbLigne2++;}?>
-										<td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
-
-							<?php	echo	'</tbody>
-								</table>';?>
->>>>>>> be3021b4dc5afd096559780f905fcd4c8855ca05
 							</div>
 						</div>
 				</div>
@@ -148,16 +132,12 @@ $nbColonne3=5;
 					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">D�tecteur de mouvement</button>
 	 					<div class="tonDiv4" id="tonDiv4">
 	 						<div class="luminosite">
-		 				<?php	echo	'<table class="tableau" border="1">
+		 						<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne3">';
-
+										<tr id="ligne3">
+										<?php 
 										while ($donnees1 = $pres->fetch()){
 										    $id=$donnees1['id'];
-                                            if (($nbLigne3 % $nbColonne3) ==0 && $nbLigne3 !=0) {
-                                                echo '</tr><tr>';
-                                                $nbLigne3 = 0;
-                                            }
 										?>
 										<td>
 										<div class="case">
@@ -180,18 +160,12 @@ $nbColonne3=5;
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
-                                            <?php $nbLigne3++;}?>
+										<?php }?>
 										
-<<<<<<< HEAD
-											<td></td>
+											<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>
-=======
-											<td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
-                                <?php	echo '</tbody>
-								</table>';?>
->>>>>>> be3021b4dc5afd096559780f905fcd4c8855ca05
 							</div>
 	 					</div>
 	 			</div>
@@ -262,29 +236,4 @@ $nbColonne3=5;
     return true;
 }
 </script>
-
-
-<!--
-
-
-	function ajouterLigne(id)
-	{
-	var tableau = document.getElementById(id);
-
-	var ligne = document.getElementById(id);//on a ajout� une ligne
-
-	var colonne1 = ligne.insertCell(0);//on a une ajout� une cellule
-	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
-	
-	//document.location.href='test.html';
-	}
-	
-	</script>
-	
-	-->
-
-
-
-
-</body>
 </html>

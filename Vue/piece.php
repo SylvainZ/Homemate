@@ -11,8 +11,9 @@ catch(Exception $e)
 }
 if(isset($_GET['ID'])){
     $id=$_GET['ID'];
-    $piece = $bdd->query('SELECT * FROM logement WHERE ID =\''.$_GET['ID'].'\'');
+    $piece = $bdd->query('SELECT * FROM piece WHERE ID_logement =\''.$_GET['ID'].'\'');
 }
+
 
 ?>
 
@@ -31,25 +32,75 @@ if(isset($_GET['ID'])){
 			<?php include("header.php") ?>
 	</header>
 	
-<?php 
-    while($donnees = $piece->fetch()){
-	 for($i=1;$i<=$donnees['NombrePiece'];$i++){  
-	     $y=$i+1;?>
-	     <div class="menu"> <!--bouton 1 et background-->
-
-		<button class="Bouton" onclick="javascript:afficher_cacher('tonDiv1');"><?php echo 'Piece '.$i.''?></button>
-
-			<div class="tonDiv1" id="tonDiv<?php echo ".$i."?>">
-				<div class="couleur1">
-						<div class="tonDiv2" id="tonDiv<?php echo ".$y."?>">
-							<div class="luminosite">
-	 							<span>nhdfhndf</span>
-							</div>
-						</div>
-				</div>
-			</div>
-		</div>
-		<?php }}?>
+	<table class="tableau">
+		<tbody>
+			<tr id="ligne1">
+                <?php
+                while ($donnees1 = $piece->fetch()){
+                    ?>
+	                  <td>
+                        <div class="case">
+                            <span> </span><?php
+                            
+                            if ($donnees1['Type']=='salon')
+                    {?>
+                     <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>"> <img class="styleHabitation" src="Vue/images/salon.png" alt="image appartement" height="112"></a>
+                        <?php
+                    }
+                    if ($donnees1['Type']=='salle de bain')
+                    {?>
+                     <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>"><img class="styleHabitation" src="Vue/images/salledebain.png" alt="image maison" height="112"></a>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                     if ($donnees1['Type']=='garage')
+                    {?>
+                      <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>"><img class="styleHabitation" src="Vue/images/garage.png" alt="image maison" height="112"></a>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                     if ($donnees1['Type']=='cuisine')
+                    {?>
+                     <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>">   <img class="styleHabitation" src="Vue/images/cuisine.png" alt="image maison" height="112"></a>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                     if ($donnees1['Type']=='chambre')
+                    {?>
+                     <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>">   <img class="styleHabitation" src="Vue/images/chambre.png" alt="image maison" height="112"></a>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                     if ($donnees1['Type']=='toilettes')
+                    {?>
+                     <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>">   <img class="styleHabitation" src="Vue/images/toilettes.png" alt="image maison" height="112"></a>
+                        <?php
+                    }
+                    ?>
+                    <?php
+                     if ($donnees1['Type']=='autres')
+                    {?>
+                      <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>">  <img class="styleHabitation" src="Vue/images/autres.png" alt="image maison" height="112"></a>
+                        <?php
+                    }
+                    ?>
+                                <br>
+                            <div class="info">
+                            <span><?php echo $donnees1['Nom']?></span><br>
+                            <span> Surface : </span><?php echo $donnees1['Superficie']; ?> <span>m²</span>
+ 
+                            </div>
+                        </div>
+                    </td>
+                <?php }?>
+                <td><a href="index.php?cible=ajoutPiece&ID=<?php echo $id?>"><input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
+			</tr>
+		</tbody>
+	</table>
 	
 	
 	

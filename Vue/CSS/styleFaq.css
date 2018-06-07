@@ -1,0 +1,49 @@
+/*Ajout de la poilice Quando*/
+@font-face 
+{
+    font-family: 'Quando';
+    src: url('quando/Quando-Regular.ttf');
+}
+
+body
+{
+	background:url("images/BLUMYS.png") fixed no-repeat center;
+	background-size:cover;
+	margin:auto;
+	font-family:Quando;
+}
+
+/*Positionnement du logo*/
+#logo
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:14em;
+
+}
+
+h1
+{
+	text-align:center;
+}
+
+.question
+{
+	background-color: #6a1b3d;
+	margin:auto;
+	padding-left:2.5em;
+	padding-right:2.5em;
+	padding-top:2.5em;
+	padding-bottom:2.5em;
+	border-radius:10px;
+	width:40em;
+	color:white;
+	font-size:1em;
+}
+
+.tout
+{
+	font-size:1.5em;
+}
+

@@ -1,54 +1,39 @@
-.menu
+
+a.styleEntete
 {
-	
-	background-color: #2f0c1b;
-
+	text-decoration: none;
 }
-/*Personnalisation des boutons envoyer et effacer*/
-.bouton
+
+button.active
 {
-	border-radius:5px;
-	width:30%;
-	height:27px;
-	background-color:#635c8e;
-	color:white;
-	background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
-	box-shadow:none;
-	position: relative;
-	left: 20%;
+	border: 6px solid white;
 }
-.Bouton{
 
-	right:100%;
-	border-radius: 5%;
-	border-style:solid;
-	border-color: white;
-	color: white;
-	background-color: #2f0c1b;
-
-}
-/*couleur pour la bande des boutons*/
-.couleur1
+td
 {
-
-	background-color: #471229 ;
-	margin-left: 3%;
+	border: thin solid transparent;
 }
 
-
-#tonDiv1{
-
-
-background-color:#6a1b3d;
-border:none;
+.case
+{
+	border: 3px solid black;
+	background: white;
+	height: 12vw;
+	width: 10vw;
 
 }
-/*bouton luminosité*/
-#bouton_tonDiv2{
-	position: relative;
-	left:0%;
-	border:none;
-	color: white;
-	background-color: #471229;
 
+.info
+{
+	border-top: 3px solid black;
+	overflow: auto;
+	width: 10vw;
+	height: 12vw;
+}
+
+.styleHabitation
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }

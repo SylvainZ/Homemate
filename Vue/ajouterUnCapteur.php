@@ -15,7 +15,7 @@
 	</header>
 	    	<section class="ajout">
 	        <h1>Ajouter un capteur</h1>
-	        <form method="post" action="index.php?cible=ajoutCapteur2">
+	        <form method="post" action="index.php?cible=ajoutCapteur2&ID=<?php echo $_GET['ID']?>">
 	        	<p> 
 					<label for="nom_du_capteur" class="nom_capteur">Nom du capteur* : </label><br/>
 					<select name="nom_du_capteur" id="nom_du_capteur" required>

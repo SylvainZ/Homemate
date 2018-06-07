@@ -24,11 +24,6 @@ $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['
 			<?php include("header.php") ?>
 	</header>
 	
-	<dialog id='form'>
-	<a href="index.php?cible=ajoutPiece"><input type="button" id="save" name="" value="+"></a>
-	<input type="button" id="save" name="" value="x" onclick="javascript:fermer_fenetre();">
-	
-	</dialog>
 
 	
 	
