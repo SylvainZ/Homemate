@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Vue/CSS/miseEnPageProfil.css" />
     <link rel="stylesheet" href="Vue/CSS/all.css">
-    <link rel="stylesheet" href="Vue/CSS/header.css">
-    <link rel="stylesheet" href="Vue/CSS/footer.css">
     <title>Modifier votre profil</title>
 </head>
 
