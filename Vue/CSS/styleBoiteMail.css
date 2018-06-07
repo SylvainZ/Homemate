@@ -46,7 +46,7 @@ body
 }
 
 /*Personnalisation du menu */
-.menu
+.menuGauche
 {
 
 	background-color:#6a1b3d;
@@ -176,11 +176,5 @@ body
 	color:white;	
 }
 
-/*Ecriture des droits d'auteurs*/
-.droit
-{
-	text-align:center;
-	color:white;
-}
 
 

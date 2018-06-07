@@ -24,7 +24,7 @@
     	<!--Positionnement menu et liste des messages-->
     	<div class="listeMessage">
     		<!--Menu-->
-	    	<section class="menu">
+	    	<section class="menuGauche">
 	    		<p>
 		    		<a href="index.php?cible=corbeille"><input type="button" value="Nouveau message" class="nouveau"/></a>
 		    		<div><a href="index.php?cible=boiteMailReception" class="liste">Liste des messages</a></div><br/>

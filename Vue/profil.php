@@ -29,7 +29,7 @@
             Age: <?php echo $_SESSION['age'];?> ans<br>
             Statut: <?php echo $_SESSION['statut'];?><br>
             Email: <?php echo $_SESSION['email'];?><br>
-            Telephone: <?php echo $_SESSION['numTel'];?><br>
+            Telephone: 0<?php echo $_SESSION['numTel'];?><br>
             Addresse: <?php echo $_SESSION['numRue'].' '.$_SESSION['nomRueBdAve'].' '.$_SESSION['numLogement'].' '.$_SESSION['codePostal'].' '.$_SESSION['ville'];?><br> 
             </div>
         </div>

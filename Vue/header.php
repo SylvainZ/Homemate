@@ -30,10 +30,15 @@
         <?php
         if (isset($_SESSION['nom'])){
         ?>
-            <a href="index.php?cible=boiteMailReception" id="icone"><img class="imageLettre" src="Vue/images/mail.png" width="90" height="50"></a>
-            <a href="#" id="iconeCloche"><img class="imageLettre" src="Vue/images/bell.png"  height="50"></a>
+
 
             <div class="posMenu">
+                <div class="posNotif">
+                    <a href="index.php?cible=boiteMailReception" id="icone"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a>
+                    <a href="#" id="iconeCloche"><img class="imageLettre" src="Vue/images/bell.png"  height="50"></a>
+                </div>
+
+                <div class="menu">
                 <ul id="menu">
 
                         <li>
@@ -48,6 +53,7 @@
                             <a href="#">Besoin d'aide ?</a>
                         </li>
                 </ul>
+                </div>
             </div>
 
             <?php
