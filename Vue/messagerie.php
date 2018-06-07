@@ -26,7 +26,7 @@
 			<p>
 		        <label for="nom">Nom</label><br />
 		        <input type="text" class="zoneTexte" name="nom" /><br />
-		        <label for="email">E-mail</label><br />
+		        <label for="email">E-mail</label><br/>
 		        <input type="text" class="zoneTexte" name="E-mail" /><br />
 		        <label for="objet">Objet</label><br />
 		        <input type="text" class="zoneTexte" name="Objet" /><br />

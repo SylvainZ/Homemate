@@ -137,29 +137,29 @@ body
 
 .messageIndSujet
 {
-    text-align:left;
-    margin-left:7vw;
-    position:absolute;
-    color:white;
-    text-decoration:none;
+	text-align:left;
+	margin-left:5vw;
+	position:relative;
+	color:white;
+	text-decoration:none;
 }
 
 .messageIndExp
 {
-    text-align:left;
-    position: absolute;
-    margin-left:22vw;
-    color:white;
-    text-decoration:none;
+	text-align:left;
+	position: relative;
+	margin-left:3vw;
+	color:white;
+	text-decoration:none;
 }
 
 .messageIndDate
 {
-    text-align:left;
-    margin-left:32vw ;
-    position: relative;
-    color:white;
-    text-decoration:none;
+	text-align:left;
+	margin-left:3vw ;
+	position: relative;
+	color:white;
+	text-decoration:none;
 
 }
 
