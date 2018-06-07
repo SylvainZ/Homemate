@@ -12,6 +12,8 @@ catch(Exception $e)
 $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND iduser =\''.$_SESSION['ID'].'\'');
 $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
 $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
+$rows=array();
+$i=0;
 ?>
 <html>
 <head>
@@ -29,14 +31,11 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 			<?php include("header.php"); ?>
 	</header>
 	
-
-	
-	
-	<div class="entete">
-    <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p>Habitation(s)</p></a></button>
+	<div id="en-tete" class="entete">
+    <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>
     <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
 </div>
-	<div id="grandmenu">
+	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
 
 		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
@@ -51,20 +50,34 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 										<tr id="ligne1">
 										<?php 
 										while ($donnees1 = $lumi->fetch()){
+										   // $rows[]=
 										?>
 										<td>
 										<div class="case">
-										<?php 
-										$type1 = explode('-',$donnees1['nom']);
-                                        $type = $type1[1];
-                                        echo $type ?><br>
-										<span> Pièce : </span><?php echo $donnees1['piece']?> <br>
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale">X</a></button>
+                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
+
+                                            <div id="fenetreModale">
+                                                <div class="popup-block">
+                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
+                                                    <div class="annulerSupprimer">
+                                                    <form method="post" action="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                        <input type="submit" value="Supprimer" class="boutonSup">
+                                                    </form>
+                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <span><?php echo $donnees1['piece']?></span> <br>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
+
 										<?php }?>
-										
-										
+
+
 										 <td id="case"><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 
 										</tr>
@@ -82,14 +95,28 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 										<tr id="ligne2">
 										<?php 
 										while ($donnees1 = $temp->fetch()){
+                                            $id=$donnees1['id'];
 										?>
 										<td>
 										<div class="case">
-										<?php
-										$type1 = explode('-',$donnees1['nom']);
-                                        $type = $type1[1];
-                                        echo $type ?><br>
-										<span> Pièce : </span><?php echo $donnees1['piece']?> <br>
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale2">X</a></button><br>
+                                            <img class="styleCapteur" src="Vue/images/temperature.png" alt="image capteur temperature" height="50px" width="50px">
+
+                                            <div id="fenetreModale2">
+                                                <div class="popup-block">
+                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
+                                                    <div class="annulerSupprimer">
+                                                        <a href="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                            <button class="boutonSup">Supprimer</button></a>
+
+                                                        </form>
+                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <span><?php echo $donnees1['piece']?></span> <br>
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
 										</td>
@@ -110,14 +137,26 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 										<tr id="ligne3">
 										<?php 
 										while ($donnees1 = $pres->fetch()){
+										    $id=$donnees1['id'];
 										?>
 										<td>
 										<div class="case">
-										<?php
-										$type1 = explode('-',$donnees1['nom']);
-										$type = $type1[1];
-										echo $type?><br>
-										<span> Pièce : </span><?php echo $donnees1['piece']?> <br>
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale3">X</a></button>
+                                            <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
+                                            <div id="fenetreModale3">
+                                                <div class="popup-block">
+                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
+                                                    <div class="annulerSupprimer">
+                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                            <input type="submit" value="Supprimer" class="boutonSup">
+                                                        </form>
+                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <span><?php echo $donnees1['piece']?> </span><br>
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
@@ -162,7 +201,7 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne2">
-																					 <td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										 <td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -172,6 +211,7 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 	 	 </div>
    	</div>
    </div>
+    </div>
    	
    	 <footer>
 			<?php include("footer.php"); ?>
@@ -198,21 +238,7 @@ $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser 
 </script>
 
 
-	<!--  <script type="text/javascript">
-
-	function ouvrir_fenetre()
-	{
-
-			document.getElementById("form").showModal();
-	}
-
-	function fermer_fenetre()
-	{
-			document.getElementById("form").close();
-	}
-
-	
-	
+<!--
 
 
 	function ajouterLigne(id)

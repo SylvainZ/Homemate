@@ -1,6 +1,5 @@
 
 
-
 td
 {
 	border:thin solid transparent;
@@ -13,8 +12,16 @@ td
 	padding:10px;
 	margin:10px;
 	border-radius:6px;
+    width: 150px;
+    height: 100px;
+    font-size: 14px;
+
 }
 
+span
+{
+    text-align: center;
+}
 
 
 
@@ -62,9 +69,6 @@ background-color: rgb(4,43,123);
 }
 
 
-
-
-
 #tonDiv1{
 
 
@@ -75,7 +79,8 @@ border:none;
 
 
 .tableau{
- border-collapse: collapse; 
+ border-collapse: collapse;
+    flex-wrap: wrap;
 }
 
 
@@ -91,7 +96,7 @@ border:none;
 
 }
 
-/*bouton luminosité*/
+/*bouton luminositï¿½*/
 #bouton_tonDiv2{
 	position: relative;
 	left:0%;
@@ -108,7 +113,7 @@ border:none;
 	margin-left: 3%;
 }
 
-/*bouton température*/
+/*bouton tempï¿½rature*/
 #bouton_tonDiv3{
 	position: relative;
 	left: 0%;
@@ -176,11 +181,20 @@ border:none;
 	
 	background-color: #2f0c1b;
 
+
+}
+
+#global
+{
+    display: flex;
+    justify-content: center;
 }
 
 #grandmenu{
 	margin-right:2vw;
 	margin-left:2vw;
+    width: 80vw;
+
 }
 .entete
 {
@@ -193,121 +207,17 @@ border:none;
 }
 
 
-/*Positionnement du point d'inerrogation d'aide à côté des champs*/
-.interrogation
-{
-	width:0.7em;
-	height:0.7em;
-	position: relative;
-	left: 10%;
-}
-
-/*Personnalisation du bloc Ajouter un capteur*/
-.ajout
-{
-	background-color:#6a1b3d;
-	margin-right: 10px;
-	margin-left: 3px;
-	padding-left:25px;
-	padding-right: 30px;
-	padding-top:20px;
-	border-radius:10px;
-	width:85%;
-	height:600px;
-	color:white;
-	font-family:Quando;
-	font-size:1em;
-}
-
-/*Personnalisation du titre Ajouter un capteur*/
-h1
-{
-	font-size:2em;
-	align-items: center;
-}
-
-/*Personnalisation du champ Nom du capteur*/
-#nom_du_capteur
-{
-	border-radius:5vw;
-	width:50%;
-	height:25vw;
-	position: relative;
-	left: 9%;
-}
-
-.nom
-{
-	position: relative;
-	left: 9%;
-	font-family: quando;
-}
-
-/*Personnalisation du champ Numéro de série*/
-#numero_de_serie
-{
-	border-radius:5px;
-	width:50%;
-	height:20px;
-	position: relative;
-	left: 9%;
-}
-
-/*Personnalisation du champ Seuil*/
-#seuil
-{
-	border-radius:5px;
-	width:40%;
-	height:20px;
-	position: relative;
-	left: 9%;
-}
-
-/*Personnalisation du champ Pièce*/
-#piece
-{
-	border-radius:5px;
-	width:40%;
-	height:25px;
-	position: relative;
-	left: 9%;
-}
-
-/*Personnalisation du champ Description*/
-#description
-{
-	border-radius:5px;
-	width:80%;
-	height:150px;
-	position: relative;
-	left: 9%;
-}
-
-/*Personnalisation des boutons envoyer et effacer*/
-.bouton
-{
-	border-radius:5px;
-	width:30%;
-	height:27px;
-	background-color:#635c8e;
-	color:white;
-	background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
-	box-shadow:none;
-	position: relative;
-	left: 20%;
-}
 
 #save{
 	float: right;
 
 }
 
-
-
-
+/*personnalisation de l'en-tÃªte actif*/
 a.styleEntete
 {
 	text-decoration: none;
+
 }
 
 button.active
@@ -315,4 +225,73 @@ button.active
 	border: 6px solid white;
 }
 
+.supprimer
+{
+	border-radius: 20px;
+	background: red;
+    box-shadow: none;
+    border: none;
+    position: relative;
+    left: 150px;
+    bottom: 15px;
+}
 
+.boutonSupprimer
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#fenetreModale, #fenetreModale2, #fenetreModale3
+{
+	display: none;
+	position: fixed;
+	top:0; right:0; bottom:0; left:0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+
+#fenetreModale:target, #fenetreModale2:target, #fenetreModale3:target
+{
+	display: block;
+}
+
+.popup-block
+{
+	background: #fff;
+	padding: 20px;
+	border: 20px solid #ddd;
+	position: relative;
+	margin: 10% auto;
+	width: 40%;
+	box-shadow: 0px 0px 20px #000;
+	border-radius: 10px;
+}
+
+.annulerSupprimer
+{
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.boutonSup
+{
+    margin-right: 80px;
+    height: 30px;
+}
+
+.annuler
+{
+    height: 30px;
+}
+
+.styleCapteur
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+bottom: 8px;
+}

@@ -7,7 +7,7 @@ if (isset($_POST['username'])
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
     }
-    
+
     $pass=sha1($_POST['password']);
 
     $requete = $bdd->prepare("SELECT Email,password FROM profil WHERE Email = ? AND password = ?");

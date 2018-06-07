@@ -2,15 +2,7 @@
 session_start();
 if(!empty($_POST['numero_de_serie'])&&!empty($_POST['seuil']))
 {
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-    }
-    
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
+  include('connexionBD.php');
     
     $seuil = $_POST['seuil'];
     $numero_de_serie = $_POST['numero_de_serie'];

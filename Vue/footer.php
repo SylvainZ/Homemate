@@ -7,6 +7,11 @@
 </head>
 
 <body>
-    <p>Copyright 2018 HomeMate | Tous droits r�serv�s</p>
+<br><br><br><br><br>
+<div class="footer">
+    <p>Copyright 2018 HomeMate | Tous droits réservés</p>
+    <p>Conditions générales d'utilisations</p>
+    <p>Mentions légales</p>
+</div>
 </body>
 </html>

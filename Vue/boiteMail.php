@@ -83,7 +83,7 @@
 											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
 											<a href="index.php?cible=pageMessage&message='.$i.'">
 												<span class="messageIndSujet">'.$_SESSION['sujet'][$i].'</span> </a>
-											<a href="index.php?cible=pageMessagep&message='.$i.'">	
+											<a href="index.php?cible=pageMessage&message='.$i.'">	
 												<span class="messageIndExp">'.$_SESSION['expediteur'][$i].'</span></a>
 											<a href="index.php?cible=pageMessage&message='.$i.'">	
 												<span class="messageIndDate">'.$_SESSION['date'][$i].'</span></a>
