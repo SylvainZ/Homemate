@@ -3,11 +3,17 @@
     <head>
         <meta charset="utf-8" />
         <title>FAQ</title>
-        <link rel="stylesheet" href="styleFaq.css" />
+        <link rel="stylesheet" href="CSS/styleFaq.css" />
+        <link rel="stylesheet" href="Vue/CSS/all.css" />
     </head>
 
     <body>
-    	<img src="images/homemate2.png" alt="logo HomeMate" id="logo"/>
+        <!--Mise en place de la barre de conexion-->
+        <header>
+            <?php include("header.php") ?>
+        </header>
+
+<div id="page">
 
     	<h1>Bienvenue sur la FAQ !</h1>
     	<section class="question">
@@ -25,6 +31,10 @@
     		<p>
 
     	</section>
+</div>
+        <footer>
+            <?php include("footer.php") ?>
+        </footer>
 
     </body>
 </html>	

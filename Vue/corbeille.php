@@ -18,7 +18,7 @@
 
     	<!--Logo
     		<img src="images/homemate2.png" alt="logo HomeMate" id="logo"/>-->
-
+<div id="page">
     	<h1>Bienvenue sur votre corbeille !</h1>
 
     	<!--Positionnement menu et liste des messages-->
@@ -80,12 +80,12 @@
 										echo '<div class="message">';
 
 											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
-											<a href="index.php?cible=pageMessage.php?message='.$i.'">
-												<span class="messageIndSujet">'.$_SESSION['sujet'][$i].'</span> </a>
-											<a href="index.php?cible=pageMessage.php?message='.$i.'">	
-												<span class="messageIndExp">'.$_SESSION['expediteur'][$i].'</span></a>
-											<a href="index.php?cible=pageMessage.php?message='.$i.'">	
-												<span class="messageIndDate">'.$_SESSION['date'][$i].'</span></a>
+											<a href="index.php?cible=pageMessage.php?message='.$i.'" class="messageIndSujet">
+												<span >'.$_SESSION['sujet'][$i].'</span> </a>
+											<a href="index.php?cible=pageMessage.php?message='.$i.'" class="messageIndExp">	
+												<span >'.$_SESSION['expediteur'][$i].'</span></a>
+											<a href="index.php?cible=pageMessage.php?message='.$i.'" class="messageIndDate">	
+												<span >'.$_SESSION['date'][$i].'</span>
 											</a>';
 										echo '</div>';
 									}
@@ -104,13 +104,10 @@
 	    	</section>
 	    </div>
 
-	    
+</div>
 
 
-
-    	<footer>
-    		<p class="droit">Copyright 2018 HomeMate, Tous droits réservés</p>
-    	</footer>
+        <?php include('Vue/footer.php');?>
 
 		<script type="text/javascript" src="Controleur/JS/cocher.js"></script>
     </body>

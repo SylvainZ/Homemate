@@ -69,12 +69,7 @@ border-style: none;
     
 }
 
-p
-{
-    font-size: 26px;
-    color: white;
-    border-left: 4em solid transparent;
-}
+
 
 .rectangle
 {
@@ -132,3 +127,6 @@ button a
     text-decoration: none;
     color: black;
 }
+
+
+

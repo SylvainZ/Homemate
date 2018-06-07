@@ -15,7 +15,7 @@
         <?php include("header.php") ?>
 
 </header>
-
+<div id="page">
 <section>
 
 	<div class="logement">
@@ -48,7 +48,7 @@
 			</div>
 			
 			<div class="champnom ligne3">			
-				<label for="piece" class="inputNom">Nombre de pièces</label><br>
+				<label for="piece" class="inputNom">Nombre de piï¿½ces</label><br>
 				<input type="text" name="piece" id="piece"/>
 			</div>
 			
@@ -69,9 +69,9 @@
 	</div>
 
 </section>
-
+</div>
 <footer>
-	<p>Copyright 2018 HomeMate | Tous droits réservés</p>
+	<p>Copyright 2018 HomeMate | Tous droits rï¿½servï¿½s</p>
 </footer>
 
 </body>

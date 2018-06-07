@@ -13,6 +13,8 @@
     <header>
 			<?php include("header.php") ?>
 	</header>
+
+    <div id="page">
 	    	<section class="ajout">
 	        <h1>Ajouter un capteur</h1>
 	        <form method="post" action="index.php?cible=ajoutCapteur2&ID=<?php echo $_GET['ID']?>">
@@ -60,10 +62,10 @@ Ex: Derrière le canapé"/></textarea><br/><br/>
 	        	</p>
 	        </form>
 	    </section>
+    </div>
 
-        	<footer>
             <?php include("Vue/footer.php") ?>
-    </footer>
+
     </body>
 
 </html>

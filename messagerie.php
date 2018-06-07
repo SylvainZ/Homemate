@@ -15,7 +15,6 @@
 			<?php include("header.php"); ?>
 		</header>
 
-        <div id="page">
     	<br />
     	<div class="en_tete">
     		<img src="Vue/images/lettre.png" class="iconeLettre" alt="Icône lettre"/> <h1>Envoyer un message</h1>
@@ -24,20 +23,23 @@
     	<span class="nomSite">HOMEMATE</span>-->
     	<div class="rectangle">
     	<div class="col1">
+    	<form action="index.php?cible=messagerie" method="post" class="rectangle">
 			<p>
 		        <label for="nom">Nom</label><br />
 		        <input type="text" class="zoneTexte" name="nom" /><br />
-		        <label for="email">E-mail</label><br/>
-		        <input type="text" class="zoneTexte" name="E-mail" /><br />
+		        <label for="email">E-mail</label><br />
+		        <input type="text" class="zoneTexte" name="Email" /><br />
 		        <label for="objet">Objet</label><br />
 		        <input type="text" class="zoneTexte" name="Objet" /><br />
 		        
 		        <label for="message">Comment pouvons-nous vous aider?</label><br />
-	       		<textarea class="zoneMessage" name="message" rows="12" cols="87"></textarea><br />
+	       		<textarea class="zoneMessage" name="message" rows="12" cols="109"></textarea><br />
 	       		<input type="submit"  class="zoneEnvoie" name="Envoyer" value="Envoyer"/>
 	    	</p>
+	    </form>
+			
 	    </div>
-        </div>
+
 	    <footer>
 			<?php include("footer.php"); ?>
     	</footer>

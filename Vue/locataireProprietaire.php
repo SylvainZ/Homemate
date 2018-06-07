@@ -16,7 +16,7 @@
 
 </header>
 
-
+<div id="page">
 <div id="bloc">
 
     <h1 class="center">Locataire/Propriétaire</h1>
@@ -177,7 +177,7 @@
     </section>
     <br>
 </div>
-
+</div>
 <script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
 
 <footer>

@@ -14,6 +14,7 @@
 			<?php include("header.php"); ?>
 		</header>
 
+            <div id="page">
 			<h2>Message</h2>
 			<div class="case">	
 				<div class="positionColonne">		
@@ -50,11 +51,10 @@
 				</div>
 				
 			</div>
+            </div>
 			<br/>
-		<footer>
-				<p>Copyright 2018 HomeMate | Tous droits réservés</p>
-		</footer>
-	 <br/>
+<?php include('Vue/footer.php');?>
+
 	 </body>
 
 </html>

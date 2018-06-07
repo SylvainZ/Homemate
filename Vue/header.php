@@ -51,7 +51,7 @@
                         </li>
 
                         <li>
-                            <a href="#">Besoin d'aide ?</a>
+                            <a href="Vue/faq.php">Besoin d'aide ?</a>
                         </li>
                 </ul>
                 </div>
@@ -77,7 +77,7 @@
                         </li>
 
                         <li>
-                               <a href="#" class="barre">Besoin d'aide ?</a>
+                               <a href="Vue/faq.php" class="barre">Besoin d'aide ?</a>
                         </li>
                 </ul>
             </div>

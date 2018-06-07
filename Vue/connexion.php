@@ -11,7 +11,7 @@
  <body >
 
  <a href="index.php?cible=accueil"><img class="image"   src="Vue/images/homemate2.png" alt="image logo"></a><br>
-
+<div id="page">
    <div class="connection">
         <h2>CONNEXION</h2>
         <div id="resultat"></div>
@@ -43,10 +43,9 @@
          <a href= "index.php?cible=mdpOublie" target="_blank"> Mot de passe oublié ?</a><br/>
          <a href="index.php?cible=creerUnCompte">Pas encore de compte?</a> <br/><br/>
     </div>
+</div>
         <br/>
-    <footer>
-            <p>Copyright 2018 HomeMate | Tous droits réservés</p>
-    </footer>
+ <?php include('Vue/footer.php');?>
  <br/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="Controleur/JS/connexion.js" type="text/javascript"></script>
