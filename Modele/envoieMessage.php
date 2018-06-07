@@ -7,8 +7,8 @@ if (isset($_POST['nom'])){
 		date('h:i:s'),
 		'Leon',$_POST['message'],	'admin'));
 
-	header('Location: ../Vue/boiteMail.php');
+	header('Location: index.php?cible=boiteMail');
 }
 else{
-    header('Location: ../Modele/messagerie.php');
+    header('Location: index.php?cible=messagerie');
 } ?>
