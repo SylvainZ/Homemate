@@ -9,15 +9,9 @@ if(isset($_GET['cible']) && !empty($_GET['cible'])) {
     $url = 'accueil';
 }
 
-// On appelle le contr�leur
-if(isset($_GET['message']) && !empty($_GET['message'])){
-    include('Controleur/'.$url.'.php?message='.$_GET['message']);
-}
 
 
-else {
- 
-include('Controleur/' . $url . '.php');
-}
+    include('Controleur/' . $url . '.php');
+
 
 ?>

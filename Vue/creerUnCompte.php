@@ -12,7 +12,7 @@
 <body>
 
 <header>
-	<div class="logo"><img src="Vue/images/homemate2.png" alt="logo Homemate"></div>
+    <div class="logo"><a href="index.php?cible=accueil"><img src="Vue/images/homemate2.png" alt="logo Homemate"></a></div>
 </header>
 
 <section>

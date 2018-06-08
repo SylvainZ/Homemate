@@ -1,6 +1,6 @@
 <?php
 
 session_start();
-include("Vue/pageMessage.php")
+include("Vue/pageMessage.php");
 
 ?>

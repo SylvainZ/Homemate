@@ -29,9 +29,9 @@
 					
 					<div class="zoneDate">
 						<span class="margeGauche">Date:
-	<?php
-	echo $_SESSION['date'][$_GET['message']];
-	?> </span>
+                        <?php
+                        echo $_SESSION['date'][$_GET['message']];
+                        ?> </span>
 					</div>
 				</div>
 				

@@ -14,7 +14,7 @@ $req = $bdd->query('SELECT * FROM messagerie ');
 	$numMessage=0;
 	
 // Récupération des 10 derniers messages
-$req = $bdd->query('SELECT * FROM messagerie WHERE Reception = \'Leon\' '); /*ORDER BY Date DESC LIMIT 0, 10*/
+$req = $bdd->query('SELECT * FROM messagerie WHERE Reception = \''.$_SESSION['email'].'\' '); /*ORDER BY Date DESC LIMIT 0, 10*/
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 while ($donnees = $req->fetch())
 {
