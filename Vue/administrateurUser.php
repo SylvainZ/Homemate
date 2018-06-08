@@ -20,7 +20,7 @@
 <head>
     <title>Administrateur - Utilisateur</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/styleAdminUser.css">
+    <link rel="stylesheet" href="styleAdminUser.css">
 </head>
 
 <body>
@@ -52,15 +52,16 @@
 			
 			
 				<table>
-					<tr>
+				
+				</table>
+			<div class="tableau">
+				<table>
+						<tr>
 					       <td id="tabletete">Nom</td>
 					       <td id="tabletete">Prénom</td>
 					       <td id="tabletete">Statut</td>
 					       <td id="tabletete">Autre</td>
 					</tr>
-				</table>
-			<div class="tableau">
-				<table>
 					<?php
 					   while ($donnees = $reponse->fetch())
 					{

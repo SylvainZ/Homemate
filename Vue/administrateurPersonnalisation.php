@@ -3,7 +3,7 @@
 <head>
     <title>Administrateur - Personnalisation</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/styleAdminPerso.css">
+    <link rel="stylesheet" href="styleAdminPerso.css">
 </head>
 
 <body>
