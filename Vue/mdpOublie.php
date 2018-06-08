@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,18 +13,10 @@
 
     <div class="bloc">
         
-        <form method="post" action="Controleur/authentification.php">
+        <form method="post" action="vue/mdpOublie2.php">
             
             <h2>MOT DE PASSE OUBLIE</h2>
            
-            <span class="color">Saisissez votre pseudo
-            </span>
-            
-            <br/><br />
-
-            <input id="pseudo" class="text" type="text" name="pseudo"/>
-        
-                <br /><br/>
 
             <span class="color">Saisissez votre adresse email
             </span>
@@ -31,10 +24,9 @@
                 <br/> <br />
             
             <input id="email"  class="text" type="text" name="email"/>
-
-                <br /><br/>
+            <br/> <br />
             
-            <input class="valider" type="submit" value="VALIDER">
+            <input class="valider" type="submit" value="VALIDER" name="forgotPass">
                 
                 <br/>
 
