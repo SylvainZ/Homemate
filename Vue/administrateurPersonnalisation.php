@@ -3,11 +3,14 @@
 <head>
     <title>Administrateur - Personnalisation</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Vue/CSS/styleAdminPerso.css">
+    <link rel="stylesheet" href="CSS/styleAdminPerso.css">
 </head>
 
 <body>
 	<section id="blocs">
+        <header>
+            <?php include ("header.php")?>
+        </header>
 		<div class="image" >
 			<img class="homemate" src="images/logo_nouvo.png">
 			<img class="profil" src="images/iconeProfil.png">
@@ -18,7 +21,7 @@
 				<li class="decoration" ><span class="padding">
 				<a href="administrateurUser.php">
 				Comptes Utilisateurs</a></span></li>
-				<li class="decoration"><span class="padding"><a href="administrateurCA.php">Capteurs/Actionnaires</a></span></li>
+				<li class="decoration"><span class="padding"><a href="administrateurCA.php">Capteurs/Actionneurs</a></span></li>
 				<li class="decoration" id="blue"><span class="padding"><a href="administrateurPersonnalisation.php">Personnalisation du site</a></span></li>
 			</ul>
 		</div>
