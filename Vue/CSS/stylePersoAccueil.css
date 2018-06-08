@@ -15,8 +15,14 @@ h1
 {
 	text-align: center;
 }
-
-p
+.titre
+{
+	font-size:2em;
+	text-align: center;
+	font-weight: bold;
+	color:black;
+}
+form
 {
 	font-family: 'Quando';
 	color: white;
@@ -36,20 +42,30 @@ p
 .bloc1
 {
 	padding-left: 3vw;
-	height:25vw;
+	height:35vw;
 	width:35vw;
 }
 .bloc2
 {
-	height:25vw;
+	height:35vw;
 	width:35vw;
 	overflow:auto;
 }
+.uploadImage
+{
+	color:white;
+	font-family: Quando;
 
+}
 input[type=text]
 {
 	border-radius: 5px;
 }
+input[type=file]
+{
+	border-radius: 20px;
+}
+
 img
 {
 	height:15vw;

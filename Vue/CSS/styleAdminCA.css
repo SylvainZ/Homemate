@@ -1,7 +1,7 @@
 body
 {
 	font-family: Raleway-SemiBold;
-	background-image: url("../images/BLUMYS.png");
+	background-image: url("Images/BLUMYS.png");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -41,7 +41,33 @@ body
 {
 	border-color: blue;
 }
+.decoliste
+{
+	background-color: #5c5684;
+	color:white;
+	font-size:1.2em;
+	font-weight: bold;
+	text-align: center;
+	font-family: Quando;
+	width:20vw;
+	height:3vw;
+	border-radius:20px;
+	border: 3px solid white;
+	list-style-type:none;
+	margin-bottom: 1vw; 
+	padding-top: 1vw;
+}
 
+.decalage
+{
+	padding-left: 10vw;
+}
+.position
+{
+	position:relative;
+	left: 25vw;
+	bottom: 2vw;
+}
 
 .profil
 {
@@ -73,6 +99,13 @@ body
 	left:15%;
 	border-radius: 60px;
 	padding-top: 1px;
+	color:white;
+	font-size:1.2em;
+	font-weight: bold;
+	text-align: center;
+	font-family: Quando;
+	margin-bottom: 10px; 
+	overflow: auto;
 }
 
 
