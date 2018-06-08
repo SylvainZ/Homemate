@@ -1,3 +1,11 @@
 <?php 
 session_start();
-include('Vue/modifierProfil.php');?>
+
+if (isset($_SESSION['Admin'])) {
+    include ('Vue/modifierProfilAdmin.php');
+}
+
+else {
+    include('Vue/modifierProfil.php');
+}
+ ?>

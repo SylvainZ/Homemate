@@ -29,32 +29,60 @@
 
         <?php
         if (isset($_SESSION['nom'])){
+
+            if (isset($_SESSION['Admin'])) {
         ?>
 
+                <div id="posMenu">
+                    <div id="posNotif">
+                        <div  id="icone"><a href="index.php?cible=boiteMailReception"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a></div>
 
-            <div id="posMenu">
-                <div id="posNotif">
-                    <div  id="icone"><a href="index.php?cible=boiteMailReception"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a></div>
-                    <div id="iconeCloche"><a href="#"><img class="imageLettre" src="Vue/images/bell.png"  height="50"></a></li></div>
-                </div>
+                    </div>
 
-                <ul id="menu">
+                    <ul id="menu">
                         <li>
                             <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
-                        <ul>
-                            <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
-                            <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">G�rer la maison</a> </li>
-                            <li><a href="index.php?cible=deconnexion" class="barre">Deconnexion</a> </li>
-                        </ul>
+                            <ul>
+                                <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
+                                <li><a href="index.php?cible=controleUser" class="barre">Gérer le site</a> </li>
+                                <li><a href="index.php?cible=deconnexion" class="barre">Déconnexion</a> </li>
+                            </ul>
                         </li>
 
                         <li>
                             <a href="index.php?cible=FAQ">Besoin d'aide ?</a>
                         </li>
-                </ul>
-            </div>
+                    </ul>
+                </div>
 
-            <?php
+
+
+
+            <?php  }
+            else {  ?>
+                <div id="posMenu">
+                    <div id="posNotif">
+                        <div  id="icone"><a href="index.php?cible=boiteMailReception"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a></div>
+                        <div id="iconeCloche"><a href="#"><img class="imageLettre" src="Vue/images/bell.png"  height="50"></a></li></div>
+                    </div>
+
+                    <ul id="menu">
+                            <li>
+                                <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
+                            <ul>
+                                <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
+                                <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">G�rer la maison</a> </li>
+                                <li><a href="index.php?cible=deconnexion" class="barre">Déconnexion</a> </li>
+                            </ul>
+                            </li>
+
+                            <li>
+                                <a href="index.php?cible=FAQ">Besoin d'aide ?</a>
+                            </li>
+                    </ul>
+                </div>
+
+            <?php }
         }
         else{
             ?>

@@ -10,14 +10,17 @@ $(document).ready(function(){
                 password : $("#password").val()
             },
 
-            function(data){
+            function Nom(data){
 
-                if (data == 'success') {
+                if (data == 'success') { // && Admin == false
                     // Le membre est connecté. Ajoutons lui un message dans la page HTML.
                     //document.getElementById('resultat').innerHTML = "Login successful.";
                     //$("#resultat").html("<p>Vous avez été connecté avec succès !</p>");
                     window.location = 'Modele/sessionProfil.php?email='+$("#username").val();
                 }
+                /*else if (data == 'success') {//
+                    window.location = 'index.php?cible=boiteMail' ;
+                }*/
                 else {
                     // Le membre n'a pas été connecté. (data vaut ici "failed")
                     document.getElementById('resultat').innerHTML = "Login failed. Please check your login & password.";
@@ -29,9 +32,4 @@ $(document).ready(function(){
         );
     });
 });
-
-
-
-
-
 

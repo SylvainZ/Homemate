@@ -43,8 +43,8 @@ p{
 	margin-left: auto;
 	border-style: none;
 	border: solid black;
-	padding-top:5px;
-	padding-bottom:5px;
+	padding-top:7px;
+	padding-bottom:7px;
 }
 
 .zoneDate
@@ -55,8 +55,8 @@ p{
 	height: 2vw;
 	margin-right: auto;
 	border: solid black;
-	padding-top:5px;
-	padding-bottom:5px;
+	padding-top:7px;
+	padding-bottom:7px;
 }
 
 .zoneReception
@@ -69,8 +69,8 @@ p{
 	margin-right: auto;
 	border-style: none;
 	border: solid black;
-	padding-top:5px;
-	padding-bottom:5px;
+	padding-top:7px;
+	padding-bottom:7px;
 }
 
 .zoneMessage

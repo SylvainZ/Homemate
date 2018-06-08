@@ -46,7 +46,7 @@ if (isset($_POST['nom'])/*
 		));
 	}
 	$req->closeCursor();
-	echo 'vous avez bien enregistrer les modification';
+	echo 'vous avez bien enregistré les modifications';
 	header('Location: index.php?cible=sessionProfilActualisation');
 }
 else{

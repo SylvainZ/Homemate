@@ -1,3 +1,11 @@
 <?php 
 session_start();
-include('Modele/modifieProfil.php');?>
+
+if (isset($_SESSION['Admin'])) {
+    include ('Modele/modifieProfilAdmin.php');
+}
+
+else {
+    include('Modele/modifieProfil.php');
+}
+?>

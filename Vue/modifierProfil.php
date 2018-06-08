@@ -49,7 +49,7 @@
             Numéro de téléphone:<br/>
             <input type="text" name="numTel" placeholder="numéro de téléphone" value=<?php echo $_SESSION['numTel'];?> /><br />
             <input type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/><br />
-            <a href="index.php?cible=profil" >annuler</a>
+            <a href="index.php?cible=profil" ><input type="button" value="Annuler"/></a>
         </p>
     </form>
 

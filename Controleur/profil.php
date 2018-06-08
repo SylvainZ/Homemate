@@ -1,3 +1,12 @@
 <?php
 session_start();
-include('Vue/profil.php')?>
+
+if (isset($_SESSION['Admin'])) {
+    include('Vue/profilAdmin.php');
+}
+
+else {
+    include('Vue/profil.php');
+    }
+
+    ?>

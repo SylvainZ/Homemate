@@ -50,6 +50,6 @@
  <?php include('Vue/footer.php');?>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script src="Controleur/JS/connexion.js" type="text/javascript"></script>
+        <script src="Controleur/JS/connecte.js" type="text/javascript"></script>
  </body>
 </html>

@@ -3,6 +3,26 @@
 
 include('connexionBD.php');
 
+if (isset($_SESSION['Admin'])) {
+    $req = $bdd->query('SELECT * FROM administrateur WHERE Email = \''.$_SESSION['email'].'\''); //à modifier pour faire en fonction de l'utilisateur
+
+    $donnees = $req->fetch();
+
+    $_SESSION['nom'] = $donnees['Nom'];
+    $_SESSION['prenom'] = $donnees['Prenom'];
+    $_SESSION['ville'] = $donnees['Ville'];
+    $_SESSION['pays']=$donnees['Pays'];
+    $_SESSION['adresse']=$donnees['Adresse'];
+    $_SESSION['email'] = $donnees['Email'];
+    $_SESSION['numTel'] = $donnees['Telephone'];
+    $_SESSION['datedenaissance'] = $donnees['Datedenaissance'];
+    $_SESSION['codePostal'] = $donnees['CodePostal'];
+    $_SESSION['ID'] = $donnees['ID'];
+
+
+}
+
+else {
 $req = $bdd->query('SELECT * FROM profil WHERE Email = \''.$_SESSION['email'].'\''); //à modifier pour faire en fonction de l'utilisateur
 
 $donnees = $req->fetch();
@@ -22,7 +42,7 @@ $_SESSION['numLogement']=$donnees['NumeroLogement'];
 $_SESSION['surface']=$donnees['surface'];
 $_SESSION['codePostal']=$donnees['CodePostal'];
 
-
+}
 
 header('Location: index.php?cible=profil');
 ?>

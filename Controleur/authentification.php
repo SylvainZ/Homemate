@@ -10,16 +10,34 @@ if (isset($_POST['username'])
 
     $pass=sha1($_POST['password']);
 
-    $requete = $bdd->prepare("SELECT Email,password FROM profil WHERE Email = ? AND password = ?");
-    $requete->execute(array($_POST['username'], $pass));
-    while ($donnees = $requete->fetch()){
-        if (isset($donnees['Email'])&& isset($donnees['password'])) {
+
+
+    $requeteAdmin = $bdd->prepare("SELECT Email,password FROM administrateur WHERE Email = ? AND password = ?");
+    $requeteAdmin->execute(array($_POST['username'], $pass));
+    while ($donneesAdmin = $requeteAdmin->fetch()){
+        if (isset($donneesAdmin['Email'])&& isset($donneesAdmin['password'])) {
+            $_SESSION['Admin']=true;
             echo "success";
-            
+
         }
         else {
             echo "failed";
         }
     }
+
+    $requete = $bdd->prepare("SELECT Email,password FROM profil WHERE Email = ? AND password = ?");
+    $requete->execute(array($_POST['username'], $pass));
+    while ($donnees = $requete->fetch()){
+        if (isset($donnees['Email'])&& isset($donnees['password'])) {
+
+            echo "success";
+
+        }
+        else {
+            echo "failed";
+        }
+    }
+
+
 }
 ?>
