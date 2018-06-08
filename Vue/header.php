@@ -43,7 +43,7 @@
                             <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
                         <ul>
                             <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
-                            <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">Gï¿½rer la maison</a> </li>
+                            <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">Gérer la maison</a> </li>
                             <li><a href="index.php?cible=deconnexion" class="barre">Deconnexion</a> </li>
                         </ul>
                         </li>

@@ -36,6 +36,8 @@ $nbColonne3=5;
 			<?php include("header.php"); ?>
 	</header>
 	
+	<div id="page">
+	
 	<div id="en-tete" class="entete">
     <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>
     <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
@@ -53,7 +55,11 @@ $nbColonne3=5;
 		</div>
 			<div class="tonDiv1" id="tonDiv1">
 				<div class="couleur1">
-					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');">Luminosit�</button>
+					<div class="bande2">
+					<div class="centre2">
+					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');"><span class="styleonglet">Luminosité</span></button>
+					</div>
+					</div>
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
 	 					<?php echo 	'<table class="tableau"><tbody>
@@ -104,7 +110,11 @@ $nbColonne3=5;
 				</div>
 
 				<div class="couleur1">
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Temp�rature</button>
+					<div class="bande2">
+					<div class="centre2">
+	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');"><span class="styleonglet">Température</span></button>
+	 				</div>
+	 				</div>
 	 					<div class="tonDiv3" id="tonDiv3">
 	 						<div class="luminosite">
 		 				<?php echo	'<table class="tableau">
@@ -154,7 +164,11 @@ $nbColonne3=5;
 						</div>
 				</div>
 				<div class="couleur1">
-					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">D�tecteur de mouvement</button>
+				<div class="bande2">
+					<div class="centre2">
+					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');"><span class="styleonglet">Détecteur de mouvement</span></button>
+					</div>
+					</div>
 	 					<div class="tonDiv4" id="tonDiv4">
 	 						<div class="luminosite">
 		 				<?php	echo	'<table class="tableau" border="1">
@@ -207,12 +221,20 @@ $nbColonne3=5;
    	</div>
 
    	<div class="menu2">
-        <div class="bande ">
+        <div class="bouton">
+		<div class="bande">
+		<div class="centre3">
             <button id="bouton" class="boutonBis" onclick="javascript:afficher_cacher('tondiv1');"><span class="style">Actionneurs</span></button>
+        </div>
+        </div>
         </div>
 			<div class="tondiv1" id="tondiv1">
 				<div class="couleur1">
-					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumi�re</button>
+				<div class="bande2">
+					<div class="centre2">
+					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');"><span class="styleonglet">Lumière</span></button>
+					</div>
+					</div>
 						<div class="tondiv2" id="tondiv2">
 							<div class="luminosite">
 	 							<table class="tableau" border="1">
@@ -229,7 +251,11 @@ $nbColonne3=5;
 						</div>
 				</div>
 				<div class="couleur1">
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tondiv3');">Volets</button>
+				<div class="bande2">
+					<div class="centre2">
+	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tondiv3');"><span class="styleonglet">Volets</span></button>
+	 				</div>
+	 				</div>
 	 					<div class="tondiv3" id="tondiv3">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -246,10 +272,11 @@ $nbColonne3=5;
    	</div>
    </div>
     </div>
+    </div>
    	
-   	 <footer>
+   	
 			<?php include("footer.php"); ?>
-    </footer>
+    
     
 
 

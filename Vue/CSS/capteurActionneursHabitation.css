@@ -1,24 +1,47 @@
 .style
 {
 	padding-bottom:5vw;
-	font-size:1.5vw;
+	font-size:1.7vw;
+}
+.styleonglet
+{
+	
+	font-size:1.2vw;
 }
 .centre
 {
 	position:absolute;
 	right:48vw;
-	padding-bottom:5vw;
+	padding-top:0.4vw;
+	padding-bottom:1vw;
+}
+.centre2
+{
+	
+	padding-top:0.3vw;
+}
+.centre3
+{
+	position:absolute;
+	right:47vw;
+	padding-top:0.4vw;
+	padding-bottom:1vw;
 }
 
 .bande
 {
-	height:3vw;
+	height:4vw;
 	border:solid;
 	border-color:white;
 	border-top-left-radius:1vw;
 	border-top-right-radius: 1vw;
 }
-
+.bande2
+{
+	height:2vw;
+	
+	
+}
 td
 {
 	border:thin solid transparent;
@@ -50,6 +73,7 @@ span
 	position: relative;
 	background-color: #82354f;
 	left:0%; 
+	
 }
 
 /*carre habitation*/
@@ -98,9 +122,11 @@ border:none;
 
 
 .tableau{
- border-collapse: collapse;
+ 	border-collapse: collapse;
     flex-wrap: wrap;
+    
 }
+
 
 
 
@@ -191,10 +217,6 @@ border:none;
 .menu
 {
 	background-color: #2f0c1b;
-<<<<<<< HEAD
-
-=======
->>>>>>> b6fcfbc71eabcc99d1ad0f66709da23b6fea6de6
 	border-radius:1vw;
 }
 

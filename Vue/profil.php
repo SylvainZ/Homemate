@@ -18,26 +18,31 @@
     	<br />
         <div id="page">
     	<img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" /><span class="profil">Profil</span>
+    	
+    	<br>
+    	<br>
+    	<br>
 
     	
         <div class="bar">
          <div class="aff">
         
-            <h1>Votre profil</h1>
+            
             <div class="br">
-            Nom: <?php echo $_SESSION['nom'];?><br>
-            Prenom: <?php echo $_SESSION['prenom'];?><br>
-            Age: <?php echo $_SESSION['age'];?> ans<br>
-            Statut: <?php echo $_SESSION['statut'];?><br>
-            Email: <?php echo $_SESSION['email'];?><br>
-            Telephone: 0<?php echo $_SESSION['numTel'];?><br>
-            Addresse: <?php echo $_SESSION['numRue'].' '.$_SESSION['nomRueBdAve'].' '.$_SESSION['numLogement'].' '.$_SESSION['codePostal'].' '.$_SESSION['ville'];?><br> 
+           <span class="texte"> Nom: <?php echo $_SESSION['nom'];?></span><br>
+           <span class="texte"> Prenom: <?php echo $_SESSION['prenom'];?></span><br>
+           <span class="texte"> Age: <?php echo $_SESSION['age'];?> ans</span><br>
+           <span class="texte"> Statut: <?php echo $_SESSION['statut'];?></span><br>
+           <span class="texte"> Email: <?php echo $_SESSION['email'];?></span><br>
+           <span class="texte"> Telephone: 0<?php echo $_SESSION['numTel'];?></span><br>
+           <span class="texte"> Addresse: <?php echo $_SESSION['numRue'].' '.$_SESSION['nomRueBdAve'].' '.$_SESSION['numLogement'].' '.$_SESSION['codePostal'].' '.$_SESSION['ville'];?></span><br> 
             </div>
         </div>
         <div >
          	<a href="index.php?cible=modifieProfil" ><input type=button value = "Modifier le profil"/></a> <br>
 			
 			<a href="index.php?cible=capteurActionneursHabitations"><input type=button value = "Gerer la maison"/></a><br/><br/>           
+        </div>
         </div>
         </div>
     	

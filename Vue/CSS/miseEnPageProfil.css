@@ -20,15 +20,20 @@ border-style: none;
 opacity: 0.8;
 position: relative;
 text-align:left;
-background: #6a1b3d;
+
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 20px;
 width: 70%;
 height: 250px;
 margin: auto;
+padding-top:3vw;
 border-style: none;
 
+}
+.texte
+{
+	color:white;
 }
 
 
@@ -37,7 +42,7 @@ border-style: none;
     position:relative;
     color: black;
     margin-left:46%;
-    margin-top:10%;
+    margin-top:2%;
     font-size: 3.5em;
     font-family: Quando, serif;
 }
@@ -47,7 +52,7 @@ border-style: none;
     border-radius: 4px;
     width: 4%;
     position: relative;
-    top: 10%;
+    margin-top: 2%;
     left: 40%;
     
 }
