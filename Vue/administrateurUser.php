@@ -37,10 +37,10 @@
 		<div class="tete">
 			<ul>
 				<li class="decoration" id="blue"><span class="padding">
-				<a href="administrateurUser.php">
+				<a href="index.php?cible=controleUser">
 				Comptes Utilisateurs</a></span></p>
-				<li class="decoration"><span class="padding"><a href="administrateurCA.php">Capteurs/Actionneurs</a></span></p></li>
-				<li class="decoration"><span class="padding"><a href="administrateurPersonnalisation.php">Personnalisation du site</a></span></p></li></ul>
+				<li class="decoration"><span class="padding"><a href="index.php?cible=controleCapteur">Capteurs/Actionneurs</a></span></p></li>
+				<li class="decoration"><span class="padding"><a href="index.php?cible=controlePerso">Personnalisation du site</a></span></p></li></ul>
 			</ul>
 		</div>
 	</section>

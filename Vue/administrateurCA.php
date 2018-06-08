@@ -3,7 +3,8 @@
 <head>
     <title>Administrateur - Capteur/Actionneur</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/styleAdminCA.css">
+    <link rel="stylesheet" href="Vue/CSS/styleAdminCA.css">
+    <link rel="stylesheet" href="Vue/CSS/all.css">
 <?php
 	try
 		{
@@ -31,10 +32,10 @@
 		<div class="tete">
 			<ul>
 				<li class="decoration"><span class="padding">
-				<a href="administrateurUser.php">
+				<a href="index.php?cible=controleUser">
 				Comptes Utilisateurs</a></span></p>
-				<li class="decoration" id="blue"><span class="padding"><a href="administrateurCA.php">Capteurs/Actionneurs</a></span></p>
-				<li class="decoration"><span class="padding"><a href="administrateurPersonnalisation.php">Personnalisation du site</a></span></p>
+				<li class="decoration" id="blue"><span class="padding"><a href="index.php?cible=controleCapteur">Capteurs/Actionneurs</a></span></p>
+				<li class="decoration"><span class="padding"><a href="index.php?cible=controlePerso">Personnalisation du site</a></span></p>
 			</ul>
 		</div>
 	</section>
@@ -49,7 +50,7 @@
 		<li class="decoliste">
 		<?php echo $donnees['Type'];?>
 		<?php echo $donnees['Nom']?>
-			<form action="controle.php" method="POST" class="position">
+			<form action="index.php?cible=controleCapteur" method="POST" class="position">
 				<input type="text" name="modification" style= "width:10vw;">
 				<input type="submit" value="Modfier type">
 			</form>
@@ -60,9 +61,6 @@
 
 
 	</section>
-    <footer>
-        <?php include ("footer.php")?>
-    </footer>
 
 
 
