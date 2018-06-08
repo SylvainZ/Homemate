@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>FAQ</title>
-        <link rel="stylesheet" href="CSS/styleFaq.css" />
+        <link rel="stylesheet" href="Vue/CSS/styleFaq.css" />
         <link rel="stylesheet" href="Vue/CSS/all.css" />
     </head>
 
@@ -32,9 +32,9 @@
 
     	</section>
 </div>
-        <footer>
+
             <?php include("footer.php") ?>
-        </footer>
+
 
     </body>
 </html>	

@@ -15,8 +15,8 @@
 	height:3vw;
 	border:solid;
 	border-color:white;
-	border-radius:1vw;
-	
+	border-top-left-radius:1vw;
+	border-top-right-radius: 1vw;
 }
 
 td
@@ -154,7 +154,7 @@ border:none;
 #bouton{
 
 	right:100%;
-	border-radius: 5%;
+	/*border-radius: 5%;*/
 	border:none;
 	color: white;
 	background-color: #2f0c1b;
@@ -191,7 +191,10 @@ border:none;
 .menu
 {
 	background-color: #2f0c1b;
+<<<<<<< HEAD
 
+=======
+>>>>>>> b6fcfbc71eabcc99d1ad0f66709da23b6fea6de6
 	border-radius:1vw;
 }
 
@@ -199,7 +202,7 @@ border:none;
 {
 	
 	background-color: #2f0c1b;
-
+	border-radius:1vw;
 
 }
 
@@ -207,7 +210,7 @@ border:none;
 {
     display: flex;
     justify-content: center;
-    border-radius:1vw;
+
 }
 
 #grandmenu{
@@ -222,8 +225,8 @@ border:none;
 	display :flex;
 	justify-content :center;
 	margin-bottom:2vw;
-	
-	
+
+
 }
 
 
