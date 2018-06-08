@@ -3,7 +3,7 @@
 <head>
     <title>Administrateur - Capteur/Actionneur</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/styleAdminCA.css">
+    <link rel="stylesheet" href="Vue/CSS/styleAdminCA.css">
 </head>
 
 <body>

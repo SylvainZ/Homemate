@@ -20,7 +20,7 @@
 <head>
     <title>Administrateur - Utilisateur</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/styleAdminUser.css">
+    <link rel="stylesheet" href="Vue/CSS/styleAdminUser.css">
 </head>
 
 <body>
