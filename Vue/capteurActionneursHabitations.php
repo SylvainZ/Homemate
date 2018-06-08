@@ -242,7 +242,7 @@ $nbColonne3=5;
 										<tr id="ligne1">
 										
 
-										 <td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										 <td><a href="index.php?cible=ajoutActionneur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 
 										</tr>
 									</tbody>
@@ -261,7 +261,7 @@ $nbColonne3=5;
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne2">
-										 <td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										 <td><a href="index.php?cible=ajoutActionneur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>

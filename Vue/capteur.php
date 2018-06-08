@@ -15,6 +15,8 @@ if(isset($_GET['ID'])){
     $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece =\''.$_GET['ID'].'\'');
     $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece=\''.$_GET['ID'].'\'');
     $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece=\''.$_GET['ID'].'\'');
+    $volet = $bdd->query('SELECT * FROM actionneurs WHERE type = \'volet\' AND idpiece=\''.$_GET['ID'].'\'');
+    $inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'interrupteur\' AND idpiece=\''.$_GET['ID'].'\'');
 }
 
 
@@ -185,8 +187,43 @@ if(isset($_GET['ID'])){
 									<tbody>
 										<tr id="ligne1">
 										
+										<?php 
+										while ($donnees1 = $inter->fetch()){
+										    $id=$donnees1['ID'];
+										?>
+										<td>
+										<div class="case">
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale3">X</a></button>
+                                            <?php if($donnees1['Etat']==1){?>
+                                            
+                                            <a href="index.php?cible=modifierActionneur&etat=0&ID=<?php echo $_GET['ID']?>&id=<?php echo $donnees1['ID']?>"><img class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px"></a>
+                                            
+                                            <?php }
+                                            else {?>
+                                            
+                                             <a href="index.php?cible=modifierActionneur&etat=1&ID=<?php echo $_GET['ID']?>&id=<?php echo $donnees1['ID']?>"><img class="styleCapteur" src="Vue/images/arret.png" alt="image interrupteur" height="50px"></a>
+                                                
+                                            <?php }?>
+                                            <div id="fenetreModale3">
+                                                <div class="popup-block">
+                                                    <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
+                                                    <div class="annulerSupprimer">
+                                                        <form method="post" action="index.php?cible=supprimerActionneur&id=<?php echo $donnees1['ID']?>">
+                                                            <input type="submit" value="Supprimer" class="boutonSup">
+                                                        </form>
+                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-										 <td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+
+                                            <span><?php echo $donnees1['nom']?> </span><br>
+										
+										</div>
+										</td>
+										<?php }?>
+
+										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>""> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 
 										</tr>
 									</tbody>
@@ -201,7 +238,7 @@ if(isset($_GET['ID'])){
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne2">
-										 <td><a href="index.php?cible=ajouterUnCapteur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>""> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>
