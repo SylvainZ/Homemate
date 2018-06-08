@@ -32,36 +32,33 @@
         ?>
 
 
-            <div class="posMenu">
-                <div class="posNotif">
-                    <a href="index.php?cible=boiteMailReception" id="icone"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a>
-                    <a href="#" id="iconeCloche"><img class="imageLettre" src="Vue/images/bell.png"  height="50"></a>
+            <div id="posMenu">
+                <div id="posNotif">
+                    <div  id="icone"><a href="index.php?cible=boiteMailReception"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a></div>
+                    <div id="iconeCloche"><a href="#"><img class="imageLettre" src="Vue/images/bell.png"  height="50"></a></li></div>
                 </div>
 
-                <div class="menu">
                 <ul id="menu">
-
                         <li>
                             <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
                         <ul>
                             <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
-                            <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">Gérer la maison</a> </li>
+                            <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">Gï¿½rer la maison</a> </li>
                             <li><a href="index.php?cible=deconnexion" class="barre">Deconnexion</a> </li>
                         </ul>
                         </li>
 
                         <li>
-                            <a href="Vue/faq.php">Besoin d'aide ?</a>
+                            <a href="index.php?cible=FAQ">Besoin d'aide ?</a>
                         </li>
                 </ul>
-                </div>
             </div>
 
             <?php
         }
         else{
             ?>
-            <div class="posMenu">
+            <div id="posMenu">
                 <ul id="menu">
 
                         <li>
@@ -77,7 +74,7 @@
                         </li>
 
                         <li>
-                               <a href="Vue/faq.php" class="barre">Besoin d'aide ?</a>
+                               <a href="index.php?cible=FAQ" class="barre">Besoin d'aide ?</a>
                         </li>
                 </ul>
             </div>

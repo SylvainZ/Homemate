@@ -70,9 +70,7 @@
 
 </section>
 </div>
-<footer>
-	<p>Copyright 2018 HomeMate | Tous droits r�serv�s</p>
-</footer>
+<?php include('footer.php');?>
 
 </body>
 </html>

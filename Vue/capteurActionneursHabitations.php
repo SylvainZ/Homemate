@@ -39,7 +39,8 @@ $nbColonne3=5;
 	<div id="en-tete" class="entete">
     <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>
     <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
-</div>
+    </div>
+
 	<div id="global">
 	<div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
@@ -193,9 +194,7 @@ $nbColonne3=5;
                                             <?php $nbLigne3++;}?>
 
 											<td></td>
-										</tr>
-									</tbody>
-								</table>
+
 
 											
                                 <?php	echo '</tbody>
@@ -208,9 +207,9 @@ $nbColonne3=5;
    	</div>
 
    	<div class="menu2">
-
-		<button id="bouton" onclick="javascript:afficher_cacher('tondiv1');">Actionneurs</button>
-
+        <div class="bande ">
+            <button id="bouton" class="boutonBis" onclick="javascript:afficher_cacher('tondiv1');"><span class="style">Actionneurs</span></button>
+        </div>
 			<div class="tondiv1" id="tondiv1">
 				<div class="couleur1">
 					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumi�re</button>

@@ -15,10 +15,10 @@ img{
     margin-left: 10px;
 }
 
-.posMenu{
-    display:flex;
-    margin-top: 13px;
-    margin-right:10px;
+#posMenu{
+   display:flex;
+   margin-top: 13px;
+   margin-right:10px;
 }
 
 .barreMenu{
@@ -30,6 +30,8 @@ img{
     justify-content:space-between;
     background-color: #2f0c1b;
 }
+
+
 #menu, #menu ul{
     padding : 0; /* pas de marge int�rieure */
     margin : 0; /* ni ext�rieure */
@@ -55,6 +57,7 @@ img{
     height: 40px;
 }
 
+
 #menu li /* �l�ments des listes */
 {
     float : left;
@@ -72,7 +75,7 @@ img{
 
 #menu li ul li /* El�ments de sous-listes */
 {
-    /* pour ie qui ne reconna�t pas "transparent" (comme pr�c�demment) */
+
     border-top : 1px solid transparent; /* on met une bordure blanche en haut de chaque �l�ment d'une sous-liste */
 }
 
@@ -89,10 +92,16 @@ img{
     min-height: 0; /* Corrige un bug sous IE */
 }
 
-.posNotif
+#posNotif
 {
     position:relative;
     margin-right:10px;
+    display: flex;
+}
+
+#iconeCloche{
+    margin-right: 2vw;
+    margin-left: 2vw;
 }
 
 .imageLettre
