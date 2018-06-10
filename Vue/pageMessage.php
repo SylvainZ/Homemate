@@ -53,6 +53,10 @@
 			</div>
             </div>
 			<br/>
+
+            <a href="index.php?cible=messagerie"><input type="button" value="Répondre" class="Repondre"/></a>
+
+
 <?php include('Vue/footer.php');?>
 
 	 </body>

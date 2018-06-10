@@ -16,6 +16,15 @@ p
     border-left: 150px solid transparent;
 }
 
+#destinataire
+{
+    border-radius:4px;
+    width: 60%;
+    height: 30px;
+    background: #9997b1;
+    margin-bottom: 1.2%;
+    border:none;
+}
 
 
 .zoneTexte

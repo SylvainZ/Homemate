@@ -30,12 +30,15 @@
             
             <div class="br">
            <span class="texte"> Nom: <?php echo $_SESSION['nom'];?></span><br>
-           <span class="texte"> Prenom: <?php echo $_SESSION['prenom'];?></span><br>
+           <span class="texte"> Prénom: <?php echo $_SESSION['prenom'];?></span><br>
            <span class="texte"> Age: <?php echo $_SESSION['age'];?> ans</span><br>
            <span class="texte"> Statut: <?php echo $_SESSION['statut'];?></span><br>
            <span class="texte"> Email: <?php echo $_SESSION['email'];?></span><br>
-           <span class="texte"> Telephone: 0<?php echo $_SESSION['numTel'];?></span><br>
-           <span class="texte"> Addresse: <?php echo $_SESSION['numRue'].' '.$_SESSION['nomRueBdAve'].' '.$_SESSION['numLogement'].' '.$_SESSION['codePostal'].' '.$_SESSION['ville'];?></span><br> 
+           <span class="texte"> Téléphone: 0<?php echo $_SESSION['numTel'];?></span><br>
+           <span class="texte"> Adresse: <?php echo $_SESSION['numRue'].' '; if ($_SESSION['numBis']!='NONE') {echo $_SESSION['numBis'];} echo $_SESSION['prefixRue'].' '.$_SESSION['nomRueBdAve'].'<br/>';
+                   if ($_SESSION['typeHab']=='Appartement') {echo 'Appartement '.$_SESSION['numLogement'].' Etage '.$_SESSION['numEtage'].'<br/>';}
+               echo $_SESSION['codePostal'].' '.$_SESSION['ville'].'<br/>';
+               echo $_SESSION['pays']; ?></span><br>
             </div>
         </div>
         <div >

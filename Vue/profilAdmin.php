@@ -30,11 +30,11 @@
 
             <div class="br">
                 <span class="texte"> Nom: <?php echo $_SESSION['nom'];?></span><br>
-                <span class="texte"> Prenom: <?php echo $_SESSION['prenom'];?></span><br>
+                <span class="texte"> Prénom: <?php echo $_SESSION['prenom'];?></span><br>
                 <span class="texte"> Age: <?php echo $_SESSION['age'];?> ans</span><br>
                 <span class="texte"> Email: <?php echo $_SESSION['email'];?></span><br>
-                <span class="texte"> Telephone: 0<?php echo $_SESSION['numTel'];?></span><br>
-                <span class="texte"> Addresse: <?php echo $_SESSION['adresse'].' <br/> 
+                <span class="texte"> Téléphone: 0<?php echo $_SESSION['numTel'];?></span><br>
+                <span class="texte"> Adresse: <?php echo $_SESSION['adresse'].' <br/> 
                 '.$_SESSION['codePostal'].' '.$_SESSION['ville'].' <br/> 
                 '.$_SESSION['pays'];?></span><br>
             </div>

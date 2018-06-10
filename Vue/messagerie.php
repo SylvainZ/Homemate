@@ -26,8 +26,25 @@
             <div class="col1">
                 <form action="index.php?cible=messagerie" method="post" class="rectangle">
                     <p>
-                        <label for="objet">Sujet</label><br />
-                        <input type="text" class="zoneTexte" name="Objet" /><br />
+                        <label for="Nom">
+                            <?php if (!isset($_SESSION['ID'])) { echo 'Nom , mail'; }
+                            else { echo 'Nom'; } ?>
+                        </label><br />
+                        <input type="text" class="zoneTexte" name="Nom" required/><br />
+
+                        <label for="Objet">Sujet</label><br />
+                        <input type="text" class="zoneTexte" name="Objet" required/><br />
+
+                        <label for="destinataire">Destinataire</label><br/>
+                        <select name="destinataire" id="destinataire" required>
+                            <?php
+                            foreach ($_SESSION['liste'] as $dest) {
+                            echo '<option value="'.$dest.'">'.$dest.'</option>';
+                            }
+
+                            echo '</select><br/>';
+
+                        ?>
 
                         <label for="message">Comment pouvons-nous vous aider?</label><br />
                         <textarea class="zoneMessage" name="message" rows="12" cols="87"></textarea><br />

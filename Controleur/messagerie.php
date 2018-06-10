@@ -6,7 +6,18 @@ if(isset($_POST['Objet']) && !empty($_POST['Objet'])){
 
 }
 else{
-	include("Vue/messagerie.php");
+	if (isset($_SESSION['Admin'])) {
+		include('Modele/listeDestinataire.php');
+
+	}
+	else if (!isset($_SESSION['Admin']) && isset($_SESSION['email']) ) {
+		include ('Modele/listeDestinataire.php');
+	}
+	else {
+        $listeDest[] = 'admin@admin.fr';
+    	$_SESSION['liste']=$listeDest;
+        include("Vue/messagerie.php");
+    }
 }
 
 ?>

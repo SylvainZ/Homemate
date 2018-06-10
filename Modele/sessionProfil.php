@@ -23,6 +23,9 @@ if (!isset($_SESSION['Admin']) ) {
     $_SESSION['surface'] = $donnees['surface'];
     $_SESSION['codePostal'] = $donnees['CodePostal'];
     $_SESSION['numPiece'] = $donnees['NumeroPi�ce'];
+    $_SESSION['prefixRue'] = $donnees['PrefixRue'];
+    $_SESSION['typeHab'] = $donnees['TypeHab'];
+    $_SESSION['pays'] = $donnees['Pays'];
     $_SESSION['ID'] = $donnees['ID'];
 
     $date_courante = new DateTime(date("Y-m-d"));
@@ -44,6 +47,7 @@ else {
     $_SESSION['numTel'] = $donnees['Telephone'];
     $_SESSION['datedenaissance'] = $donnees['Datedenaissance'];
     $_SESSION['codePostal'] = $donnees['CodePostal'];
+    $_SESSION['statut'] = $donnees['Statut'];
     $_SESSION['ID'] = $donnees['ID'];
 
     $date_courante = new DateTime(date("Y-m-d"));

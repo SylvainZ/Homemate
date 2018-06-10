@@ -13,6 +13,7 @@ while ($donnees = $req->fetch())
 {
 	$sujet[] = $donnees['Sujet'];
 	$expediteur[] = $donnees['Expediteur'];
+    $nomExp[] = $donnees['nomExp'];
 	$date[] = $donnees['Date'];
 	$message[] = $donnees['Message'];
 	$reception[] = $donnees['Reception'];
@@ -22,6 +23,7 @@ while ($donnees = $req->fetch())
 }
 $_SESSION['sujet']=$sujet;
 $_SESSION['expediteur']=$expediteur;
+$_SESSION['nomExp']=$nomExp;
 $_SESSION['date']=$date;
 $_SESSION['message']=$message;
 $_SESSION['reception']=$reception;
