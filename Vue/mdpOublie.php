@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mot de passe oublié</title>
+        <title>Mot de passe oubliÃ©</title>
         <link rel="stylesheet" href="Vue/CSS/styleMDP.css">
         <link rel="stylesheet" href="Vue/CSS/all.css">
         <meta charset="utf-8" />
@@ -13,7 +13,7 @@
 
     <div class="bloc">
         
-        <form method="post" action="vue/mdpOublie2.php">
+        <form method="post" action="mdpoub2.php">
             
             <h2>MOT DE PASSE OUBLIE</h2>
            
@@ -38,7 +38,7 @@
 
         <br/>
     <footer>
-            <p>Copyright 2018 HomeMate | Tous droits réservés</p>
+            <p>Copyright 2018 HomeMate | Tous droits rÃ©servÃ©s</p>
     </footer>
  <br/>
  </body>
