@@ -135,6 +135,17 @@ td
 text-align :center;
 }
 
+.valider
+{
+	border-radius: 5px;
+	border-style: none;
+	background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
+	font-family: Quando;
+	color: white;
+	font-weight: bold;
+	min-width: 100px;
+	min-height: 30px;
+}
 
 a
 {
