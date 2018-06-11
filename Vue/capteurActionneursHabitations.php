@@ -81,7 +81,7 @@ $nbColonne3=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                    <form method="post" action="index.php?cible=supprimer&id=<?php echo $donnees1['id']?>">
                                                         <input type="submit" value="Supprimer" class="boutonSup">
                                                     </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -137,7 +137,7 @@ $nbColonne3=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <a href="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                        <a href="index.php?cible=supprimer&id=<?php echo $donnees1['id']?>">
                                                             <button class="boutonSup">Supprimer</button></a>
 
                                                         </form>
@@ -190,7 +190,7 @@ $nbColonne3=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                        <form method="post" action="index.php?cible=supprimer&id=<?php echo $donnees1['id']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -207,10 +207,7 @@ $nbColonne3=5;
 										</td>
                                             <?php $nbLigne3++;}?>
 
-											<td></td>
 
-
-											
                                 <?php	echo '</tbody>
 								</table>';?>
 

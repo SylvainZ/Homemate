@@ -12,6 +12,8 @@ catch(Exception $e)
 if(isset($_GET['ID'])){
     $id=$_GET['ID'];
     $piece = $bdd->query('SELECT * FROM piece WHERE ID_logement =\''.$_GET['ID'].'\'');
+    $nombrePiece = $bdd->query('SELECT NombrePiece FROM logement WHERE ID ='.$_GET['ID']);
+
 }
 
 
@@ -31,8 +33,10 @@ if(isset($_GET['ID'])){
 	<header>
 			<?php include("header.php") ?>
 	</header>
+
+
 	<div id="page">
-	<table class="tableau">
+	<table class="tableauPiece">
 		<tbody>
 			<tr id="ligne1">
                 <?php
@@ -41,7 +45,7 @@ if(isset($_GET['ID'])){
 	                  <td>
                         <div class="case">
                             <span> </span><?php
-                            
+
                             if ($donnees1['Type']=='salon')
                     {?>
                      <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>"> <img class="styleHabitation" src="Vue/images/salon.png" alt="image appartement" height="112"></a>
@@ -92,7 +96,7 @@ if(isset($_GET['ID'])){
                             <div class="info">
                             <span><?php echo $donnees1['Nom']?></span><br>
                             <span> Surface : </span><?php echo $donnees1['Superficie']; ?> <span>m²</span>
- 
+
                             </div>
                         </div>
                     </td>
@@ -102,31 +106,15 @@ if(isset($_GET['ID'])){
 		</tbody>
 	</table>
     </div>
-	
-	
-        
-	
-	
-	<footer>
-            <?php include("Vue/footer.php") ?>
-    </footer>
-      <script>
 
-	function afficher_cacher(id)
-{
-    if(document.getElementById(id).style.display=="none")
-    {
-        document.getElementById(id).style.display="block";
-        
-    }
-    else
-    {
-        document.getElementById(id).style.display="none";
-        
-    }
-    return true;
-}
-	</script>
+
+
+
+
+
+            <?php include("Vue/footer.php") ?>
+
+
   </body>
 
 
