@@ -92,11 +92,11 @@ body
 .bloc2
 {
 	background-color: #471229;
-	height:500px;
-	width:1300px;
+	height:30vw;
+	width:80vw;
 	position: relative;
 	top: 350px;
-	left:15%;
+	left:10%;
 	border-radius: 60px;
 	padding-top: 1px;
 	color:white;
@@ -107,7 +107,17 @@ body
 	margin-bottom: 10px; 
 	overflow: auto;
 }
-
+.bouton
+{
+	border-radius: 5px;
+	border-style: none;
+	background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
+	font-family: Quando;
+	color: white;
+	font-weight: bold;
+	min-width: 100px;
+	min-height: 30px;
+}
 
 td
 {
@@ -132,6 +142,7 @@ input[type=text]
 	padding: 10px 20px;
     box-sizing: border-box;
     width: 1000px;
+	border-radius:5px;
 }
 
 
