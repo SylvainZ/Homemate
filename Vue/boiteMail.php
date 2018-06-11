@@ -73,33 +73,79 @@
 							/*Partie qui affiche les messages stockés dans la session ouverte
 							10 messages par page*/
 								
-								
-							for ($i = 0; $i < 10; $i++){
-								/*Vérification de l'existence des variables*/
-								if (isset($_SESSION['sujet'][$i])&& isset($_SESSION['expediteur'][$i])&&isset($_SESSION['date'][$i])){
-									if($_SESSION['corbeille'][$i]==0){
-										/*Ligne d'un message*/
-										echo '<div class="message">';
+							if(isset($_GET['page']) && !empty($_GET['page'])&& $_GET['page']>0) {
+							    $i=10* ($_GET['page'] - 1);
+							    while($i < 10 * $_GET['page']){
+                                    /*Vérification de l'existence des variables*/
+                                    if (isset($_SESSION['sujet'][$i]) && isset($_SESSION['nomExp'][$i]) && isset($_SESSION['date'][$i])) {
+                                        if ($_SESSION['corbeille'][$i] == 0) {
 
-											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
-											<a href="index.php?cible=pageMessage&message='.$i.'" class="messageIndSujet">
-												<span >'.$_SESSION['sujet'][$i].'</span> </a>
-											<a href="index.php?cible=pageMessage&message='.$i.'" class="messageIndExp">	
-												<span >'.$_SESSION['nomExp'][$i].'</span></a>
-											<a href="index.php?cible=pageMessage&message='.$i.'" class="messageIndDate">	
-												<span >'.$_SESSION['date'][$i].'</span>
+                                            /*Ligne d'un message*/
+                                            echo '<div class="message">';
+
+                                            echo '<input type="checkbox" class="messagecheck" name="' . $i . '"/>
+											<a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndSujet">
+												<span >' . $_SESSION['sujet'][$i] . '</span> </a>
+											<a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndExp">	
+												<span >' . $_SESSION['nomExp'][$i] . '</span></a>
+											<a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndDate">	
+												<span >' . $_SESSION['date'][$i] . '</span>
 											</a>';
-										echo '</div>';
-									}
-								}
-							}
+                                            echo '</div>';
+                                            $i++;
+                                        }
+                                    }
+                                    else{
+                                        $i++;
+                                    }
+                                }
+                            }
+                            else{
+                                $i=0;
+
+							    while($i < 10){
+                                    /*Vérification de l'existence des variables*/
+                                    if (isset($_SESSION['sujet'][$i]) && isset($_SESSION['nomExp'][$i]) && isset($_SESSION['date'][$i])) {
+                                        if ($_SESSION['corbeille'][$i] == 0) {
+                                            /*Ligne d'un message*/
+                                            echo '<div class="message">';
+                                            echo '<input type="checkbox" class="messagecheck" name="' . $i . '"/>
+											<a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndSujet">
+												<span >' . $_SESSION['sujet'][$i] . '</span> </a>
+											<a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndExp">	
+												<span >' . $_SESSION['nomExp'][$i] . '</span></a>
+											<a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndDate">	
+												<span >' . $_SESSION['date'][$i] . '</span>
+											</a>';
+                                            echo '</div>';
+                                            $i++;
+                                        }
+                                    }
+                                    else{
+                                        $i++;
+                                    }
+                                }
+                            }
 							
 																					
 		?>				
 						
 					
 				    			<!-- commentaire : changer de page -->
-				    			<div class="page">Pages: 1</div>
+                            <?php
+                            $nbPages=0;
+                            foreach ($_SESSION['corbeille'] as $value) {
+                                if($value==0) {
+                                    $nbPages++;
+                                }
+                            }
+
+                            echo '<div class="page">Pages:';
+                            for($numPage=1;$numPage<($nbPages/10)+1;$numPage++){
+                                echo '<a href="index.php?cible=boiteMail&&page='.$numPage.'" class="liste"> '.$numPage.' </a>' ;
+                            }
+                            echo'</div>';
+                            ?>
 			    			</div>	
 			    		</p>
 	    		</form>
