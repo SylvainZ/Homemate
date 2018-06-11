@@ -3,17 +3,14 @@
 <head>
     <title>Administrateur - Personnalisation</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/styleAdminPerso.css">
+    <link rel="stylesheet" href="Vue/CSS/styleAdminPerso.css">
 </head>
 
 <body>
 	<section id="blocs">
-        <header>
-            <?php include ("header.php")?>
-        </header>
 		<div class="image" >
-			<img class="homemate" src="images/logo_nouvo.png">
-			<img class="profil" src="images/iconeProfil.png">
+			<img class="homemate" src="Vue/images/logo_nouvo.png">
+			<img class="profil" src="Vue/images/iconeProfil.png">
 		</div>
 
 		<div class="tete">
@@ -31,10 +28,10 @@
 			<div class="menu">
 				<ul>
 					<li class="deco2">
-						<a href="persoAccueil.php">
+						<a href="index.php?cible=controlePersoAccueil">
 						Page d'accueil</a></li>
 					<li class="deco2">
-						<a href="FAQ.php">
+						<a href="index.php?cible=controleFaq">
 						FAQ</a></li>
 			</div>
 	</section>

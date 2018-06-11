@@ -25,8 +25,8 @@
 
 	<section id="blocs">
 		<div class="image" >
-			<img class="homemate" src="images/logo_nouvo.png">
-			<img class="profil" src="images/iconeProfil.png">
+			<img class="homemate" src="Vue/images/logo_nouvo.png">
+			<img class="profil" src="Vue/images/iconeProfil.png">
 		</div>
 
 		<div class="tete">

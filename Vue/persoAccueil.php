@@ -3,7 +3,7 @@
 <head>
     <title>Personnalisation ACCUEIL</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="stylePersoAccueil.css">
+    <link rel="stylesheet" href="Vue/CSS/stylePersoAccueil.css">
  
 </head>
 
@@ -12,7 +12,7 @@
 	<section class="bigbloc">
 
 		<div class="bloc1">
-			<form method="post" action="../index.php?cible=ajoutLienImagesBDD">
+			<form method="post" action="index.php?cible=ajoutLienImagesBDD">
 
 			<h1 style="color:white;"> Choisissez les images à affichées à la page d'accueil :</h1>
 			<br/>
@@ -20,7 +20,7 @@
 			<p> L'image de la case 1 : <select name="image1">
             	<option value="images.jpg" > image 1</option>
             	<option value="maison.jpg">image 2</option>
-            	<option value="mais.jpg">image 3</option>	 
+            	<option value="mais.jpg">image 3</option>
             	<option value="tele.jpg">image 4</option>
             	<option value="ori.jpg">image 5</option>
 		    </select>
@@ -68,11 +68,11 @@
 		</div>
 
 		<div class="bloc2">
-			<img src="images/images.jpg">
-			<img src="images/maison.jpg">
-			<img src="images/mais.jpg">
-			<img src="images/tele.jpg">
-			<img src="images/ori.jpg">
+			<img src="Vue/images/images.jpg">
+			<img src="Vue/images/maison.jpg">
+			<img src="Vue/images/mais.jpg">
+			<img src="Vue/images/tele.jpg">
+			<img src="Vue/images/ori.jpg">
 		</div>
 
 	</section>

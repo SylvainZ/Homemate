@@ -15,23 +15,27 @@
 				// Si tout va bien, on peut continuer
 
 				// On récupère tout le contenu de la table jeux_video
-				$reponse = $bdd->query('SELECT * FROM profil');
+                if (isset($_POST['nomUser']))
+                {
+                    $reponse = $bdd->query('SELECT * FROM profil WHERE Nom = \''.$_POST['nomUser'].'\''); /**/
+                }
+                else{
+                    $reponse = $bdd->query('SELECT * FROM profil');
+                }
+
 				?>
 <head>
     <title>Administrateur - Utilisateur</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/styleAdminUser.css">
+    <link rel="stylesheet" href="Vue/CSS/styleAdminUser.css">
     <link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
 
 <body>
 	<section id="blocs">
-        <header>
-            <?php include ("header.php")?>
-        </header>
 		<div class="image" >
-			<img class="homemate" src="images/logo_nouvo.png">
-			<img class="profil" src="images/iconeProfil.png">
+			<img class="homemate" src="Vue/images/logo_nouvo.png">
+			<img class="profil" src="Vue/images/iconeProfil.png">
 		</div>
 
 		<div class="tete">
@@ -47,10 +51,10 @@
 
 	<section class="bloc2">
 		
-			<form method="POST" action="adminUser.php">
+			<form method="POST" action="index.php?cible=controleUser">
 				<p> Rechercher un utilisateur :
 				<input type="text" name="nomUser">
-				<input type="submit" value="valider">
+				<input type="submit" value="Valider" class="valider">
 				</p>
 			</form>
 
