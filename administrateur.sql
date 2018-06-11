@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 10 juin 2018 à 18:41
+-- Généré le :  lun. 11 juin 2018 à 10:30
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -40,15 +40,16 @@ CREATE TABLE `administrateur` (
   `password` varchar(255) NOT NULL,
   `Pays` text NOT NULL,
   `Telephone` int(10) NOT NULL,
-  `ID_user` int(11) NOT NULL
+  `ID_user` int(11) NOT NULL,
+  `Statut` varchar(5) NOT NULL DEFAULT 'admin'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `administrateur`
 --
 
-INSERT INTO `administrateur` (`ID`, `Nom`, `Prenom`, `Email`, `Datedenaissance`, `Adresse`, `CodePostal`, `Ville`, `password`, `Pays`, `Telephone`, `ID_user`) VALUES
-(1, 'Ye', 'Kevin', 'admin@admin.fr', '1997-12-20', '27 Rue Jean Bleuzen', 92130, 'Issy-Les-Moulineaux', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'France', 769545454, 0);
+INSERT INTO `administrateur` (`ID`, `Nom`, `Prenom`, `Email`, `Datedenaissance`, `Adresse`, `CodePostal`, `Ville`, `password`, `Pays`, `Telephone`, `ID_user`, `Statut`) VALUES
+(1, 'Ye', 'Kevin', 'admin@admin.fr', '1997-12-20', '27 Rue Jean Bleuzen', 92130, 'Issy-Les-Moulineaux', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'France', 769545454, 0, 'admin');
 
 --
 -- Index pour les tables déchargées
