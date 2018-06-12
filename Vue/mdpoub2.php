@@ -32,8 +32,5 @@ if (isset($_POST["forgotPass"])) {
     else{
         echo "mail ou reponse incorect";
     }
-} else {
-    header("Location: connection.php");
-    exit();
 }
 ?>
