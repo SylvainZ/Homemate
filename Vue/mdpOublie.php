@@ -15,7 +15,7 @@
 
     <div class="bloc">
         
-        <form method="post" action=""index.php?cible="mdpoub2.php">
+        <form method="post" action="index.php?cible=mdpoub2">
             
             <h2>MOT DE PASSE OUBLIE</h2>
            
