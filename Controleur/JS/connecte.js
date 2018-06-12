@@ -23,7 +23,7 @@ $(document).ready(function(){
                 }*/
                 else {
                     // Le membre n'a pas été connecté. (data vaut ici "failed")
-                    document.getElementById('resultat').innerHTML = "Login failed. Please check your login & password.";
+                    document.getElementById('resultat').innerHTML = "Authentification echouée. Veuillez recommencer.";
                     //$("#resultat").html("<p>Erreur lors de la connexion...</p>");
                 }
 

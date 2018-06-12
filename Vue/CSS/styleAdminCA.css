@@ -73,13 +73,13 @@ body
 {
 	position: relative;
 	left:80px;
-	height: 150px;
-	width:150px;
+	height: 10vw;
+	width:10vw;
 }
 .homemate
 {
-	height: 200px;
-	width: 350px;
+	height: 10vw;
+	width: 20vw;
 }
 .tete
 {
@@ -95,8 +95,7 @@ body
 	height:30vw;
 	width:80vw;
 	position: relative;
-	top: 350px;
-	left:10%;
+	top:8vw;
 	border-radius: 60px;
 	padding-top: 1px;
 	color:white;
@@ -104,8 +103,8 @@ body
 	font-weight: bold;
 	text-align: center;
 	font-family: Quando;
-	margin-bottom: 10px; 
 	overflow: auto;
+	margin:auto;
 }
 .bouton
 {

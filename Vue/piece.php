@@ -36,6 +36,12 @@ if(isset($_GET['ID'])){
 
 
 	<div id="page">
+
+        <div class = "entete">
+            <button class="A active"><p>Habitation(s)</p></button>
+            <button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>
+        </div>
+<br><br>
 	<table class="tableauPiece">
 		<tbody>
 			<tr id="ligne1">

@@ -23,8 +23,8 @@ body
 
 .homemate
 {
-	height: 200px;
-	width: 350px;
+	height: 10vw;
+	width: 20vw;
 }
 
 .decoration
@@ -53,8 +53,8 @@ body
 {
 	position: relative;
 	left:80px;
-	height: 150px;
-	width:150px;
+	height: 10vw;
+	width:10vw;
 }
 .tete
 {
@@ -78,9 +78,10 @@ body
 }
 .tableau
 {
-	height:420px;
-	padding: 20px;
-	width:1350px;
+	height:25vw;
+	width:80vw;
+	min-height: 400px;
+	min-width: 1000px;
 	overflow: auto;
 }
 

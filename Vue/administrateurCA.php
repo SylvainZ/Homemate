@@ -17,7 +17,7 @@
 		        die('Erreur : '.$e->getMessage());
 		}
 		// Si tout va bien, on peut continuer
-		$reponse_capteur = $bdd->query('SELECT * FROM piece');
+		$reponse_capteur = $bdd->query('SELECT * FROM capteur');
 ?>
 </head>
 
@@ -44,18 +44,18 @@
 		<h1 >Voici les capteurs :</h1>
 			<ul class="decalage">
 <?php
-	while ($donnees = $reponse_capteur->fetch())
-	{
-	?>		
-		<li class="decoliste">
-		<?php echo $donnees['Type'];?>
-		<?php echo $donnees['Nom']?>
-			<form action="index.php?cible=controleCapteur" method="POST" class="position">
-				<input type="text" name="modification" style= "width:10vw;">
-				<input type="submit" value="Modfier type">
-			</form>
-		</li>	   	
-<?php
+while ($donnees = $reponse_capteur->fetch())
+{
+    ?>
+    <li class="decoliste">
+        <?php echo $donnees['type'];?>
+        <?php echo $donnees['nom']?>
+        <form action="index.php?cible=controleCapteur&id=<?php echo $donnees['id']?>" method="POST" class="position">
+            <input type="text" name="modification" style= "width:10vw;">
+            <input type="submit" value="Modfier type">
+        </form>
+    </li>
+    <?php
 }
 ?>
 
