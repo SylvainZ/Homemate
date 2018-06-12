@@ -65,7 +65,35 @@ function cgu() {
 }
 
 
+function valider_numero() {
+    var nombre = document.formulaire.telephone.value;
+    var chiffres = new String(nombre);
 
+// Enlever tous les charactères sauf les chiffres
+    chiffres = chiffres.replace(/[^0-9]/g, '');
+
+// Le champs est vide
+    if ( nombre == "" )
+    {
+        alert ( "Le champs est vide !" );
+        return;
+    }
+
+// Nombre de chiffres
+    compteur = chiffres.length;
+
+    if (compteur!=10)
+    {
+        alert("Assurez-vous de rentrer un numéro à 10 chiffres (xxx-xxx-xxxx)");
+        return;
+    }
+
+    else
+    {
+        alert("Le numéro me semble bon !");
+    }
+
+}
 
 
 
