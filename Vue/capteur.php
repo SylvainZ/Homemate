@@ -39,12 +39,20 @@ if(isset($_GET['ID'])){
 <div id="page">
 	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
-
-		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');">Capteurs</button>
-
+		<div class="bouton">
+		<div class="bande">
+		<div class="centre">
+		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');"><span class="style">Capteurs</span></button>
+		</div>
+		</div>
+		</div>
 			<div class="tonDiv1" id="tonDiv1">
 				<div class="couleur1">
-					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');">Luminosit�</button>
+					<div class="bande2">
+					<div class="centre2">
+					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');"><span class="styleonglet">Luminosité</span></button>
+					</div>
+					</div>
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
 	 							<table class="tableau" border="1">
@@ -89,7 +97,11 @@ if(isset($_GET['ID'])){
 						</div>
 				</div>
 				<div class="couleur1">
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');">Temp�rature</button>
+					<div class="bande2">
+					<div class="centre2">
+	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');"><span class="styleonglet">Température</span</button>
+	 				</div>
+	 				</div>
 	 					<div class="tonDiv3" id="tonDiv3">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -131,7 +143,11 @@ if(isset($_GET['ID'])){
 						</div>
 				</div>
 				<div class="couleur1">
-					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');">D�tecteur de mouvement</button>
+				<div class="bande2">
+					<div class="centre2">
+					<button id="bouton_tonDiv4" onclick="javascript:afficher_cacher('tonDiv4');"><span class="styleonglet">Détecteur de mouvement</span></button>
+	 				</div>
+	 				</div>
 	 					<div class="tonDiv4" id="tonDiv4">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -175,12 +191,22 @@ if(isset($_GET['ID'])){
    	</div>
 
    	<div class="menu2">
+   	<div class="bouton">
+		<div class="bande">
+		<div class="centre3">
 
-		<button id="bouton" onclick="javascript:afficher_cacher('tondiv1');">Actionneurs</button>
-
+		<button id="bouton" onclick="javascript:afficher_cacher('tondiv1');"><span class="style">Actionneurs</span></button>
+		</div>
+		</div>
+		</div>
+		
 			<div class="tondiv1" id="tondiv1">
 				<div class="couleur1">
-					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');">Lumi�re</button>
+				<div class="bande2">
+					<div class="centre2">
+					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');"><span class="styleonglet">Lumière</span></button>
+						</div>
+						</div>
 						<div class="tondiv2" id="tondiv2">
 							<div class="luminosite">
 	 							<table class="tableau" border="1">
@@ -196,12 +222,41 @@ if(isset($_GET['ID'])){
                                             <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale3">X</a></button>
                                             <?php if($donnees1['Etat']==1){?>
                                             
-                                            <a href="index.php?cible=modifierActionneur&etat=0&ID=<?php echo $_GET['ID']?>&id=<?php echo $donnees1['ID']?>"><img class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px"></a>
+                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px"&z>
+                                            <script>
                                             
+                                            $("#eteindre<?php echo $donnees1['ID']?>").click(function(){
+	     
+	   										 $.ajax({
+	      									 url : 'index.php?', // La ressource ciblée
+	       									 type : 'GET', // Le type de la requête HTTP
+			
+                                        	  /**
+                                        	        * Le paramètre data n'est plus renseigné, nous ne faisons plus passer de variable
+                                        	        */
+                                        
+                                        	       data : 'cible=' + modifierActionneur+ '&etat=' + 0+ '&ID=' + <?php echo $_GET['ID']?>+ '&id=' + id=<?php echo $donnees1['ID']?> // Le type de données à recevoir, ici, du HTML.
+                                        	    });
+                                          	  });
+                                        	});
+                                            </script>
                                             <?php }
                                             else {?>
                                             
-                                             <a href="index.php?cible=modifierActionneur&etat=1&ID=<?php echo $_GET['ID']?>&id=<?php echo $donnees1['ID']?>"><img class="styleCapteur" src="Vue/images/arret.png" alt="image interrupteur" height="50px"></a>
+                                            <img id="allumer<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/arret.png" alt="image interrupteur" height="50px">
+                                            <script>
+                                            $(document).ready(function(){
+                                                $("#allumer<?php echo $donnees1['ID']?>").click(function(){
+    	     
+        	   										 $.get({
+            	      									 'index.php?',
+                                                
+                                                	     data : 'cible=' + modifierActionneur+'&etat=' + 1+ '&ID=' + <?php echo $_GET['ID']?>+ '&id=' + id=<?php echo $donnees1['ID']?> // Le type de données à recevoir, ici, du HTML.
+                                            	    });
+                                            	   
+                                            	});
+                                        	});
+                                            </script>
                                                 
                                             <?php }?>
                                             <div id="fenetreModale3">
@@ -232,7 +287,11 @@ if(isset($_GET['ID'])){
 						</div>
 				</div>
 				<div class="couleur1">
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tondiv3');">Volets</button>
+				<div class="bande2">
+					<div class="centre2">
+	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tondiv3');"><span class="styleonglet">Volets</span></button>
+	 					</div>
+	 					</div>
 	 					<div class="tondiv3" id="tondiv3">
 	 						<div class="luminosite">
 		 						<table class="tableau" border="1">
@@ -273,5 +332,7 @@ if(isset($_GET['ID'])){
     }
     return true;
 }
+
+		
 </script>
 </html>
