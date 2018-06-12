@@ -78,9 +78,10 @@ body
 }
 .tableau
 {
-	height:420px;
-	padding: 20px;
-	width:1350px;
+	height:25vw;
+	width:80vw;
+	min-height: 400px;
+	min-width: 1000px;
 	overflow: auto;
 }
 
