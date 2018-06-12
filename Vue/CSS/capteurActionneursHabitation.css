@@ -288,7 +288,7 @@ button.active
     color: white;
 }
 
-#fenetreModale, #fenetreModale2, #fenetreModale3
+#fenetreModale, #fenetreModale2, #fenetreModale3, #fenetreModale1
 {
 	display: none;
 	position: fixed;
