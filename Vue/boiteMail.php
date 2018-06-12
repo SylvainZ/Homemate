@@ -43,13 +43,13 @@
 							<h2>Liste des messages</h2>
 							<section class="option">
 								<label for="selection">Pour la sélection : </label>
-									<input type='submit'>
+									<input type='submit'/>
 										<select name="selection" id="selection">
 											<option value="lu">Marquer comme lus</option>
 											<option value="non_lu">Marquer comme non lus</option>
 											<option value="supprimer">Supprimer</option>
 										</select><br/>
-									</input>
+
 							</section>
 						</div>
 			    		

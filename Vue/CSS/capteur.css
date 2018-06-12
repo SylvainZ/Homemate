@@ -1,5 +1,47 @@
+.style
+{
+	padding-bottom:5vw;
+	font-size:1.7vw;
+}
+.styleonglet
+{
+
+	font-size:1.2vw;
+}
+.centre
+{
+	position:absolute;
+	right:48vw;
+	padding-top:0.4vw;
+	padding-bottom:1vw;
+}
+.centre2
+{
+
+	padding-top:0.3vw;
+}
+.centre3
+{
+	position:absolute;
+	right:47vw;
+	padding-top:0.4vw;
+	padding-bottom:1vw;
+}
+
+.bande
+{
+	height:4vw;
+	border:solid;
+	border-color:white;
+	border-top-left-radius:1vw;
+	border-top-right-radius: 1vw;
+}
+.bande2
+{
+	height:2vw;
 
 
+}
 td
 {
 	border:thin solid transparent;
@@ -12,25 +54,26 @@ td
 	padding:10px;
 	margin:10px;
 	border-radius:6px;
-    width: 150px;
-    height: 100px;
-    font-size: 14px;
+	width: 150px;
+	height: 100px;
+	font-size: 14px;
 
 }
 
 span
 {
-    text-align: center;
+	text-align: center;
 }
 
 
 
 /*couleur de la marge en dessous du bouton capteur*/
- .luminosite
+.luminosite
 {
 	position: relative;
 	background-color: #82354f;
-	left:0%; 
+	left:0%;
+
 }
 
 /*carre habitation*/
@@ -45,18 +88,18 @@ span
 	text-align:center;
 	padding-top:1vw;
 	padding-bottom:1vw;
-	
+
 	width:9%;
 	border-color: rgb(0,0,0);
-	
+
 
 }
 /*carre capteur actionneurs*/
 .B
 {
-background-color: rgb(4,43,123);
+	background-color: rgb(4,43,123);
 	position: relative;
-	
+
 	color:white;
 	border:100vw;
 	text-align:center;
@@ -72,16 +115,18 @@ background-color: rgb(4,43,123);
 #tonDiv1{
 
 
-background-color:#6a1b3d;
-border:none;
+	background-color:#6a1b3d;
+	border:none;
 
 }
 
 
 .tableau{
- border-collapse: collapse;
-    flex-wrap: wrap;
+	border-collapse: collapse;
+	flex-wrap: wrap;
+
 }
+
 
 
 
@@ -93,7 +138,7 @@ border:none;
 	color: white;
 	background-color: #2f0c1b;
 	border-radius: 50px;
-
+	height: 10vw;
 }
 
 /*bouton luminosit�*/
@@ -135,11 +180,11 @@ border:none;
 #bouton{
 
 	right:100%;
-	border-radius: 5%;
-	border-style:solid;
-	border-color: white;
+	/*border-radius: 5%;*/
+	border:none;
 	color: white;
 	background-color: #2f0c1b;
+	height:3vw;
 
 }
 #bouton2{
@@ -171,29 +216,29 @@ border:none;
 }
 .menu
 {
-	
 	background-color: #2f0c1b;
-
+	border-radius:1vw;
 }
 
 .menu2
 {
-	
-	background-color: #2f0c1b;
 
+	background-color: #2f0c1b;
+	border-radius:1vw;
 
 }
 
 #global
 {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+
 }
 
 #grandmenu{
 	margin-right:2vw;
 	margin-left:2vw;
-    width: 80vw;
+	width: 80vw;
 
 }
 .entete
@@ -202,8 +247,8 @@ border:none;
 	display :flex;
 	justify-content :center;
 	margin-bottom:2vw;
-	
-	
+
+
 }
 
 
@@ -229,18 +274,18 @@ button.active
 {
 	border-radius: 20px;
 	background: red;
-    box-shadow: none;
-    border: none;
-    position: relative;
-    left: 150px;
-    bottom: 15px;
+	box-shadow: none;
+	border: none;
+	position: relative;
+	left: 150px;
+	bottom: 15px;
 }
 
 .boutonSupprimer
 {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
 }
 
 #fenetreModale, #fenetreModale2, #fenetreModale3
@@ -271,27 +316,28 @@ button.active
 
 .annulerSupprimer
 {
-    display: block;
-    display: flex;
-    justify-content: center;
+	display: block;
+	display: flex;
+	justify-content: center;
 }
 
 .boutonSup
 {
-    margin-right: 80px;
-    height: 30px;
+	margin-right: 80px;
+	height: 30px;
 }
 
 .annuler
 {
-    height: 30px;
+	height: 30px;
 }
 
 .styleCapteur
 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-bottom: 8px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	bottom: 8px;
 }
+
