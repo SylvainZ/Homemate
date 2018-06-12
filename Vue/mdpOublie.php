@@ -9,11 +9,13 @@
 
     </head>
  <body >
-        <img class="image" src="Vue/images/homemate2.png" alt="image logo">
+        <header>
+            <?php include("Vue/header.php") ?>
+        	</header>
 
     <div class="bloc">
         
-        <form method="post" action="mdpoub2.php">
+        <form method="post" action=""index.php?cible="mdpoub2.php">
             
             <h2>MOT DE PASSE OUBLIE</h2>
            
@@ -41,6 +43,9 @@
             <p>Copyright 2018 HomeMate | Tous droits rÃ©servÃ©s</p>
     </footer>
  <br/>
+     <footer>
+            <?php include("Vue/footer.php") ?>
+        	</footer>
  </body>
 
 </html>
