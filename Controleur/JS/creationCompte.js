@@ -4,21 +4,23 @@
  atpos = emailID.indexOf("@");
  dotpos = emailID.lastIndexOf(".");
  var mdp = document.form.password.value;
+ var result= /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{7,})/.test(mdp);
  
- if (atpos < 1 || ( dotpos - atpos < 2 ) && mdp.length<7) {
-	 alert("Email incorrect")
-	 alert("Mot de passe trop court (minimum 7 caractères)")
+ if (atpos < 1 || ( dotpos - atpos < 2 ) && !result) {
+	 alert("Email incorrect");
+	 alert("Le mot de passe doit contenir au moins 7 caractères, une majuscule, une minuscule et un chiffre");
 	 document.form.password.focus();
 	 return false;
  }
 
  if (atpos < 1 || ( dotpos - atpos < 2 )) {
- alert( "Email incorrect")
+ alert( "Email incorrect");
  document.form.Email.focus() ;
  return false;
  }
- if (mdp.length<7){
-	 alert("Mot de passe trop court (minimum 7 caractères)")
+
+ if (!result){
+	 alert("Le mot de passe doit contenir au moins 7 caractères, une majuscule, une minuscule et un chiffre");
 	 document.form.password.focus();
 	 return false;
  }

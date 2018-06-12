@@ -67,11 +67,11 @@ body
 .bloc2
 {
 	background-color: #471229;
-	height:700px;
-	width:1400px;
+	height:33vw;
+	width:80vw;
 	position: relative;
 	top: 300px;
-	left:12.5%;
+	left:10%;
 	border-radius: 60px;
 	padding-top:  1px;
 

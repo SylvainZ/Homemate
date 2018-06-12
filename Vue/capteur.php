@@ -37,6 +37,11 @@ if(isset($_GET['ID'])){
 			<?php include("header.php") ?>
 	</header>
 <div id="page">
+    <div class = "entete">
+        <button class="A active"><p>Habitation(s)</p></button>
+        <button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>
+    </div>
+
 	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
 		<div class="bouton">
@@ -65,6 +70,8 @@ if(isset($_GET['ID'])){
 										<td>
 										<div class="case">
                                             <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale">X</a></button>
+                                            <div class="posParametre"><a href="#fenetreModaleBis"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
+                                            </div>
                                             <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
 
                                             <div id="fenetreModale">
@@ -79,6 +86,30 @@ if(isset($_GET['ID'])){
                                                 </div>
                                             </div>
 
+                                            <!-- formulaire modification -->
+                                            <div id="fenetreModaleBis">
+                                                <div class="popup-block">
+                                                    <h3 class="log modiflog">Modification du capteur</h3>
+
+                                                    <div class="logement">
+
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifCapteur&ID=<?php echo $donnees1['ID']?>">
+                                                            <div class="form2">
+                                                                <div class="champnom ligne3">
+                                                                    <label for="seuil" class="inputNom">Seuil :</label><br>
+                                                                    <input type="number" name="seuil" id="piece" value="<?php echo $donnees1['SeuilL']?>"/>
+                                                                </div>
+                                                                <br> <br>
+                                                                <div class="valid">
+                                                                    <input type="submit" name="valider" value="Valider" class="bouton validLogement">
+
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <a class="annuler1" href="#en-tete"><button class="annuler1">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                             <span><?php echo $donnees1['piece']?></span> <br>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
@@ -309,10 +340,10 @@ if(isset($_GET['ID'])){
    </div>
     </div>
 </div>
-   	
-   	 <footer>
+
+
 			<?php include("footer.php"); ?>
-    </footer>
+
     
 
 
@@ -335,4 +366,6 @@ if(isset($_GET['ID'])){
 
 		
 </script>
+
+</body>
 </html>

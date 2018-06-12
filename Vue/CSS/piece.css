@@ -1,4 +1,223 @@
 
+/*carre habitation*/
+.A
+{
+
+	background-color: rgb(4,43,123);
+	position: relative;
+	margin-right:2vw;
+	color:white;
+	border-color:white;
+	border:100vw;
+	text-align:center;
+	padding-top:1vw;
+	padding-bottom:1vw;
+	width:9%;
+	border-color: rgb(0,0,0);
+
+
+}
+/*carre capteur actionneurs*/
+.B
+{
+	background-color: rgb(4,43,123);
+	position: relative;
+
+	color:white;
+	border:100vw;
+	text-align:center;
+	padding: 0.5vw;
+	padding-top: 0.5vw;
+	margin-right: 2vw;
+	width:9%;
+	border-color: rgb(0,0,0);
+
+}
+
+.entete
+{
+	background: none;
+	display :flex;
+	justify-content :center;
+	margin-bottom:2vw;
+
+
+}
+
+a.styleEntete
+{
+	text-decoration: none;
+}
+
+button.active
+{
+	border: 6px solid white;
+}
+
+td
+{
+	border: thin solid transparent;
+}
+
+.case
+{
+	border: 3px solid black;
+	background: white;
+	height: 16vw;
+	width: 16vw;
+
+}
+
+.info
+{
+	border-top: 3px solid black;
+	overflow: auto;
+	width: 16vw;
+	height: 8vh;
+}
+
+.styleHabitation
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tableau
+{
+	margin-left: 6vw;
+}
+
+
+button.active
+{
+	border: 6px solid white;
+}
+
+.supprimerlog
+{
+	border-radius: 20px;
+	background: red;
+	box-shadow: none;
+	border: none;
+	position: relative;
+	left: 195px;
+	bottom: 13px;
+	height: 4vh;
+}
+
+
+.case
+{
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.boutonSupprimerlog
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+
+#fenetreModale, #fenetreModale1
+{
+	display: none;
+	position: fixed;
+	top:0; right:0; bottom:0; left:0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+
+#fenetreModale:target, #fenetreModale1:target
+{
+	display: block;
+}
+
+.popup-block
+{
+	background: #fff;
+	padding: 20px;
+	border: 20px solid #ddd;
+	position: relative;
+	margin: 10% auto;
+	width: 40%;
+	box-shadow: 0px 0px 20px #000;
+	border-radius: 10px;
+}
+
+.annulerSupprimer
+{
+	display: block;
+	display: flex;
+	justify-content: center;
+}
+
+.boutonSup
+{
+	margin-right: 80px;
+	height: 30px;
+}
+
+.annuler
+{
+	height: 30px;
+	position: relative;
+	right: 15px;
+}
+
+.annuler1
+{
+	height: 21px;
+	position: relative;
+	right: 15px;
+	top: 61.5px;
+}
+
+.validLogement
+{
+	margin-right: 8px;
+}
+
+#supModif{
+	display: flex;
+}
+
+.parametre
+{
+	height: 30px;
+	width:30px;
+}
+
+.posParametre
+{
+	position: relative;
+	left: 130px;
+	bottom: 15px;
+}
+
+.logement, .valid
+{
+	display: block;
+	display: flex;
+	justify-content: center;
+}
+
+.modiflog{
+	text-align: center;
+}
+
+.form2{
+	position: relative;
+	left: 10px;
+}
+
+.valid
+{
+	position: relative;
+	right: 35px;
+}
+
 a.styleEntete
 {
 	text-decoration: none;

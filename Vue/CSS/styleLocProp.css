@@ -1,32 +1,23 @@
-
-
-.center
-{
-	position: center;
-	text-align: center;
-}
-
-figure
-{
-	position:relative;
-	left:33%;
-}
-
-
 #bloc
 {
-	font-size:18px;
+	font-size:14px;
 	font-weight:bold;
 	color:white;
 	background: #6a1b3c;
 	border-radius: 20px;
 	padding-top: 1px;
 	padding-bottom: 1px;
-	padding-left: 30px;
+	padding-left: 60px;
+	padding-right: 60px;
 	position:center;
 	margin:auto;
-	height:60%;
-	max-width: 40%;
+	height:100%;
+	width: 40%;
+}
+
+tr
+{
+margin-bottom: 15px;
 }
 
 input[type=text]
@@ -34,26 +25,28 @@ input[type=text]
 	padding: 10px 20px;
 	margin: 15px 0;
 	box-sizing: border-box;
+	width: 200px;
+	height: 30px;
 }
 
-#block1, #block2, #block3
+input[type=number]
 {
-	margin-right: 20px;
-	margin-left: 20px;
+	width: 60px;
 }
-#titre1, #titre2, #titre3
+
+.longueur
 {
-	margin-left: 30px;
-	margin-right: 72px;
-	border: white solid 2px;
-	border-left: none;
-	border-right: none;
-	border-top: none;
-	font-family: Quando, serif;
+	width: 150px;
+}
+
+h1
+{
+	text-align: center;
 }
 
 h2
 {
+	text-align: center;
 	margin-left: 40px;
 	margin-right: 72px;
 	border: white solid 2px;
@@ -63,141 +56,44 @@ h2
 	font-family: Quando, serif;
 }
 
-#ligne1
+.date
+{
+	margin-left: 35px;
+	margin-right: 100px;
+}
+
+.statut
+{
+	margin-top: 20px;
+	margin-left: 35px;
+}
+
+.log, .numRue, .route, .ville, .typeHab, .nbPiece
+{
+	margin-left: 35px;
+}
+
+.etage, .codePostal
+{
+	margin-left: 70px;
+}
+
+.typeRue
 {
 	position: relative;
-	left: 10px;
+	right: 7.5vw;
 }
-
-#ligne1, #ligne3, #ligne4, #ligne5, #ligne6, #ligne7
-{
-	display:flex;
-	justify-content:space-around;
-}
-
-
-#ligne2
-{
-	position: relative;
-	left: 31px;
-}
-
-#ligne3
-{
-	position: relative;
-	left: 30px;
-}
-
-#ligne4
-{
-	position: relative;
-	left: 13px;
-}
-
-#ligne5, #ligne6
-{
-	position: relative;
-	left: 10px;
-}
-
-#ligne7
-{
-	position: relative;
-	left: 5px;
-}
-
 
 .bis
 {
 	position: relative;
-	right: 55px;
-	top: 20px;
+	right: 3vw;
 }
-
-.log
-{
-	position: relative;
-	right: 32px;
-}
-
-.etage
-{
-	position: relative;
-	right: 44px;
-}
-
-.route
-{
-	position: relative;
-	right: 3px;
-}
-
-.codePostal
-{
-	position: relative;
-	right: 28px;
-}
-
-.champPostal
-{
-	max-width: 100px;
-}
-
-.ville
-{
-	position: relative;
-	left: 0;
-}
-
-.pays
-{
-	position: relative;
-	right: 32px;
-}
-
-.longueur
-{
-	max-width: 180px;
-}
-.champ
-{
-	border: none;
-	border-radius: 2px 2px 2px 2px;
-	height: 50%;
-}
-
-.champ1
-{
-	border: none;
-	border-radius: 2px 2px 2px 2px;
-	height: 30%;
-}
-
-.champ2
-{
-	border: none;
-	border-radius: 2px 2px 2px 2px;
-	height: 60%;
-}
-
-.typeHab
-{
-	position: relative;
-	right: 15px;
-	top: 20px;
-}
-
 .surface
 {
-	position: relative;
-	right: 13px;
+	margin-right: 70px;
 }
 
-.nbPiece
-{
-	position: relative;
-	left: 37px;
-}
 
 #cgu{
 	position: relative;
@@ -243,11 +139,6 @@ a:visited
 	color:none;
 }
 
-footer p{
-	font-size: 18px;
-	color: white;
-	text-align: center;
-}
 
 #nonCoche, #nonAge {
 	font-family:quando;

@@ -35,7 +35,7 @@
            <span class="texte"> Statut: <?php echo $_SESSION['statut'];?></span><br>
            <span class="texte"> Email: <?php echo $_SESSION['email'];?></span><br>
            <span class="texte"> Téléphone: 0<?php echo $_SESSION['numTel'];?></span><br>
-           <span class="texte"> Adresse: <?php echo $_SESSION['numRue'].' '; if ($_SESSION['numBis']!='NONE') {echo $_SESSION['numBis'];} echo $_SESSION['prefixRue'].' '.$_SESSION['nomRueBdAve'].'<br/>';
+           <span class="texte"> Adresse: <?php echo $_SESSION['numRue'].' '; if ($_SESSION['numBis']!='NONE') {echo $_SESSION['numBis'].' ';} echo $_SESSION['prefixRue'].' '.$_SESSION['nomRueBdAve'].'<br/>';
                    if ($_SESSION['typeHab']=='Appartement') {echo 'Appartement '.$_SESSION['numLogement'].' Etage '.$_SESSION['numEtage'].'<br/>';}
                echo $_SESSION['codePostal'].' '.$_SESSION['ville'].'<br/>';
                echo $_SESSION['pays']; ?></span><br>

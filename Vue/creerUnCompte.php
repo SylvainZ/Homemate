@@ -63,7 +63,7 @@
 <footer>
 	<p>Copyright 2018 HomeMate | Tous droits réservés</p>
 </footer>
-<script type="text/javascript" src="Controleur/creationCompte.js"></script>
+<script type="text/javascript" src="Controleur/JS/creationCompte.js"></script>
  <script src="Controleur/verifEmail.js" type="text/javascript"></script>
 </body>
 </html>
