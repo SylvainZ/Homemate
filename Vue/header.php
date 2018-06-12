@@ -71,7 +71,7 @@
                                 <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
                             <ul>
                                 <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
-                                <li><a href="index.php?cible=capteurActionneursHabitations	" class="barre">G�rer la maison</a> </li>
+                                <li><a href="index.php?cible=recupDonneesPasserelle	" class="barre">Gérer la maison</a> </li>
                                 <li><a href="index.php?cible=deconnexion" class="barre">Déconnexion</a> </li>
                             </ul>
                             </li>
