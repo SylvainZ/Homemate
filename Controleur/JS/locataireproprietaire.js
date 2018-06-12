@@ -49,11 +49,18 @@ function calculAge() {
 }
 
 
-/*fonction qui vérifie que l'utlisateur ait au moins 18 ans et ait coché les CGUs*/
+/*fonction qui vérifie que l'utlisateur ait au moins 18 ans et ait coché les CGUs et le numéro de téléphone*/
 function cgu() {
    var age= calculAge();
 
-    if (document.getElementById("CGU").checked == false) {
+
+    var tel = document.form.numTel.value;
+    var verifTel= /([0-9]{10})/.test(tel);
+
+    var postal = document.form.codePostal.value;
+    var verifCodePostal= /([0-9]{5})/.test(postal);
+
+   if (document.getElementById("CGU").checked == false) {
         document.getElementById("nonCoche").innerHTML = "Veuillez accepter nos Conditions Générales d'Utilisation";
         return false;
     }
@@ -62,38 +69,22 @@ function cgu() {
         document.getElementById("nonAge").innerHTML="Vous devez avoir plus de 18 ans";
     	return false;
     }
-}
 
+   if (!verifTel)
+   {
+       document.getElementsByName('tel').focus();
+       document.getElementById("nonNum").innerHTML = "Assurez-vous de rentrer un numéro à 10 chiffres";
+       return false;
+   }
 
-function valider_numero() {
-    var nombre = document.formulaire.telephone.value;
-    var chiffres = new String(nombre);
-
-// Enlever tous les charactères sauf les chiffres
-    chiffres = chiffres.replace(/[^0-9]/g, '');
-
-// Le champs est vide
-    if ( nombre == "" )
-    {
-        alert ( "Le champs est vide !" );
-        return;
-    }
-
-// Nombre de chiffres
-    compteur = chiffres.length;
-
-    if (compteur!=10)
-    {
-        alert("Assurez-vous de rentrer un numéro à 10 chiffres (xxx-xxx-xxxx)");
-        return;
-    }
-
-    else
-    {
-        alert("Le numéro me semble bon !");
+    if (!verifCodePostal) {
+        document.getElementsByName('postal').focus();
+        document.getElementById("nonPostal").innerHTML = "Veuillez rentrer un code postal à 5 chiffres";
+        return false;
     }
 
 }
+
 
 
 
