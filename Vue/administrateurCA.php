@@ -53,9 +53,9 @@
                     <li class="decoliste">
                         <?php echo $donnees['type'];?>
                         <?php echo $donnees['nom']?>
-                        <form action="index.php?cible=controleCapteur&id=<?php echo $donnees['ID']?>" method="POST" class="position">
-                            <input type="text" name="modification" style= "width:10vw;"> <br/>
-                            <input type="submit" value="Modifier type" class="bouton">
+                        <form action="index.php?cible=controleCapteur&id=<?php echo $donnees['id']?>" method="POST" class="position">
+                            <input type="text" name="modification" style= "width:10vw;"><br/>
+                            <input type="submit" value="Modfier type" class="bouton">
                         </form>
                     </li>
                     <?php

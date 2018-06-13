@@ -1,6 +1,6 @@
 <?php include('Modele/connexionBD.php');?>
 <?php
-$sql=$bdd->query('SELECT * FROM messagerie WHERE status=0');
+$sql=$bdd->query('SELECT * FROM messagerie WHERE statut=0');
 $count=$sql->rowCount();
 ?>
 <!DOCTYPE html>

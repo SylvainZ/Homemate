@@ -12,8 +12,11 @@ catch(Exception $e)
 
 if (isset($_POST['modification']) && isset($_GET['id']))
 {
-    $req = $bdd->prepare('UPDATE capteur SET type = ? WHERE id = '. $_GET['id']);
-    $req->execute([$_POST['moddification']]);
+    $req = $bdd->prepare('UPDATE capteur SET type= ? WHERE id ='. $_GET['id'] );
+    $req->execute(array(
+        $_POST['modification']
+
+    ));
     header('Location:index.php?cible=controleCapteur2');
 }
 else{
