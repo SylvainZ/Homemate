@@ -121,6 +121,7 @@ $nbColonne3=5;
 									<tbody>
 										<tr id="ligne2">';
 										while ($donnees1 = $temp->fetch()){
+										    $temperature=$donnees1['temperature'];
                                             $id=$donnees1['id'];
                                             if (($nbLigne2 % $nbColonne2) ==0 && $nbLigne2 !=0) {
                                                 echo '</tr><tr>';
@@ -150,7 +151,7 @@ $nbColonne3=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                         <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> Température : </span><?php echo $donnees1['temperature']; ?>
+										<span> T° : </span><?php echo $temperature[0].$temperature[1].$temperature[2].','.$temperature[3].'°C'; ?>
 										</div>
 										</td>
 

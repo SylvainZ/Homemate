@@ -1,4 +1,8 @@
-
+<?php include('Modele/connexionBD.php');?>
+<?php
+$sql=$bdd->query('SELECT * FROM messagerie WHERE status=0');
+$count=$sql->rowCount();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,7 +67,11 @@
                 <div id="posMenu">
                     <div id="posNotif">
                         <div  id="icone"><a href="index.php?cible=boiteMailReception"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a></div>
-                        <div id="iconeCloche"><a href="#"><img class="imageLettre" src="Vue/images/bell.png"  height="50"></a></li></div>
+                        <div id="iconeCloche"><button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn">
+                                <span id="notification-count"><?php if($count>0) { echo $count; } ?></span>
+                                <img class="imageLettre" src="Vue/images/bell.png"  height="50"></button>
+                                <div id="notification-latest"></div>
+                        </div>
                     </div>
 
                     <ul id="menu">
@@ -111,6 +119,8 @@
     </div>
 
     <br><br>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="Controleur/JS/notification.js" type="text/javascript"></script>
 
 
 </body> 
