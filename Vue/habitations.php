@@ -48,10 +48,10 @@ $nbColonne=5;
 	                  <td id="colonneLogement">
                         <div class="case">
                             <div id="supModif">
-                            <button class="supprimerlog"><a class="boutonSupprimerlog" href="#fenetreModale">X</a></button>
-                            <div class="posParametre"><a href="#fenetreModale1"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
+                            <button class="supprimerlog"><a class="boutonSupprimerlog" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
+                            <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['ID']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
                             </div>
-                            <div id="fenetreModale">
+                            <div id="fenetreModale<?php echo $donnees1['ID']?>">
                                 <div class="popup-block">
                                     <h3>Voulez-vous vraiment supprimer ce logement ?</h3>
                                     <div class="annulerSupprimer">
@@ -63,7 +63,7 @@ $nbColonne=5;
                                 </div>
                             </div>
 
-                            <div id="fenetreModale1">
+                            <div id="fenetreModaleBis<?php echo $donnees1['ID']?>">
                                 <div class="popup-block">
                                     <h3 class="log modiflog">Modification du logement</h3>
 
@@ -91,6 +91,8 @@ $nbColonne=5;
                                     </div>
                                 </div>
                             </div>
+                            
+                            
                             <?php
                             if ($donnees1['Type']=='appartement')
                             {?>
@@ -112,6 +114,24 @@ $nbColonne=5;
                             </div>
                         </div>
                     </td>
+                    
+                    <style>
+                    
+                    #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['ID']?>:target, #fenetreModaleBis<?php echo $donnees1['ID']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
+                    
                     <?php $nbLigne++;}?>
                 <td><a href="index.php?cible=ajouterLogement"><input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 

@@ -74,10 +74,10 @@ $nbColonne3=5;
 										?>
 										<td>
 										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale">X</a></button>
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button>
                                             <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
 
-                                            <div id="fenetreModale">
+                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
@@ -97,6 +97,23 @@ $nbColonne3=5;
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
+										
+					<style>
+                    
+                    #fenetreModale<?php echo $donnees1['id']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['id']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
 
 										<?php $nbLigne++;}?>
 
@@ -130,10 +147,10 @@ $nbColonne3=5;
 										?>
 										<td>
 										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale2">X</a></button><br>
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button><br>
                                             <img class="styleCapteur" src="Vue/images/temperature.png" alt="image capteur temperature" height="50px" width="50px">
 
-                                            <div id="fenetreModale2">
+                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
@@ -153,6 +170,22 @@ $nbColonne3=5;
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
 										</td>
+					<style>
+                    
+                    #fenetreModale<?php echo $donnees1['id']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['id']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
 
                                             <?php $nbLigne2++;}?>
 										
@@ -184,9 +217,9 @@ $nbColonne3=5;
 										?>
 										<td>
 										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale3">X</a></button>
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button>
                                             <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
-                                            <div id="fenetreModale3">
+                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
@@ -205,6 +238,22 @@ $nbColonne3=5;
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
+					<style>
+                    
+                    #fenetreModale<?php echo $donnees1['id']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['id']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
                                             <?php $nbLigne3++;}?>
 
 

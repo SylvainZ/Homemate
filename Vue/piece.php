@@ -38,7 +38,7 @@ if(isset($_GET['ID'])){
 	<div id="page">
 
         <div class = "entete">
-            <button class="A active"><p>Habitation(s)</p></button>
+            <button class="A active"><a href="index.php?cible=logement" class="styleEntete"><p class="hab"><p>Habitation(s)</p></a></button>
             <button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>
         </div>
 <br><br>
@@ -50,7 +50,50 @@ if(isset($_GET['ID'])){
                     ?>
 	                  <td>
                         <div class="case">
-                            <span> </span><?php
+                        					<div id="supModif">
+                                          	<button class="supprimerlog"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
+                                             <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['ID']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
+                                            </div>
+                                         
+                                            <div id="fenetreModale<?php echo $donnees1['ID']?>">
+                                                <div class="popup-block">
+                                                    <h3>Voulez-vous vraiment supprimer cette pièce ?</h3>
+                                                    <div class="annulerSupprimer">
+                                                        <form method="post" action="index.php?cible=supprimerPiece&id=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
+                                                            <input type="submit" value="Supprimer" class="boutonSup">
+                                                        </form>
+                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- formulaire modification -->
+                                            <div id="fenetreModaleBis<?php echo $donnees1['ID']?>">
+                                                <div class="popup-block">
+                                                    <h3 class="log modiflog">Modification de la pièce</h3>
+
+                                                    <div class="logement">
+
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierPiece&ID=<?php echo $donnees1['ID']?>&id=<?php echo $_GET['ID']?>">
+                                                            <div class="form2">
+                                                                <div class="champnom ligne3">
+                                                                    <label for="nom" class="inputNom">Nom :</label></br>
+                                                                    <input type="text" name="nom" id="piece" value="<?php echo $donnees1['Nom']?>"/><br>
+                                                                    <label for="superficie" class="inputNom">Superficie :</label></br>
+                                                                    <input type="number" name="superficie" id="piece" value="<?php echo $donnees1['Superficie']?>"/></br>
+                                                                </div>
+                                                                <br> <br>
+                                                                <div class="valid">
+                                                                    <input type="submit" name="valider" value="Valider" class="bouton validLogement">
+																	
+                                                                </div>
+                                                            </div> 
+                                                        </form>
+                                                        <a class="annuler1" href="#en-tete"><button class="annuler">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                          <?php
 
                             if ($donnees1['Type']=='salon')
                     {?>
@@ -106,6 +149,24 @@ if(isset($_GET['ID'])){
                             </div>
                         </div>
                     </td>
+                    
+                     <style>
+                    
+                    #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['ID']?>:target, #fenetreModaleBis<?php echo $donnees1['ID']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
+                    
                 <?php }?>
                 <td><a href="index.php?cible=ajoutPiece&ID=<?php echo $id?>"><input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 			</tr>
