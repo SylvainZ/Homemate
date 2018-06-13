@@ -22,29 +22,30 @@
     <h1 class="center">Locataire/Propriétaire</h1>
 
     <section>
-        <div id="block1">
-        <h2 id="titre1">Données personnelles</h2>
-        <form name = "form" action="index.php?cible=creerUnCompteBis" method="post" onsubmit="return cgu()">
 
-           <table>
-               <tbody>
+        <form name = "form" action="index.php?cible=creerUnCompteBis" method="post" onsubmit="return cgu()">
+            <div id="block1">
+                <h2 id="titre1">Données personnelles</h2>
+                <table>
+                    <tbody>
                     <tr>
                         <td>
                             <div class="date">
-                            <label for="dateDeNaissance">
-                                Date de naissance<br>
-                                <input type="date" name="dateDeNaissance" id="naissance" class="champ">
-                                <div id="nonAge"></div>
-                            </label>
+                                <label for="dateDeNaissance">
+                                    Date de naissance<br>
+                                    <input type="date" name="dateDeNaissance" id="naissance" class="champ">
+                                    <div id="nonAge"></div>
+                                </label>
                             </div>
                         </td>
 
                         <td>
                             <div class="numTel">
-                            <label for="tel">
-                                Numéro de téléphone<br/>
-                                <input type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" name="tel" class="champ">
-                            </label>
+                                <label for="tel">
+                                    Numéro de téléphone<br/>
+                                    <input type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" id="numTel" name="tel" class="champ" >
+                                    <div id="nonNum"></div>
+                                </label>
                             </div>
                         </td>
                     </tr>
@@ -52,116 +53,120 @@
                     <tr>
                         <td>
                             <div class="statut">
-                            <select name="statut" id="champ" class="champ">
-                                <option value="proprietaire">proprietaire</option>
-                                <option value="locataire">locataire</option>
-                            </select>
+                                <select name="statut" id="champ" class="champ">
+                                    <option value="proprietaire">proprietaire</option>
+                                    <option value="locataire">locataire</option>
+                                </select>
                             </div>
                         </td>
                     </tr>
-               </tbody>
-           </table>
-
-        <div id="block2">
-            <h2 id="titre2">Adresse personnelle</h2>
-
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="log">
-                            <label for="numLogement">
-                                Numéro de logement<br>
-                                <input type="number" name="numLogement" class="champ">
-                            </label >
-                            </div><br>
-                        </td>
-
-                        <td>
-                            <div class="etage">
-                            <label for="numEtage">
-                                Numéro d'étage<br>
-                                <input type="number" name="numEtage" size="40" class="champ">
-                            </label>
-                            </div><br>
-                        </td>
-                    </tr>
+                    </tbody>
+                </table>
 
 
-                    <tr>
-                        <td>
-                            <div class="numRue">
-                            <label for="numRue">
-                                Numéro de Rue <br>
-                                <input type="number" size="40" name="numRue" class="champ">
-                            </label>
-                            </div><br><br>
-                        </td>
+            </div>
 
-                        <td>
-                            <div class="bis">
-                            <label for="bis">
-                                Bis
-                                <input type="checkbox" name="numBis" value="bis" class="champ"/>
-                            </label>
-                            </div><br><br>
-                        </td>
+            <div id="block2">
+                <h2 id="titre2">Adresse personnelle</h2>
 
-                        <td>
-                            <div class="typeRue">
-                            <select name="prefixRueBdAve" id="champ" class="champ">
-                                <option value="rue">rue</option>
-                                <option value="bd">boulevard</option>
-                                <option value="ave">avenue</option>
-                                <option value="imp">impasse</option>
-                                <option value="pont">pont</option>
-                            </select>
-                            </div><br><br>
-                        </td>
-                    </tr>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="log">
+                                <label for="numLogement">
+                                    Numéro de logement<br>
+                                    <input type="number" name="numLogement" class="champ">
+                                </label >
+                                </div><br>
+                            </td>
 
-                    <tr>
-                        <td>
-                            <div class="route">
-                            <label for="nomRoute">
-                                Nom de Rue, Boulevard, Avenue <br/>
-                                <input type="text" name="nomRoute" class="champ1"/>
-                            </label><br><br>
-                            </div>
-                        </td>
+                            <td>
+                                <div class="etage">
+                                <label for="numEtage">
+                                    Numéro d'étage<br>
+                                    <input type="number" name="numEtage" size="40" class="champ">
+                                </label>
+                                </div><br>
+                            </td>
+                        </tr>
 
-                        <td>
-                            <div class="codePostal">
-                            <label for="postal">
-                                Code Postal <br>
-                                <input type="number" name="postal" class="champPostal champ1"/>
-                            </label>
-                            </div>
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td>
-                            <div class="ville">
-                            <label for="Ville">
-                                Ville <br/>
-                                <input type="text" name="Ville" class="champ1 longueur"/>
-                            </label>
-                            </div>
-                        </td>
+                        <tr>
+                            <td>
+                                <div class="numRue">
+                                <label for="numRue">
+                                    Numéro de Rue <br>
+                                    <input type="number" size="40" name="numRue" class="champ">
+                                </label>
+                                </div><br><br>
+                            </td>
 
-                        <td>
-                            <div class="pays">
-                            <label for="pays">
-                                Pays <br>
-                                <input type="text" name="pays" class="champ1 longueur"/>
-                            </label>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                            <td>
+                                <div class="bis">
+                                <label for="bis">
+                                    Bis
+                                    <input type="checkbox" name="numBis" value="bis" class="champ"/>
+                                </label>
+                                </div><br><br>
+                            </td>
 
+                            <td>
+                                <div class="typeRue">
+                                <select name="prefixRueBdAve" id="champ" class="champ">
+                                    <option value="rue">rue</option>
+                                    <option value="bd">boulevard</option>
+                                    <option value="ave">avenue</option>
+                                    <option value="imp">impasse</option>
+                                    <option value="pont">pont</option>
+                                </select>
+                                </div><br><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="route">
+                                <label for="nomRoute">
+                                    Nom de Rue, Boulevard, Avenue <br/>
+                                    <input type="text" name="nomRoute" class="champ1"/>
+                                </label><br><br>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="codePostal">
+                                <label for="postal">
+                                    Code Postal <br>
+                                    <input type="text" name="postal" class="champPostal champ1" id="codePostal"/>
+                                    <div id="nonPostal"></div>
+                                </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="ville">
+                                <label for="Ville">
+                                    Ville <br/>
+                                    <input type="text" name="Ville" class="champ1 longueur"/>
+                                </label>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="pays">
+                                <label for="pays">
+                                    Pays <br>
+                                    <input type="text" name="pays" class="champ1 longueur"/>
+                                </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         <div id="block3">
         <h2 id="titre3">Informations sur l'habitation</h2>
@@ -176,7 +181,7 @@
                             <option value="Appartement">Appartement</option>
                             <option value="Maison">Maison</option>
                         </select>
-                        </div>
+
                     </td>
 
                     <td>
@@ -215,7 +220,9 @@
         </div>
             <br>
             <p class="center"> <input type="submit" value="Valider" class="Valider" size="1000"></p>
+
         </form>
+
     </section>
     <br>
 </div>

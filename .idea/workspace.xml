@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dabfda98-210d-475e-b79a-3e9fbb537381" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Modele/donneesPasserelle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue/modifierLogement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controleur/recupDonnées.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controleur/JS/connecte.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/JS/connecte.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/capteur.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/capteur.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/piece.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/piece.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/CSS/styleLocProp.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/styleLocProp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/boiteMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/boiteMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modele/donneesPasserelle.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modele/donneesPasserelle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue/capteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/capteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/locataireProprietaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/locataireProprietaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue/piece.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/piece.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/header.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="capteur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/capteur.php">
+      <file leaf-file-name="capteurActionneursHabitations.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/capteurActionneursHabitations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="967">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="238">
+              <caret line="152" column="88" lean-forward="true" selection-start-line="152" selection-start-column="88" selection-end-line="152" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -50,8 +44,8 @@
       <file leaf-file-name="recupDonneesPasserelle.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/recupDonneesPasserelle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state relative-caret-position="80">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -59,8 +53,8 @@
       <file leaf-file-name="donneesPasserelle.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/donneesPasserelle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -68,24 +62,17 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-867" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="locataireProprietaire.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-680">
-              <caret line="110" column="49" lean-forward="true" selection-start-line="110" selection-start-column="49" selection-end-line="110" selection-end-column="49" />
+            <state relative-caret-position="323">
+              <caret line="73" column="83" selection-start-line="73" selection-start-column="83" selection-end-line="73" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styleLocProp.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
+      <file leaf-file-name="capteurActionneursHabitations.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controleur/capteurActionneursHabitations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="34">
+              <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -171,7 +158,6 @@
         <option value="$PROJECT_DIR$/Vue/faq.php" />
         <option value="$PROJECT_DIR$/Vue/connexion.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/header.css" />
-        <option value="$PROJECT_DIR$/Vue/header.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/capteurActionneursHabitation.css" />
         <option value="$PROJECT_DIR$/Modele/supprimerCapteurActionneur.php" />
         <option value="$PROJECT_DIR$/Controleur/supprimer.php" />
@@ -190,14 +176,15 @@
         <option value="$PROJECT_DIR$/Vue/boiteMail.php" />
         <option value="$PROJECT_DIR$/Controleur/recupDonnées.php" />
         <option value="$PROJECT_DIR$/Controleur/recupDonnéesPasserelle.php" />
-        <option value="$PROJECT_DIR$/Controleur/recupDonneesPasserelle.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/capteur.css" />
         <option value="$PROJECT_DIR$/Vue/CSS/piece.css" />
         <option value="$PROJECT_DIR$/Vue/piece.php" />
-        <option value="$PROJECT_DIR$/Vue/capteur.php" />
-        <option value="$PROJECT_DIR$/Modele/donneesPasserelle.php" />
         <option value="$PROJECT_DIR$/Vue/locataireProprietaire.php" />
         <option value="$PROJECT_DIR$/Vue/CSS/styleLocProp.css" />
+        <option value="$PROJECT_DIR$/Vue/header.php" />
+        <option value="$PROJECT_DIR$/Modele/donneesPasserelle.php" />
+        <option value="$PROJECT_DIR$/Controleur/recupDonneesPasserelle.php" />
+        <option value="$PROJECT_DIR$/Vue/capteur.php" />
       </list>
     </option>
   </component>
@@ -370,7 +357,7 @@
       <workItem from="1528459757229" duration="21592000" />
       <workItem from="1528703627850" duration="5886000" />
       <workItem from="1528731263179" duration="3676000" />
-      <workItem from="1528739785812" duration="10520000" />
+      <workItem from="1528739785812" duration="15184000" />
     </task>
     <task id="LOCAL-00001" summary="changement emplacement fichier js">
       <created>1528114606579</created>
@@ -407,11 +394,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528719003684</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="push modif">
+      <created>1528796294035</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528796294036</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119859000" />
+    <option name="totallyTimeSpent" value="124523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -430,7 +424,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24534413" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24534413" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32955465" />
       <window_info id="Learn" order="6" weight="0.32955465" />
@@ -543,13 +537,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Controleur/actualisationLogement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modele/actualisationLogement.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -706,13 +693,6 @@
         <state relative-caret-position="-39" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/capteurActionneursHabitations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/CSS/habitations.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -788,43 +768,59 @@
     <entry file="file://$PROJECT_DIR$/Controleur/ajouterUnCapteur.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur/recupDonneesPasserelle.php">
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/donneesPasserelle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/capteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="967">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="366">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="110" column="49" lean-forward="true" selection-start-line="110" selection-start-column="49" selection-end-line="110" selection-end-column="49" />
+        <state relative-caret-position="170">
+          <caret line="160" column="25" lean-forward="true" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
+    <entry file="file://$PROJECT_DIR$/Controleur/capteurActionneursHabitations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="34">
+          <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="73" column="83" selection-start-line="73" selection-start-column="83" selection-end-line="73" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/donneesPasserelle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/recupDonneesPasserelle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="114" column="63" selection-start-line="114" selection-start-column="63" selection-end-line="114" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/capteurActionneursHabitations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="152" column="88" lean-forward="true" selection-start-line="152" selection-start-column="88" selection-end-line="152" selection-end-column="88" />
         </state>
       </provider>
     </entry>

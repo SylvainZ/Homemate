@@ -69,16 +69,17 @@ if(isset($_GET['ID'])){
 										?>
 										<td>
 										<div class="case">
+										 <div id="supModif">
                                             <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale">X</a></button>
                                             <div class="posParametre"><a href="#fenetreModaleBis"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
-                                            </div>
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
+                                         </div>
+                                            
 
                                             <div id="fenetreModale">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
                                                         <input type="submit" value="Supprimer" class="boutonSup">
                                                     </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -93,7 +94,7 @@ if(isset($_GET['ID'])){
 
                                                     <div class="logement">
 
-                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifCapteur&ID=<?php echo $donnees1['ID']?>">
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['ID']?>">
                                                             <div class="form2">
                                                                 <div class="champnom ligne3">
                                                                     <label for="seuil" class="inputNom">Seuil :</label><br>
@@ -110,8 +111,9 @@ if(isset($_GET['ID'])){
                                                     </div>
                                                 </div>
                                             </div>
+                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
 
-                                            <span><?php echo $donnees1['piece']?></span> <br>
+                                            <span><?php echo $donnees1['piece']?></span>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
@@ -144,14 +146,17 @@ if(isset($_GET['ID'])){
 										?>
 										<td>
 										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale2">X</a></button><br>
+											<div id="supModif">
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale2">X</a></button>
+                                            <div class="posParametre"><a href="#fenetreModaleBis"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
+                                            </div>
                                             <img class="styleCapteur" src="Vue/images/temperature.png" alt="image capteur temperature" height="50px" width="50px">
 
                                             <div id="fenetreModale2">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <a href="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                        <a href="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
                                                             <button class="boutonSup">Supprimer</button></a>
 
                                                         </form>
@@ -159,9 +164,34 @@ if(isset($_GET['ID'])){
                                                     </div>
                                                 </div>
                                             </div>
+                                            
+                                            <!-- formulaire modification -->
+                                            <div id="fenetreModaleBis2">
+                                                <div class="popup-block">
+                                                    <h3 class="log modiflog">Modification du capteur</h3>
+
+                                                    <div class="logement">
+
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['ID']?>">
+                                                            <div class="form2">
+                                                                <div class="champnom ligne3">
+                                                                    <label for="seuil" class="inputNom">Seuil :</label><br>
+                                                                    <input type="number" name="seuil" id="piece" value="<?php echo $donnees1['SeuilL']?>"/>
+                                                                </div>
+                                                                <br> <br>
+                                                                <div class="valid">
+                                                                    <input type="submit" name="valider" value="Valider" class="bouton validLogement">
+
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <a class="annuler1" href="#en-tete"><button class="annuler1">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
-                                            <span><?php echo $donnees1['piece']?></span> <br>
+                                            <span><?php echo $donnees1['piece']?></span>
 										<span> Température : </span><?php echo $donnees1['temperature']; ?>
 										</div>
 										</td>
@@ -190,22 +220,51 @@ if(isset($_GET['ID'])){
 										?>
 										<td>
 										<div class="case">
+											<div id="supModif">
                                             <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale3">X</a></button>
+                                             <div class="posParametre"><a href="#fenetreModaleBis"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
+                                            </div>
+                                         
                                             <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
                                             <div id="fenetreModale3">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&id=<?php echo $donnees1['id']?>">
+                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
                                                     </div>
                                                 </div>
                                             </div>
+                                            
+                                            <!-- formulaire modification -->
+                                            <div id="fenetreModaleBis3">
+                                                <div class="popup-block">
+                                                    <h3 class="log modiflog">Modification du capteur</h3>
+
+                                                    <div class="logement">
+
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['ID']?>">
+                                                            <div class="form2">
+                                                                <div class="champnom ligne3">
+                                                                    <label for="seuil" class="inputNom">Seuil :</label><br>
+                                                                    <input type="number" name="seuil" id="piece" value="<?php echo $donnees1['SeuilL']?>"/>
+                                                                </div>
+                                                                <br> <br>
+                                                                <div class="valid">
+                                                                    <input type="submit" name="valider" value="Valider" class="bouton validLogement">
+
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <a class="annuler1" href="#en-tete"><button class="annuler1">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
-                                            <span><?php echo $donnees1['piece']?> </span><br>
+                                            <span><?php echo $donnees1['piece']?> </span>
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
@@ -301,6 +360,9 @@ if(isset($_GET['ID'])){
                                                     </div>
                                                 </div>
                                             </div>
+                                            
+                                            
+                                            
 
 
                                             <span><?php echo $donnees1['nom']?> </span><br>

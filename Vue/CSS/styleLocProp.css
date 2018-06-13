@@ -140,7 +140,7 @@ a:visited
 }
 
 
-#nonCoche, #nonAge {
+#nonCoche, #nonAge, #nonNum, #nonPostal {
 	font-family:quando;
 	font-weight:bold;
 	color:red;

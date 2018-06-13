@@ -1,6 +1,9 @@
 <?php
 include('connexionBD.php');
-if ($c==7){
-    $req = $bdd->prepare('UPDATE capteur SET Presence=? WHERE Type = ?');
-    $req->execute(array($v,'Presence'));
+
+if ($c==2){
+    $req = $bdd->prepare('UPDATE capteur SET temperature=? WHERE Type = ?');
+    $req->execute(array($v,'Temperature'));
 }
+
+include('Vue/capteurActionneursHabitations.php');

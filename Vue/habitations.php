@@ -53,9 +53,9 @@ $nbColonne=5;
                             </div>
                             <div id="fenetreModale">
                                 <div class="popup-block">
-                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
+                                    <h3>Voulez-vous vraiment supprimer ce logement ?</h3>
                                     <div class="annulerSupprimer">
-                                        <form method="post" action="index.php?cible=supprimer&ID=<?php echo $donnees1['ID']?>">
+                                        <form method="post" action="index.php?cible=supprimerLogement&ID=<?php echo $donnees1['ID']?>">
                                             <input type="submit" value="Supprimer" class="boutonSup">
                                         </form>
                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
