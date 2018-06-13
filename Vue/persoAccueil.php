@@ -52,7 +52,7 @@
 		    <input type="submit" value="Valider">
 		    </form>
 
-		    <form method="post" action="index.php?ciblecontroleImage" enctype="multipart/form-data" class="uploadImage">
+		    <form method="post" action="index.php?cible=controleImage" enctype="multipart/form-data" class="uploadImage">
 			    <h1 style="color:white;"> OU Upload une image personelle : </h1>
 			     <label for="case1">Image case 1 :</label><br />
 			     <input type="file" name="case1" id="case1"/><br />

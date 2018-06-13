@@ -14,7 +14,7 @@ function testImage($chemin)
             if (in_array($extension_upload, $extensions_autorisees))
             {
                 // On peut valider le fichier et le stocker définitivement
-                move_uploaded_file($_FILES[$chemin]['tmp_name'], 'images/' . basename($_FILES[$chemin]['name']));
+                move_uploaded_file($_FILES[$chemin]['tmp_name'], 'Vue/images/' . basename($_FILES[$chemin]['name']));
 
             }
         }
