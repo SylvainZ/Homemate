@@ -10,19 +10,41 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 
-if (isset($_POST['modification'])&&isset($_GET['id']))
+if (isset($_POST['modification']) && isset($_GET['id']))
 {
-    $req2 = $bdd->prepare('UPDATE capteur SET type= ? WHERE id ='. $_GET['id'] );
-    $req2->execute(array(
+    $req = $bdd->prepare('UPDATE capteur SET type= ? WHERE id ='. $_GET['id'] );
+    $req->execute(array(
         $_POST['modification']
 
     ));
-
     header('Location:index.php?cible=controleCapteur2');
 }
 else{
     header('Location:index.php?cible=controleCapteur2');
 }
+if (isset($_POST['ajoutCapteur']))
+{
+    $req2 = $bdd->prepare('INSERT INTO capteur(type) VALUES(:type)');
+    $req2->execute(array(
+        'type' => $_POST['ajoutCapteur']
+    ));
+    header('Location:index.php?cible=controleCapteur2');
+}
+else{
+    header('Location:index.php?cible=controleCapteur2');
+}
+if (isset($_POST['ajoutActionneur']))
+{
+    $req3 = $bdd->prepare('INSERT INTO actionneurs (nom) VALUES(:nom)');
+    $req3->execute(array(
+        'nom' => $_POST['ajoutActionneur']
+    ));
+    header('Location:index.php?cible=controleCapteur2');
+}
+else{
+    header('Location:index.php?cible=controleCapteur2');
+}
+
 ?>
 
 

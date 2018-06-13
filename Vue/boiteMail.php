@@ -28,8 +28,8 @@
 	    		<p>
 		    		<a href="index.php?cible=messagerie"><input type="button" value="Nouveau message" class="nouveau"/>
                     </a>
-		    		<div><a href="index.php?cible=boiteMailReception" class="liste">Liste des messages</a></div><br/>
-		    		<div><a href="index.php?cible=corbeilleRecherche" class="corbeille">Corbeille</a></div>
+		    		<div><a href="index.php?cible=boiteMailReception" class="active">Liste des messages</a></div><br/>
+		    		<div><a href="index.php?cible=corbeilleRecherche" class="nonActive">Corbeille</a></div>
 	    		</p>
 	    	</section>
 
@@ -84,29 +84,48 @@
                             while($i < $intervale){
                                 /*Vérification de l'existence des variables*/
                                 if (isset($_SESSION['sujet'][$i]) && isset($_SESSION['nomExp'][$i]) && isset($_SESSION['date'][$i])) {
-                                    if ($_SESSION['corbeille'][$i] == 0) {
+                                    if ($_SESSION['corbeille'][$i] == 0) {?>
 
-                                        /*Ligne d'un message*/
-                                        echo '<div class="message">';
+                                        <!--Ligne d'un message-->
+                                        <div class="message">
 
-                                        echo '<input type="checkbox" class="messagecheck" name="' . $i . '"/>
-                                        <a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndSujet">
-                                            <span >' . $_SESSION['sujet'][$i] . '</span> </a>
-                                        <a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndExp">	
-                                            <span >' . $_SESSION['nomExp'][$i] . '</span></a>
-                                        <a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndDate">	
-                                            <span >' . $_SESSION['date'][$i] . '</span>
-                                        </a>';
-                                        echo '</div>';
+                                        <input type="checkbox" class="messagecheck" name="<?php echo $i?>"/>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td width="15%">
+                                                        <div class="sujet">
+                                                        <a href="index.php?cible=pageMessage&message=<?php echo $i?>" class="messageIndSujet">
+                                                        <span ><?php echo $_SESSION['sujet'][$i]?></span> </a>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                    <td width="10%" >
+                                                        <div class="expediteur">
+                                                        <a href="index.php?cible=pageMessage&message=<?php echo $i?>" class="messageIndExp">
+                                                        <span ><?php echo $_SESSION['nomExp'][$i]?></span></a>
+                                                        </div>
+                                                    </td>
+                                                    
+                                                    <td width="10%">
+                                                        <a href="index.php?cible=pageMessage&message=<?php echo $i?>" class="messageIndDate">
+                                                        <span ><?php echo $_SESSION['date'][$i]?></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </a>
+                                        </div>
+                            <?php
                                         $i++;
                                     }
                                 }
                                 else{
                                     $i++;
                                 }
-                            }
+                            }?>
 
-		?>
+
 				    			<!-- commentaire : changer de page -->
 
                             <?php

@@ -22,7 +22,7 @@ body
 }
 
 /*Style de Liste des messages dans le menu*/
-.liste
+.active
 {
 	text-shadow: -1px -1px white, 2px 2px blue;
 	color:white;
@@ -32,7 +32,7 @@ body
 
 
 /*Style de corbeille*/
-.corbeille
+.nonActive
 {
 	color:white;
 	text-decoration:none;
@@ -144,6 +144,7 @@ body
 	text-decoration:none;
 }
 
+
 .messageIndExp
 {
 	text-align:left;
@@ -163,6 +164,7 @@ body
 
 }
 
+
 /*Titre Listes des messages et liste déroulante(supprimer, marquer comme lu,...)*/
 .debut
 {
@@ -173,8 +175,23 @@ body
 .page
 {
 	text-align:center;
-	color:white;	
+	color:white;
 }
+
+.expediteur
+{
+	margin-left: 1.5vw;
+	overflow: hidden;
+}
+
+.sujet
+{
+	overflow: hidden;
+}
+
+
+
+
 
 
 

@@ -27,8 +27,8 @@
 	    	<section class="menuGauche">
 	    		<p>
 		    		<a href="index.php?cible=messagerie"><input type="button" value="Nouveau message" class="nouveau"/></a>
-		    		<div><a href="index.php?cible=boiteMailReception" class="liste">Liste des messages</a></div><br/>
-		    		<div><a href="index.php?cible=corbeilleRecherche" class="corbeille">Corbeille</a></div>
+		    		<div><a href="index.php?cible=boiteMailReception" class="nonActive">Liste des messages</a></div><br/>
+		    		<div><a href="index.php?cible=corbeilleRecherche" class="active">Corbeille</a></div>
 	    		</p>
 	    	</section>
 
@@ -75,25 +75,42 @@
 							for ($i = 0; $i < 10; $i++){
 								/*Vérification de l'existence des variables*/
 								if (isset($_SESSION['sujet'][$i])&& isset($_SESSION['expediteur'][$i])&&isset($_SESSION['date'][$i])){
-									if($_SESSION['corbeille'][$i]==1){
-										/*Ligne d'un message*/
-										echo '<div class="message">';
+									if($_SESSION['corbeille'][$i]==1){?>
 
-											echo '<input type="checkbox" class="messagecheck" name="'.$i.'"/>
-											<a href="index.php?cible=pageMessage.php?message='.$i.'" class="messageIndSujet">
-												<span >'.$_SESSION['sujet'][$i].'</span> </a>
-											<a href="index.php?cible=pageMessage.php?message='.$i.'" class="messageIndExp">	
-												<span >'.$_SESSION['expediteur'][$i].'</span></a>
-											<a href="index.php?cible=pageMessage.php?message='.$i.'" class="messageIndDate">	
-												<span >'.$_SESSION['date'][$i].'</span>
-											</a>';
-										echo '</div>';
-									}
-								}
-							}
-							
+										<div class="message">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td width="15%">
+                                                        <div class="sujet">
+                                                        <a href="index.php?cible=pageMessage&message="<?php echo $i?> class="messageIndSujet">
+                                                        <span ><?php echo $_SESSION['sujet'][$i]?></span> </a>
+                                                        </div>
+                                                    </td>
+
+                                                    <td width="10%" >
+                                                        <div class="expediteur">
+                                                            <a href="index.php?cible=pageMessage&message="<?php echo $i?> class="messageIndExp">
+                                                            <span ><?php echo $_SESSION['nomExp'][$i]?></span></a>
+                                                        </div>
+                                                    </td>
+
+                                                    <td width="10%">
+                                                        <a href="index.php?cible=pageMessage&message="<?php echo $i?> class="messageIndDate">
+                                                            <span ><?php echo $_SESSION['date'][$i]?></span></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+    <?php
+    $i++;
+    }
+    }
+    }?>
+
 																					
-		?>				
+
 						
 					
 				    			<!-- commentaire : changer de page -->

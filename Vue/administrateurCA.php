@@ -40,27 +40,49 @@
 		</div>
 	</section>
 
-	<section class="bloc2">
-		<h1 >Voici les capteurs :</h1>
-			<ul class="decalage">
-<?php
-while ($donnees = $reponse_capteur->fetch())
-{
-    ?>
-    <li class="decoliste">
-        <?php echo $donnees['type'];?>
-        <?php echo $donnees['nom']?>
-        <form action="index.php?cible=controleCapteur&id=<?php echo $donnees['id']?>" method="POST" class="position">
-            <input type="text" name="modification" style= "width:10vw;">
-            <input type="submit" value="Modfier type">
-        </form>
-    </li>
-    <?php
-}
-?>
+    <section class="big">
+        <div class="bloc2">
+            <h1 >Voici les capteurs :</h1>
+            <ul class="decalage">
 
 
-	</section>
+                <?php
+                while ($donnees = $reponse_capteur->fetch())
+                {
+                    ?>
+                    <li class="decoliste">
+                        <?php echo $donnees['type'];?>
+                        <?php echo $donnees['nom']?>
+                        <form action="index.php?cible=controleCapteur&id=<?php echo $donnees['id']?>" method="POST" class="position">
+                            <input type="text" name="modification" style= "width:10vw;"><br/>
+                            <input type="submit" value="Modfier type" class="bouton">
+                        </form>
+                    </li>
+                    <?php
+                }
+                ?>
+            </ul>
+        </div>
+        <div class="bloc2">
+            <h1>Ajouter des capteurs ou des actionneurs : </h1>
+            <p>Ajouter un capteur :</p>
+            <form action="index.php?cible=controleCapteur" method="POST">
+                Type : <select name="ajoutCapteur" >
+                    <option value="Température">Température</option>
+                    <option value="Présence">Présence</option>
+                    <option value="Luminosité">Luminosité</option>
+                </select>
+                <input type="submit" value="Ajouter" class="bouton">
+
+                <p>Ajouter un actionneur : </p>
+                Type : <select name="ajoutActionneur" >
+                    <option value="Volet">Moteur volet</option>
+                    <option value="Interrupteur">Interrupteur</option>
+                </select>
+                <input type="submit" value="Ajouter" class="bouton">
+            </form>
+        </div>
+    </section>
 
 
 

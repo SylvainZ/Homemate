@@ -12,11 +12,19 @@ try
 
 if (isset($_POST['modification']))
 {
-	$req2 = $bdd->prepare('UPDATE piece SET type = :type WHERE ID_logement = :ID_logement');
-	$req2->execute(array(
+	$req = $bdd->prepare('UPDATE piece SET type = :type WHERE ID_logement = :ID_logement');
+	$req->execute(array(
 		'type' => $_POST['modification'],
 		'ID_logement' => 0,
 		));
+}
+if (isset($_POST['ajoutCapteur']))
+{
+    $req2 = $bdd->prepare('INSERT INTO capteur VALUES');
+    $req2->execute(array(
+        'type' => $_POST['modification'],
+        'ID_logement' => 0,
+    ));
 }
 
 

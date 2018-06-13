@@ -94,7 +94,15 @@ if(isset($_GET['ID'])){
 
                                                     <div class="logement">
 
+<<<<<<< HEAD
                                                         <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['id']?>">
+=======
+
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['ID']?>">
+
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifCapteur&ID=<?php echo $donnees1['id']?>">
+
+>>>>>>> 84411420a0875dc7e3b97709cc5d31c15ea25f1b
                                                             <div class="form2">
                                                                 <div class="champnom ligne3">
                                                                     <label for="seuil" class="inputNom">Seuil :</label><br>
