@@ -60,12 +60,12 @@ body
 
 .decalage
 {
-	padding-left: 10vw;
+	padding-left: 2vw;
 }
 .position
 {
 	position:relative;
-	left: 25vw;
+	left: 20vw;
 	bottom: 2vw;
 }
 
@@ -89,22 +89,38 @@ body
 	margin-bottom: 20%;
 }
 
-.bloc2
-{
+.big {
 	background-color: #471229;
-	height:30vw;
-	width:80vw;
+	height: 30vw;
+	width: 80vw;
 	position: relative;
-	top:8vw;
+	top: 8vw;
 	border-radius: 60px;
 	padding-top: 1px;
-	color:white;
-	font-size:1.2em;
+	color: white;
+	font-size: 1.2em;
 	font-weight: bold;
 	text-align: center;
 	font-family: Quando;
-	overflow: auto;
-	margin:auto;
+	display: flex;
+	margin: auto;
+}
+.bloc2
+{
+	padding-top:1vw;
+	height:28vw;
+	width:40vw;
+	overflow:auto;
+}
+
+select
+{
+	border-radius: 5px;
+	border-style: none;
+	font-family: Quando;
+	font-weight: bold;
+	min-width: 100px;
+	min-height: 30px;
 }
 .bouton
 {
@@ -140,13 +156,9 @@ input[type=text]
 {
 	padding: 10px 20px;
     box-sizing: border-box;
-    width: 1000px;
+    width: 300px;
 	border-radius:5px;
 }
-
-
-
-
 a
 {
 	text-decoration: none;

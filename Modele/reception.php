@@ -15,7 +15,7 @@ function testImage($chemin)
             {
                 // On peut valider le fichier et le stocker définitivement
                 move_uploaded_file($_FILES[$chemin]['tmp_name'], 'Vue/images/' . basename($_FILES[$chemin]['name']));
-
+                echo "L'image a bien été envoyée";
             }
         }
     }
