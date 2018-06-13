@@ -13,44 +13,87 @@
 
         </header>
 
-<img src="Vue/images/iconeProfil.png" class="iconeProfil" alt="Icône Profil" href="pageDAccueil.php"/> <span class="profil">Profil</span>
+<span class="profil">Modifier profil</span>
 
-<div class="rectangle">
-
+<div class="bbb">
+<
     <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data">
-        <p>
-            Nom, Prénom, Statut: <br/>
-            <input type="text" name="nom" placeholder="nom" value= <?php echo $_SESSION['nom'];?> />
-            <input type="text" name="prenom" placeholder="prénom" value= <?php echo $_SESSION['prenom'];?> /><br/>
-			<?php //valeur par défaut ?>
-            <select name="statut">
-                <option value="proprietaire">proprietaire</option>
-                <option value="locataire">locataire</option>
-                <option value="gestionnaire">gestionnaire</option>
-            </select><br /><br/>
-            Adresse complète:<br/>
-            <input type="text" name="numLogement" placeholder="numéro d'appartement" value=<?php echo $_SESSION['numLogement'];?> />
-            <input type="text" name="numEtage" placeholder="numéro d'étage" value= <?php echo $_SESSION['numEtage'];?> /><br />
-            <input type="text" name="numRue" placeholder="numéro de rue" value=<?php echo $_SESSION['numRue'];?> />
-            <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label>
-            <select name="prefixeRueBdAve">
-                <option value="rue">rue</option>
-                <option value="bd">boulevard</option>
-                <option value="ave">avenue</option>
-                <option value="imp">impasse</option>
-                <option value="pond">pond</option>
-            </select>
+    
+     <table>
+       	   <tr>
+       	      <td>
+                <table>
+			<tr>
+		       <td>Nom:</td>
+		       <td><input type="text" name="nom" placeholder="nom" value= <?php echo $_SESSION['nom'];?>></td>
+			</tr>
+		        <tr>
+			<td>Prenom:</td>
+		       <td><input type="text" name="prenom" placeholder="prÃ©nom" value=<?php echo $_SESSION['prenom']; ?>></td>
+		       </tr>
+        		<tr>
+        	            <td>Statut: </td>
+			    <td><select name="statut">
+			    <option value="proprietaire">proprietaire</option>
+			    <option value="locataire">locataire</option>
+			    <option value="gestionnaire">gestionnaire</option> </select></td>
+        		</tr>
+			<tr>
+			  <td>Numero d'appartement:</td>
+		       <td><input type="text" name="numLogement" placeholder="numÃ©ro d'appartement" value=<?php echo $_SESSION['numLogement'];?> /></td>
+			</tr>
+			<tr>
+			  <td>Numero d'étage:</td>
+		       <td><input type="text" name="numEtage" placeholder="numÃ©ro d'Ã©tage" value= <?php echo $_SESSION['numEtage'];?> /></td>
+			</tr>
+			<tr>
+			  <td>Numero de la rue:</td>
+		       <td><input type="text"name="numRue" placeholder="numÃ©ro de rue" value=<?php echo $_SESSION['numRue'];?>  /></td>
+			</tr>
 
-            <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue"  value=<?php echo $_SESSION['nomRueBdAve'];?> /><br/>
-            <input type="text" name="codePostal" placeholder="département"  value=<?php echo $_SESSION['codePostal'];?> />
-            <input type="text" name="ville" placeholder="ville" value=<?php echo $_SESSION['ville'];?> /></span><br/>
-            Mail:<br/>
-            <input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?> /><br/>
-            Numéro de téléphone:<br/>
-            <input type="text" name="numTel" placeholder="numéro de téléphone" value=<?php echo $_SESSION['numTel'];?> /><br />
-            <input type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/><br />
-            <a href="index.php?cible=profil" ><input type="button" value="Annuler"/></a>
-        </p>
+		</table>
+	  </td>
+	  <td>
+               <table>
+        		 			
+	   <tr>
+		  <td>type: <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label></td>
+	       <td><select name="prefixeRueBdAve">
+
+    <option value="rue">rue</option>
+    <option value="bd">boulevard</option>
+    <option value="ave">avenue</option>
+    <option value="imp">impasse</option>
+    <option value="pond">pond</option>
+
+			</select>
+	  </td>
+		</tr>
+		<tr>
+		  <td>Nom de rue: </td>
+	      <td <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue"  value=<?php echo $_SESSION['nomRueBdAve'];?> /></td>
+		</tr>
+		<tr>
+		  <td>Code postal: </td>
+	       <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue"  value=<?php echo $_SESSION['nomRueBdAve'];?> /></td>
+		</tr>
+		<tr>
+		  <td>Ville:</td>
+	       <td> <input type="text" name="ville" placeholder="ville" value=<?php echo $_SESSION['ville'];?> /></td>
+		</tr>
+		<tr>
+		  <td>Email:</td>
+	       <td> <input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?> /></td>
+		</tr>
+								<tr>
+		  <td>Telephone:</td>
+	       <td> <input type="text" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=<?php echo $_SESSION['numTel'];?> /></td>
+		</tr>
+        			</table>
+        		</td>
+        	</tr>
+        	</table>
+			   
     </form>
 
     </div>
