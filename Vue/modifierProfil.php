@@ -27,7 +27,11 @@
         				   	</tr>
         				   <tr>
         				   	  <td>Prénom:</td>
+<<<<<<< HEAD
         				       <td><input type="text" name="prenom" placeholder="prÃ©nom" value=<?php echo $_SESSION['prenom'];?>></td>
+=======
+        				       <td><input type="text" name="prenom" placeholder="prÃ©nom" value="<?php echo $_SESSION['prenom'];?>"/></td>
+>>>>>>> 4e937947ccd12a8700c9d74d7604a794d5ec09fc
         				   	</tr>
         					<tr>
         				   	  <td>Statut: </td>
@@ -71,7 +75,11 @@
         				   	</tr>
         					<tr>
         				   	  <td>Nom de rue: </td>
+<<<<<<< HEAD
         				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" value=<?php echo $_SESSION['nomRueBdAve'];?> ></td>
+=======
+        				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" value="<?php echo $_SESSION['nomRueBdAve'];?>" /></td>
+>>>>>>> 4e937947ccd12a8700c9d74d7604a794d5ec09fc
         				   	</tr>
         				   	<tr>
         				   	  <td>Code postal: </td>
@@ -93,11 +101,17 @@
         		</td>
         	</tr>
         	</table>
+<<<<<<< HEAD
 			   <input class="valider" type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
     </form>
             
-            <a href="index.php?cible=profil" ><input class="valider" type="button" value="Annuler"/></a>
+=======
+			   
 
+            <input class="valider" type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
+>>>>>>> 4e937947ccd12a8700c9d74d7604a794d5ec09fc
+            <a href="index.php?cible=profil" ><input class="valider" type="button" value="Annuler"/></a>
+    </form>
 
     </div>
 <footer>

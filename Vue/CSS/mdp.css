@@ -21,6 +21,11 @@ h1
 
 }
 
+table
+{
+    color:white;
+}
+
 .valider {
     border-radius: 5px;
     border-style: none;

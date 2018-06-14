@@ -19,6 +19,7 @@ while ($donnees = $req->fetch())
 	$reception[] = $donnees['Reception'];
 	$id[] = $donnees['ID'];
 	$corbeille[] = $donnees['Corbeille'];
+    $consulte[] = $donnees['Consulte'];
 	$numMessage++;
 }
 $_SESSION['sujet']=$sujet;
@@ -29,5 +30,6 @@ $_SESSION['message']=$message;
 $_SESSION['reception']=$reception;
 $_SESSION['id']=$id;
 $_SESSION['corbeille']=$corbeille;
+$_SESSION['consulte']=$consulte;
 header('Location: index.php?cible=boiteMail');
 ?>
