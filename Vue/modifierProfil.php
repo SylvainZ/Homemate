@@ -27,7 +27,7 @@
         				   	</tr>
         				   <tr>
         				   	  <td>Prénom:</td>
-        				       <td><input type="text" name="prenom" placeholder="prÃ©nom" <?php echo $_SESSION['prenom'];?>></td>
+        				       <td><input type="text" name="prenom" placeholder="prÃ©nom" value="<?php echo $_SESSION['prenom'];?>"/></td>
         				   	</tr>
         					<tr>
         				   	  <td>Statut: </td>
@@ -71,7 +71,7 @@
         				   	</tr>
         					<tr>
         				   	  <td>Nom de rue: </td>
-        				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" alue=<?php echo $_SESSION['nomRueBdAve'];?> /></td>
+        				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" value="<?php echo $_SESSION['nomRueBdAve'];?>" /></td>
         				   	</tr>
         				   	<tr>
         				   	  <td>Code postal: </td>
@@ -94,10 +94,10 @@
         	</tr>
         	</table>
 			   
-    </form>
+
             <input class="valider" type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
             <a href="index.php?cible=profil" ><input class="valider" type="button" value="Annuler"/></a>
-
+    </form>
 
     </div>
 <footer>
