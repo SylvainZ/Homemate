@@ -41,7 +41,7 @@
 
                     <td>
                         <div class="titre3">
-                            <span class="ecriture">Adrresse :</span> <br><br>
+                            <span class="ecriture">Adresse :</span> <br><br>
                             <span class="ecriture2">10 rue de Vanves </span> <br>
                             <span class="ecriture2">Issy les Moulinaux</span>
                             <span class="ecriture2"><br>92130</span>
