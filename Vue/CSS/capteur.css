@@ -1,3 +1,12 @@
+.adresse{
+	color:#6a1b3d;
+	font-weight:bold;
+	font-size:1.5vw;
+	position: relative;
+	top:3.5vw;
+	left:10vw;
+}
+
 .style
 {
 	padding-bottom:5vw;

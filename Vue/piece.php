@@ -13,8 +13,11 @@ if(isset($_GET['ID'])){
     $id=$_GET['ID'];
     $piece = $bdd->query('SELECT * FROM piece WHERE ID_logement =\''.$_GET['ID'].'\'');
     $nombrePiece = $bdd->query('SELECT NombrePiece FROM logement WHERE ID ='.$_GET['ID']);
+    
 
 }
+$nbLigne=0;
+$nbColonne=7;
 
 
 ?>
@@ -23,7 +26,7 @@ if(isset($_GET['ID'])){
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Habitations</title>
+	<title>Logement</title>
 	<link rel="stylesheet" href="Vue/CSS/piece.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
@@ -33,20 +36,42 @@ if(isset($_GET['ID'])){
 	<header>
 			<?php include("header.php") ?>
 	</header>
-
+	
+	
+	
+	
+	
+	
 
 	<div id="page">
-
+		<div class="adresse">
+        	
+        	<?php 
+        	$logement = $bdd->query('SELECT * FROM logement WHERE ID =\''.$_GET['ID'].'\'');
+        	while ($donnees1 = $logement->fetch()){
+        	    
+        	 echo $donnees1['Adresse'].' '.  $donnees1['Ville'] .' '.  $donnees1['CodePostal'];
+        	    
+        	} ?>
+        	       
+        	
+        </div>
         <div class = "entete">
+        
+        
             <button class="A active"><a href="index.php?cible=logement" class="styleEntete"><p class="hab"><p>Habitation(s)</p></a></button>
             <button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>
         </div>
 <br><br>
-	<table class="tableauPiece">
+
+<?php echo 	'<table class="tableau">
 		<tbody>
-			<tr id="ligne1">
-                <?php
+			<tr id="ligne1">';
                 while ($donnees1 = $piece->fetch()){
+                    if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0) {
+                        echo '</tr><tr>';
+                        $nbLigne = 0;
+                    }
                     ?>
 	                  <td>
                         <div class="case">
@@ -166,8 +191,8 @@ if(isset($_GET['ID'])){
                     }
                     
                     </style>
-                    
-                <?php }?>
+                      <?php $nbLigne++;}?>
+                
                 <td><a href="index.php?cible=ajoutPiece&ID=<?php echo $id?>"><input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>
 			</tr>
 		</tbody>
