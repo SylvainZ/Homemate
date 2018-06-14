@@ -26,7 +26,7 @@ if(isset($_GET['ID'])){
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Habitations</title>
+	<title>Capteurs</title>
 	<link rel="stylesheet" href="Vue/CSS/capteur.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
@@ -37,6 +37,18 @@ if(isset($_GET['ID'])){
 			<?php include("header.php") ?>
 	</header>
 <div id="page">
+	<div class="adresse">
+        	
+        	<?php 
+        	$piece = $bdd->query('SELECT * FROM piece WHERE ID =\''.$_GET['ID'].'\'');
+        	while ($donnees1 = $piece->fetch()){
+        	    
+        	 echo $donnees1['Nom'];
+        	    
+        	} ?>
+        	       
+        	
+        </div>
     <div class = "entete">
         <button class="A active"><a href="index.php?cible=logement" class="styleEntete"><p class="hab"><p>Habitation(s)</p></a></button>
         <button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>
@@ -94,15 +106,15 @@ if(isset($_GET['ID'])){
 
                                                     <div class="logement">
 
-<<<<<<< HEAD
+
                                                         <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['id']?>">
-=======
+
 
                                                         <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['ID']?>">
 
                                                         <form class="form1 form2" method="post"  action="index.php?cible=modifCapteur&ID=<?php echo $donnees1['id']?>">
 
->>>>>>> 84411420a0875dc7e3b97709cc5d31c15ea25f1b
+
                                                             <div class="form2">
                                                                 <div class="champnom ligne3">
                                                                     <label for="seuil" class="inputNom">Seuil :</label><br>
