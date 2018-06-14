@@ -23,8 +23,7 @@ function testImage($chemin)
 
 testImage('case1');
 testImage('case2');
-testImage('case3');
-testImage('case4');
+
 
 try
 {
@@ -36,8 +35,6 @@ catch(Exception $e)
 }
 $bdd->exec('UPDATE `accueilimage` SET `Chemin`=\''.$_FILES['case1']['name'].'\' WHERE ID=1');
 $bdd->exec('UPDATE `accueilimage` SET `Chemin`=\''.$_FILES['case2']['name'].'\' WHERE ID=2');
-$bdd->exec('UPDATE `accueilimage` SET `Chemin`=\''.$_FILES['case3']['name'].'\' WHERE ID=3');
-$bdd->exec('UPDATE `accueilimage` SET `Chemin`=\''.$_FILES['case4']['name'].'\' WHERE ID=4');
 
 try
 {
@@ -54,8 +51,5 @@ $donnees = $req->fetch();
 $chemin1=$donnees['Chemin'];
 $donnees = $req->fetch();
 $chemin2=$donnees['Chemin'];
-$donnees = $req->fetch();
-$chemin3=$donnees['Chemin'];
-$donnees = $req->fetch();
-$chemin4=$donnees['Chemin'];
+
 ?>

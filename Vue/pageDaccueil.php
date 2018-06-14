@@ -22,11 +22,12 @@
                 <tr>
                     <td>
                         <div class="titre">
-                            <h1>Notre entreprise</h1>
+                            <h1>Bienvenue chez HOMEMATE</h1>
+
                         </div>
                             <br>
                         <div class="titre2">
-                            Notre entreprise
+                            <img class="images2" src="<?php echo'Vue/images/'.$chemin1?>">
                         </div>
                             <br>
                         <div class="titre">
@@ -50,8 +51,11 @@
                             <span class="ecriture3"> 06 45 67 23 90 </span> <br>
                             <span class="ecriture2">-Email </span> <br>
                             <span class="ecriture3"> domisep@isep.fr </span> <br><br>
-                            <span class="ecriture">Nos partenaires :</span> <br><br>
-                            <span class="ecriture2">-ISEP </span> <br>
+                        </div>
+                        <br/>
+                        <div class="titre3">
+
+                            <img class="images3" src="<?php echo'Vue/images/'.$chemin2?>">
                         </div>
                     </td>
                 </tr>
