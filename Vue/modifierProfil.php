@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="modifierProfil.css" />
+    <link rel="stylesheet" href="Vue/CSS/mdp.css" />
     <link rel="stylesheet" href="Vue/CSS/all.css">
     <title>Modifier votre profil</title>
 </head>
@@ -12,9 +12,9 @@
             <?php include("Vue/header.php") ?>
     </header>
 
-<span class="profil">Modifier profil</span>
+<h1>Modifier profil</h1>
 
-<div class="bbb">
+<div class="bloc">
     <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data">
     
      <table>
@@ -27,7 +27,7 @@
         				   	</tr>
         				   <tr>
         				   	  <td>Prenom:</td>
-        				       <td><input type="text" name="prenom" placeholder="prénom" <?php echo $_SESSION['prenom'];?>></td>
+        				       <td><input type="text" name="prenom" placeholder="prÃ©nom" <?php echo $_SESSION['prenom'];?>></td>
         				   	</tr>
         					<tr>
         				   	  <td>Statut: </td>
@@ -39,15 +39,15 @@
         				   	</tr>
         				   	<tr>
         				   	  <td>Numero d'appartement:</td>
-        				       <td><input type="text" name="numLogement" placeholder="numéro d'appartement" value=<?php echo $_SESSION['numLogement'];?>/></td>
+        				       <td><input type="text" name="numLogement" placeholder="numÃ©ro d'appartement" value=<?php echo $_SESSION['numLogement'];?>/></td>
         				   	</tr>
         				   	<tr>
-        				   	  <td>Numero d'�tage:</td>
-        				       <td><input type="text" name="numEtage" placeholder="numéro d'étage" value= <?php echo $_SESSION['numEtage'];?> /></td>
+        				   	  <td>Numero d'étage:</td>
+        				       <td><input type="text" name="numEtage" placeholder="numÃ©ro d'Ã©tage" value= <?php echo $_SESSION['numEtage'];?> /></td>
         				   	</tr>
         				   	<tr>
         				   	  <td>Numero de la rue:</td>
-        				       <td><input type="text" name="numRue" placeholder="numéro de rue" value=<?php echo $_SESSION['numRue'];?>/></td>
+        				       <td><input type="text" name="numRue" placeholder="numÃ©ro de rue" value=<?php echo $_SESSION['numRue'];?>/></td>
         				   	</tr>
 
         			</table>
@@ -56,9 +56,9 @@
     			   <table>
         		 			
         				   <tr>
-        				   	  <td>type: <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label></td>
+        				   	  <td>type:</td>
         				   	
-        				       <td><select name="prefixeRueBdAve">
+        				       <td> <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label><select name="prefixeRueBdAve">
             
                                     <option value="rue">rue</option>
                                     <option value="bd">boulevard</option>
@@ -75,7 +75,7 @@
         				   	</tr>
         				   	<tr>
         				   	  <td>Code postal: </td>
-        				       <td> <input type="text" name="codePostal" placeholder="département"  value=<?php echo $_SESSION['codePostal'];?> /></td>
+        				       <td> <input type="text" name="codePostal" placeholder="dÃ©partement"  value=<?php echo $_SESSION['codePostal'];?> /></td>
         				   	</tr>
         				   	<tr>
         				   	  <td>Ville:</td>
@@ -87,7 +87,7 @@
         				   	</tr>
         				   	        				   	<tr>
         				   	  <td>Telephone:</td>
-        				       <td> <input type="text" name="numTel" placeholder="numéro de téléphone" value=<?php echo $_SESSION['numTel'];?>/></td>
+        				       <td> <input type="text" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=<?php echo $_SESSION['numTel'];?>/></td>
         				   	</tr>
         			</table>
         		</td>
@@ -95,6 +95,9 @@
         	</table>
 			   
     </form>
+            <input type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
+            <a href="index.php?cible=profil" ><input type="button" value="Annuler"/></a>
+
 
     </div>
 <footer>
