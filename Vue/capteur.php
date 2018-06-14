@@ -27,6 +27,8 @@ if(isset($_GET['ID'])){
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Capteurs</title>
+	 
+    <link rel="stylesheet" type="text/css" href="Vue/css/on-off-switch.css"/>
 	<link rel="stylesheet" href="Vue/CSS/capteur.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
@@ -377,48 +379,35 @@ if(isset($_GET['ID'])){
 										    $id=$donnees1['ID'];
 										?>
 										<td>
-										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale3">X</a></button>
-                                            <?php if($donnees1['Etat']==1){?>
+										<div class="case2">
+										
+                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
                                             
-                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px"&z>
-                                            <script>
                                             
-                                            $("#eteindre<?php echo $donnees1['ID']?>").click(function(){
-	     
-	   										 $.ajax({
-	      									 url : 'index.php?', // La ressource ciblée
-	       									 type : 'GET', // Le type de la requête HTTP
-			
-                                        	  /**
-                                        	        * Le paramètre data n'est plus renseigné, nous ne faisons plus passer de variable
-                                        	        */
-                                        
-                                        	       data : 'cible=' + modifierActionneur+ '&etat=' + 0+ '&ID=' + <?php echo $_GET['ID']?>+ '&id=' + id=<?php echo $donnees1['ID']?> // Le type de données à recevoir, ici, du HTML.
-                                        	    });
-                                          	  });
-                                        	});
-                                            </script>
-                                            <?php }
-                                            else {?>
                                             
-                                            <img id="allumer<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/arret.png" alt="image interrupteur" height="50px">
-                                            <script>
-                                            $(document).ready(function(){
-                                                $("#allumer<?php echo $donnees1['ID']?>").click(function(){
-    	     
-        	   										 $.get({
-            	      									 'index.php?',
-                                                
-                                                	     data : 'cible=' + modifierActionneur+'&etat=' + 1+ '&ID=' + <?php echo $_GET['ID']?>+ '&id=' + id=<?php echo $donnees1['ID']?> // Le type de données à recevoir, ici, du HTML.
-                                            	    });
-                                            	   
-                                            	});
-                                        	});
-                                            </script>
-                                                
-                                            <?php }?>
-                                            <div id="fenetreModale3">
+                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px">
+                                          <span class="nom"><?php echo $donnees1['nom']?> </span><br>
+                                           <div class="checkbox-container">
+                                    <input type="checkbox" id="on-off-switch" name="switch1" checked>
+                               </div>
+                                <div id="listener-text">
+                                
+                                </div>
+                                
+                                <script type="text/javascript" src="Vue/js/jquery-1.11.2.min.js"></script>
+    							<script type="text/javascript" src="Vue/js/on-off-switch.js"></script>
+    							<script type="text/javascript" src="Vue/js/on-off-switch-onload.js"></script>
+    							    							
+                                <script type="text/javascript">
+                                    new DG.OnOffSwitch({
+                                        el: '#on-off-switch',
+                                        textOn: 'On',
+                                        textOff: 'Off',
+                                 });
+                                    
+                                </script>
+             
+                                            <div id="fenetreModale<?php echo $donnees1['ID']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
                                                     <div class="annulerSupprimer">
@@ -428,16 +417,27 @@ if(isset($_GET['ID'])){
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>                 
                                             
-                                            
-                                            
-
-
-                                            <span><?php echo $donnees1['nom']?> </span><br>
-										
 										</div>
 										</td>
+										
+										<style>
+                                        
+                                        #fenetreModale<?php echo $donnees1['ID']?>
+                                        {
+                    	                display: none;
+                    	                position: fixed;
+                    	                top:0; right:0; bottom:0; left:0;
+                    	                background-color: rgba(0, 0, 0, 0.5);
+                    	                z-index: 1000;}
+                    
+                                        #fenetreModale<?php echo $donnees1['ID']?>:target
+                                        {
+                    	                   display: block;
+                                        }
+                    
+                                        </style>
 										<?php }?>
 
 										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>""> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>

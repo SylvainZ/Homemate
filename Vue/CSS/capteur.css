@@ -70,6 +70,19 @@ td
 
 }
 
+.case2
+{
+	background-color:#9998b2;
+	padding:10px;
+	margin:10px;
+	border-radius:6px;
+    width: 10vw;
+    height: 10vw;
+    font-size: 14px;
+
+}
+
+
 span
 {
     text-align: center;
@@ -350,4 +363,14 @@ button.active
     margin-right: auto;
     position: relative;
 	bottom:1vw;
+}
+.checkbox-container
+{
+	padding-top:1vw;
+	padding-left:2.5vw;
+}
+.nom
+{
+	
+	padding-left:2vw;
 }
