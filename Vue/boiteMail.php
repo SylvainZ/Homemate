@@ -98,7 +98,7 @@
                                         <a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndDate">	
                                             <span >' . $_SESSION['date'][$i] . '</span>
                                         </a>';
-                                        if (!$_SESSION['consulte'][$i]){echo </bold>;} //fin de la condition
+                                        if (!$_SESSION['consulte'][$i]){echo "</bold>";} //fin de la condition
                                         echo '</div>';
                                         $i++;
                                     }
