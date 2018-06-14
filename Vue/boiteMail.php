@@ -88,7 +88,7 @@
 
                                         /*Ligne d'un message*/
                                         echo '<div class="message">';
-                                        //if ($_SESSION['consulte'][$i]){ echo "En gras":
+                                        if (!$_SESSION['consulte'][$i]){ echo "<bold>";}
                                         echo '<input type="checkbox" class="messagecheck" name="' . $i . '"/>
                                         
                                         <a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndSujet">
@@ -98,7 +98,7 @@
                                         <a href="index.php?cible=pageMessage&message=' . $i . '" class="messageIndDate">	
                                             <span >' . $_SESSION['date'][$i] . '</span>
                                         </a>';
-                                        //} //fin de la condition
+                                        if (!$_SESSION['consulte'][$i]){echo </bold>;} //fin de la condition
                                         echo '</div>';
                                         $i++;
                                     }
@@ -108,7 +108,7 @@
                                 }
                             }
 
-		?><
+		?>
 				    			<!-- commentaire : changer de page -->
 
                             <?php
