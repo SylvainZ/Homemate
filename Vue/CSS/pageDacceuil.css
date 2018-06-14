@@ -10,8 +10,9 @@
 }
 .block1{
 	background: #9998b2;
-	height: 22vw;
-    width: 92vw;
+	display: inline-block;
+	height: 38.9vh;
+    width: 46vw;
     position: relative;
     left: 40px;
 	opacity: 1;
@@ -21,7 +22,7 @@
 .block3{
 	background: #9998b2;
 	display: inline-block;
-	height: 15vw;
+	height: 26.5vh;
 	width: 30vw;
 	opacity: 1;
 	border: 6px white solid;
@@ -33,13 +34,13 @@
 
 .images
 {
-	height:22vw;
-	width: 92vw;
+	height:19vw;
+	width: 46vw;
 }
 
 .images3
 {
-	height:15vw;
+	height:13vw;
 	width: 30vw;
 }
 	
