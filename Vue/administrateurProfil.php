@@ -11,7 +11,6 @@
     <body>
     <header>
         <?php include("Vue/header.php") ?>
-
     </header>
 
     	<br/>
@@ -67,11 +66,6 @@
                 }
                 ?>
             </div>
-        </div>
-        <div >
-         	<a href="index.php?cible=modifieProfil" ><input type=button value = "Modifier le profil"/></a> <br>
-
-			<a href="index.php?cible=capteurActionneursHabitations"><input type=button value = "Gerer la maison"/></a><br/><br/>
         </div>
         </div>
         </div>

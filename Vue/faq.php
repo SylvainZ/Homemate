@@ -5,6 +5,24 @@
         <title>FAQ</title>
         <link rel="stylesheet" href="Vue/CSS/styleFaq.css" />
         <link rel="stylesheet" href="Vue/CSS/all.css" />
+        <?php
+        try
+        {
+            // On se connecte à MySQL
+            $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        }
+        catch(Exception $e)
+        {
+            // En cas d'erreur, on affiche un message et on arrête tout
+            die('Erreur : '.$e->getMessage());
+        }
+
+        // Si tout va bien, on peut continuer
+
+        // On récupère tout le contenu de la table jeux_video
+        $reponse = $bdd->query('SELECT * FROM faq ');
+
+        ?>
     </head>
 
     <body>
@@ -20,14 +38,20 @@
     		<p>
     			<span class="tout">Toutes les réponses à vos questions : <span><br/>
     			<ul>
-    				<li>Comment s'inscrire?</li>
-    				<li>Comment se connecter?</li>
-    				<li>Comment ajouter un capteur à ma maison?</li>
-    				<li>Comment ajouter une pièce à ma maison?</li>
-    				<li>Comment ajouter une nouvelle maison?</li>
-    				<li>Comment contacter DOMISEP?</li>
+                    <?php
+                    while ($donnees = $reponse->fetch())
+                    {
+                    ?>
+                    <li><?php echo $donnees['question']; ?></li>
+                    <?php echo $donnees['reponse']; ?>
+                    <?php }
+                    ?>
     			</ul>
-
+<form action="index.php?cible=controlefaqAdmin" method="POST">
+            Entrez question :
+            <input type="text" name="question" style= "width:10vw;"/>
+            <input type="submit" value="Ajouter" class="valider"/>
+</form>
     		<p>
 
     	</section>

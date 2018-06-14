@@ -31,8 +31,11 @@
 						<a href="index.php?cible=controlePersoAccueil">
 						Page d'accueil</a></li>
 					<li class="deco2">
-						<a href="index.php?cible=controleFaq">
+						<a href="index.php?cible=controleFaqAdmin">
 						FAQ</a></li>
+                    <li class="deco2">
+                        <a href="index.php?cible=inscriptionAdmin">
+                            Ajouter un compte administrateur</a></li>
 			</div>
 	</section>
 </body>

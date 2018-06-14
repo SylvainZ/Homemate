@@ -84,7 +84,7 @@ body
 .bloc2
 {
 	background-color: #471229;
-	height:25vw;
+	height:30vw;
 	width:70vw;
 	position: relative;
 	top: 350px;
@@ -121,8 +121,8 @@ input[type=text]
 {
 	background-color: #82354f;
 	position:relative;
-	top:15%;
-	height:300px;
+	top:13%;
+	height:20vw;
 	width:1000px;
 	margin:auto;
 	border-radius: 20px;

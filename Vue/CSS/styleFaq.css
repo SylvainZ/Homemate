@@ -14,7 +14,7 @@ h1
 	padding-top:2.5em;
 	padding-bottom:2.5em;
 	border-radius:10px;
-	width:40em;
+	width:45vw;
 	color:white;
 	font-size:1em;
 }
@@ -24,3 +24,12 @@ h1
 	font-size:1.5em;
 }
 
+.valider
+{
+	border-radius: 5px;
+	border-style: none;
+	font-family: Quando;
+	font-weight: bold;
+	min-width: 100px;
+
+}
