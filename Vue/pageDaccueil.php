@@ -26,9 +26,10 @@
         <section>
 
             <div class="block1"><img class="images" src="<?php echo'Vue/images/'.$chemin1?>"></div>
-            <div class="block3"><img class="images3" src="<?php echo'Vue/images/'.$chemin2?>"></div>
+            <div class="block1"><img class="images" src="<?php echo'Vue/images/'.$chemin2?>"></div>
             <div class="block3"><img class="images3" src="<?php echo'Vue/images/'.$chemin3?>"></div>
             <div class="block3"><img class="images3" src="<?php echo'Vue/images/'.$chemin4?>"></div>
+            <div class="block3"><img class="images3" src="<?php echo'Vue/images/'.$chemin5?>"></div>
             <br/>
 
         </section>
