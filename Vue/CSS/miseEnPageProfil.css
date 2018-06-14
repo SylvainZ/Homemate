@@ -1,3 +1,4 @@
+
 .bar
 {
 display: flex;
@@ -135,6 +136,5 @@ border-style: none;
     background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
     box-shadow:none;
 }
-
 
 

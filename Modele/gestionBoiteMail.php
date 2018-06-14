@@ -28,11 +28,37 @@ switch($_POST["selection"]){
 	break;
 	
 	case 'lu':
-	
+        foreach ($_POST as $key => $value) {
+            if($key!='lu'){
+                try
+                {
+                    echo $key." ".$value;
+                    $bdd->exec('UPDATE `messagerie` SET `Consulte`=1 WHERE ID='.$_SESSION['id'][$key]);
+
+                }
+                catch(Exception $e)
+                {
+                    echo 'Message non supprimé';
+                }
+            }
+        }
 	break;
 	
 	case 'non_lu':
-	
+        foreach ($_POST as $key => $value) {
+            if($key!='lu'){
+                try
+                {
+                    echo $key." ".$value;
+                    $bdd->exec('UPDATE `messagerie` SET `Consulte`=0 WHERE ID='.$_SESSION['id'][$key]);
+
+                }
+                catch(Exception $e)
+                {
+                    echo 'Message non supprimé';
+                }
+            }
+        }
 	break;
 	
 	
