@@ -22,20 +22,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="boiteMail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="boiteMail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
+            <state relative-caret-position="-258">
+              <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styleBoiteMail.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styleBoiteMail.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -53,8 +53,8 @@
         <option value="$PROJECT_DIR$/Vue/header.php" />
         <option value="$PROJECT_DIR$/Controleur/pageMessage.php" />
         <option value="$PROJECT_DIR$/Modele/consulteMessage.php" />
-        <option value="$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css" />
         <option value="$PROJECT_DIR$/Vue/boiteMail.php" />
+        <option value="$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css" />
       </list>
     </option>
   </component>
@@ -71,7 +71,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="420" />
     <option name="y" value="-20" />
     <option name="width" value="1060" />
@@ -262,7 +262,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4950000" />
+    <option name="totallyTimeSpent" value="6578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -654,17 +654,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
+    <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+        <state relative-caret-position="-258">
+          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
+        <state relative-caret-position="289">
+          <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
         </state>
       </provider>
     </entry>

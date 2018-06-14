@@ -93,9 +93,9 @@
                                             <td width="15%">
                                                 <div class="sujet">
                                                     <a href="index.php?cible=pageMessage&message=<?php echo $i?>"
-                                                    <?php if ($_SESSION['consulte'][$i]){ echo 'class="messageIndLu"';}
-                                                    else{echo 'class="messageIndNonLu"';}
-                                                    ?>
+                                                        <?php if ($_SESSION['consulte'][$i]){ echo 'class="messageIndSujetLu"';}
+                                                        else{echo 'class="messageIndSujetNonLu"';}
+                                                        ?>
                                                     >
                                                         <span ><?php echo $_SESSION['sujet'][$i]?></span> </a>
                                                 </div>

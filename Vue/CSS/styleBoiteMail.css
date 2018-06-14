@@ -135,6 +135,24 @@ body
 
 }
 
+.messageIndSujetLu
+{
+	text-align:left;
+	margin-left:5vw;
+	position:relative;
+	color:Black;
+	text-decoration:none;
+}
+
+.messageIndSujetNonLu
+{
+	text-align:left;
+	margin-left:5vw;
+	position:relative;
+	color:white;
+	text-decoration:none;
+}
+
 .messageIndLu
 {
 	text-align:left;
