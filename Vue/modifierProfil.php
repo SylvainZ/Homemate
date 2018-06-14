@@ -26,7 +26,7 @@
         				       <td><input type="text" name="nom" placeholder="nom" value= <?php echo $_SESSION['nom'];?> ></td>
         				   	</tr>
         				   <tr>
-        				   	  <td>Prenom:</td>
+        				   	  <td>Prénom:</td>
         				       <td><input type="text" name="prenom" placeholder="prÃ©nom" <?php echo $_SESSION['prenom'];?>></td>
         				   	</tr>
         					<tr>
@@ -38,15 +38,15 @@
                                 </select></td>
         				   	</tr>
         				   	<tr>
-        				   	  <td>Numero d'appartement:</td>
+        				   	  <td>Numéro d'appartement:</td>
         				       <td><input type="text" name="numLogement" placeholder="numÃ©ro d'appartement" value=<?php echo $_SESSION['numLogement'];?>/></td>
         				   	</tr>
         				   	<tr>
-        				   	  <td>Numero d'étage:</td>
+        				   	  <td>Numéro d'étage:</td>
         				       <td><input type="text" name="numEtage" placeholder="numÃ©ro d'Ã©tage" value= <?php echo $_SESSION['numEtage'];?> /></td>
         				   	</tr>
         				   	<tr>
-        				   	  <td>Numero de la rue:</td>
+        				   	  <td>Numéro de la rue:</td>
         				       <td><input type="text" name="numRue" placeholder="numÃ©ro de rue" value=<?php echo $_SESSION['numRue'];?>/></td>
         				   	</tr>
 
@@ -56,7 +56,7 @@
     			   <table>
         		 			
         				   <tr>
-        				   	  <td>type:</td>
+        				   	  <td>Type:</td>
         				   	
         				       <td> <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label><select name="prefixeRueBdAve">
             
@@ -86,7 +86,7 @@
         				       <td> <input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?> /></td>
         				   	</tr>
         				   	        				   	<tr>
-        				   	  <td>Telephone:</td>
+        				   	  <td>Téléphone:</td>
         				       <td> <input type="text" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=<?php echo $_SESSION['numTel'];?>/></td>
         				   	</tr>
         			</table>

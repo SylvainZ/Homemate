@@ -48,7 +48,7 @@
 			</div>
 			
 			<div class="champnom ligne3">			
-				<label for="piece" class="inputNom">Nombre de pi�ces</label><br>
+				<label for="piece" class="inputNom">Nombre de pièces</label><br>
 				<input type="text" name="piece" id="piece"/>
 			</div>
 			

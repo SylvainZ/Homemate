@@ -1,18 +1,24 @@
-.bloc{
+
+h1
+{
+    text-align:center;
+}
+
+
+.bloc
+{
+    color:white;
 	opacity: 0.8;
-position: relative;
-right: 20%;
-text-align:center;
-background: #6a1b3d;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 20px;
-padding: 0px;
-margin: auto;
-border-style: none;
-padding-top: 5px;
-padding: 5px 10px 0px 10px;
-	
+    position: relative;
+    text-align:center;
+    background: #6a1b3d;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 20px;
+    margin:auto;
+    border-style: none;
+    padding: 35px 35px 35px 35px;
+
 }
 
 .valider {

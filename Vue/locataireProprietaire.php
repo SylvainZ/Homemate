@@ -209,7 +209,7 @@
                     <td>
                         <div id="cgu">
                         <input id="CGU" type="checkbox" name="CGU" value="1" />
-                        <label for = "CGU" class="CGU">En cochant, vous acceptez nos Conditions G�n�rales d'Utilisation</label>
+                        <label for = "CGU" class="CGU">En cochant, vous acceptez nos Conditions Générales d'Utilisation</label>
                             <div id="nonCoche"></div>
                         </div>
                     </td>

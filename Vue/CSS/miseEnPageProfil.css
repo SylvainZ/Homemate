@@ -127,10 +127,13 @@ border-style: none;
 	    font-size: 1.9em;
 }
 
-button a
+.boutonModif
 {
-    text-decoration: none;
-    color: black;
+    border-radius:5px;
+    background-color:#635c8e;
+    color:white;
+    background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
+    box-shadow:none;
 }
 
 
