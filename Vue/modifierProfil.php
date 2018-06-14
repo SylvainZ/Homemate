@@ -95,8 +95,8 @@
         	</table>
 			   
     </form>
-            <input type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
-            <a href="index.php?cible=profil" ><input type="button" value="Annuler"/></a>
+            <input class="valider" type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
+            <a href="index.php?cible=profil" ><input class="valider" type="button" value="Annuler"/></a>
 
 
     </div>
