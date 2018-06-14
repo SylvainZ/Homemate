@@ -71,7 +71,7 @@
 					{
 					?>		
 					<tr>
-						<td><?php echo $donnees['Nom']; ?></td>
+                        <td><a href="index.php?cible=controleProfilAdmin&id=<?php echo $donnees['ID']?>"><?php echo $donnees['Nom']; ?></a></td>
 						<td><?php echo $donnees['Prenom']; ?></td>
 						<td><?php echo $donnees['Statut']; ?></td>
 						<td><?php echo $donnees['Email']; ?></td>
