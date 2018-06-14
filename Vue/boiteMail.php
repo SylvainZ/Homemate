@@ -80,6 +80,7 @@
                     else {
                         $i=0;
                     }
+
                     while($i < $intervale){
                         /*Vérification de l'existence des variables*/
                         if (isset($_SESSION['sujet'][$i]) && isset($_SESSION['nomExp'][$i]) && isset($_SESSION['date'][$i])) {
@@ -139,21 +140,23 @@
 
                     <?php
                     $nbMails=0;
-                    foreach ($_SESSION['corbeille'] as $value) {
-                        if($value==0) {
-                            $nbMails++;
+                    if(isset($_SESSION['corbeille'])&& !empty($_SESSION['corbeille'])){
+                        foreach ($_SESSION['corbeille'] as $value) {
+                            if($value==0) {
+                                $nbMails++;
+                            }
                         }
+                        echo '<div class="page">Pages: ';
+                        if($page>1){
+                            echo '<a href="index.php?cible=boiteMail&&page='.($page-1).'" class="liste"> < </a>';
+                        }
+                        echo (10*($page-1)+1).'-'.(10*$page).' sur '.$nbMails;
+                        if($page<$nbMails/10){
+                            echo '<a href="index.php?cible=boiteMail&&page='.($page+1).'" class="liste"> > </a>';
+                        }
+                        echo'</div>';
+                        ?>
                     }
-                    echo '<div class="page">Pages: ';
-                    if($page>1){
-                        echo '<a href="index.php?cible=boiteMail&&page='.($page-1).'" class="liste"> < </a>';
-                    }
-                    echo (10*($page-1)+1).'-'.(10*$page).' sur '.$nbMails;
-                    if($page<$nbMails/10){
-                        echo '<a href="index.php?cible=boiteMail&&page='.($page+1).'" class="liste"> > </a>';
-                    }
-                    echo'</div>';
-                    ?>
                 </div>
                 </p>
             </form>
