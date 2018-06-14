@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de9ae3f8-a2eb-4910-a56c-3365770ceb54" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Controleur/pageMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/pageMessage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modele/consulteMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modele/consulteMessage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vue/boiteMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/boiteMail.php" afterDir="false" />
     </list>
@@ -27,8 +25,8 @@
       <file leaf-file-name="boiteMail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="111" column="94" selection-start-line="111" selection-start-column="94" selection-end-line="111" selection-end-column="94" />
+            <state relative-caret-position="527">
+              <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -36,8 +34,8 @@
       <file leaf-file-name="styleBoiteMail.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="120" column="8" lean-forward="true" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+            <state relative-caret-position="310">
+              <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -73,7 +71,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="420" />
     <option name="y" value="-20" />
     <option name="width" value="1060" />
@@ -264,7 +262,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4603000" />
+    <option name="totallyTimeSpent" value="4950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -658,15 +656,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/CSS/styleBoiteMail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="120" column="8" lean-forward="true" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+        <state relative-caret-position="310">
+          <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="111" column="94" selection-start-line="111" selection-start-column="94" selection-end-line="111" selection-end-column="94" />
+        <state relative-caret-position="527">
+          <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
         </state>
       </provider>
     </entry>

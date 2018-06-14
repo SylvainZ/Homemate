@@ -90,26 +90,36 @@
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <?php if ($_SESSION['consulte'][$i]){ echo '<bold>';}?>
-                                                <td width="15%">
-                                                    <div class="sujet">
-                                                        <a href="index.php?cible=pageMessage&message=<?php echo $i?>" class="messageIndSujet">
-                                                            <span ><?php echo $_SESSION['sujet'][$i]?></span> </a>
-                                                    </div>
-                                                </td>
+                                            <td width="15%">
+                                                <div class="sujet">
+                                                    <a href="index.php?cible=pageMessage&message=<?php echo $i?>"
+                                                    <?php if ($_SESSION['consulte'][$i]){ echo 'class="messageIndLu"';}
+                                                    else{echo 'class="messageIndNonLu"';}
+                                                    ?>
+                                                    >
+                                                        <span ><?php echo $_SESSION['sujet'][$i]?></span> </a>
+                                                </div>
+                                            </td>
 
-                                                <td width="10%" >
-                                                    <div class="expediteur">
-                                                        <a href="index.php?cible=pageMessage&message=<?php echo $i?>" class="messageIndExp">
-                                                            <span ><?php echo $_SESSION['nomExp'][$i]?></span></a>
-                                                    </div>
-                                                </td>
+                                            <td width="10%" >
+                                                <div class="expediteur">
+                                                    <a href="index.php?cible=pageMessage&message=<?php echo $i?>"
+                                                        <?php if ($_SESSION['consulte'][$i]){ echo 'class="messageIndLu"';}
+                                                        else{echo 'class="messageIndNonLu"';}
+                                                        ?>
+                                                    >
+                                                        <span ><?php echo $_SESSION['nomExp'][$i]?></span></a>
+                                                </div>
+                                            </td>
 
-                                                <td width="10%">
-                                                    <a href="index.php?cible=pageMessage&message=<?php echo $i?>" class="messageIndDate">
-                                                        <span ><?php echo $_SESSION['date'][$i]?></span></a>
-                                                </td>
-                                            <?php if ($_SESSION['consulte'][$i]){ echo '</bold>';}?>
+                                            <td width="10%">
+                                                <a href="index.php?cible=pageMessage&message=<?php echo $i?>"
+                                                    <?php if ($_SESSION['consulte'][$i]){ echo 'class="messageIndLu"';}
+                                                    else{echo 'class="messageIndNonLu"';}
+                                                    ?>
+                                                >
+                                                    <span ><?php echo $_SESSION['date'][$i]?></span></a>
+                                            </td>
                                         </tr>
                                         </tbody>
                                     </table>

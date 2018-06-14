@@ -135,34 +135,25 @@ body
 
 }
 
-.messageIndSujet
+.messageIndLu
 {
 	text-align:left;
-	margin-left:5vw;
+	margin-left:3vw;
+	position:relative;
+	color:Black;
+	text-decoration:none;
+}
+
+.messageIndNonLu
+{
+	text-align:left;
+	margin-left:3vw;
 	position:relative;
 	color:white;
 	text-decoration:none;
 }
 
 
-.messageIndExp
-{
-	text-align:left;
-	position: relative;
-	margin-left:3vw;
-	color:white;
-	text-decoration:none;
-}
-
-.messageIndDate
-{
-	text-align:left;
-	margin-left:3vw ;
-	position: relative;
-	color:white;
-	text-decoration:none;
-
-}
 
 
 /*Titre Listes des messages et liste déroulante(supprimer, marquer comme lu,...)*/
