@@ -1,36 +1,39 @@
 .titre{
-    background: #6a1b3c;
+    background: #2f0c1b;
     color: white;
-    width: 500px;
-    font-size: 1em;
-    padding-top: 7px;
-    text-align: left;
     margin-left: 20px;
-    padding-left: 20px;
-
+    width: 190%;
+    height: 650%;
+    border-radius: 20px;
+    padding-left: 30px;
 }
 
 .titre2{
     background: #917e86;
-    width: 600px;
+    width: 210%;
     height: 300px;
     font-size: 1em;
     padding-top: 0.5px;
     text-align: left;
     margin-left: 20px;
     padding-left: 20px;
+    border-radius: 10px;
 }
 
 .titre3{
     background: #917e86;
     width: 450px;
     height: 830px;
+    padding-top: 20px;
+    margin-left: 50%;
+    border-radius: 10px;
 }
 
 .ecriture{
-    font-size: 3em;
+    font-size: 2.8em;
     color: white;
     text-decoration: underline;
+    padding-left: 25px;
 }
 .ecriture2{
     font-size: 1.5em;
