@@ -1,41 +1,48 @@
 .bar
 {
-display: flex;
-opacity: 0.8;
-position: relative;
-text-align:left;
-background: #6a1b3d;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 20px;
-width: 70%;
-height: 250px;
-margin: auto;
-border-style: none;
+    display: flex;
+    opacity: 0.8;
+    position: relative;
+    text-align:left;
+    background: #6a1b3d;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 20px;
+    width: 70vw;
+    height: 55vh;
+    margin: auto;
+    border-style: none;
 
 }
 
 .aff
 {
-opacity: 0.8;
-position: relative;
-text-align:left;
+    opacity: 0.8;
+    position: relative;
+    text-align:left;
 
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 20px;
-width: 70%;
-height: 250px;
-margin: auto;
-padding-top:3vw;
-border-style: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 20px;
+    width: 50vw;
+    height: 250vh;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 12vh;
+    padding-top:3vw;
+    border-style: none;
 
 }
 .texte
 {
-	color:white;
+    color:white;
 }
 
+.text
+{
+    position: relative;
+    margin-left: 20vh;
+}
 
 .profil
 {
@@ -54,7 +61,7 @@ border-style: none;
     position: relative;
     margin-top: 2%;
     left: 40%;
-    
+
 }
 .logo
 {
@@ -62,7 +69,7 @@ border-style: none;
     top: 2%;
     left: 7%;
     width: 20%;
-    
+
 }
 
 .boutonDeconnection
@@ -71,32 +78,35 @@ border-style: none;
     top: 7%;
     left: 84%;
     width: 5%;
-    
-}
 
-
-
-.rectangle
-{
-    display: flex;
-    background-color: #6a1b3d;
-    height: 37vw;
-    width:80%;
-    margin-left:10%;
-    border-radius: 40px;
-    position:relative;
-    top:30%;
 }
 
 .valeurImporte
 {
-	margin-left:1.5em;
+    margin-left:1.5em;
 }
 
 .positionModifProfil
 {
-	margin-top:-1em;
+
+    margin-top:-1em;
     margin-left: 6.7em;
+}
+
+.boutonModifProfil
+{
+    /*
+    border-radius: 8px;
+
+    background-color: #625c8e;
+    */
+    border-radius: 7px;
+    height: 7vh;
+    width:  11vw;
+    margin-left: 0.5%;
+    background: #625c8e;
+    color: white;
+    font-size: 0.8em;
 }
 
 .modifProfil
@@ -114,17 +124,17 @@ border-style: none;
 {
     left: 7%;
     width: 5%;
-    
+
 }
 .col1
 {
     width: 90%;
     height: 40px;
-	margin-left:1%;
+    margin-left:1%;
 }
 .col2
 {
-	    font-size: 1.9em;
+    font-size: 1.9em;
 }
 
 button a
@@ -133,5 +143,24 @@ button a
     color: black;
 }
 
-
-
+.rectangle
+{
+    /*
+    margin-left:10%;
+    border-radius: 40px;
+    position:relative;
+    top:30%;
+*/
+    display: flex;
+    opacity: 0.8;
+    position: relative;
+    text-align:left;
+    background: #6a1b3d;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 20px;
+    height: 37vw;
+    width:80vw;
+    margin: auto;
+    border-style: none;
+}
