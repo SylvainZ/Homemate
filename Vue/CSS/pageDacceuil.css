@@ -2,7 +2,7 @@
     background: #2f0c1b;
     color: white;
     margin-left: 20px;
-    width: 190%;
+    width: 50vw;
     height: 650%;
     border-radius: 20px;
     padding-left: 30px;
@@ -10,7 +10,7 @@
 
 .titre2{
     background: #917e86;
-    width: 210%;
+    width: 50vw;
     height: 300px;
     font-size: 1em;
     padding-top: 0.5px;
@@ -22,10 +22,10 @@
 
 .titre3{
     background: #917e86;
-    width: 450px;
+    width: 38vw;
     height: 830px;
     padding-top: 20px;
-    margin-left: 50%;
+    margin-left: 5vw;
     border-radius: 10px;
 }
 
