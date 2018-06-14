@@ -52,7 +52,10 @@
 
                             <form action="index.php?cible=controlefaqAdmin&id=<?php echo $donnees['ID']?>" method="POST">
                                 Modifier question :
-                                <input type="text" name="modifquestion" style= "width:13vw;" ><br/>
+                                <input type="text" name="modifquestion" style= "width:13vw;" >
+                                 <input type="submit" value="Modifier" class="valider">
+                            </form>
+                            <form action="index.php?cible=controlefaqAdmin&id=<?php echo $donnees['ID']?>" method="POST">
                                 Modifier reponse :
                                 <input type="text" name="modifreponse" style= "width:13vw;">
                                 <input type="submit" value="Modifier" class="valider">

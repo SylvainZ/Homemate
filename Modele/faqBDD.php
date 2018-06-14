@@ -37,14 +37,22 @@ if (isset($_POST['supprimer']))
     ));
 }
 
-if (isset($_POST['modifquestion']) or isset($_POST['modifreponse']))
+if (isset($_POST['modifquestion']))
 {
-    $req2 = $bdd->prepare('UPDATE faq SET question = :question, reponse = :reponse WHERE id = :id');
+    $req2 = $bdd->prepare('UPDATE faq SET question = :question WHERE id = :id');
     $req2->execute(array(
         'question' => $_POST['modifquestion'],
+        'id' => $_GET['id']
+    ));
+}
+if (isset($_POST['modifreponse']))
+{
+    $req2 = $bdd->prepare('UPDATE faq SET reponse = :reponse WHERE id = :id');
+    $req2->execute(array(
         'reponse' => $_POST['modifreponse'],
         'id' => $_GET['id']
     ));
 }
+
 
 ?>
