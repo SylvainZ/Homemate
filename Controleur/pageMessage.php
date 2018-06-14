@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include("Controleur/consulteMessage.php");
+include("Modele/consulteMessage.php");
 include("Vue/pageMessage.php");
 
 ?>
