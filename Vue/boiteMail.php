@@ -140,21 +140,22 @@
 
                     <?php
                     $nbMails=0;
-                    if(isset($_SESSION['corbeille'])&& !empty($_SESSION['corbeille'])){
+                    if(isset($_SESSION['corbeille'])&& !empty($_SESSION['corbeille'])) {
                         foreach ($_SESSION['corbeille'] as $value) {
-                            if($value==0) {
+                            if ($value == 0) {
                                 $nbMails++;
                             }
                         }
                         echo '<div class="page">Pages: ';
-                        if($page>1){
-                            echo '<a href="index.php?cible=boiteMail&&page='.($page-1).'" class="liste"> < </a>';
+                        if ($page > 1) {
+                            echo '<a href="index.php?cible=boiteMail&&page=' . ($page - 1) . '" class="liste"> < </a>';
                         }
-                        echo (10*($page-1)+1).'-'.(10*$page).' sur '.$nbMails;
-                        if($page<$nbMails/10){
-                            echo '<a href="index.php?cible=boiteMail&&page='.($page+1).'" class="liste"> > </a>';
+                        echo (10 * ($page - 1) + 1) . '-' . (10 * $page) . ' sur ' . $nbMails;
+                        if ($page < $nbMails / 10) {
+                            echo '<a href="index.php?cible=boiteMail&&page=' . ($page + 1) . '" class="liste"> > </a>';
                         }
-                        echo'</div>';
+                        echo '</div>';
+                    }
                         ?>
                     }
                 </div>
