@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 01 juin 2018 à 14:18
+-- Généré le :  jeu. 14 juin 2018 à 08:18
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -34,17 +34,18 @@ CREATE TABLE IF NOT EXISTS `accueilimage` (
   `NomImage` varchar(20) NOT NULL,
   `Chemin` varchar(250) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `accueilimage`
 --
 
 INSERT INTO `accueilimage` (`ID`, `NomImage`, `Chemin`) VALUES
-(1, 'Case1', 'images.jpg'),
-(2, 'Case2', 'maison.jpg'),
-(3, 'Case3', 'mais.jpg'),
-(4, 'Case4', 'tele.jpg');
+(1, 'Case1', 'maison.jpg'),
+(2, 'Case2', 'mais.jpg'),
+(3, 'Case3', 'images.jpg'),
+(4, 'Case4', 'ori.jpg'),
+(5, 'Case5', 'mais.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
