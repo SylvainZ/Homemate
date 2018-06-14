@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="Vue/CSS/header.css">
         <link rel="stylesheet" href="Vue/CSS/footer.css">
         <link rel="stylesheet" href="Vue/CSS/all.css">
-        <link rel="stylesheet" href="Vue/CSS/accueil2.css">
         <meta charset="utf-8" />
 
 
@@ -43,17 +42,16 @@
                         <div class="titre3">
                             <span class="ecriture">Adresse :</span> <br><br>
                             <span class="ecriture2">10 rue de Vanves </span> <br>
-                            <span class="ecriture2">Issy les Moulinaux</span>
-                            <span class="ecriture2"><br>92130</span>
-                            <span class="ecriture2"><br> France</span> <br><br>
+                            <span class="ecriture2">Issy les Moulinaux</span> <br>
+                            <span class="ecriture2">92130</span> <br>
+                            <span class="ecriture2">France</span> <br><br>
                             <span class="ecriture">Contacts :</span> <br><br>
-                            <span class="ecriture2">-Numero de téléphone </span> <br>
+                            <span class="ecriture2">-Numéro de téléphone </span> <br>
                             <span class="ecriture3"> 06 45 67 23 90 </span> <br>
                             <span class="ecriture2">-Email </span> <br>
-                            <span class="ecriture3"> Homemate@sklubs.fr </span> <br><br>
+                            <span class="ecriture3"> domisep@isep.fr </span> <br><br>
                             <span class="ecriture">Nos partenaires :</span> <br><br>
                             <span class="ecriture2">-ISEP </span> <br>
-                            <span class="ecriture2">-DOMISEP </span> <br>
                         </div>
                     </td>
                 </tr>
