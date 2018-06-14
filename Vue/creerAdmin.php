@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Créer un compte</title>
+	<title>Créer un compte administrateur</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="Vue/CSS/styleCompte.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
@@ -19,7 +19,7 @@
 	<div class="inscription">
 
 		<form class="form1" name="form" method="post" action="index.php?cible=inscriptionAdminBDD" onsubmit="return validateEmail()">
-			<span class="titreinscription">Créer un compte</span>
+			<span class="titreinscription">Créer un compte administrateur</span>
 
 			<div class="champnom ligne1">
 				<label for="nom" class="inputNom">Nom <br></label>

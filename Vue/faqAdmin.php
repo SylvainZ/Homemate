@@ -32,7 +32,7 @@
 
 <div id="page">
 
-    <h1>Bienvenue sur la FAQ !</h1>
+    <h1>Personnaliser la FAQ !</h1>
     <section class="question">
 
     			<span class="tout">Toutes les réponses à vos questions : <span><br/>
