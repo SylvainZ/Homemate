@@ -34,8 +34,9 @@
                             <h1>Nos Capteurs</h1>
                         </div>
                             <br>
-                        <div class="titre2">
-                            Capteur 1
+                        <div class="titre4">
+                            <img class="image" src="Vue/images/micro.jpg">
+                            <img class="image" src="Vue/images/capteurMouvement.png">
                         </div>
                     </td>
 
