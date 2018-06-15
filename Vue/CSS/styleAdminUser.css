@@ -17,8 +17,8 @@ body
 {
 	display: flex;
 	position: absolute;
-	top: 80px;
-	left: 20%;
+	top: 4vw;
+	left:20vw;
 }
 
 .homemate
