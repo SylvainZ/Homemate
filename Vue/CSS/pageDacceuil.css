@@ -68,8 +68,9 @@
     border-radius: 10px;
 }
 .image{
-    width:50vw;
+    width:35vw;
     height:20vw;
     border-radius:10px;
+    float:left;
 
 }

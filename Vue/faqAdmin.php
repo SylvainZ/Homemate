@@ -45,8 +45,8 @@
                                 <form action="index.php?cible=controlefaqAdmin&id=<?php echo $donnees['ID']?>" method="POST">
                                     <input type="submit" value="Supprimer" id="supprimer" name="supprimer" class="valider">
                                 </form>
-                            <?php echo $donnees['question']; ?></li>
-                            <?php echo $donnees['reponse']; ?>
+                                <?php echo $donnees['question']; ?></li>
+                                <?php echo $donnees['reponse']; ?>
 
 
 
