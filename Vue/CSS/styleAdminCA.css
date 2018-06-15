@@ -17,7 +17,7 @@ body
 {
 	display: flex;
 	position: absolute;
-	top: 80px;
+	top: 4vw;
 	left: 20%;
 }
 
@@ -26,8 +26,8 @@ body
 	background-color: #5c5684;
 	color:white;
 	font-size:2em;
-	width:450px;
-	height:50px;
+	width:28vw;
+	height:2.5vw;
 	font-weight: bold;
 	text-align: center;
 	font-family: Quando;
@@ -68,27 +68,25 @@ body
 	left: 20vw;
 	bottom: 2vw;
 }
-
-.profil
-{
-	position: relative;
-	left:80px;
-	height: 10vw;
-	width:10vw;
-}
 .homemate
 {
 	height: 10vw;
 	width: 20vw;
 }
+.profil
+{
+	position: relative;
+	left:3vw;
+	height: 10vw;
+	width:10vw;
+}
 .tete
 {
 	position: relative;
-	left:180px;
-	top:-80px;
+	left:5vw;
+	top:-4vw;
 	margin-bottom: 20%;
 }
-
 .big {
 	background-color: #471229;
 	height: 30vw;

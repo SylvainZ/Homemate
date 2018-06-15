@@ -32,8 +32,8 @@ body
 	background-color: #5c5684;
 	color:white;
 	font-size:2em;
-	width:450px;
-	height:50px;
+	width:28vw;
+	height:2.5vw;
 	font-weight: bold;
 	text-align: center;
 	font-family: Quando;
@@ -41,7 +41,7 @@ body
 	border-radius:20px;
 	border: 10px solid white;
 	list-style-type:none;
-	margin-bottom: 10px; 
+	margin-bottom: 10px;
 }
 
 #blue
@@ -52,15 +52,15 @@ body
 .profil
 {
 	position: relative;
-	left:80px;
+	left:3vw;
 	height: 10vw;
 	width:10vw;
 }
 .tete
 {
 	position: relative;
-	left:180px;
-	top:-80px;
+	left:5vw;
+	top:-4vw;
 	margin-bottom: 20%;
 }
 
@@ -70,7 +70,7 @@ body
 	height:33vw;
 	width:80vw;
 	position: relative;
-	top: 300px;
+	top: 17vw;
 	left:10%;
 	border-radius: 60px;
 	padding-top:  1px;
@@ -80,8 +80,8 @@ body
 {
 	height:25vw;
 	width:80vw;
-	min-height: 400px;
-	min-width: 1000px;
+	min-height: 15vw;
+	min-width: 40vw;
 	overflow: auto;
 }
 
@@ -93,8 +93,8 @@ table
 }
 #tabletete
 {
-	padding-right: 125px;
-	padding-left: 125px;
+	padding-right: 7vw;
+	padding-left: 7vw;
 }
 td
 {
