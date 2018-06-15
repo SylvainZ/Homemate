@@ -20,7 +20,7 @@
 
 	<div class="logement">
 
-		<form class="form1" method="post"  action="index.php?cible=ajouterLogement2">
+		<form class="form1" method="post"  action="index.php?cible=ajouterLogement">
 			<span class="log">Ajouter un logement</span>
 
 			<div class="champnom ligne1">

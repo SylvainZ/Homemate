@@ -94,7 +94,7 @@ $nbColonne3=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                                 <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
+										<span> Luminosité : <p id="trame"></p> </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
 										
@@ -168,7 +168,7 @@ $nbColonne3=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                         <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> T° : </span><?php echo $temperature[0].$temperature[1].$temperature[2].','.$temperature[3].'°C'; ?>
+										<span> T° :<span id="trame"></span> </span><?php echo $temperature[0].$temperature[1].$temperature[2].','.$temperature[3].'°C'; ?>
 										</div>
 										</td>
 					<style>
@@ -236,7 +236,7 @@ $nbColonne3=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                         <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
+										<span> Présence :<span id="trame"></span> </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
 					<style>
@@ -344,26 +344,7 @@ $nbColonne3=5;
     return true;
 }
 </script>
-
-
-<!--
-
-
-	function ajouterLigne(id)
-	{
-	var tableau = document.getElementById(id);
-
-	var ligne = document.getElementById(id);//on a ajout� une ligne
-
-	var colonne1 = ligne.insertCell(0);//on a une ajout� une cellule
-	//colonne1.innerHTML += document.getElementById("titre").value;//on y met le contenu de titre
-	
-	//document.location.href='test.html';
-	}
-	
-	</script>
-	
-	-->
+<script rel="script" src="Controleur/JS/trames.js"></script>
 
 
 

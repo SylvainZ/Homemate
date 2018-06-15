@@ -6,7 +6,8 @@ function myFunction() {
         processData:false,
         success: function(data){
             $("#notification-count").remove();
-            $("#notification-latest").show();$("#notification-latest").html(data);
+            $("#notification-latest").show();
+            $("#notification-latest").html(data);
         },
         error: function(){}
     });

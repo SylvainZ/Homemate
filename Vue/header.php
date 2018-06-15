@@ -1,8 +1,7 @@
 <?php include('Modele/connexionBD.php');?>
 <?php
-if (isset($_SESSION['email'])) {
-$sql=$bdd->query('SELECT * FROM messagerie WHERE status=0 AND Reception = \''.$_SESSION['email'].'\' ');
-$count=$sql->rowCount(); }
+$sql=$bdd->query('SELECT * FROM messagerie WHERE notif=0');
+$count=$sql->rowCount();
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,7 +79,7 @@ $count=$sql->rowCount(); }
                                 <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
                             <ul>
                                 <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
-                                <li><a href="index.php?cible=recupDonneesPasserelle	" class="barre">Gérer la maison</a> </li>
+                                <li><a href="index.php?cible=capteurActionneursHabitations" class="barre">Gérer la maison</a> </li>
                                 <li><a href="index.php?cible=deconnexion" class="barre">Déconnexion</a> </li>
                             </ul>
                             </li>
