@@ -1,7 +1,8 @@
 <?php include('Modele/connexionBD.php');?>
 <?php
-$sql=$bdd->query('SELECT * FROM messagerie WHERE status=0');
-$count=$sql->rowCount();
+if (isset($_SESSION['email'])) {
+$sql=$bdd->query('SELECT * FROM messagerie WHERE status=0 AND Reception = \''.$_SESSION['email'].'\' ');
+$count=$sql->rowCount(); }
 ?>
 <!DOCTYPE html>
 <html>

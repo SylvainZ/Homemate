@@ -41,7 +41,7 @@
 					
 					<label for="numero_de_serie">Numéro de série* : </label><br/>
 					<input type="text" name="numero_de_serie" id="numero_de_serie" maxlength="10" placeholder="Ex: XXXXXXXXXX" required/>
-					<img src="Vue/images/interrogation.png" alt="un point d'interrogation" title="Il s'agit d'un numéro à 10 caractères composé de chiffres et de lettres" class="interrogation"/><br/><br/>
+					<img src="Vue/images/interrogation.png" alt="un point d'interrogation" title="Il s'agit d'un numéro à 10 caractères composé de chiffres" class="interrogation"/><br/><br/>
 
 					<label for="seuil">Seuil* : </label><br/>
 					<input type="number" name="seuil" id="seuil" placeholder="Ex: 10" required/>

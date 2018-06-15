@@ -1,7 +1,7 @@
 <?php
 session_start();
     
-if(!empty($_POST['dateDeNaissance']&&!empty($_POST['tel'])&&!empty($_POST['statut'])&&!empty($_POST['numLogement'])&&!empty($_POST['numEtage'])
+if(!empty($_POST['dateDeNaissance']&&!empty($_POST['tel'])&&!empty($_POST['statut'])
     &&!empty($_POST['numRue'])&&!empty($_POST['prefixRueBdAve'])&&!empty($_POST['nomRoute'])&&!empty($_POST['postal'])
     &&!empty($_POST['Ville'])&&!empty($_POST['pays'])
     &&!empty($_POST['typedHab'])&&!empty($_POST['surface'])&&!empty($_POST['piece'])))

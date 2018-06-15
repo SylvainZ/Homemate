@@ -4,7 +4,7 @@ if (isset($_POST['Objet'])){
 
 	if (isset($_SESSION['email']) && $_SESSION['statut']) {
 
-        $req = $bdd->prepare('INSERT INTO `messagerie`(`Expediteur`,`nomExp`, `Sujet`, `Date`, `Heure`, `Reception`, `Message`, `Statut`) VALUES (?,?,?,?,?,?,?,?)');
+        $req = $bdd->prepare('INSERT INTO `messagerie`(`Expediteur`,`nomExp`, `Sujet`, `Dates`, `Heure`, `Reception`, `Message`, `Statut`) VALUES (?,?,?,?,?,?,?,?)');
         $req->execute(array(
             $_SESSION['email'],
             $_SESSION['nom']." ".$_SESSION['prenom'],
@@ -20,7 +20,7 @@ if (isset($_POST['Objet'])){
 
     else {
 	    $Expediteur=explode(',',$_POST['Nom']);
-        $req = $bdd->prepare('INSERT INTO `messagerie`(`Expediteur`,`nomExp`, `Sujet`, `Date`, `Heure`, `Reception`, `Message`, `Statut`) VALUES (?,?,?,?,?,?,?,?)');
+        $req = $bdd->prepare('INSERT INTO `messagerie`(`Expediteur`,`nomExp`, `Sujet`, `Dates`, `Heure`, `Reception`, `Message`, `Statut`) VALUES (?,?,?,?,?,?,?,?)');
         $req->execute(array(
             $Expediteur[1],
             $Expediteur[0],

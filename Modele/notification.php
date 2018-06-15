@@ -3,7 +3,7 @@
 require('connexionBD.php');
 $req1=$bdd->query("UPDATE messagerie SET status=1 WHERE status=0");
 
-$req1=$bdd->query("SELECT * FROM messagerie ORDER BY ID DESC limit 5");
+$req1=$bdd->query('SELECT * FROM messagerie WHERE Reception = \''.$_SESSION['email'].'\' ORDER BY ID DESC limit 5');
 
 $response='';
 while($row=$req1->fetch()) {
