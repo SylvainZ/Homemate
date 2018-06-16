@@ -1,6 +1,4 @@
 <?php
-
-
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
@@ -20,6 +18,7 @@ $nbColonne=5;
 $nbColonne2=5;
 $nbColonne3=5;
 ?>
+
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -94,7 +93,7 @@ $nbColonne3=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                                 <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> Luminosité : <p id="trame"></p> </span><?php echo $donnees1['Luminosite']; ?>
+										<span> Luminosité :  </span><p id="trame"></p>
 										</div>
 										</td>
 										
@@ -236,7 +235,7 @@ $nbColonne3=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                         <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> Présence :<span id="trame"></span> </span><?php echo $donnees1['Presence']; ?>
+										<span> Présence : </span><span id="trame"></span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
 					<style>
@@ -344,7 +343,8 @@ $nbColonne3=5;
     return true;
 }
 </script>
-<script rel="script" src="Controleur/JS/trames.js"></script>
+<script rel="script" src="Controleur/JS/tempo.js"></script>
+
 
 
 
