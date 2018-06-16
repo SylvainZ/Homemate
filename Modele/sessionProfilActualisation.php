@@ -1,8 +1,10 @@
 <?php
 // On démarre la session AVANT d'écrire du code HTML
 
+//appelle la BDD homemate
 include('connexionBD.php');
 
+//vérifie si la session est celle d'un admin
 if (isset($_SESSION['Admin'])) {
     $req = $bdd->query('SELECT * FROM administrateur WHERE Email = \''.$_SESSION['email'].'\''); //à modifier pour faire en fonction de l'utilisateur
 
@@ -22,6 +24,7 @@ if (isset($_SESSION['Admin'])) {
 
 }
 
+//vérifie si la session est celle d'un utilisateur
 else {
 $req = $bdd->query('SELECT * FROM profil WHERE Email = \''.$_SESSION['email'].'\''); //à modifier pour faire en fonction de l'utilisateur
 
@@ -43,6 +46,6 @@ $_SESSION['surface']=$donnees['surface'];
 $_SESSION['codePostal']=$donnees['CodePostal'];
 
 }
-
+//renvoie vers le profil une fois l'actualisation réussie
 header('Location: index.php?cible=profil');
 ?>

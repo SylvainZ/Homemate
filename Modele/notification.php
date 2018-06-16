@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('connexionBD.php');
-$req1=$bdd->query("UPDATE messagerie SET notif=1 WHERE notif=0");
+$req1=$bdd->query('UPDATE messagerie SET notif=1 WHERE notif=0 AND Reception=\''.$_SESSION['email'].'\' ');
 
 //récupère les 5 derniers messages reçus
 $req1=$bdd->query('SELECT * FROM messagerie WHERE Reception = \''.$_SESSION['email'].'\' ORDER BY Dates DESC limit 5');
