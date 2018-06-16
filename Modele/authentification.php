@@ -1,19 +1,19 @@
 <?php
 session_start();
+
+//vérifie que les champs ont bien été remplis
 if (isset($_POST['username'])
     &&isset($_POST['password'])) {
-    try {
-        $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
 
-    $pass=sha1($_POST['password']);
+    //appelle la BDD homemate
+     include('connexionBD.php');
+
+    $pass=sha1(htmlspecialchars($_POST['password']));
 
 
-
+    /*Parcours la BDD Admin pour y trouver les identifiants de l'utilisateur*/
     $requeteAdmin = $bdd->prepare("SELECT Email,password FROM administrateur WHERE Email = ? AND password = ?");
-    $requeteAdmin->execute(array($_POST['username'], $pass));
+    $requeteAdmin->execute(array(htmlspecialchars($_POST['username']), $pass));
     while ($donneesAdmin = $requeteAdmin->fetch()){
         if (isset($donneesAdmin['Email'])&& isset($donneesAdmin['password'])) {
             $_SESSION['Admin']=true;
@@ -25,8 +25,9 @@ if (isset($_POST['username'])
         }
     }
 
+    /*Parcours la BDD des utilisateurs pour y trouver les identifiants de l'utilisateur*/
     $requete = $bdd->prepare("SELECT Email,password FROM profil WHERE Email = ? AND password = ?");
-    $requete->execute(array($_POST['username'], $pass));
+    $requete->execute(array(htmlspecialchars($_POST['username']), $pass));
     while ($donnees = $requete->fetch()){
         if (isset($donnees['Email'])&& isset($donnees['password'])) {
 

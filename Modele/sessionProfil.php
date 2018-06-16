@@ -1,7 +1,10 @@
 <?php
 session_start();
+
+//appelle la BDD homemate
 include('connexionBD.php');
 
+//vérifie si la session est celle d'un utilisateur
 if (!isset($_SESSION['Admin']) ) {
 
     $req = $bdd->query('SELECT * FROM profil WHERE Email = \'' . $_GET['email'] . '\''); /*.$_GET['email'].*/
@@ -35,6 +38,8 @@ if (!isset($_SESSION['Admin']) ) {
 
 
 }
+
+//vérifie si la session est celle d'un admin
 else {
     $req = $bdd->query('SELECT * FROM administrateur WHERE Email = \'' . $_GET['email'] . '\''); /*.$_GET['email'].*/
     $donnees = $req->fetch();
@@ -50,6 +55,7 @@ else {
     $_SESSION['statut'] = $donnees['Statut'];
     $_SESSION['ID'] = $donnees['ID'];
 
+    //calcul de l'âge à partir de la date de naissance
     $date_courante = new DateTime(date("Y-m-d"));
     $date_naissance = new DateTime($_SESSION['datedenaissance']);
     $interval = date_diff($date_courante, $date_naissance);
@@ -59,7 +65,7 @@ else {
 
 }
 
-
+//renvoie vers la page d'accueil une fois la connexion réussie
 header('Location:../index.php?cible=accueil');
 
 

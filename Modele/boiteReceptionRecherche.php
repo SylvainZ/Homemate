@@ -1,16 +1,16 @@
 <?php
 
+//appelle la BDD homemate
 include('connexionBD.php');
-/*
-$req = $bdd->query('SELECT * FROM messagerie ');
-*/
-	$numMessage=0;
+
 	
-// Récupération des 10 derniers messages
-$req = $bdd->query('SELECT * FROM messagerie WHERE Reception = \''.$_SESSION['email'].'\' ORDER BY Dates DESC'); /*ORDER BY Date DESC LIMIT 0, 10*/
+// Récupération des messages triés par date
+$req = $bdd->query('SELECT * FROM messagerie WHERE Reception = \''.$_SESSION['email'].'\' ORDER BY Dates DESC');
+
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 while ($donnees = $req->fetch())
 {
+    //stockage des différents champs des messages dans des tableaux
 	$sujet[] = $donnees['Sujet'];
 	$expediteur[] = $donnees['Expediteur'];
     $nomExp[] = $donnees['nomExp'];
@@ -20,8 +20,10 @@ while ($donnees = $req->fetch())
 	$id[] = $donnees['ID'];
 	$corbeille[] = $donnees['Corbeille'];
     $consulte[] = $donnees['Consulte'];
-	$numMessage++;
+
 }
+
+//affectation des tableaux aux variables de session
 $_SESSION['sujet']=$sujet;
 $_SESSION['expediteur']=$expediteur;
 $_SESSION['nomExp']=$nomExp;
@@ -31,5 +33,8 @@ $_SESSION['reception']=$reception;
 $_SESSION['id']=$id;
 $_SESSION['corbeille']=$corbeille;
 $_SESSION['consulte']=$consulte;
+
+//redirection vers le contrôleur Boite de réception
 header('Location: index.php?cible=boiteMail');
+
 ?>

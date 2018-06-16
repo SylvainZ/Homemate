@@ -4,7 +4,8 @@
 
 // Connexion à la base de données
 switch($_POST["selection"]){
-	case 'restaurer' :
+    //Le cas où l'on veut restaurer un message
+    case 'restaurer' :
 
 	include('connexionBD.php');
 

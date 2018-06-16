@@ -19,7 +19,7 @@
 
         // Si tout va bien, on peut continuer
 
-        // On récupère tout le contenu de la table jeux_video
+        // On récupère tout le contenu de la table faq
         $reponse = $bdd->query('SELECT * FROM faq ');
 
     ?>
