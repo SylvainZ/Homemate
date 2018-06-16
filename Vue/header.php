@@ -23,10 +23,11 @@
 </head>
 
 <body>
-
+	 
     <div class="barreMenu">
      <div class="cd"> <a href="index.php?cible=accueil"><img src="Vue/images/homemate2.png"> </a></div>
 
+<!--affichage du header en fonction de l'utilisateur-->
         <?php
         if (isset($_SESSION['nom'])){
 
@@ -94,6 +95,8 @@
         }
         else{
             ?>
+
+            <!-- si le visiteur n'a pas de compte -->
             <div id="posMenu">
                 <ul id="menu">
 
@@ -123,4 +126,4 @@
     <script src="Controleur/JS/notification.js" type="text/javascript"></script>
     <script rel="script" src="Controleur/JS/tempo.js"></script>
 
-</body>
+</body> 
