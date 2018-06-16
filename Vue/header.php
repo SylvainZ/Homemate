@@ -1,9 +1,5 @@
 <?php include('Modele/connexionBD.php');?>
-<?php
-if (isset($_SESSION['email'])) {
-$sql=$bdd->query('SELECT * FROM messagerie WHERE status=0 AND Reception = \''.$_SESSION['email'].'\' ');
-$count=$sql->rowCount(); }
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +20,10 @@ $count=$sql->rowCount(); }
         }
         if (window.attachEvent) window.attachEvent("onload", sfHover);
     </script>
-
 </head>
 
 <body>
-	 
+
     <div class="barreMenu">
      <div class="cd"> <a href="index.php?cible=accueil"><img src="Vue/images/homemate2.png"> </a></div>
 
@@ -41,7 +36,11 @@ $count=$sql->rowCount(); }
                 <div id="posMenu">
                     <div id="posNotif">
                         <div  id="icone"><a href="index.php?cible=boiteMailReception"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a></div>
-
+                        <div id="iconeCloche"><button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn">
+                                <span id="notification-count"></span>
+                                <img class="imageLettre" src="Vue/images/bell.png"  height="50"></button>
+                            <div id="notification-latest"></div>
+                        </div>
                     </div>
 
                     <ul id="menu">
@@ -69,7 +68,7 @@ $count=$sql->rowCount(); }
                     <div id="posNotif">
                         <div  id="icone"><a href="index.php?cible=boiteMailReception"><img class="imageLettre" src="Vue/images/mail.png"  width="90" height="50"></a></div>
                         <div id="iconeCloche"><button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn">
-                                <span id="notification-count"><?php if($count>0) { echo $count; } ?></span>
+                                <span id="notification-count"></span>
                                 <img class="imageLettre" src="Vue/images/bell.png"  height="50"></button>
                                 <div id="notification-latest"></div>
                         </div>
@@ -80,7 +79,7 @@ $count=$sql->rowCount(); }
                                 <a href="#"><?php echo $_SESSION['nom']." ".$_SESSION['prenom']?></a>
                             <ul>
                                 <li><a href="index.php?cible=profil	" class="barre">Profil</a> </li>
-                                <li><a href="index.php?cible=recupDonneesPasserelle	" class="barre">Gérer la maison</a> </li>
+                                <li><a href="index.php?cible=capteurActionneursHabitations" class="barre">Gérer la maison</a> </li>
                                 <li><a href="index.php?cible=deconnexion" class="barre">Déconnexion</a> </li>
                             </ul>
                             </li>
@@ -122,6 +121,6 @@ $count=$sql->rowCount(); }
     <br><br>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script src="Controleur/JS/notification.js" type="text/javascript"></script>
+    <script rel="script" src="Controleur/JS/tempo.js"></script>
 
-
-</body> 
+</body>
