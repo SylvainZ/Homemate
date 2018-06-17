@@ -8,7 +8,7 @@ if (isset($_POST['nom'])){
 	include('connexionBD.php');
 
 	//met à jour la table pour la modification du profil
-	$req = $bdd->prepare('UPDATE profil SET Nom = ? ,Prenom= ? ,Statut = ? ,NumeroLogement = ? ,NumeroEtage=?, NumeroRue = ? ,Bis = ? ,NomRueAveBd = ? ,codePostal = ? ,Ville = ? ,Email = ? ,NumeroTelephone = ? WHERE Email = ?');
+	$req = $bdd->prepare('UPDATE profil SET Nom = ? ,Prenom= ? ,Statut = ? ,NumeroLogement = ? ,NumeroEtage=?, NumeroRue = ? ,Bis = ? ,NomRueAveBd = ? ,codePostal = ? ,Ville = ? ,Email = ? ,NumeroTelephone = ? ,PrefixRue = ? WHERE Email = ?');
 
 	//si l'utilisateur à cocher le bis pour sa rue
 	if(isset($_POST['numBis'])){
@@ -24,6 +24,7 @@ if (isset($_POST['nom'])){
             htmlspecialchars($_POST['ville']),
             htmlspecialchars($_POST['email']),
             htmlspecialchars($_POST['numTel']),
+		    htmlspecialchars($_POST['prefixeRueBdAve']),
 		    $_SESSION['email']
 		));}
 	else{
@@ -39,6 +40,7 @@ if (isset($_POST['nom'])){
             htmlspecialchars($_POST['ville']),
             htmlspecialchars($_POST['email']),
             htmlspecialchars($_POST['numTel']),
+            htmlspecialchars($_POST['prefixeRueBdAve']),
             $_SESSION['email']
 		));
 	}
