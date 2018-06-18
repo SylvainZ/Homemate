@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="dabfda98-210d-475e-b79a-3e9fbb537381" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controleur/JS/connexion.js" beforeDir="false" />
+=======
+    <list default="true" id="c033ca1b-cab7-45ee-bc47-6fe30331fbd2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controleur/sessionProfilActualisation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/sessionProfilActualisation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modele/actualisationLogement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modele/adminProfil.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modele/modifieProfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modele/modifieProfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modele/sessionProfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modele/sessionProfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modele/sessionProfilActualisation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/CSS/mdp.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/CSS/mdp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/modifierProfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/modifierProfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/modifierProfilAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/modifierProfilAdmin.php" afterDir="false" />
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="mdp.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/CSS/mdp.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modifieProfil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modele/modifieProfil.php">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="459">
+              <caret line="27" column="63" lean-forward="true" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+=======
+            <state relative-caret-position="731">
+              <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modifierProfil.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/modifierProfil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="106" column="11" lean-forward="true" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modifieProfilAdmin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modele/modifieProfilAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profilModifie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controleur/profilModifie.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Vue/header.php" />
+        <option value="$PROJECT_DIR$/Vue/administrateurCA.php" />
+        <option value="$PROJECT_DIR$/Controleur/authentification.php" />
+        <option value="$PROJECT_DIR$/Modele/authentification.php" />
+        <option value="$PROJECT_DIR$/Controleur/JS/connecte.js" />
+        <option value="$PROJECT_DIR$/Modele/ajoutActionneur.php" />
+        <option value="$PROJECT_DIR$/Vue/capteur.php" />
+        <option value="$PROJECT_DIR$/Modele/ajouterImageBDD.php" />
+        <option value="$PROJECT_DIR$/Modele/ajouterLogement.php" />
+        <option value="$PROJECT_DIR$/Modele/ajoutPiece.php" />
+        <option value="$PROJECT_DIR$/Modele/ajoutCapteur.php" />
+        <option value="$PROJECT_DIR$/Modele/consulteMessage.php" />
+        <option value="$PROJECT_DIR$/Controleur/corbeilleRecherche.php" />
+        <option value="$PROJECT_DIR$/Modele/boiteReceptionRecherche.php" />
+        <option value="$PROJECT_DIR$/Modele/corbeilleRecherche.php" />
+        <option value="$PROJECT_DIR$/Modele/creationCompteBis.php" />
+        <option value="$PROJECT_DIR$/Modele/creationCompteAdmin.php" />
+        <option value="$PROJECT_DIR$/Modele/envoieMessage.php" />
+        <option value="$PROJECT_DIR$/Vue/faqAdmin.php" />
+        <option value="$PROJECT_DIR$/Modele/faqBDD.php" />
+        <option value="$PROJECT_DIR$/Modele/gestionCorbeille.php" />
+        <option value="$PROJECT_DIR$/Modele/gestionBoiteMail.php" />
+        <option value="$PROJECT_DIR$/Modele/listeDestinataire.php" />
+        <option value="$PROJECT_DIR$/Modele/locataireProprietaire.php" />
+        <option value="$PROJECT_DIR$/Modele/BDD.php" />
+        <option value="$PROJECT_DIR$/Modele/modifierActionneur.php" />
+        <option value="$PROJECT_DIR$/Modele/modifierCapteur.php" />
+        <option value="$PROJECT_DIR$/Modele/modifierLogement.php" />
+        <option value="$PROJECT_DIR$/Modele/modifierMdp2.php" />
+        <option value="$PROJECT_DIR$/Modele/modifierPiece.php" />
+        <option value="$PROJECT_DIR$/Modele/pageMessage.php" />
+        <option value="$PROJECT_DIR$/Modele/reception.php" />
+        <option value="$PROJECT_DIR$/Modele/supprimer.php" />
+        <option value="$PROJECT_DIR$/Modele/supprimerActionneur.php" />
+        <option value="$PROJECT_DIR$/Modele/supprimerCapteur.php" />
+        <option value="$PROJECT_DIR$/Modele/supprimerLogement.php" />
+        <option value="$PROJECT_DIR$/Modele/supprimerPiece.php" />
+        <option value="$PROJECT_DIR$/Vue/boiteMail.php" />
+        <option value="$PROJECT_DIR$/Modele/connexionBD.php" />
+        <option value="$PROJECT_DIR$/Modele/lienImagesBDD.php" />
+        <option value="$PROJECT_DIR$/Controleur/accueil.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Modele/modifieProfilAdmin.php" />
+        <option value="$PROJECT_DIR$/Controleur/sessionProfilActualisation.php" />
+        <option value="$PROJECT_DIR$/Modele/sessionProfilActualisation.php" />
+        <option value="$PROJECT_DIR$/Modele/modifieProfil.php" />
+        <option value="$PROJECT_DIR$/Modele/sessionProfil.php" />
+        <option value="$PROJECT_DIR$/Vue/CSS/mdp.css" />
+        <option value="$PROJECT_DIR$/Vue/modifierProfil.php" />
+        <option value="$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js" />
+        <option value="$PROJECT_DIR$/Vue/modifierProfilAdmin.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1059" />
+    <option name="height" value="930" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="width" value="980" />
+    <option name="height" value="1031" />
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Homemate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homemate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homemate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homemate" type="462c0819:PsiDirectoryNode" />
+              <item name="Controleur" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homemate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homemate" type="462c0819:PsiDirectoryNode" />
+              <item name="Controleur" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homemate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homemate" type="462c0819:PsiDirectoryNode" />
+              <item name="Modele" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homemate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homemate" type="462c0819:PsiDirectoryNode" />
+              <item name="Vue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Homemate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Homemate" type="462c0819:PsiDirectoryNode" />
+              <item name="Vue" type="462c0819:PsiDirectoryNode" />
+              <item name="CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c033ca1b-cab7-45ee-bc47-6fe30331fbd2" name="Default" comment="" />
+      <created>1527857172136</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527857172136</updated>
+      <workItem from="1527857176610" duration="8283000" />
+      <workItem from="1527960248346" duration="901000" />
+      <workItem from="1528014989414" duration="1243000" />
+      <workItem from="1528040147767" duration="2850000" />
+      <workItem from="1528113877297" duration="10118000" />
+      <workItem from="1528140384485" duration="214000" />
+      <workItem from="1528140999366" duration="185000" />
+      <workItem from="1528141388665" duration="695000" />
+      <workItem from="1528142119975" duration="273000" />
+      <workItem from="1528142426410" duration="312000" />
+      <workItem from="1528296046509" duration="1353000" />
+      <workItem from="1528298801609" duration="329000" />
+      <workItem from="1528307171120" duration="17777000" />
+      <workItem from="1528325541875" duration="147000" />
+      <workItem from="1528350222593" duration="11298000" />
+      <workItem from="1528379862194" duration="6636000" />
+      <workItem from="1528398598860" duration="5497000" />
+      <workItem from="1528459757229" duration="21592000" />
+      <workItem from="1528703627850" duration="5886000" />
+      <workItem from="1528731263179" duration="3676000" />
+      <workItem from="1528739785812" duration="33887000" />
+      <workItem from="1528888338538" duration="42659000" />
+<<<<<<< HEAD
+      <workItem from="1529136412555" duration="13584000" />
+      <workItem from="1529305563362" duration="235000" />
+=======
+      <workItem from="1529136412555" duration="10934000" />
+      <workItem from="1529175966787" duration="1185000" />
+      <workItem from="1529258867113" duration="8236000" />
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+    </task>
+    <task id="LOCAL-00001" summary="changement emplacement fichier js">
+      <created>1528114606579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528114606580</updated>
+    </task>
+    <task id="LOCAL-00002" summary="modification ajout supprimer capteur">
+      <created>1528366335531</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528366335531</updated>
+    </task>
+    <task id="LOCAL-00003" summary="regler probleme tableau à la ligne">
+      <created>1528383178190</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528383178190</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixer le footer en fin de page">
+      <created>1528389471602</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528389471602</updated>
+    </task>
+    <task id="LOCAL-00005" summary="push modif">
+      <created>1528719003683</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1528719003684</updated>
+    </task>
+    <task id="LOCAL-00006" summary="push modif">
+      <created>1528796294035</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528796294036</updated>
+    </task>
+    <task id="LOCAL-00007" summary="donnees passerelles">
+      <created>1528820446087</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528820446087</updated>
+    </task>
+    <task id="LOCAL-00008" summary="donnees passerelles">
+      <created>1528888455835</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1528888455835</updated>
+    </task>
+    <task id="LOCAL-00009" summary="reception de trame">
+      <created>1529076933281</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1529076933281</updated>
+    </task>
+    <task id="LOCAL-00010" summary="modification notification (mise à jour toutes les 0.2s)">
+      <created>1529158462356</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1529158462356</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="199704000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="21969000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+    <layout>
+      <window_info anchor="right" id="Palette" order="10" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Palette&#9;" order="11" />
+      <window_info id="Image Layers" order="4" />
+<<<<<<< HEAD
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50121456" side_tool="true" weight="0.3283582" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32955465" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49878544" weight="0.3283582" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2574899" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32955465" />
+      <window_info id="Learn" order="6" weight="0.32955465" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32955465" />
+=======
+      <window_info anchor="right" id="Capture Analysis" order="16" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.50121456" side_tool="true" weight="0.3291592" />
+      <window_info anchor="right" id="Maven Projects" order="12" weight="0.32955465" />
+      <window_info anchor="bottom" id="Database Changes" order="17" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="18" sideWeight="0.49878544" weight="0.3283582" />
+      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="16" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18266979" />
+      <window_info anchor="right" id="Database" order="14" weight="0.32955465" />
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24939272" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="13" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="19" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="15" weight="0.32955465" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="13" />
+      <window_info id="Learn" order="6" weight="0.32955465" />
+      <window_info anchor="right" id="SciView" order="9" weight="0.32955465" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changement emplacement fichier js" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/SylvainZ/Homemate&#10;&#10;# Conflicts:&#10;#&#9;Vue/capteurActionneursHabitations.php" />
+    <MESSAGE value="modification ajout supprimer capteur" />
+    <MESSAGE value="regler probleme tableau à la ligne" />
+    <MESSAGE value="fixer le footer en fin de page" />
+    <MESSAGE value="push modif" />
+    <MESSAGE value="donnees passerelles" />
+    <MESSAGE value="reception de trame" />
+    <MESSAGE value="modification notification (mise à jour toutes les 0.2s)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification notification (mise à jour toutes les 0.2s)" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Controleur/controleFaqAdmin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/faqBDD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Controleur/recupDonnées.php" />
+    <entry file="file://$PROJECT_DIR$/Modele/actualisationLogement.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/ajoutActionneur.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/sessionPageProfil.php" />
+    <entry file="file://$PROJECT_DIR$/Modele/pageMessage.php">
+      <provider selected="true" editor-type-id="text-editor" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/faqAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        </state>
+      </provider>
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/boiteMail.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/gestionBoiteMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/gestionCorbeille.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/listeDestinataire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/locataireProprietaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Vue/habitations.php">
+=======
+    <entry file="file://$PROJECT_DIR$/Modele/ajoutCapteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/BDD.php">
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/modifierActionneur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/modifierMdp2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/modifierCapteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/modifierLogement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/modifierPiece.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/reception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/supprimerActionneur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/supprimer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/supprimerCapteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/supprimerLogement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/supprimerPiece.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/pageMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/notification.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/persoAccueil.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="99" column="53" lean-forward="true" selection-start-line="99" selection-start-column="53" selection-end-line="99" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/boiteMailReception.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Controleur/JS/trames.js" />
+    <entry file="file://$PROJECT_DIR$/Modele/corbeilleRecherche.php">
+=======
+    <entry file="file://$PROJECT_DIR$/Modele/boiteReceptionRecherche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/pageDaccueil.php">
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/connexionBD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/lienImagesBDD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/accueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/adminProfil.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/actualisationLogement.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/profil.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="47" column="28" lean-forward="true" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/authentification.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/JS/connecte.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/sessionProfilActualisation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/sessionProfilActualisation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/modifieProfil.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/profilModifie.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/locataireProprietaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/styleLocProp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CSS/mdp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/JS/locataireproprietaire.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/modifieProfilAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/modifieProfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/sessionProfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Modele/sessionProfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/sessionProfilActualisation.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/boiteMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="63" lean-forward="true" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/modifierProfilAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="51" column="130" selection-start-line="51" selection-start-column="130" selection-end-line="51" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/modifierProfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="106" column="11" lean-forward="true" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
+>>>>>>> 6343ae647c49670a577314a1b56c993b1c748642
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
