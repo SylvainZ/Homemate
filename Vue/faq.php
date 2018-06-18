@@ -42,7 +42,7 @@
                     while ($donnees = $reponse->fetch())
                     {
                     ?>
-                    <li><?php echo $donnees['question']; ?></li>
+                    <li class="color"><?php echo $donnees['question']; ?></li>
                     <?php echo $donnees['reponse']; ?>
                     <?php }
                     ?>

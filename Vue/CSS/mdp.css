@@ -37,3 +37,11 @@ table
     min-height: 30px;
     text-color: white;
 }
+
+#nonNum, #nonPostal {
+    font-family:quando;
+    font-weight:bold;
+    color:red;
+    text-align:center;
+    font-size:0.8em;
+}

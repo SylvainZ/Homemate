@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <!DOCTYPE html>
@@ -57,6 +58,8 @@
     </body>
 </html>
 =======
+=======
+>>>>>>> 566de374fc64389c84969a034bd2ae0a87e4fdec
 
 <!DOCTYPE html>
 
@@ -102,8 +105,8 @@
             <div >
 
 
-                <a href="index.php?cible=capteurActionneursHabitations"><input type=button value = "Gerer la maison"/></a><br/><br/>
-                <a href="index.php?cible=modifierMDP"><input type=button value = "Modifier votre mot de passe"/></a><br/><br/>
+                <a href="index.php?cible=capteurActionneursHabitations"><input type=button value = "Gérer la maison" class="boutonModifProfil"/></a><br/><br/>
+                <a href="index.php?cible=modifierMDP"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
             </div>
         </div>
     	
@@ -113,4 +116,4 @@
     
     </body>
 </html>
->>>>>>> 4e937947ccd12a8700c9d74d7604a794d5ec09fc
+

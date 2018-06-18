@@ -1,3 +1,5 @@
+
+/* Titre bienvenue chez Homemate et nos capteurs*/
 .titre{
     background: #2f0c1b;
     color: white;
@@ -8,6 +10,7 @@
     padding-left: 30px;
 }
 
+/*Image en dessous du bienvenue*/
 .titre2{
     background: #917e86;
     width: 50vw;
@@ -19,6 +22,7 @@
     border-radius: 10px;
 }
 
+/*Image micro et capteur*/
 .titre4{
     background: #917e86;
     width: 50vw;
@@ -31,31 +35,38 @@
     border-radius: 10px;
 }
 
+/*bloc adresse et contact*/
 .titre3{
     background: #917e86;
     width: 40vw;
     height: 410px;
-    margin-left: 5vw;
+    margin-left: 3vw;
     border-radius: 10px;
 }
 
+/*Adresse et contact*/
 .ecriture{
     font-size: 2.8em;
     color: white;
     text-decoration: underline;
     padding-left: 25px;
 }
+
+/*10 rue de Vanves...*/
 .ecriture2{
     font-size: 1.5em;
     color: white;
     margin-left: 30px;
 }
 
+/*06... et mail de domisep*/
 .ecriture3{
     font-size: 1.5em;
     color: white;
     margin-left: 70px;
 }
+
+
 .images2{
     width:50vw;
     height:20vw;
@@ -68,8 +79,9 @@
     border-radius: 10px;
 }
 .image{
-    width:50vw;
+    width:35vw;
     height:20vw;
     border-radius:10px;
+    float:left;
 
 }

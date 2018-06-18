@@ -33,9 +33,9 @@
 			<ul>
 				<li class="decoration"><span class="padding">
 				<a href="index.php?cible=controleUser">
-				Comptes Utilisateurs</a></span></p>
-				<li class="decoration" id="blue"><span class="padding"><a href="index.php?cible=controleCapteur">Capteurs/Actionneurs</a></span></p>
-				<li class="decoration"><span class="padding"><a href="index.php?cible=controlePerso">Personnalisation du site</a></span></p>
+                    Comptes Utilisateurs</a></span></p></li>
+                <li class="decoration" id="blue"><span class="padding"><a href="index.php?cible=controleCapteur">Capteurs/Actionneurs</a></span></p></li>
+                <li class="decoration"><span class="padding"><a href="index.php?cible=controlePerso">Personnalisation du site</a></span></p></li>
 			</ul>
 		</div>
 	</section>

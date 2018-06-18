@@ -1,26 +1,32 @@
-function cguf(){
-	/*var cgu = document.form.CGU.value;
-	
-	if(cgu==null)
-	{
-		alert("Veuillez accepter nos Conditions Générales d'Utilisation")
-		document.form.password.CGU.focus();
-		return false;
-	}
-	
-	else
-		{
-		return true;
-		}*/
-	
-	if(document.getElementById("CGU").checked==true){
-		return true;
-	}
-	
-	else{
-		document.getElementById("nonCoche").innerHTML="Veuillez accepter nos Conditions Générales d'Utilisation";
-		return false;
-	}
+//fonction qui vérifie le numéro de téléphone et le code postal lorsqu'il modifie son profil
+function modifProfil(){
+    var tel = document.getElementById('numTel').value;
+    var chiffres = new String(tel);
+    var taille = chiffres.length;
+
+    var postal = document.getElementById('codePostal').value;
+    var chiffres2 = new String(postal);
+    var taille2 = chiffres2.length;
+
+    var faux=0;
+
+    //si le numéro de téléphone n'est pas à 10 chiffres
+    if (taille!=10)
+    {
+        document.getElementById("nonNum").innerHTML = "Assurez-vous de rentrer un numéro à 10 chiffres";
+        faux+=1;
+    }
+
+    //si le code postal n'est pas à 5 chiffres
+    if (taille2!=5)
+    {
+        document.getElementById("nonPostal").innerHTML = "Veuillez rentrer un code postal à 5 chiffres";
+        faux+=1;
+    }
+
+    if (faux>0){
+        return false;
+    }
 	
 }
 
@@ -53,34 +59,45 @@ function calculAge() {
 function cgu() {
    var age= calculAge();
 
+    var tel = document.getElementById('numTel').value;
+    var chiffres = new String(tel);
+    var taille = chiffres.length;
 
-    var tel = document.form.numTel.value;
-    var verifTel= /([0-9]{10})/.test(tel);
+    var postal = document.getElementById('codePostal').value;
+    var chiffres2 = new String(postal);
+    var taille2 = chiffres2.length;
 
-    var postal = document.form.codePostal.value;
-    var verifCodePostal= /([0-9]{5})/.test(postal);
+    var faux=0;
 
+    //si le numéro de téléphone n'est pas à 10 chiffres
+    if (taille!=10)
+    {
+        document.getElementById("nonNum").innerHTML = "Assurez-vous de rentrer un numéro à 10 chiffres";
+        faux+=1;
+    }
+
+    //si le code postal n'est pas à 5 chiffres
+    if (taille2!=5) {
+
+        document.getElementById("nonPostal").innerHTML = "Veuillez rentrer un code postal à 5 chiffres";
+        faux+=1;
+    }
+
+    //s'il a bien coché les CGUs
    if (document.getElementById("CGU").checked == false) {
         document.getElementById("nonCoche").innerHTML = "Veuillez accepter nos Conditions Générales d'Utilisation";
-        return false;
+        faux+=1;
     }
+
+    //s'il a bien au moins 18 ans
     if (age < 18) {
         document.getElementById("naissance").focus();
         document.getElementById("nonAge").innerHTML="Vous devez avoir plus de 18 ans";
-    	return false;
+        faux+=1;
     }
 
-   if (!verifTel)
-   {
-       document.getElementsByName('tel').focus();
-       document.getElementById("nonNum").innerHTML = "Assurez-vous de rentrer un numéro à 10 chiffres";
+    if (faux>0){
        return false;
-   }
-
-    if (!verifCodePostal) {
-        document.getElementsByName('postal').focus();
-        document.getElementById("nonPostal").innerHTML = "Veuillez rentrer un code postal à 5 chiffres";
-        return false;
     }
 
 }

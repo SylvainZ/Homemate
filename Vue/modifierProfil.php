@@ -15,7 +15,7 @@
 <h1>Modifier profil</h1>
 
 <div class="bloc">
-    <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data">
+    <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data" onsubmit="return modifProfil()">
     
      <table>
        	   <tr>
@@ -28,8 +28,11 @@
         				   <tr>
         				   	  <td>Prénom:</td>
 
+<<<<<<< HEAD
         				       <td><input type="text" name="prenom" placeholder="prÃ©nom" value=<?php echo $_SESSION['prenom'];?>></td>
 
+=======
+>>>>>>> 566de374fc64389c84969a034bd2ae0a87e4fdec
         				       <td><input type="text" name="prenom" placeholder="prÃ©nom" value="<?php echo $_SESSION['prenom'];?>"/></td>
 
         				   	</tr>
@@ -38,7 +41,6 @@
         				      <td><select name="statut">
                                     <option value="proprietaire">proprietaire</option>
                                     <option value="locataire">locataire</option>
-                                    <option value="gestionnaire">gestionnaire</option>
                                 </select></td>
         				   	</tr>
         				   	<tr>
@@ -62,8 +64,9 @@
         				   <tr>
         				   	  <td>Type:</td>
         				   	
-        				       <td> <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label><select name="prefixeRueBdAve">
-            
+        				       <td> <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label>
+                                   <select name="prefixeRueBdAve">
+
                                     <option value="rue">rue</option>
                                     <option value="bd">boulevard</option>
                                     <option value="ave">avenue</option>
@@ -76,14 +79,18 @@
         					<tr>
         				   	  <td>Nom de rue: </td>
 
+<<<<<<< HEAD
         				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" value=<?php echo $_SESSION['nomRueBdAve'];?> ></td>
 
+=======
+>>>>>>> 566de374fc64389c84969a034bd2ae0a87e4fdec
         				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" value="<?php echo $_SESSION['nomRueBdAve'];?>" /></td>
 
         				   	</tr>
         				   	<tr>
         				   	  <td>Code postal: </td>
-        				       <td> <input type="text" name="codePostal" placeholder="dÃ©partement"  value=<?php echo $_SESSION['codePostal'];?> ></td>
+        				       <td> <input type="text" id="codePostal" name="codePostal" placeholder="dÃ©partement"  value=<?php echo $_SESSION['codePostal'];?> ><div id="nonPostal"></div>
+                               </td>
         				   	</tr>
         				   	<tr>
         				   	  <td>Ville:</td>
@@ -94,16 +101,20 @@
         				       <td> <input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?> ></td>
         				   	</tr>
         				   	        				   	<tr>
-        				   	  <td>Téléphone:</td>
-        				       <td> <input type="text" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=<?php echo $_SESSION['numTel'];?>></td>
+        				   	  <td>Téléphone: </td>
+        				       <td> <input type="text" id="numTel" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=0<?php echo $_SESSION['numTel'];?>><div id="nonNum"></div>
+                               </td>
         				   	</tr>
         			</table>
         		</td>
         	</tr>
         	</table>
+<<<<<<< HEAD
 
 			
 
+=======
+>>>>>>> 566de374fc64389c84969a034bd2ae0a87e4fdec
 			   
 
             <input class="valider" type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
@@ -112,6 +123,9 @@
     </form>
 
     </div>
+
+    <script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
+
 <footer>
         <?php include("Vue/footer.php") ?>
 </footer>

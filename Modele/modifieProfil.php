@@ -1,54 +1,56 @@
 <?php
 session_start();
-if (isset($_POST['nom'])/*
-	&&isset($_POST['prenom'])
-	&&isset($_POST['statut'])
-	&&isset($_POST['numAppartement'])
-	&&isset($_POST['numRue'])
-	&&isset($_POST['prefixeRueBdAve'])
-	&&isset($_POST['nomRueBdAve'])
-	&&isset($_POST['departement'])
-	&&isset($_POST['ville'])
-	&&isset($_POST['email'])
-	&&isset($_POST['numTel'])*/){
+
+//vérifie si le champ nom est rempli
+if (isset($_POST['nom'])){
+
+    //appelle la BDD homemate
 	include('connexionBD.php');
-	/*INSERT INTO profil (Nom,Prenom,Statut,NumeroAppartement,NumeroEtage,NumeroRue,Bis,PrefixeRueAveBd,NomRueAveBd,NumeroDepartement,Ville,Email,NumeroTelephone) VALUES ('nom','preomn','Gérant',5,5,46,'avenue','Champs de Mars',71,'Paris','fr@fr.fr',32)*/
-	$req = $bdd->prepare('UPDATE profil SET Nom = ? ,Prenom= ? ,Statut = ? ,NumeroLogement = ? ,NumeroEtage=?, NumeroRue = ? ,Bis = ? ,NomRueAveBd = ? ,codePostal = ? ,Ville = ? ,Email = ? ,NumeroTelephone = ? WHERE Email = ?');
+
+	//met à jour la table pour la modification du profil
+	$req = $bdd->prepare('UPDATE profil SET Nom = ? ,Prenom= ? ,Statut = ? ,NumeroLogement = ? ,NumeroEtage=?, NumeroRue = ? ,Bis = ? ,NomRueAveBd = ? ,codePostal = ? ,Ville = ? ,Email = ? ,NumeroTelephone = ? ,PrefixRue = ? WHERE Email = ?');
+
+	//si l'utilisateur à cocher le bis pour sa rue
 	if(isset($_POST['numBis'])){
-		$req->execute(array($_POST['nom'],
-		$_POST['prenom'],
-		$_POST['statut'],
-		$_POST['numLogement'],
-		$_POST['numEtage'],
-		$_POST['numRue'],
-		$_POST['numBis'],
-		$_POST['nomRueBdAve'],
-		$_POST['codePostal'],
-		$_POST['ville'],
-		$_POST['email'],
-		$_POST['numTel'],
-		$_SESSION['email']
+		$req->execute(array(htmlspecialchars($_POST['nom']),
+            htmlspecialchars($_POST['prenom']),
+            htmlspecialchars($_POST['statut']),
+            htmlspecialchars($_POST['numLogement']),
+            htmlspecialchars($_POST['numEtage']),
+            htmlspecialchars($_POST['numRue']),
+            htmlspecialchars($_POST['numBis']),
+            htmlspecialchars($_POST['nomRueBdAve']),
+            htmlspecialchars($_POST['codePostal']),
+            htmlspecialchars($_POST['ville']),
+            htmlspecialchars($_POST['email']),
+            htmlspecialchars($_POST['numTel']),
+		    htmlspecialchars($_POST['prefixeRueBdAve']),
+		    $_SESSION['email']
 		));}
 	else{
-		$req->execute(array($_POST['nom'],
-		$_POST['prenom'],
-		$_POST['statut'],
-		$_POST['numLogement'],
-		$_POST['numEtage'],
-		$_POST['numRue'],
-		'NONE',
-		$_POST['nomRueBdAve'],
-		$_POST['codePostal'],
-		$_POST['ville'],
-		$_POST['email'],
-		$_POST['numTel'],
-		$_SESSION['email']
+		$req->execute(array(htmlspecialchars($_POST['nom']),
+            htmlspecialchars($_POST['prenom']),
+            htmlspecialchars($_POST['statut']),
+            htmlspecialchars($_POST['numLogement']),
+            htmlspecialchars($_POST['numEtage']),
+            htmlspecialchars($_POST['numRue']),
+		    'NONE',
+            htmlspecialchars($_POST['nomRueBdAve']),
+            htmlspecialchars($_POST['codePostal']),
+            htmlspecialchars($_POST['ville']),
+            htmlspecialchars($_POST['email']),
+            htmlspecialchars($_POST['numTel']),
+            htmlspecialchars($_POST['prefixeRueBdAve']),
+            $_SESSION['email']
 		));
 	}
 	$req->closeCursor();
 	echo 'vous avez bien enregistré les modifications';
+
+	//renvoi vers le controleur qui va actualiser le profil
 	header('Location: index.php?cible=sessionProfilActualisation');
 }
 else{
+    //renvoie vers la page de saisie du formulaire
     header('Location: Vue/modifierProfil.php');
 } ?>

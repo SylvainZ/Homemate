@@ -19,7 +19,7 @@
 
         // Si tout va bien, on peut continuer
 
-        // On récupère tout le contenu de la table jeux_video
+        // On récupère tout le contenu de la table faq
         $reponse = $bdd->query('SELECT * FROM faq ');
 
     ?>
@@ -45,8 +45,8 @@
                                 <form action="index.php?cible=controlefaqAdmin&id=<?php echo $donnees['ID']?>" method="POST">
                                     <input type="submit" value="Supprimer" id="supprimer" name="supprimer" class="valider">
                                 </form>
-                            <?php echo $donnees['question']; ?></li>
-                            <?php echo $donnees['reponse']; ?>
+                                <?php echo $donnees['question']; ?></li>
+                                <?php echo $donnees['reponse']; ?>
 
 
 

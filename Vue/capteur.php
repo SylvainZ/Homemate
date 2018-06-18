@@ -1,17 +1,14 @@
 
 <?php
 
+//appelle la BDD homemate
+require('Modele/connexionBD.php');
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
+//vérifie si l'ID de la pièce existe
 if(isset($_GET['ID'])){
     $id=$_GET['ID'];
+
+    //sélectionne les capteurs et actionneurs situés dans la pièce en question
     $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idpiece =\''.$_GET['ID'].'\'');
     $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece=\''.$_GET['ID'].'\'');
     $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece=\''.$_GET['ID'].'\'');
@@ -38,10 +35,11 @@ if(isset($_GET['ID'])){
 	<header>
 			<?php include("header.php") ?>
 	</header>
+
 <div id="page">
 	<div class="adresse">
         	
-        	<?php 
+        	<?php //affiche le nom de la pièce dans laquelle l'utilisateur est
         	$piece = $bdd->query('SELECT * FROM piece WHERE ID =\''.$_GET['ID'].'\'');
         	while ($donnees1 = $piece->fetch()){
         	    
@@ -50,7 +48,7 @@ if(isset($_GET['ID'])){
         	} ?>
         	       
         	
-        </div>
+    </div>
     <div class = "entete">
         <button class="A active"><a href="index.php?cible=logement" class="styleEntete"><p class="hab"><p>Habitation(s)</p></a></button>
         <button class="B"><a class="styleEntete" href="index.php?cible=capteurActionneursHabitations"><p>Capteurs/</br>Actionneurs</p></a></button>

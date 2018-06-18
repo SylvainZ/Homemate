@@ -1,13 +1,9 @@
 <?php
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
 
+//appelle la BDD homemate
+include('connexionBD.php');
+
+//sélectionne le message dans la table qui a l'ID correspondant
 $req = $bdd->query('SELECT * FROM messagerie WHERE ID = '.$_GET['message']);
 $donnees = $req->fetch()
 
