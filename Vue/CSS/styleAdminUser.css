@@ -31,7 +31,7 @@ body
 {
 	background-color: #5c5684;
 	color:white;
-	font-size:2em;
+	font-size:2vw;
 	width:28vw;
 	height:2.5vw;
 	font-weight: bold;
@@ -67,8 +67,8 @@ body
 .bloc2
 {
 	background-color: #471229;
-	height:33vw;
-	width:80vw;
+	height: 45vw;
+	width:83vw;
 	position: relative;
 	top: 17vw;
 	left:10%;
@@ -79,7 +79,7 @@ body
 .tableau
 {
 	height:25vw;
-	width:80vw;
+	width:82vw;
 	min-height: 15vw;
 	min-width: 40vw;
 	overflow: auto;
@@ -104,8 +104,8 @@ td
 	font-family: Quando;
 	color:white;
 	position: center;
-	padding-right: 70px;
-	padding-left: 70px;
+	padding-right: 1VW;
+	padding-left: 1VW;
 	padding-top: 5px;
 	padding-bottom: 5px;
 

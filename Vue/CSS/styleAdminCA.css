@@ -25,7 +25,7 @@ body
 {
 	background-color: #5c5684;
 	color:white;
-	font-size:2em;
+	font-size:2VW;
 	width:28vw;
 	height:2.5vw;
 	font-weight: bold;
@@ -45,7 +45,7 @@ body
 {
 	background-color: #5c5684;
 	color:white;
-	font-size:1.2em;
+	font-size:1VW;
 	font-weight: bold;
 	text-align: center;
 	font-family: Quando;
@@ -60,7 +60,7 @@ body
 
 .decalage
 {
-	padding-left: 2vw;
+	padding-left: 1vw;
 }
 .position
 {
@@ -96,7 +96,7 @@ body
 	border-radius: 60px;
 	padding-top: 1vh;
 	color: white;
-	font-size: 1.2em;
+	font-size: 1VW;
 	font-weight: bold;
 	text-align: center;
 	font-family: Quando;
@@ -135,7 +135,7 @@ select
 td
 {
 	border:2px solid white ;
-	font-size:1.5em;
+	font-size:0.7VW;
 	font-weight: bold;
 	font-family: Quando;
 	color:white;
@@ -144,7 +144,7 @@ td
 p
 {
 	text-align: center;
-	font-size:2em;
+	font-size:1.7VW;
 	font-weight: bold;
 	font-family: Quando;
 	color:white;
@@ -154,7 +154,7 @@ input[type=text]
 {
 	padding: 10px 20px;
     box-sizing: border-box;
-    width: 300px;
+    width: 5VW;
 	border-radius:5px;
 }
 a
