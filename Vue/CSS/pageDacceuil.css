@@ -46,7 +46,7 @@
 
 /*Adresse et contact*/
 .ecriture{
-    font-size: 2.8em;
+    font-size: 2em;
     color: white;
     text-decoration: underline;
     padding-left: 25px;
@@ -54,14 +54,14 @@
 
 /*10 rue de Vanves...*/
 .ecriture2{
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: white;
     margin-left: 30px;
 }
 
 /*06... et mail de domisep*/
 .ecriture3{
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: white;
     margin-left: 70px;
 }
