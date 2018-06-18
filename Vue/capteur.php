@@ -28,7 +28,7 @@ if(isset($_GET['ID'])){
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Capteurs</title>
 	 
-    <link rel="stylesheet" type="text/css" href="Vue/css/on-off-switch.css"/>
+   
 	<link rel="stylesheet" href="Vue/CSS/capteur.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
 </head>
@@ -387,25 +387,10 @@ if(isset($_GET['ID'])){
                                             
                                             <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px">
                                           <span class="nom"><?php echo $donnees1['nom']?> </span><br>
-                                           <div class="checkbox-container">
-                                    <input type="checkbox" id="on-off-switch" name="switch1" checked>
-                               </div>
-                                <div id="listener-text">
+                                  
+                               		
+                                                                    
                                 
-                                </div>
-                                
-                                <script type="text/javascript" src="Vue/js/jquery-1.11.2.min.js"></script>
-    							<script type="text/javascript" src="Vue/js/on-off-switch.js"></script>
-    							<script type="text/javascript" src="Vue/js/on-off-switch-onload.js"></script>
-    							    							
-                                <script type="text/javascript">
-                                    new DG.OnOffSwitch({
-                                        el: '#on-off-switch',
-                                        textOn: 'On',
-                                        textOff: 'Off',
-                                 });
-                                    
-                                </script>
              
                                             <div id="fenetreModale<?php echo $donnees1['ID']?>">
                                                 <div class="popup-block">
@@ -417,12 +402,98 @@ if(isset($_GET['ID'])){
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            
+                                            <div class="onoffswitch<?php echo $donnees1['ID']?>">
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc()'>
+                                            <label class="onoffswitch-label<?php echo $donnees1['ID']?>" for="myonoffswitch<?php echo $donnees1['ID']?>">
+                                            <span class="onoffswitch-inner<?php echo $donnees1['ID']?>"></span>
+                                            <span class="onoffswitch-switch<?php echo $donnees1['ID']?>"></span>
+                                            </label>
                                             </div>                 
                                             
 										</div>
 										</td>
 										
+										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+                                        <script>
+                                        function loadDoc() {
+                                          var xhttp = new XMLHttpRequest();
+                                          if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
+                                          xhttp.onreadystatechange = function() {
+                                            if (this.readyState == 4 && this.status == 200) {
+                                             document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
+                                            }
+                                          };
+                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1111", true);
+                                          xhttp.send();
+                                        }
+                                          else {
+                                        	  xhttp.onreadystatechange = function() {
+                                                  if (this.readyState == 4 && this.status == 200) {
+                                                   document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
+                                                  }
+                                                };
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=0000", true);
+                                                xhttp.send();
+                                          }
+                                              }
+                                          
+                                        
+                                        </script>
+                                        
+                                        
+										
 										<style>
+										/*interrupteur*/
+
+                                        .onoffswitch<?php echo $donnees1['ID']?> {
+                                            position: relative; width: 90px;
+                                            -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?> {
+                                            display: none;
+                                        }
+                                        .onoffswitch-label<?php echo $donnees1['ID']?> {
+                                            display: block; overflow: hidden; cursor: pointer;
+                                            border: 2px solid #999999; border-radius: 20px;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?> {
+                                            display: block; width: 200%; margin-left: -100%;
+                                            transition: margin 0.3s ease-in 0s;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:before, .onoffswitch-inner<?php echo $donnees1['ID']?>:after {
+                                            display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+                                            font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+                                            box-sizing: border-box;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:before {
+                                            content: "ON";
+                                            padding-left: 10px;
+                                            background-color: #34A7C1; color: #FFFFFF;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:after {
+                                            content: "OFF";
+                                            padding-right: 10px;
+                                            background-color: #EEEEEE; color: #999999;
+                                            text-align: right;
+                                        }
+                                        .onoffswitch-switch<?php echo $donnees1['ID']?> {
+                                            display: block; width: 18px; margin: 6px;
+                                            background: #FFFFFF;
+                                            position: absolute; top: 0; bottom: 0;
+                                            right: 56px;
+                                            border: 2px solid #999999; border-radius: 20px;
+                                            transition: all 0.3s ease-in 0s; 
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-inner<?php echo $donnees1['ID']?> {
+                                            margin-left: 0;
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-switch<?php echo $donnees1['ID']?> {
+                                            right: 0px; 
+                                        }
+                                        										
                                         
                                         #fenetreModale<?php echo $donnees1['ID']?>
                                         {

@@ -36,7 +36,7 @@
 
                 <br /><br/>
 
-            <input id="valider" type="submit" value="VALIDER"">
+            <input id="valider" type="submit" value="VALIDER">
                 
                 <br/>
         </form>
