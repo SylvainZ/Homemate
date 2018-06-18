@@ -23,6 +23,10 @@
 
 <body>
 
+    <header>
+        <?php include("Vue/header.php") ?>
+    </header>
+
 	<section id="blocs">
 		<div class="image" >
 			<img class="homemate" src="Vue/images/logo_nouvo.png">
@@ -81,6 +85,12 @@
                 </select>
                 <input type="submit" value="Ajouter" class="bouton">
             </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="page">
+            <?php include("Vue/footer.php") ?>
         </div>
     </section>
 
