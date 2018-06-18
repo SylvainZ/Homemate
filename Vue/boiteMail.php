@@ -81,9 +81,12 @@
                         $i=0;
                     }
 
-                    while($i < $intervale){
+                    while($i < $intervale && isset($_SESSION['sujet'][$i]) ){
                         /*Vérification de l'existence des variables*/
-                        if (isset($_SESSION['sujet'][$i]) && isset($_SESSION['nomExp'][$i]) && isset($_SESSION['date'][$i])) {
+
+                        if (isset($_SESSION['sujet'][$i]) && isset($_SESSION['nomExp'][$i]) && isset($_SESSION['date'][$i])&&
+                        !empty($_SESSION['sujet'][$i]) && !empty($_SESSION['nomExp'][$i]) && !empty($_SESSION['date'][$i])) {
+
                             if ($_SESSION['corbeille'][$i] == 0) {
                                 ?>
                                 <div class="message">
@@ -127,12 +130,10 @@
 
                                 </div>
                                 <?php
-                                $i++;
+
                             }
                         }
-                        else{
-                            $i++;
-                        }
+                        $i++;
                     }?>
 
 

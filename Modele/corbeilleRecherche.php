@@ -13,7 +13,7 @@ while ($donnees = $req->fetch())
     //stockage des différents champs des messages dans des tableaux
 	$sujet[] = $donnees['Sujet'];
 	$expediteur[] = $donnees['Expediteur'];
-	$date[] = $donnees['Date'];
+	$date[] = $donnees['Dates'];
 	$message[] = $donnees['Message'];
 	$reception[] = $donnees['Reception'];
 	$id[] = $donnees['ID'];
