@@ -15,7 +15,7 @@
 <h1>Modifier profil</h1>
 
 <div class="bloc">
-    <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data">
+    <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data" onsubmit="return modifProfil()">
     
      <table>
        	   <tr>
@@ -36,7 +36,6 @@
         				      <td><select name="statut">
                                     <option value="proprietaire">proprietaire</option>
                                     <option value="locataire">locataire</option>
-                                    <option value="gestionnaire">gestionnaire</option>
                                 </select></td>
         				   	</tr>
         				   	<tr>
@@ -60,8 +59,9 @@
         				   <tr>
         				   	  <td>Type:</td>
         				   	
-        				       <td> <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label><select name="prefixeRueBdAve">
-            
+        				       <td> <input type="checkbox" name="numBis" value="bis"/><label for="bis">bis</label>
+                                   <select name="prefixeRueBdAve">
+
                                     <option value="rue">rue</option>
                                     <option value="bd">boulevard</option>
                                     <option value="ave">avenue</option>
@@ -79,7 +79,8 @@
         				   	</tr>
         				   	<tr>
         				   	  <td>Code postal: </td>
-        				       <td> <input type="text" name="codePostal" placeholder="dÃ©partement"  value=<?php echo $_SESSION['codePostal'];?> ></td>
+        				       <td> <input type="text" id="codePostal" name="codePostal" placeholder="dÃ©partement"  value=<?php echo $_SESSION['codePostal'];?> ><div id="nonPostal"></div>
+                               </td>
         				   	</tr>
         				   	<tr>
         				   	  <td>Ville:</td>
@@ -90,8 +91,9 @@
         				       <td> <input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?> ></td>
         				   	</tr>
         				   	        				   	<tr>
-        				   	  <td>Téléphone:</td>
-        				       <td> <input type="text" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=<?php echo $_SESSION['numTel'];?>></td>
+        				   	  <td>Téléphone: </td>
+        				       <td> <input type="text" id="numTel" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=0<?php echo $_SESSION['numTel'];?>><div id="nonNum"></div>
+                               </td>
         				   	</tr>
         			</table>
         		</td>
@@ -105,6 +107,9 @@
     </form>
 
     </div>
+
+    <script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
+
 <footer>
         <?php include("Vue/footer.php") ?>
 </footer>

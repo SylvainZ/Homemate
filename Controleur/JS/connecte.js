@@ -4,7 +4,7 @@ $(document).ready(function(){
         e.preventDefault();
 
         $.post(
-            'Controleur/authentification.php',
+            'Modele/authentification.php',
             {
                 username : $("#username").val(),  // Nous récupérons la valeur de nos input que l'on fait passer à authentification.php
                 password : $("#password").val()

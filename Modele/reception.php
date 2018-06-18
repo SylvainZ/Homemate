@@ -25,25 +25,14 @@ testImage('case1');
 testImage('case2');
 
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
+//appelle la BDD homemate
+include('connexionBD.php');
+
 $bdd->exec('UPDATE `accueilimage` SET `Chemin`=\''.$_FILES['case1']['name'].'\' WHERE ID=1');
 $bdd->exec('UPDATE `accueilimage` SET `Chemin`=\''.$_FILES['case2']['name'].'\' WHERE ID=2');
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
+//appelle la BDD homemate
+include('connexionBD.php');
 
 $req = $bdd->query('SELECT Chemin FROM accueilimage');
 
