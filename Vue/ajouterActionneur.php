@@ -20,12 +20,14 @@
 	        
 	     
 	        <form method="post" action="index.php?cible=ajoutActionneur2&ID=<?php echo $_GET['ID']?>">
-	        	<p> 
-					<label for="nom_du_capteur" class="nom_capteur">Nom de l'actionneur* : </label><br/>
-					<select name="nom_du_capteur" id="nom_du_capteur">
+	        	<p>
+                    <label for="nom_actionneur">Nom de l'actionneur* : </label><br/>
+                    <input type="text" name="nom_actionneur" id="nom_actionneur" maxlength="10" required/><br/><br/>
+
+					<label for="type_actionneur" class="type_actionneur">Nom de l'actionneur* : </label><br/>
+					<select name="type_actionneur" id="type_actionneur">
 							<option value="volet">Volet</option>
 							<option value="Interrupteur">Interrupteur</option>
-							
 					</select>
 					<br/><br/>
 					

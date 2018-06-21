@@ -49,7 +49,7 @@
                             </tr>
                             <tr>
                                 <td> Numéro de téléphone</td>
-                                <td>: <?php echo $_SESSION['numTel'];?></td>
+                                <td>: 0<?php echo $_SESSION['numTel'];?></td>
                             </tr>
                             <tr>
                                 <td> Adresse</td>
