@@ -61,7 +61,7 @@
 </section>
 
 <footer>
-	<p>Copyright 2018 HomeMate | Tous droits réservés</p>
+    <?php include("Vue/footer.php") ?>
 </footer>
 <script type="text/javascript" src="Controleur/JS/creationCompte.js"></script>
  <script src="Controleur/verifEmail.js" type="text/javascript"></script>
