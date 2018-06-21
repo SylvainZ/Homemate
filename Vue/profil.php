@@ -47,6 +47,7 @@
                 <a href="index.php?cible=modifierMDP"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
             </div>
         </div>
+        </div>
     	
 
             <?php include("Vue/footer.php") ?>
