@@ -27,12 +27,6 @@
         				   	</tr>
         				   <tr>
         				   	  <td>Prénom:</td>
-
-<<<<<<< HEAD
-        				       <td><input type="text" name="prenom" placeholder="prÃ©nom" value=<?php echo $_SESSION['prenom'];?>></td>
-
-=======
->>>>>>> 566de374fc64389c84969a034bd2ae0a87e4fdec
         				       <td><input type="text" name="prenom" placeholder="prÃ©nom" value="<?php echo $_SESSION['prenom'];?>"/></td>
 
         				   	</tr>
@@ -79,11 +73,6 @@
         					<tr>
         				   	  <td>Nom de rue: </td>
 
-<<<<<<< HEAD
-        				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" value=<?php echo $_SESSION['nomRueBdAve'];?> ></td>
-
-=======
->>>>>>> 566de374fc64389c84969a034bd2ae0a87e4fdec
         				      <td> <input type="text" name="nomRueBdAve" placeholder="nom de rue, boulevard ou avenue" value="<?php echo $_SESSION['nomRueBdAve'];?>" /></td>
 
         				   	</tr>
@@ -109,12 +98,6 @@
         		</td>
         	</tr>
         	</table>
-<<<<<<< HEAD
-
-			
-
-=======
->>>>>>> 566de374fc64389c84969a034bd2ae0a87e4fdec
 			   
 
             <input class="valider" type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>

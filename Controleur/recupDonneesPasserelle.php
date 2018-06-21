@@ -35,7 +35,7 @@ function insererTrameBDD($data,$bdd)
         $trame=$data_tab[$cle];
         // décodage avec sscanf
         list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
-            sscanf($trame, "%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+            sscanf($trame, "%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s"); // 19(Trame) + 14 (date)
         /*echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");*/
 
         $values = array(
@@ -50,7 +50,7 @@ function insererTrameBDD($data,$bdd)
             $year.'-'.$month.'-'.$day,
             $hour.':'.$min.':'.$sec
         );
-        $maintenant = "11:20:00";//date('H:i:s');
+        $maintenant = date('H:i:s');//"11:20:00";
         $ilYADixMinutes = date("H:i:s", strtotime("-10 minute", strtotime($maintenant)));
         if ($year.'/'.$month.'/'.$day==date('Y/m').'/'.(date('d')-1)) {//&& $hour==date('h')
             if(($hour.':'.$min.':'.$sec)>=$ilYADixMinutes) {

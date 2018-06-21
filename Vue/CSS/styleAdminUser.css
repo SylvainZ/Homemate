@@ -17,7 +17,7 @@ body
 {
 	display: flex;
 	position: absolute;
-	top: 4vw;
+	top: 10vw;
 	left:20vw;
 }
 
@@ -68,12 +68,13 @@ body
 {
 	background-color: #471229;
 	height: 45vw;
-	width:83vw;
+	width:84vw;
 	position: relative;
-	top: 17vw;
+	top: 15vw;
 	left:10%;
 	border-radius: 60px;
 	padding-top:  1px;
+
 
 }
 .tableau
@@ -85,7 +86,12 @@ body
 	overflow: auto;
 }
 
-
+.page
+{
+	width:100vw;
+	position:absolute;
+	right:-5vw;
+}
 table
 {
     border-collapse: collapse;

@@ -40,9 +40,9 @@
             </div>
         </div>
         <div >
-            <a href="index.php?cible=modifieProfil" ><input type=button value = "Modifier le profil"/></a> <br>
+            <a href="index.php?cible=modifieProfil" ><input type=button value = "Modifier le profil" class="bouton"/></a> <br>
 
-            <a href="index.php?cible=controleUser"><input type=button value = "Gérer le site"/></a><br/><br/>
+            <a href="index.php?cible=controleUser"><input type=button value = "Gérer le site" class="bouton"/></a><br/><br/>
         </div>
     </div>
 </div>

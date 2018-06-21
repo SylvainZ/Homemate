@@ -16,8 +16,15 @@ body
 {
 	display: flex;
 	position: absolute;
-	top:4vw;
+	top:10vw;
 	left:20vw;
+}
+
+.page
+{
+	width:100vw;
+	position:absolute;
+	left:-15vw;
 }
 
 .decoration
@@ -83,10 +90,10 @@ body
 .bloc2
 {
 	background-color: #471229;
-	height:30vw;
+	height:27vw;
 	width:70vw;
 	position: relative;
-	top: 17vw;
+	top: 15vw;
 	left:15%;
 	border-radius: 60px;
 	padding-top: 1px;
@@ -124,8 +131,9 @@ input[type=text]
 	height:20vw;
 	width:50vw;
 	margin:auto;
+	font-size: 1vw;
 	border-radius: 20px;
-	padding-top: 2vw;
+	padding-top: 1vw;
 }
 
 a

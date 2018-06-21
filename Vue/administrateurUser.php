@@ -32,6 +32,11 @@
 </head>
 
 <body>
+
+    <header>
+        <?php include("Vue/header.php") ?>
+    </header>
+
 	<section id="blocs">
 		<div class="image" >
 			<img class="homemate" src="Vue/images/logo_nouvo.png">
@@ -49,7 +54,7 @@
 		</div>
 	</section>
 
-	<section class="bloc2">
+	<section class="bloc2" class="page">
 		
 			<form method="POST" action="index.php?cible=controleUser">
 				<p> Rechercher un utilisateur :
@@ -81,6 +86,12 @@
 				   	?>
 				</table>
 			</div>
+        <div class="page">
+            <?php include("Vue/footer.php") ?>
+        </div>
 	</section>
+
+
+
 </body>
 </html>

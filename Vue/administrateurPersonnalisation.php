@@ -7,7 +7,12 @@
 </head>
 
 <body>
-	<section id="blocs">
+
+    <header>
+        <?php include("Vue/header.php") ?>
+    </header>
+
+<section id="blocs">
 		<div class="image" >
 			<img class="homemate" src="Vue/images/logo_nouvo.png">
 			<img class="profil" src="Vue/images/iconeProfil.png">
@@ -37,6 +42,11 @@
                         <a href="index.php?cible=inscriptionAdmin">
                             Ajouter un compte administrateur</a></li>
 			</div>
+        <div class="page">
+            <?php include("Vue/footer.php") ?>
+        </div>
 	</section>
+
+
 </body>
 </html>
