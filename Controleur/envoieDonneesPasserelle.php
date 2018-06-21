@@ -19,14 +19,18 @@ function envoieTrameBDD()
     $OBJ2 = "1";
     $OBJ3 = "1";
     $OBJ4 = "E";
-    $REQ = "1";
-    $TYP = "7";
+    $REQ = "2";
+    $TYP = "5";
     $NUM1 = "0";
     $NUM2 = "1";
-    $ANS1 = "1";
-    $ANS2 = "1";
-    $ANS3 = "1";
-    $ANS4 = "1";
+
+    $ValeurAns="1";
+
+    $ANS1 = $ValeurAns;
+    $ANS2 = $ValeurAns;
+    $ANS3 = $ValeurAns;
+    $ANS4 = $ValeurAns;
+
     $CHK1 = "0";
     $CHK2 = "0";
     $TRAME=array($TRA,$OBJ1,$OBJ2,$OBJ3 ,$OBJ4 ,$REQ ,$TYP ,$NUM1 ,$NUM2 ,$ANS1 ,$ANS2 ,$ANS3 ,$ANS4 ,$CHK1 ,$CHK2 );
