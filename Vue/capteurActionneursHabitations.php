@@ -181,7 +181,7 @@ $nbColonne3=5;
 										
                                             
                                             
-                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60px">
+                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60px"><br>
                                           <span class="nom"><?php echo $donnees1['nom']?> </span><br>
                                   
                                		
