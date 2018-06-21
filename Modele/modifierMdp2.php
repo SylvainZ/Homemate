@@ -27,8 +27,7 @@ if (isset($_POST["modifier"]))
 	        $password = sha1($mdp1);
 
 	        $req = $bdd->query("UPDATE profil SET password ='$password' WHERE email = '$email'");
-	        echo $email;
-	        echo $password;
+	        header('location: index.php?cible=profil');
 	  	}
 
   	else
