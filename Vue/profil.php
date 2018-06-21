@@ -23,10 +23,10 @@
             <span class="profil">Profil</span>
 
             <div class="col-xs-6 col-md-offset-3 ">
-                <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color: #2f0c1b"><h3 style="color: white">Informations sur l'utilisateur</h3></div>
-                    <div class="panel-body">
-                        <table style="color: black">
+                <div class="panel panel-default" style="background-color: #2f0c1b">
+                    <div class="panel-heading" style="background-color: #2f0c1b" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
+                    <div class="panel-body" style="background-color: #6a1b3c">
+                        <table style="color: white">
                             <tr>
                                 <td>Nom</td>
                                 <td>: <?php echo $_SESSION['nom'];?></td>
@@ -59,8 +59,8 @@
                                     echo $_SESSION['pays']; ?></span></td>
                             </tr>
                         </table>
-
                     </div>
+                    <br>
                      <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
                      <a href="index.php?cible=modifierMDP"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
                 </div>
