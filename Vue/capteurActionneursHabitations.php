@@ -11,6 +11,9 @@ $temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND idus
 $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
 $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
 
+$inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'Interrupteur\' AND iduser =\''.$_SESSION['ID'].'\'');
+$volet= $bdd->query('SELECT * FROM actionneurs WHERE type = \'volet\' AND iduser =\''.$_SESSION['ID'].'\'');
+
 $nbLigne=0;
 $nbLigne2=0;
 $nbLigne3=0;
@@ -27,6 +30,7 @@ $nbColonne3=5;
 
 	<link href="Vue/CSS/capteurActionneursHabitation.css" rel="stylesheet">
 	<link href="Vue/CSS/all.css" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -73,20 +77,10 @@ $nbColonne3=5;
 										?>
 										<td>
 										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button>
+                                            
                                             <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
 
-                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
-                                                <div class="popup-block">
-                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
-                                                    <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
-                                                        <input type="submit" value="Supprimer" class="boutonSup">
-                                                    </form>
-                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                         
 
 										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
                                          
@@ -96,23 +90,7 @@ $nbColonne3=5;
 										<span> Luminosité :  </span><p id="trame"></p>
 										</div>
 										</td>
-										
-					<style>
-                    
-                    #fenetreModale<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
-                    
-                    </style>
+				
 
 										<?php $nbLigne++;}?>
 
@@ -125,77 +103,7 @@ $nbColonne3=5;
 						</div>
 				</div>
 
-				<div class="couleur1">
-					<div class="bande2">
-					<div class="centre2">
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');"><span class="styleonglet">Température</span></button>
-	 				</div>
-	 				</div>
-	 					<div class="tonDiv3" id="tonDiv3">
-	 						<div class="luminosite">
-		 				<?php echo	'<table class="tableau">
-									<tbody>
-										<tr id="ligne2">';
-										while ($donnees1 = $temp->fetch()){
-										    $temperature=$donnees1['temperature'];
-                                            $id=$donnees1['id'];
-                                            if (($nbLigne2 % $nbColonne2) ==0 && $nbLigne2 !=0) {
-                                                echo '</tr><tr>';
-                                                $nbLigne2 = 0;
-                                            }
-
-										?>
-										<td>
-										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button><br>
-                                            <img class="styleCapteur" src="Vue/images/temperature.png" alt="image capteur temperature" height="50px" width="50px">
-
-                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
-                                                <div class="popup-block">
-                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
-                                                    <div class="annulerSupprimer">
-                                                        <a href="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
-                                                            <button class="boutonSup">Supprimer</button></a>
-
-                                                        </form>
-                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                   <?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
-                                         
-                                            while ($donnees2 = $nomPiece->fetch()){?>
-                                            
-                                        <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> T° :<span id="trame"></span> </span><?php echo $temperature[0].$temperature[1].$temperature[2].','.$temperature[3].'°C'; ?>
-										</div>
-										</td>
-					<style>
-                    
-                    #fenetreModale<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
-                    
-                    </style>
-
-                                            <?php $nbLigne2++;}?>
-										
-
-							<?php	echo	'</tbody>
-								</table>';?>
-
-							</div>
-						</div>
-				</div>
+				
 				<div class="couleur1">
 				<div class="bande2">
 					<div class="centre2">
@@ -217,19 +125,9 @@ $nbColonne3=5;
 										?>
 										<td>
 										<div class="case">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button>
+                                            
                                             <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
-                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
-                                                <div class="popup-block">
-                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
-                                                    <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
-                                                            <input type="submit" value="Supprimer" class="boutonSup">
-                                                        </form>
-                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
 										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
@@ -238,23 +136,9 @@ $nbColonne3=5;
 										<span> Présence : </span><span id="trame"></span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
-					<style>
-                    
-                    #fenetreModale<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
-                    
-                    </style>
-                                            <?php $nbLigne3++;}?>
+										
+										
+					           <?php $nbLigne3++;}?>
 
 
                                 <?php	echo '</tbody>
@@ -279,20 +163,130 @@ $nbColonne3=5;
 				<div class="bande2">
 					<div class="centre2">
 					<button id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tondiv2');"><span class="styleonglet">Lumière</span></button>
+					
 					</div>
 					</div>
 						<div class="tondiv2" id="tondiv2">
 							<div class="luminosite">
-	 							<table class="tableau" border="1">
+	 								<?php	echo	'<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne1">
+										<tr id="ligne4">';?>
 										
+										<?php 
+										while ($donnees1 = $inter->fetch()){
+										    $id=$donnees1['ID'];
+										?>
+										<td>
+										<div class="case2">
+										
+                                            
+                                            
+                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60px">
+                                          <span class="nom"><?php echo $donnees1['nom']?> </span><br>
+                                  
+                               		
+                                    
+                                            <div class="inter">
+                                            <div class="onoffswitch<?php echo $donnees1['ID']?>">
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc()'>
+                                            <label class="onoffswitch-label<?php echo $donnees1['ID']?>" for="myonoffswitch<?php echo $donnees1['ID']?>">
+                                            <span class="onoffswitch-inner<?php echo $donnees1['ID']?>"></span>
+                                            <span class="onoffswitch-switch<?php echo $donnees1['ID']?>"></span>
+                                            </label>
+                                            </div>                 
+                                            </div>
+										</div>
+										</td>
+										
+										
+										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-										 <td><a href="index.php?cible=ajoutActionneur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+                                        <script>
+                                        function loadDoc() {
+                                          var xhttp = new XMLHttpRequest();
+                                          if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
+                                          xhttp.onreadystatechange = function() {
+                                            if (this.readyState == 4 && this.status == 200) {
+                                             document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
+                                            }
+                                          };
+                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1111", true);
+                                          xhttp.send();
+                                        }
+                                          else {
+                                        	  xhttp.onreadystatechange = function() {
+                                                  if (this.readyState == 4 && this.status == 200) {
+                                                   document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
+                                                  }
+                                                };
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2222", true);
+                                                xhttp.send();
+                                          }
+                                              }
+                                          
+                                        
+                                        </script>
+                                        
+                                        
+										<style>
+										/*interrupteur*/
 
-										</tr>
-									</tbody>
-								</table>
+                                        .onoffswitch<?php echo $donnees1['ID']?> {
+                                            position: relative; width: 90px;
+                                            -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?> {
+                                            display: none;
+                                        }
+                                        .onoffswitch-label<?php echo $donnees1['ID']?> {
+                                            display: block; overflow: hidden; cursor: pointer;
+                                            border: 2px solid #999999; border-radius: 20px;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?> {
+                                            display: block; width: 200%; margin-left: -100%;
+                                            transition: margin 0.3s ease-in 0s;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:before, .onoffswitch-inner<?php echo $donnees1['ID']?>:after {
+                                            display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+                                            font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+                                            box-sizing: border-box;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:before {
+                                            content: "ON";
+                                            padding-left: 10px;
+                                            background-color: #34A7C1; color: #FFFFFF;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:after {
+                                            content: "OFF";
+                                            padding-right: 10px;
+                                            background-color: #EEEEEE; color: #999999;
+                                            text-align: right;
+                                        }
+                                        .onoffswitch-switch<?php echo $donnees1['ID']?> {
+                                            display: block; width: 18px; margin: 6px;
+                                            background: #FFFFFF;
+                                            position: absolute; top: 0; bottom: 0;
+                                            right: 56px;
+                                            border: 2px solid #999999; border-radius: 20px;
+                                            transition: all 0.3s ease-in 0s; 
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-inner<?php echo $donnees1['ID']?> {
+                                            margin-left: 0;
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-switch<?php echo $donnees1['ID']?> {
+                                            right: 0px; 
+                                        }
+                                        										
+                                        
+                                        
+                                        </style>
+										
+                                                        <?php $nbLigne3++;}?>
+                                                        
+            
+                                            <?php	echo '</tbody>
+            								</table>';?>
+										
 							</div>
 						</div>
 				</div>
@@ -307,7 +301,7 @@ $nbColonne3=5;
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne2">
-										 <td><a href="index.php?cible=ajoutActionneur"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										 
 										</tr>
 									</tbody>
 								</table>

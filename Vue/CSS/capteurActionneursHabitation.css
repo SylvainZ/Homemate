@@ -59,6 +59,17 @@ td
     font-size: 14px;
 
 }
+.case2
+{
+	background-color:#9998b2;
+	padding:10px;
+	margin:10px;
+	border-radius:6px;
+    width: 10vw;
+    height: 10vw;
+    font-size: 14px;
+
+}
 
 span
 {
@@ -214,6 +225,20 @@ border:none;
 	background-color: #471229 ;
 
 }
+
+.nom
+{
+	
+	padding-left:2vw;
+	position:relative;
+	bottom:5vw;
+}
+.inter
+{
+	margin-left:1.5vw;
+	margin-top:2vw;
+	
+}
 .menu
 {
 	background-color: #2f0c1b;
@@ -325,6 +350,8 @@ button.active
     margin-left: auto;
     margin-right: auto;
     position: relative;
-	bottom: 8px;
+	bottom: 1vw;
 }
+
+
 
