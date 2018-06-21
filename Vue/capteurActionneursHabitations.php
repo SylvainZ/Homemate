@@ -87,7 +87,7 @@ $nbColonne3=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                                 <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span> Luminosité :  </span><p id="trame"></p>
+										<span id="capteur"> Luminosité :  </span><p id="trame"></p>
 										</div>
 										</td>
 				
