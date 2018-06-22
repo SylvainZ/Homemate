@@ -9,6 +9,7 @@
         <title>Messagerie</title>
     </head>
 
+    <!--Debut de la page-->
     <body>
     	<!--Mise en place de la barre de connexion-->
 		<header>
@@ -24,6 +25,8 @@
     	<span class="nomSite">HOMEMATE</span>-->
     	<div class="rectangle">
             <div class="col1">
+
+                <!--Debut du formulaire-->
                 <form action="index.php?cible=messagerie" method="post" class="rectangle">
                     <p>
                         <label for="Nom">
@@ -48,11 +51,15 @@
 
                         <label for="message">Comment pouvons-nous vous aider?</label><br />
                         <textarea class="zoneMessage" name="message" rows="12" cols="87"></textarea><br />
+
+                            <!--Bouton d'envoie du message-->
                         <input type="submit"  class="zoneEnvoie" name="Envoyer" value="Envoyer"/>
                     </p>
                 </form>
             </div>
         </div>
+
+            <!--Debut du footer-->
 	    <footer>
 			<?php include("footer.php"); ?>
     	</footer>
