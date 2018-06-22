@@ -55,12 +55,12 @@
                             <td>:<?php echo $_SESSION['adresse'];?></td>
                         </tr>
                         <tr>
-                            <td>         </td>
+                            <td></td>
                             <td><?php echo $_SESSION['codePostal'].' '.$_SESSION['ville'] ?> </td>
 
                         </tr>
                         <tr>
-                            <td>         </td>
+                            <td></td>
                             <td><?php echo $_SESSION['pays'];?></span></td>
                         </tr>
                     </table>
