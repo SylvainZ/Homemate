@@ -47,7 +47,7 @@ if (isset($_POST["modifier"]))
 
   	else
 	  	{
-	        echo "Vérifiez saisie";
+	        echo "Vérifiez saisie aaa";
 	    }
 	}
 }
