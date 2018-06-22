@@ -8,19 +8,22 @@
 </head>
 
 <body>
+<!--Mise en place de la barre de connexion-->
     <header>
             <?php include("Vue/header.php") ?>
     </header>
-
+    <!--Début de la page de modifier profil -->
 <h1>Modifier profil</h1>
 
 <div class="bloc">
+    <!--Debut du formulaire-->
     <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data" onsubmit="return modifProfil()">
     
      <table>
        	   <tr>
        	      <td>
             		<table>
+                        <!--Debut des champs de input-->
         		 			<tr>
         				       <td>Nom:</td>
         				       <td><input type="text" name="nom" placeholder="nom" value= <?php echo $_SESSION['nom'];?> ></td>
@@ -98,17 +101,20 @@
         		</td>
         	</tr>
         	</table>
-			   
 
+        <!--Bouton d'envoie-->
             <input class="valider" type="submit" value="Envoyer les modifications" class="boutonEnvoyerModification"/>
 
+        <!--Bouton pour revenir à la page de profil-->
             <a href="index.php?cible=profil" ><input class="valider" type="button" value="Annuler"/></a>
     </form>
 
     </div>
 
+<!--Debut du javascript-->
     <script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
 
+<!--Debut du footer-->
 <footer>
         <?php include("Vue/footer.php") ?>
 </footer>

@@ -10,7 +10,7 @@
     </head>
 
     <body>
-    	<!--Mise en place de la barre de conexion-->
+    	<!--Mise en place de la barre de connexion-->
 		<header>
 			<?php include("header.php"); ?>
 		</header>
