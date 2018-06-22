@@ -9,11 +9,11 @@
     </head>
 	
 	 <body >
-	 		<!--Mise en place de la barre de conexion-->
+	 		<!--Mise en place de la barre de connexion-->
 		<header>
 			<?php include("header.php"); ?>
 		</header>
-
+            <!--Début de la page de Message -->
             <div id="page">
 			<h2>Message</h2>
 			<div class="case">	

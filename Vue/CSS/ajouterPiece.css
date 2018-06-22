@@ -119,3 +119,12 @@ td
   width:30vw;
 }
 
+#tailleNom
+{
+  font-family:quando;
+  font-weight:bold;
+  color:red;
+  text-align:center;
+  font-size:0.8em;
+}
+
