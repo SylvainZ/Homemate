@@ -29,14 +29,34 @@
             <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 20px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
             <div class="panel-body" style="background-color: #6a1b3c">
                 <div class="br">
-                    <span class="texte"> Nom: <?php echo $_SESSION['nom'];?></span><br>
-                    <span class="texte"> Prénom: <?php echo $_SESSION['prenom'];?></span><br>
-                    <span class="texte"> Age: <?php echo $_SESSION['age'];?> ans</span><br>
-                    <span class="texte"> Email: <?php echo $_SESSION['email'];?></span><br>
-                    <span class="texte"> Téléphone: 0<?php echo $_SESSION['numTel'];?></span><br>
-                    <span class="texte"> Adresse: <?php echo $_SESSION['adresse'].' <br/> 
-                '.$_SESSION['codePostal'].' '.$_SESSION['ville'].' <br/> 
-                '.$_SESSION['pays'];?></span><br>
+                    <table style="color: white">
+                        <tr>
+                            <td>Nom</td>
+                            <td>: <?php echo $_SESSION['nom'];?></td>
+                        </tr>
+                        <tr>
+                            <td>Prénom </td>
+                            <td>: <?php echo $_SESSION['prenom'];?></td>
+                        </tr>
+                        <tr>
+                            <td>Age </td>
+                            <td>: <?php echo $_SESSION['age'];?> ans </td>
+                        </tr>
+                        <tr>
+                            <td>Email </td>
+                            <td>: <?php echo $_SESSION['email'];?> </td>
+                        </tr>
+                        <tr>
+                            <td> Numéro de téléphone</td>
+                            <td>: <?php echo $_SESSION['numTel'];?></td>
+                        </tr>
+                        <tr>
+                            <td> Adresse</td>
+                            <td>:<?php echo $_SESSION['adresse'].' 
+                '.$_SESSION['codePostal'].' '.$_SESSION['ville'].' 
+                '.$_SESSION['pays'];?></span></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <br>
