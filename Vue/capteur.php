@@ -358,7 +358,7 @@ $nbColonne4=5;
                                              document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                             }
                                           };
-                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1111", true);
+                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1", true);
                                           xhttp.send();
                                         }
                                           else {
@@ -367,7 +367,7 @@ $nbColonne4=5;
                                                    document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                                   }
                                                 };
-                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2222", true);
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2", true);
                                                 xhttp.send();
                                           }
                                               }

@@ -1,18 +1,5 @@
 <?php
-session_start();
-//include('../Modele/connexion.php');
-$ch = curl_init();
-curl_setopt(
-    $ch,
-    CURLOPT_URL,
-    "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=011E"
-);
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-$data = curl_exec($ch);
-curl_close($ch);
-
-function envoieTrameBDD()
+function envoieTrame($TYP1, $ValeurAns1)
 {   /** 15(Trame) + (date) */
     $TRA = "1";
     $OBJ1 = "0";
@@ -20,11 +7,11 @@ function envoieTrameBDD()
     $OBJ3 = "1";
     $OBJ4 = "E";
     $REQ = "2";
-    $TYP = "5";
+    $TYP = "".$TYP1;
     $NUM1 = "0";
     $NUM2 = "1";
 
-    $ValeurAns="1";
+    $ValeurAns="".$ValeurAns1;
 
     $ANS1 = $ValeurAns;
     $ANS2 = $ValeurAns;
@@ -66,7 +53,7 @@ function envoieTrameBDD()
     //echo "envoyé";
 }
 
-envoieTrameBDD();
+
 
 
 //include('../Modele/donneesPasserelle.php');
