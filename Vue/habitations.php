@@ -39,6 +39,7 @@ $nbColonne=5;
 		<tbody>
 			<tr id="ligne1">';
                 while ($donnees1 = $habitation->fetch()){
+                    /*permet de mettre à la ligne l'image quand il y a nbcolonne images*/
                     if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0) {
                         echo '</tr><tr>';
                         $nbLigne = 0;
@@ -48,9 +49,11 @@ $nbColonne=5;
 	                  <td id="colonneLogement">
                         <div class="case">
                             <div id="supModif">
+                            <!-- bouton supprimer et modifier -->
                             <button class="supprimerlog"><a class="boutonSupprimerlog" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
                             <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['ID']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
                             </div>
+                            <!-- affiche le pop up quand on clique sur le bouton supprimerlog -->
                             <div id="fenetreModale<?php echo $donnees1['ID']?>">
                                 <div class="popup-block">
                                     <h3>Voulez-vous vraiment supprimer ce logement ?</h3>
@@ -62,7 +65,7 @@ $nbColonne=5;
                                     </div>
                                 </div>
                             </div>
-
+							 <!-- affiche le pop up quand on clique sur le bouton posParametre -->
                             <div id="fenetreModaleBis<?php echo $donnees1['ID']?>">
                                 <div class="popup-block">
                                     <h3 class="log modiflog">Modification du logement</h3>
@@ -92,7 +95,7 @@ $nbColonne=5;
                                 </div>
                             </div>
                             
-                            
+                            <!-- afficher les image en fonction des types -->
                             <?php
                             if ($donnees1['Type']=='appartement')
                             {?>
@@ -115,6 +118,7 @@ $nbColonne=5;
                         </div>
                     </td>
                     
+                    <!-- afficher les fenetres-popups avec du css et non javascript -->
                     <style>
                     
                     #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>

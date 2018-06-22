@@ -68,6 +68,8 @@ $nbColonne=7;
 		<tbody>
 			<tr id="ligne1">';
                 while ($donnees1 = $piece->fetch()){
+                    
+                    /* permet de mettre à la ligne lorsqu'il y a nbcolonnes images*/
                     if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0) {
                         echo '</tr><tr>';
                         $nbLigne = 0;
@@ -76,10 +78,11 @@ $nbColonne=7;
 	                  <td>
                         <div class="case">
                         					<div id="supModif">
+                        					<!-- bouton supprimer et  modifier-->
                                           	<button class="supprimerlog"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
                                              <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['ID']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
                                             </div>
-                                         
+                                         	<!-- fenetre supprimer -->
                                             <div id="fenetreModale<?php echo $donnees1['ID']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer cette pièce ?</h3>
@@ -119,8 +122,9 @@ $nbColonne=7;
                                                     </div>
                                                 </div>
                                             </div>
+                     <!-- affiche les images de piece  -->
                           <?php
-
+                    
                             if ($donnees1['Type']=='salon')
                     {?>
                      <a href ="index.php?cible=capteur&ID=<?php echo $donnees1['ID']?>"> <img class="styleHabitation" src="Vue/images/salon.png" alt="image appartement" height="112"></a>
@@ -175,7 +179,7 @@ $nbColonne=7;
                             </div>
                         </div>
                     </td>
-                    
+                    <!-- affiche les fenetres pour supprimer et modifer -->
                     <style>
                     
                     #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
