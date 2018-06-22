@@ -99,11 +99,12 @@ $nbColonne=7;
 
                                                     <div class="logement">
 
-                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierPiece&ID=<?php echo $donnees1['ID']?>&id=<?php echo $_GET['ID']?>">
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierPiece&ID=<?php echo $donnees1['ID']?>&id=<?php echo $_GET['ID']?>" onsubmit=" return verifPiece();">
                                                             <div class="form2">
                                                                 <div class="champnom ligne3">
                                                                     <label for="nom" class="inputNom">Nom :</label></br>
-                                                                    <input type="text" name="nom" id="piece" value="<?php echo $donnees1['Nom']?>"/><br>
+                                                                    <input type="text" name="nom" id="nomPiece" value="<?php echo  'salle'.$donnees1['Nom']?>"/><br>
+                                                                    <div id="tailleNom"></div>
                                                                     <label for="superficie" class="inputNom">Superficie :</label></br>
                                                                     <input type="number" name="superficie" id="piece" value="<?php echo $donnees1['Superficie']?>"/></br>
                                                                 </div>
@@ -206,7 +207,7 @@ $nbColonne=7;
 
 
             <?php include("Vue/footer.php") ?>
-
+	<script src="Controleur/JS/piece.js" type="text/javascript"></script>
 
   </body>
 

@@ -16,7 +16,7 @@
 <div id="page">
 		<div class="piece">
 
-		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>" onsubmit=" return verifPiece();">
+		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>" onsubmit="return verifPiece();">
 			<span class="piece2">Ajouter une pièce</span>
 
             <table>
@@ -24,7 +24,7 @@
                     <td>
                         <div class="champnom ligne1">
                             <label for="nom" class="inputNom">Nom <br></label>
-                            <input type="text" name="nom" id="nom"/>
+                            <input type="text" name="nom" id="nomPiece"/>
                             <div id="tailleNom"></div>
                         </div>
                     </td>
