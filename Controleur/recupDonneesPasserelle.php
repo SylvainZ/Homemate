@@ -39,12 +39,12 @@ function insererTrameBDD($data,$bdd)
         /*echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");*/
 
         $values = array(
-            $t,
-            $o,
-            $r,
-            $c,
-            intval($n),
-            $v,
+            $t,//type de trame
+            $o,//numero d'objet
+            $r,//type de requete
+            $c,//type de capteur
+            intval($n),//numero de capteur
+            $v,//va
             $a,
             $x,
             $year.'-'.$month.'-'.$day,
@@ -78,7 +78,10 @@ function insererTrameBDD($data,$bdd)
 function analyseTrame($bdd){
     $req_valeurCapteur = $bdd->query('SELECT valeurCapteur FROM passerelle ORDER BY ID DESC LIMIT 1');
     $valeurCapteur=$req_valeurCapteur->fetch();
-    echo hexdec($valeurCapteur['valeurCapteur']);
+    if (hexdec($valeurCapteur['valeurCapteur'])>900){
+        echo "Il y a quelqu'un";
+    }
+    //echo hexdec($valeurCapteur['valeurCapteur']);
 }
 
 include('../Modele/donneesPasserelle.php');
