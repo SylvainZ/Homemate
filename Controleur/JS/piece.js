@@ -8,7 +8,7 @@ function verifPiece(){
     //si le numéro de téléphone n'est pas à 10 chiffres
     if (taille>10)
     {
-        document.getElementById("tailleNom").innerHTML = "Assurez-vous de ne pas dépasser 10 carctères";
+        document.getElementById("tailleNom").innerHTML = "Assurez-vous de ne pas dépasser 10 caractères";
         faux+=1;
     }
 

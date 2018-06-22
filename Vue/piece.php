@@ -175,6 +175,23 @@ $nbColonne=7;
                         </div>
                     </td>
                     
+                    <style>
+                    
+                    #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['ID']?>:target, #fenetreModaleBis<?php echo $donnees1['ID']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
+                    
                       <?php $nbLigne++;}?>
                 
                 <td><a href="index.php?cible=ajoutPiece&ID=<?php echo $id?>"><input type="button" name="bu" id="bu" value="+" class="bouton1"></a></td>

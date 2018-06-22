@@ -23,8 +23,8 @@
             <span class="profil">Profil</span>
 
             <div class="col-xs-6 col-md-offset-3 ">
-                <div class="panel panel-default" style="background-color: #2f0c1b">
-                    <div class="panel-heading" style="background-color: #2f0c1b" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
+                <div class="panel panel-default" style="background-color: #2f0c1b; border-radius: 10px">
+                    <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 10px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
                     <div class="panel-body" style="background-color: #6a1b3c">
                         <table style="color: white">
                             <tr>
@@ -62,7 +62,7 @@
                     </div>
                     <br>
                      <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
-                     <a href="index.php?cible=modifierMDP"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
+                     <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
                 </div>
             </div>
                  </div>
