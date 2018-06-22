@@ -25,6 +25,7 @@
                         <div class="champnom ligne1">
                             <label for="nom" class="inputNom">Nom <br></label>
                             <input type="text" name="nom" id="nom"/>
+                            <div id="tailleNom"></div>
                         </div>
                     </td>
                     <td>

@@ -102,7 +102,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
+                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                         <input type="submit" value="Supprimer" class="boutonSup">
                                                     </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -148,6 +148,23 @@ $nbColonne4=5;
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
+										
+										<style>
+                    
+                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
 				
 
 										<?php $nbLigne++;}?>
@@ -193,7 +210,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
+                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -231,6 +248,23 @@ $nbColonne4=5;
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
+										
+										<style>
+                    
+                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
 					
 										<?php $nbLigne3++;}?>
 										
@@ -292,7 +326,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerActionneur&id=<?php echo $donnees1['ID']?>">
+                                                        <form method="post" action="index.php?cible=supprimerActionneur&id=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -391,7 +425,23 @@ $nbColonne4=5;
                                         .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-switch<?php echo $donnees1['ID']?> {
                                             right: 0px; 
                                         }
-            
+                                        
+                                        
+                                       
+                    
+                                        #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
+                                        {
+                    	                display: none;
+                    	                position: fixed;
+                    	                top:0; right:0; bottom:0; left:0;
+                    	                background-color: rgba(0, 0, 0, 0.5);
+                    	                z-index: 1000;}
+                    
+                                        #fenetreModale<?php echo $donnees1['ID']?>:target, #fenetreModaleBis<?php echo $donnees1['ID']?>:target
+                                        {
+                    	                   display: block;
+                                        }
+                                        
                     
                                         </style>
                                         <?php $nbLigne4++;}?>

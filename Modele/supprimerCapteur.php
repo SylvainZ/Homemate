@@ -6,7 +6,7 @@ if(isset($_GET['id'])&&!empty($_GET['id'])) {
 
     //supprime un capteur
     $req = $bdd->query('DELETE FROM capteur WHERE id=\'' . $_GET['id'] . '\'');
-    include('Vue/capteurs.php');
+    include('Vue/capteur.php');
 }
 else {}
 ?>
