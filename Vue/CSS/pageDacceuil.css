@@ -24,7 +24,6 @@
 
 /*Image micro et capteur*/
 .titre4{
-    background: #917e86;
     width: 50vw;
     height: 20vw;
     font-size: 1em;
@@ -39,7 +38,7 @@
 .titre3{
     background: #917e86;
     width: 40vw;
-    height: 410px;
+    height: 27vw;
     margin-left: 3vw;
     border-radius: 10px;
 }
@@ -75,7 +74,7 @@
 .images3{
     background: #917e86;
     width: 40vw;
-    height: 25vw;
+    height: 27vw;
     border-radius: 10px;
 }
 .image{

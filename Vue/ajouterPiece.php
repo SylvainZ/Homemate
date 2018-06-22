@@ -16,14 +16,15 @@
 <div id="page">
 		<div class="piece">
 
-		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>">
+		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>" onsubmit=" return verifPiece();">
 			<span class="piece2">Ajouter une pièce</span>
 
 			<div class="champnom ligne1">
 				<label for="nom" class="inputNom">Nom <br></label>
-				<input type="text" name="nom" id="nom"/><br>	
-			</div>
-
+				<input type="text" name="nom" id="nom"/><br>
+				<div id="tailleNom"></div><br/>	
+			</div><br>
+			
 			<div class="champnom ligne1 colonne1">
 				<label for="type" class="inputNom">Type</label><br>
 					<select name="type" id="type" required/>
@@ -35,7 +36,7 @@
 					<option value="toilettes">Toilettes</option>
 					<option value="autres">Autres</option>
 				</select>			
-				</div>
+				</div><br/>
 
 			<div class="champnom ligne2">
 				<label for="Superficie" class="inputNom">Superficie</label><br>
@@ -58,6 +59,8 @@
 	Copyright 2018 HomeMate | Tous droits réservés
 			</p>
 		</footer>
+		
+		<script src="Controleur/JS/piece.js" type="text/javascript"></script>
     </body>
 
 </html>

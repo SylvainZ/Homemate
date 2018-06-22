@@ -17,9 +17,11 @@ $volet= $bdd->query('SELECT * FROM actionneurs WHERE type = \'volet\' AND iduser
 $nbLigne=0;
 $nbLigne2=0;
 $nbLigne3=0;
+$nbLigne4=0;
 $nbColonne=5;
 $nbColonne2=5;
 $nbColonne3=5;
+$nbColonne4=6;
 ?>
 
 <html>
@@ -82,7 +84,7 @@ $nbColonne3=5;
 
                                          
 
-										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
+										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.id=\''.$donnees1['id'].'\'');
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
@@ -128,11 +130,11 @@ $nbColonne3=5;
                                             
                                             <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
                                             
-										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.idpiece=\''.$donnees1['idpiece'].'\'');
+										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.id=\''.$donnees1['id'].'\'');
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
-                                            
-                                        <span><?php echo $donnees2['Nom'];}?></span> <br>
+                                           
+                                        <span><?php echo $donnees2['Nom']; }?></span> <br>
 										<span> Présence : </span><span id="trame"></span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
@@ -175,6 +177,9 @@ $nbColonne3=5;
 										<?php 
 										while ($donnees1 = $inter->fetch()){
 										    $id=$donnees1['ID'];
+										    if (($nbLigne4 % $nbColonne4) ==0 && $nbLigne4 !=0) {
+										        echo '</tr><tr>';
+										        $nbLigne4 = 0;}
 										?>
 										<td>
 										<div class="case2">
@@ -183,12 +188,17 @@ $nbColonne3=5;
                                             
                                             <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60px"><br>
                                           <span class="nom"><?php echo $donnees1['nom']?> </span><br>
+                                          <?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN actionneurs ON piece.ID=actionneurs.idpiece AND actionneurs.id=\''.$donnees1['ID'].'\'');
+                                         
+                                            while ($donnees2 = $nomPiece->fetch()){?>
+                                            
+                                        <span><?php echo $donnees2['Nom'];}?></span> <br>
                                   
                                		
                                     
                                             <div class="inter">
                                             <div class="onoffswitch<?php echo $donnees1['ID']?>">
-                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc()'>
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc<?php echo $donnees1['ID']?>()'>
                                             <label class="onoffswitch-label<?php echo $donnees1['ID']?>" for="myonoffswitch<?php echo $donnees1['ID']?>">
                                             <span class="onoffswitch-inner<?php echo $donnees1['ID']?>"></span>
                                             <span class="onoffswitch-switch<?php echo $donnees1['ID']?>"></span>
@@ -202,7 +212,7 @@ $nbColonne3=5;
 										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
                                         <script>
-                                        function loadDoc() {
+                                        function loadDoc<?php echo $donnees1['ID']?>() {
                                           var xhttp = new XMLHttpRequest();
                                           if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
                                           xhttp.onreadystatechange = function() {
@@ -281,7 +291,7 @@ $nbColonne3=5;
                                         
                                         </style>
 										
-                                                        <?php $nbLigne3++;}?>
+                                                        <?php $nbLigne4++;}?>
                                                         
             
                                             <?php	echo '</tbody>
