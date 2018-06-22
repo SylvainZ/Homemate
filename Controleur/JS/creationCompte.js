@@ -30,7 +30,7 @@
 	 var mdp = document.form.password.value;
 	 
 	 if (mdp.length<7){
-		 alert("Mot de passe trop court (minimum 7 caractères)")
+		 alert("Mot de passe trop court (minimum 7 caractères)");
 		 document.form.password.focus();
 		 return false;
 	 }
