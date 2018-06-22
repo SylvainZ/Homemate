@@ -16,7 +16,7 @@
 <div id="page">
 		<div class="piece">
 
-		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>">
+		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>" onsubmit=" return verifPiece();">
 			<span class="piece2">Ajouter une pièce</span>
 
             <table>
@@ -25,6 +25,7 @@
                         <div class="champnom ligne1">
                             <label for="nom" class="inputNom">Nom <br></label>
                             <input type="text" name="nom" id="nom"/>
+                            <div id="tailleNom"></div>
                         </div>
                     </td>
                     <td>
@@ -52,6 +53,7 @@
                 </tr>
             </table>
 
+
 			<div class="valid">
 				<input type="submit" name="valider" value="Valider" class="bouton">
 
@@ -63,7 +65,11 @@
 	</div>
 </div>
 	    <footer>
-            <?php include("footer.php") ?>
+			<?php include("footer.php") ?>
+		</footer>
+		
+		<script src="Controleur/JS/piece.js" type="text/javascript"></script>
+
     </body>
 
 </html>

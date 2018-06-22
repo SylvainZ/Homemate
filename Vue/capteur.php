@@ -13,11 +13,21 @@ if(isset($_GET['ID'])){
     $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece=\''.$_GET['ID'].'\'');
     $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece=\''.$_GET['ID'].'\'');
     $volet = $bdd->query('SELECT * FROM actionneurs WHERE type = \'volet\' AND idpiece=\''.$_GET['ID'].'\'');
-    $inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'interrupteur\' AND idpiece=\''.$_GET['ID'].'\'');
+    $inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'Interrupteur\' AND idpiece=\''.$_GET['ID'].'\'');
 }
 
-
+$nbLigne=0;
+$nbLigne2=0;
+$nbLigne3=0;
+$nbLigne4=0;
+$nbColonne=5;
+$nbColonne2=5;
+$nbColonne3=5;
+$nbColonne4=5;
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html>
@@ -72,12 +82,13 @@ if(isset($_GET['ID'])){
 					</div>
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
-	 							<table class="tableau" border="1">
-									<tbody>
-										<tr id="ligne1">
-										<?php 
+	 							<?php echo 	'<table class="tableau"><tbody>
+										<tr id="ligne1">';
 										while ($donnees1 = $lumi->fetch()){
-										   // $rows[]=
+										  if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0){
+										      echo '</tr><tr>';
+										      $nbLigne=0;
+                                          }
 										?>
 										<td>
 										<div class="case">
@@ -91,7 +102,7 @@ if(isset($_GET['ID'])){
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
+                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                         <input type="submit" value="Supprimer" class="boutonSup">
                                                     </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -137,9 +148,26 @@ if(isset($_GET['ID'])){
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
+										
+										<style>
+                    
+                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
 				
 
-										<?php }?>
+										<?php $nbLigne++;}?>
 
 
 										 <td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td> 
@@ -159,12 +187,16 @@ if(isset($_GET['ID'])){
 	 				</div>
 	 					<div class="tonDiv4" id="tonDiv4">
 	 						<div class="luminosite">
-		 						<table class="tableau" border="1">
+		 						<?php	echo	'<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne3">
-										<?php 
+										<tr id="ligne3">';
+
 										while ($donnees1 = $pres->fetch()){
 										    $id=$donnees1['id'];
+                                            if (($nbLigne3 % $nbColonne3) ==0 && $nbLigne3 !=0) {
+                                                echo '</tr><tr>';
+                                                $nbLigne3 = 0;
+                                            }
 										?>
 										<td>
 										<div class="case">
@@ -178,7 +210,7 @@ if(isset($_GET['ID'])){
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
+                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -216,8 +248,25 @@ if(isset($_GET['ID'])){
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
+										
+										<style>
+                    
+                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
+                    {
+	                display: none;
+	                position: fixed;
+	                top:0; right:0; bottom:0; left:0;
+	                background-color: rgba(0, 0, 0, 0.5);
+	                z-index: 1000;}
+
+                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
+                    {
+	                   display: block;
+                    }
+                    
+                    </style>
 					
-										<?php }?>
+										<?php $nbLigne3++;}?>
 										
 											<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
@@ -248,13 +297,16 @@ if(isset($_GET['ID'])){
 						</div>
 						<div class="tondiv2" id="tondiv2">
 							<div class="luminosite">
-	 							<table class="tableau" border="1">
+	 							<?php	echo	'<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne1">
+										<tr id="ligne4">';?>
 										
 										<?php 
 										while ($donnees1 = $inter->fetch()){
 										    $id=$donnees1['ID'];
+										    if (($nbLigne4 % $nbColonne4) ==0 && $nbLigne4 !=0) {
+										        echo '</tr><tr>';
+										        $nbLigne4 = 0;}
 										?>
 										<td>
 										<div class="case2">
@@ -274,7 +326,7 @@ if(isset($_GET['ID'])){
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerActionneur&id=<?php echo $donnees1['ID']?>">
+                                                        <form method="post" action="index.php?cible=supprimerActionneur&id=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -284,7 +336,7 @@ if(isset($_GET['ID'])){
                                             
                                             <div class="inter">
                                             <div class="onoffswitch<?php echo $donnees1['ID']?>">
-                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc()'>
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc<?php echo $donnees1['ID']?>()'>
                                             <label class="onoffswitch-label<?php echo $donnees1['ID']?>" for="myonoffswitch<?php echo $donnees1['ID']?>">
                                             <span class="onoffswitch-inner<?php echo $donnees1['ID']?>"></span>
                                             <span class="onoffswitch-switch<?php echo $donnees1['ID']?>"></span>
@@ -298,7 +350,7 @@ if(isset($_GET['ID'])){
 										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
                                         <script>
-                                        function loadDoc() {
+                                        function loadDoc<?php echo $donnees1['ID']?>() {
                                           var xhttp = new XMLHttpRequest();
                                           if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
                                           xhttp.onreadystatechange = function() {
@@ -373,16 +425,32 @@ if(isset($_GET['ID'])){
                                         .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-switch<?php echo $donnees1['ID']?> {
                                             right: 0px; 
                                         }
-            
+                                        
+                                        
+                                       
+                    
+                                        #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
+                                        {
+                    	                display: none;
+                    	                position: fixed;
+                    	                top:0; right:0; bottom:0; left:0;
+                    	                background-color: rgba(0, 0, 0, 0.5);
+                    	                z-index: 1000;}
+                    
+                                        #fenetreModale<?php echo $donnees1['ID']?>:target, #fenetreModaleBis<?php echo $donnees1['ID']?>:target
+                                        {
+                    	                   display: block;
+                                        }
+                                        
                     
                                         </style>
-										<?php }?>
+                                        <?php $nbLigne4++;}?>
+										
 
 										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>""> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 
-										</tr>
-									</tbody>
-								</table>
+										 <?php	echo '</tbody>
+            								</table>';?>
 							</div>
 						</div>
 				</div>

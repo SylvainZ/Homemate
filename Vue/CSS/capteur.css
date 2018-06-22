@@ -73,9 +73,9 @@ td
 .case2
 {
 	background-color:#9998b2;
-	padding:10px;
-	margin:10px;
-	border-radius:6px;
+	padding:0.7vw;
+	margin:0.7vw;
+	border-radius:1vw;
     width: 10vw;
     height: 10vw;
     font-size: 14px;
@@ -384,19 +384,4 @@ button.active
 	padding-left:2vw;
 }
 
-
- 
-                    [id*='fenetreModale'], [id*='fenetreModaleBis']
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                   [id*='fenetreModale'] :target,  [id*='fenetreModaleBis']:target
-                    {
-	                   display: block;
-                    }
-                    
 

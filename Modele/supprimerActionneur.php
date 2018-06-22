@@ -6,7 +6,7 @@ include('connexionBD.php');
 //supprime un actionneur
 if(isset($_GET['id'])&&!empty($_GET['id'])) {
     $req = $bdd->query('DELETE FROM actionneurs WHERE id=\'' . $_GET['id'] . '\'');
-    include('Vue/capteurs.php');
+    include('Vue/capteur.php');
 }
 else {}
 ?>
