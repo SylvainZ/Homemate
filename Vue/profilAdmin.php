@@ -41,7 +41,7 @@
             </div>
             <br>
             <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
-            <a href="index.php?cible=modifierMDP"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
+            <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
         </div>
     </div>
 </div>
