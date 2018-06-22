@@ -137,22 +137,7 @@ if(isset($_GET['ID'])){
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
-					<style>
-                    
-                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
-                    
-                    </style>
+				
 
 										<?php }?>
 
@@ -165,97 +150,7 @@ if(isset($_GET['ID'])){
 							</div>
 						</div>
 				</div>
-				<div class="couleur1">
-					<div class="bande2">
-					<div class="centre2">
-	 				<button id="bouton_tonDiv3" onclick="javascript:afficher_cacher('tonDiv3');"><span class="styleonglet">Température</span></button>
-	 				</div>
-	 				</div>
-	 					<div class="tonDiv3" id="tonDiv3">
-	 						<div class="luminosite">
-		 						<table class="tableau" border="1">
-									<tbody>
-										<tr id="ligne2">
-										<?php 
-										while ($donnees1 = $temp->fetch()){
-                                            $id=$donnees1['id'];
-										?>
-										<td>
-										<div class="case">
-											<div id="supModif">
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button>
-                                            <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['id']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
-                                            </div>
-                                            <img class="styleCapteur" src="Vue/images/temperature.png" alt="image capteur temperature" height="50px" width="50px">
-
-                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
-                                                <div class="popup-block">
-                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
-                                                    <div class="annulerSupprimer">
-                                                        <a href="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>">
-                                                            <button class="boutonSup">Supprimer</button></a>
-
-                                                        </form>
-                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- formulaire modification -->
-                                            <div id="fenetreModaleBis<?php echo $donnees1['id']?>">
-                                                <div class="popup-block">
-                                                    <h3 class="log modiflog">Modification du capteur</h3>
-
-                                                    <div class="logement">
-
-                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['id']?>">
-                                                            <div class="form2">
-                                                                <div class="champnom ligne3">
-                                                                    <label for="seuil" class="inputNom">Seuil :</label><br>
-                                                                    <input type="number" name="seuil" id="piece" value="<?php echo $donnees1['seuilT']?>"/>
-                                                                </div>
-                                                                <br> <br>
-                                                                <div class="valid">
-                                                                    <input type="submit" name="valider" value="Valider" class="bouton validLogement">
-
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                        <a class="annuler1" href="#en-tete"><button class="annuler1">Annuler</button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <span><?php echo $donnees1['piece']?></span>
-										<span> Température : </span><?php echo $donnees1['temperature']; ?>
-										</div>
-										</td>
-										
-					<style>
-                    
-                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
-                    
-                    </style>
-										<?php }?>
-										<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-				</div>
+				
 				<div class="couleur1">
 				<div class="bande2">
 					<div class="centre2">
@@ -321,22 +216,7 @@ if(isset($_GET['ID'])){
 										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
 										</div>
 										</td>
-					<style>
-                    
-                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
-                    
-                    </style>
+					
 										<?php }?>
 										
 											<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
@@ -402,13 +282,15 @@ if(isset($_GET['ID'])){
                                                 </div>
                                             </div>
                                             
+                                            <div class="inter">
                                             <div class="onoffswitch<?php echo $donnees1['ID']?>">
                                             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc()'>
                                             <label class="onoffswitch-label<?php echo $donnees1['ID']?>" for="myonoffswitch<?php echo $donnees1['ID']?>">
                                             <span class="onoffswitch-inner<?php echo $donnees1['ID']?>"></span>
                                             <span class="onoffswitch-switch<?php echo $donnees1['ID']?>"></span>
                                             </label>
-                                            </div>                 
+                                            </div>  
+                                            </div>               
                                             
 										</div>
 										</td>
@@ -433,7 +315,7 @@ if(isset($_GET['ID'])){
                                                    document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                                   }
                                                 };
-                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=0000", true);
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2222", true);
                                                 xhttp.send();
                                           }
                                               }
@@ -491,20 +373,7 @@ if(isset($_GET['ID'])){
                                         .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-switch<?php echo $donnees1['ID']?> {
                                             right: 0px; 
                                         }
-                                        										
-                                        
-                                        #fenetreModale<?php echo $donnees1['ID']?>
-                                        {
-                    	                display: none;
-                    	                position: fixed;
-                    	                top:0; right:0; bottom:0; left:0;
-                    	                background-color: rgba(0, 0, 0, 0.5);
-                    	                z-index: 1000;}
-                    
-                                        #fenetreModale<?php echo $donnees1['ID']?>:target
-                                        {
-                    	                   display: block;
-                                        }
+            
                     
                                         </style>
 										<?php }?>

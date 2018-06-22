@@ -56,11 +56,11 @@ h1
 {
 	background-color:#6a1b3d;
 	margin:auto;
-	
+	padding-bottom:10px;
 	padding-top:20px;
 	border-radius:10px;
 	width:40%;
-	height:25vw;
+	height:30vw;
 	color:white;
 	font-family:Quando;
 	font-size:1em;
@@ -75,7 +75,7 @@ h1
 }
 
 /*Personnalisation du champ Nom du capteur*/
-#nom_du_capteur
+#type_actionneur
 {
 	border-radius:5px;
 	width:30%;
@@ -83,7 +83,7 @@ h1
 }
 
 /*Personnalisation du champ Numéro de série*/
-#numero_de_serie
+#numero_de_serie, #nom_actionneur
 {
 	border-radius:5px;
 	width:30%;
