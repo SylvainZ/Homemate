@@ -70,10 +70,12 @@
                                 <td> <?php echo $_SESSION['pays']; ?></td>
                             </tr>
                         </table>
+
                     </div>
                     <br>
                      <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
-                     <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
+                     <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a>
+                    <a href="index.php?cible=autorisation"><input type=button value = "Gérer les autorisations" class="boutonModifProfil"/></a><br/><br/>
                 </div>
             </div>
                  </div>

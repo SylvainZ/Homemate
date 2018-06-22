@@ -7,8 +7,9 @@ include('connexionBD.php');
 //vérifie si la session est celle d'un utilisateur
 if (!isset($_SESSION['Admin']) ) {
 
+    //pour l'actualisation du profil
     if (isset($_SESSION['email'])) {
-        $req = $bdd->query('SELECT * FROM profil WHERE Email = \''.$_SESSION['email'].'\''); //à modifier pour faire en fonction de l'utilisateur
+        $req = $bdd->query('SELECT * FROM profil WHERE Email = \''.$_SESSION['email'].'\'');
 
         $donnees = $req->fetch();
 
