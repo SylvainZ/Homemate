@@ -44,10 +44,10 @@
                         <label for="selection">Pour la sélection : </label>
                         <input type='submit'/>
                         <select name="selection" id="selection">
-                            <option value="lu">Marquer comme lus</option>
-                            <option value="non_lu">Marquer comme non lus</option>
-                            <option value="supprimer">Supprimer</option>
+                            <option value="restaurer">Restaurer</option>
+                            <option value="supprimer">Supprimer définitivement</option>
                         </select><br/>
+                        </input>
 
                     </section>
                 </div>
