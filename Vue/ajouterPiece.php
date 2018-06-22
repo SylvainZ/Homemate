@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Ajouter un capteur</title>
+        <title>Ajouter une pièce</title>
         <link rel="stylesheet" href="Vue/CSS/ajouterPiece.css"/>
         <link rel="stylesheet" href="Vue/CSS/all.css"/>
     </head>
@@ -16,7 +16,7 @@
 <div id="page">
 		<div class="piece">
 
-		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>" onsubmit="return verifPiece();">
+		<form class="form1" method="post" action="index.php?cible=ajoutPiece2&ID=<?php echo $_GET['ID']?>" onsubmit="return verifPiece2();">
 			<span class="piece2">Ajouter une pièce</span>
 
             <table>
