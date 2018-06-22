@@ -13,11 +13,21 @@ if(isset($_GET['ID'])){
     $lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND idpiece=\''.$_GET['ID'].'\'');
     $pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND idpiece=\''.$_GET['ID'].'\'');
     $volet = $bdd->query('SELECT * FROM actionneurs WHERE type = \'volet\' AND idpiece=\''.$_GET['ID'].'\'');
-    $inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'interrupteur\' AND idpiece=\''.$_GET['ID'].'\'');
+    $inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'Interrupteur\' AND idpiece=\''.$_GET['ID'].'\'');
 }
 
-
+$nbLigne=0;
+$nbLigne2=0;
+$nbLigne3=0;
+$nbLigne4=0;
+$nbColonne=5;
+$nbColonne2=5;
+$nbColonne3=5;
+$nbColonne4=5;
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html>
@@ -72,12 +82,13 @@ if(isset($_GET['ID'])){
 					</div>
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
-	 							<table class="tableau" border="1">
-									<tbody>
-										<tr id="ligne1">
-										<?php 
+	 							<?php echo 	'<table class="tableau"><tbody>
+										<tr id="ligne1">';
 										while ($donnees1 = $lumi->fetch()){
-										   // $rows[]=
+										  if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0){
+										      echo '</tr><tr>';
+										      $nbLigne=0;
+                                          }
 										?>
 										<td>
 										<div class="case">
@@ -139,7 +150,7 @@ if(isset($_GET['ID'])){
 										</td>
 				
 
-										<?php }?>
+										<?php $nbLigne++;}?>
 
 
 										 <td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td> 
@@ -159,12 +170,16 @@ if(isset($_GET['ID'])){
 	 				</div>
 	 					<div class="tonDiv4" id="tonDiv4">
 	 						<div class="luminosite">
-		 						<table class="tableau" border="1">
+		 						<?php	echo	'<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne3">
-										<?php 
+										<tr id="ligne3">';
+
 										while ($donnees1 = $pres->fetch()){
 										    $id=$donnees1['id'];
+                                            if (($nbLigne3 % $nbColonne3) ==0 && $nbLigne3 !=0) {
+                                                echo '</tr><tr>';
+                                                $nbLigne3 = 0;
+                                            }
 										?>
 										<td>
 										<div class="case">
@@ -217,7 +232,7 @@ if(isset($_GET['ID'])){
 										</div>
 										</td>
 					
-										<?php }?>
+										<?php $nbLigne3++;}?>
 										
 											<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
@@ -248,13 +263,16 @@ if(isset($_GET['ID'])){
 						</div>
 						<div class="tondiv2" id="tondiv2">
 							<div class="luminosite">
-	 							<table class="tableau" border="1">
+	 							<?php	echo	'<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne1">
+										<tr id="ligne4">';?>
 										
 										<?php 
 										while ($donnees1 = $inter->fetch()){
 										    $id=$donnees1['ID'];
+										    if (($nbLigne4 % $nbColonne4) ==0 && $nbLigne4 !=0) {
+										        echo '</tr><tr>';
+										        $nbLigne4 = 0;}
 										?>
 										<td>
 										<div class="case2">
@@ -284,7 +302,7 @@ if(isset($_GET['ID'])){
                                             
                                             <div class="inter">
                                             <div class="onoffswitch<?php echo $donnees1['ID']?>">
-                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc()'>
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc<?php echo $donnees1['ID']?>()'>
                                             <label class="onoffswitch-label<?php echo $donnees1['ID']?>" for="myonoffswitch<?php echo $donnees1['ID']?>">
                                             <span class="onoffswitch-inner<?php echo $donnees1['ID']?>"></span>
                                             <span class="onoffswitch-switch<?php echo $donnees1['ID']?>"></span>
@@ -298,7 +316,7 @@ if(isset($_GET['ID'])){
 										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
                                         <script>
-                                        function loadDoc() {
+                                        function loadDoc<?php echo $donnees1['ID']?>() {
                                           var xhttp = new XMLHttpRequest();
                                           if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
                                           xhttp.onreadystatechange = function() {
@@ -306,7 +324,7 @@ if(isset($_GET['ID'])){
                                              document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                             }
                                           };
-                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1111", true);
+                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1", true);
                                           xhttp.send();
                                         }
                                           else {
@@ -315,7 +333,7 @@ if(isset($_GET['ID'])){
                                                    document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                                   }
                                                 };
-                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2222", true);
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2", true);
                                                 xhttp.send();
                                           }
                                               }
@@ -376,13 +394,13 @@ if(isset($_GET['ID'])){
             
                     
                                         </style>
-										<?php }?>
+                                        <?php $nbLigne4++;}?>
+										
 
 										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>""> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 
-										</tr>
-									</tbody>
-								</table>
+										 <?php	echo '</tbody>
+            								</table>';?>
 							</div>
 						</div>
 				</div>

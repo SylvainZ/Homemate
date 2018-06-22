@@ -85,6 +85,16 @@ img{
   margin-top: 30px;
 }
 
+#tailleNom
+{
+	font-family:quando;
+	font-weight:bold;
+	color:red;
+	text-align:center;
+	font-size:0.8em;
+}
+
+
 /*personnalisation intÃ©rieur du bouton*/
 .bouton{
   display: flex;

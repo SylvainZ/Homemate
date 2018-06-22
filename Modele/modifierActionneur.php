@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('Controleur/envoieDonneesPasserelle.php');
+
 
 
 //vérifie que les variables nécessaires à la mofidication existent
@@ -14,10 +14,9 @@ if (isset($_GET['etat'])&&isset($_GET['id'])){
 	$req = $bdd->prepare('UPDATE actionneurs SET Etat=? WHERE ID = '.$_GET['id']);
 	$req->execute(array(
 	    $_GET['etat']
-	    
 	));
-
-    envoieTrameBDD();
+    include('Controleur/envoieDonneesPasserelle.php');
+    envoieTrame(5,$_GET['etat']);
 }
 ?>
 

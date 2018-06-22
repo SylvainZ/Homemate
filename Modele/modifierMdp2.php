@@ -6,6 +6,7 @@ if (isset($_POST["modifier"]))
  	//appelle la BDD homemate
      include('connexionBD.php');
 
+
 	if (isset($_POST["mdp1"]) AND isset($_POST["mdp2"]) AND isset($_POST["mdpA"])) 
 	{
     
@@ -14,9 +15,16 @@ if (isset($_POST["modifier"]))
    		$mdp2=htmlspecialchars($_POST["mdp2"]);
    		$mdpA=sha1(htmlspecialchars($_POST["mdpA"]));
 
+   		$req1;
+
+		if (isset($_SESSION['Admin'])){
+            $req1 = $bdd->query('SELECT password FROM administrateur WHERE Email = \'' . $_SESSION['email'] . '\'');
+		}
+		else {
+            $req1 = $bdd->query('SELECT password FROM profil WHERE Email = \'' . $_SESSION['email'] . '\'');
+		}
 
 
-   		$req1 = $bdd->query('SELECT password FROM profil WHERE Email = \'' . $_SESSION['email'] . '\'');
    		
    		$donnees1 = $req1->fetch();
    		$mdpA2=$donnees1['password'];
@@ -26,14 +34,20 @@ if (isset($_POST["modifier"]))
 	        
 	        $password = sha1($mdp1);
 
-	        $req = $bdd->query("UPDATE profil SET password ='$password' WHERE email = '$email'");
-	        echo $email;
-	        echo $password;
+	        $req;
+
+            if (isset($_SESSION['Admin'])){
+                $req = $bdd->query("UPDATE administrateur SET password ='$password' WHERE email = '$email'");
+            }
+            else {
+                $req = $bdd->query("UPDATE profil SET password ='$password' WHERE email = '$email'");
+            }
+	        header('location: index.php?cible=profil');
 	  	}
 
   	else
 	  	{
-	        echo "Vérifiez votre saisie";
+	        echo "Vérifiez saisie aaa";
 	    }
 	}
 }

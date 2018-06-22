@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-function envoieTrameBDD($TYP, $ValeurAns)
+function envoieTrame($TYP1, $ValeurAns1)
 {   /** 15(Trame) + (date) */
     $TRA = "1";
     $OBJ1 = "0";
@@ -9,11 +7,11 @@ function envoieTrameBDD($TYP, $ValeurAns)
     $OBJ3 = "1";
     $OBJ4 = "E";
     $REQ = "2";
-    //$TYP = "5";
+    $TYP = "".$TYP1;
     $NUM1 = "0";
     $NUM2 = "1";
 
-    //$ValeurAns="1";
+    $ValeurAns="".$ValeurAns1;
 
     $ANS1 = $ValeurAns;
     $ANS2 = $ValeurAns;
