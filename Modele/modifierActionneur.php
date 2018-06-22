@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include('Controleur/envoieDonneesPasserelle.php');
 
 
 //vérifie que les variables nécessaires à la mofidication existent
@@ -17,7 +17,7 @@ if (isset($_GET['etat'])&&isset($_GET['id'])){
 	    
 	));
 
-
+    envoieTrameBDD();
 }
 ?>
 
