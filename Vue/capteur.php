@@ -1,4 +1,3 @@
-
 <?php
 
 //appelle la BDD homemate
@@ -109,7 +108,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
+                                                    <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionCapteur=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                         <input type="submit" value="Supprimer" class="boutonSup">
                                                     </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -151,7 +150,7 @@ $nbColonne4=5;
                                                 </div>
                                             </div>
                                             
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
+                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="70" width="70">
 
                                             <span><?php echo $donnees1['piece']?></span>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
@@ -220,7 +219,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
+                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionCapteur=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -255,7 +254,7 @@ $nbColonne4=5;
 
 
                                             <span><?php echo $donnees1['piece']?> </span>
-										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
+										<span id="trame"></span>
 										</div>
 										</td>
 										
@@ -323,7 +322,7 @@ $nbColonne4=5;
 										<td>
 										<div class="case2">
 										
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
+                                            <button class="supprimer2"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
                                             
                                             
                                             
@@ -338,7 +337,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerActionneur&id=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
+                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionActionneur=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>

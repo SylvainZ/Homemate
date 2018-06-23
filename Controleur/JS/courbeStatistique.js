@@ -1,6 +1,6 @@
 google.charts.load('current', {'packages':['line', 'corechart']});
 google.charts.setOnLoadCallback(drawChart);
-
+//
 function drawChart() {
 
     var button = document.getElementById('change-chart');

@@ -37,7 +37,7 @@ function drawChart() {
     <?php
     while($reponse=$req1->fetch()){
         if($reponse['typeCapteur']==7) {
-            if ($reponse['dateFrame'] == date('Y-m') . '-' . (date('d') - 1)) {
+            if ($reponse['dateFrame'] == '2018-06-21'){/*date('Y-m') . '-' . (date('d') - 1))*/
                 echo '[new Date(' .
                     $reponse['dateFrame'][0] . $reponse['dateFrame'][1] . $reponse['dateFrame'][2] . $reponse['dateFrame'][3] . ',' .    //annees
                     $reponse['dateFrame'][5] . $reponse['dateFrame'][6] . ',' .                                                      //mois
