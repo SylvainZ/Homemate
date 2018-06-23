@@ -89,7 +89,7 @@ $nbColonne4=6;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                                 <span class ="nom"><?php echo $donnees2['Nom'];}?></span> <br>
-										<span id="capteur"> Luminosité :  </span><p id="trame"></p>
+                                            <span id="trame"></span>
 										</div>
 										</td>
 				
@@ -135,7 +135,7 @@ $nbColonne4=6;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                            
                                         <span><?php echo $donnees2['Nom']; }?></span> <br>
-										<span> Présence : </span><span id="trame"></span><?php echo $donnees1['Presence']; ?>
+										<span id="trame"></span>
 										</div>
 										</td>
 										
