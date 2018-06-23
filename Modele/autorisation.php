@@ -14,11 +14,12 @@ include('connexionBD.php');
         $emailAutor[]= $donnees['Email'];
     }
 
+    if (!empty($idAutor)) {
     //stocke les informations dans des variables de session
     $_SESSION['idA']=$idAutor;
     $_SESSION['nomA']=$nomAutor;
     $_SESSION['prenomA']=$prenomAutor;
-    $_SESSION['emailAut']= $emailAutor;
+    $_SESSION['emailAut']= $emailAutor; }
 
 
 //renvoie vers la page autorisation
