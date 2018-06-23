@@ -1,3 +1,4 @@
 <?php 
 session_start();
-include('Vue/capteur.php')?>
+include('Vue/capteur.php');
+?>
