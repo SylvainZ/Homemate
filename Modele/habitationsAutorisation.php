@@ -3,20 +3,21 @@
 //appelle la BDD homemate
 include('connexionBD.php');
 
+//prend la liste des logements de l'utilisateur principal
 $habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['ID'].'\'');
 
 while ($donnees = $habitation->fetch())
 {
-    $idHabA[]=$donnees['ID'];
-    $adresseHabA[] = $donnees['Adresse'];
-    $pieceHabA[] = $donnees['NombrePiece'];
-    $superficieHabA[] = $donnees['Superficie'];
+    $idHab[]=$donnees['ID'];
+    $adresseHab[] = $donnees['Adresse'];
+    $pieceHab[] = $donnees['NombrePiece'];
+    $superficieHab[] = $donnees['Superficie'];
 }
 
-$_SESSION['idHabA']=$idHabA;
-$_SESSION['adresseHabA']=$adresseHabA;
-$_SESSION['pieceHabA']=$pieceHabA;
-$_SESSION['superficieHabA']=$superficieHabA;
+$_SESSION['idHab']=$idHab;
+$_SESSION['adresseHab']=$adresseHab;
+$_SESSION['pieceHab']=$pieceHab;
+$_SESSION['superficieHab']=$superficieHab;
 
 include('Vue/habitationsAutorisation.php');
 

@@ -31,13 +31,13 @@
              <?php
                 $flag2=true;
                 $i=0;
-                if (isset($_SESSION['adresseHabA']) && isset($_SESSION['pieceHabA']) && isset($_SESSION['superficieHabA'])) {
+                if (isset($_SESSION['adresseHab']) && isset($_SESSION['pieceHab']) && isset($_SESSION['superficieHab'])) {
                     while($flag2) {
-                        if (isset($_SESSION['adresseHabA'][$i]) && isset($_SESSION['pieceHabA'][$i]) && isset($_SESSION['superficieHabA'][$i])) {
+                        if (isset($_SESSION['adresseHab'][$i]) && isset($_SESSION['pieceHab'][$i]) && isset($_SESSION['superficieHab'][$i])) {
                             echo '<tr>';
-                            echo '<td><a href="index.php?cible=autorisation&logement='.$i.'">'.$_SESSION['adresseHabA'][$i]. ' </a></td> ';
-                            echo '<td>'.$_SESSION['pieceHabA'][$i]. ' </td>';
-                            echo '<td>'.$_SESSION['superficieHabA'][$i]. ' </td>';
+                            echo '<td><a href="index.php?cible=lienLogSec&logement='.$i.'">'.$_SESSION['adresseHab'][$i]. ' </a></td> ';
+                            echo '<td>'.$_SESSION['pieceHab'][$i]. ' </td>';
+                            echo '<td>'.$_SESSION['superficieHab'][$i]. ' </td>';
                             echo ' </tr>' ;
                             $i++;
                         }

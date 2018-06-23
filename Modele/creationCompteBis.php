@@ -42,12 +42,14 @@ if(isset($_POST['nom'])) {
                 'password' => $password,
             ));
 
+            //vérifie s'il s'agit d'un utilisateur principal qui est connecté et veut entrer un utilisateur secondaire
             if (isset($_SESSION['nom'])) {
                 $req = $bdd->prepare("UPDATE profil SET Statut=? WHERE Email= ? ");
                 $req->execute(array(
                     'secondaire-'.$_SESSION['ID'],
                     $Email
                 ));
+                $_SESSION['emailA']=$Email;
                 header('Location:index.php?cible=habitationsAutorisation');
             }
             else {

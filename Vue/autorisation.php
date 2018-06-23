@@ -19,16 +19,20 @@
         <h2>Liste des utilisateurs secondaires</h2>
 
         <table>
-            <tr>
-                <td>  <?php
+
+                <?php
                     $flag=true;
                     $i=0;
                     if (isset($_SESSION['nomA']) && isset($_SESSION['prenomA'])) {
                         while($flag) {
+                            echo '<tr>';
                             if (isset($_SESSION['nomA'][$i]) && isset($_SESSION['prenomA'][$i])) {
-                                echo '<tr>'.$_SESSION['nomA'][$i]. ' </tr> ';
-                                echo '<tr>'.$_SESSION['prenomA'][$i]. '</tr>';
-                                echo '<br/>' ;
+                                echo '<td>'.$_SESSION['nomA'][$i]. ' </td> ';
+                                echo '<td>'.$_SESSION['prenomA'][$i]. '</td>';
+                                echo '<td><a href="index.php?cible=gererUserSec&action=modifier&ind='.$i.'" ><input type=button value="Modifier"/></a></td> ';
+                                echo '<td><a href="index.php?cible=gererUserSec&action=supprimer&ind='.$i.'" ><input type=button value="Supprimer"/></a></td> ';
+                                echo '</tr>';
+
                                 $i++;
                             }
                             else{
@@ -36,9 +40,9 @@
                             }
                         }
                     } ?>
-                </td>
 
-            </tr>
+
+
 
         </table>
 
