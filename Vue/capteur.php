@@ -151,7 +151,7 @@ $nbColonne4=5;
                                                 </div>
                                             </div>
                                             
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
+                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="70" width="70">
 
                                             <span><?php echo $donnees1['piece']?></span>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
@@ -323,7 +323,7 @@ $nbColonne4=5;
 										<td>
 										<div class="case2">
 										
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
+                                            <button class="supprimer2"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
                                             
                                             
                                             

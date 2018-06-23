@@ -80,7 +80,7 @@ $nbColonne4=6;
 										<td>
 										<div class="case">
                                             
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
+                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="80" width="80"><br>
 
                                          
 
@@ -88,7 +88,7 @@ $nbColonne4=6;
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
-                                                <span><?php echo $donnees2['Nom'];}?></span> <br>
+                                                <span class ="nom"><?php echo $donnees2['Nom'];}?></span> <br>
 										<span id="capteur"> Luminosité :  </span><p id="trame"></p>
 										</div>
 										</td>
@@ -128,7 +128,7 @@ $nbColonne4=6;
 										<td>
 										<div class="case">
                                             
-                                            <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
+                                            <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50">
                                             
 										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.id=\''.$donnees1['id'].'\'');
                                          
@@ -186,7 +186,7 @@ $nbColonne4=6;
 										
                                             
                                             
-                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60px"><br>
+                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60"><br>
                                           <span class="nom"><?php echo $donnees1['nom']?> </span><br>
                                           <?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN actionneurs ON piece.ID=actionneurs.idpiece AND actionneurs.id=\''.$donnees1['ID'].'\'');
                                          
