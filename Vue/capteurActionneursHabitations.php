@@ -1,18 +1,4 @@
 <?php
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
-$temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND iduser =\''.$_SESSION['ID'].'\'');
-$lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
-$pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
-
-$inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'Interrupteur\' AND iduser =\''.$_SESSION['ID'].'\'');
-$volet= $bdd->query('SELECT * FROM actionneurs WHERE type = \'volet\' AND iduser =\''.$_SESSION['ID'].'\'');
 
 $nbLigne=0;
 $nbLigne2=0;
@@ -80,7 +66,7 @@ $nbColonne4=6;
 										<td>
 										<div class="case">
                                             
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
+                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="80" width="80"><br>
 
                                          
 
@@ -88,8 +74,8 @@ $nbColonne4=6;
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
-                                                <span><?php echo $donnees2['Nom'];}?></span> <br>
-										<span id="capteur"> Luminosité :  </span><p id="trame"></p>
+                                                <span class ="nom"><?php echo $donnees2['Nom'];}?></span> <br>
+                                            <span id="trame"></span>
 										</div>
 										</td>
 				
@@ -128,14 +114,14 @@ $nbColonne4=6;
 										<td>
 										<div class="case">
                                             
-                                            <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
+                                            <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50">
                                             
 										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.id=\''.$donnees1['id'].'\'');
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                            
                                         <span><?php echo $donnees2['Nom']; }?></span> <br>
-										<span> Présence : </span><span id="trame"></span><?php echo $donnees1['Presence']; ?>
+										<span id="trame"></span>
 										</div>
 										</td>
 										
@@ -186,13 +172,13 @@ $nbColonne4=6;
 										
                                             
                                             
-                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60px"><br>
+                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="60"><br>
                                           <span class="nom"><?php echo $donnees1['nom']?> </span><br>
                                           <?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN actionneurs ON piece.ID=actionneurs.idpiece AND actionneurs.id=\''.$donnees1['ID'].'\'');
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
-                                        <span><?php echo $donnees2['Nom'];}?></span> <br>
+                                        <span class="nomInter"><?php echo $donnees2['Nom'];}?></span> <br>
                                   
                                		
                                     

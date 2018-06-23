@@ -22,6 +22,7 @@
         <div id="page">
             <span class="profil">Profil</span>
 
+<!--Renseignement du profil-->
             <div class="col-xs-6 col-md-offset-3 ">
                 <div class="panel panel-default" style="background-color: #2f0c1b; border-radius: 10px">
                     <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 10px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
@@ -87,6 +88,7 @@
 
             <?php include("Vue/footer.php") ?>
 
+<!-- définition fenetre modale pour la modification du profil-->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
                 <div class="modal-dialog" role="document" style="background-color: #2f0c1b">
                     <div class="modal-content">
@@ -96,7 +98,7 @@
                         </div>
                         <div class="modal-body">
                             <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data" onsubmit="return modifProfil()">
-
+<!--Champs avec informations prédéfinies-->
                                 <table>
                                     <tr>
                                         <td>

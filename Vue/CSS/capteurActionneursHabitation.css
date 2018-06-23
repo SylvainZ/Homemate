@@ -51,23 +51,30 @@ td
 .case
 {
 	background-color:#9998b2;
-	padding:10px;
-	margin:10px;
+	padding:1vw;
+	margin:1vw;
 	border-radius:6px;
-    width: 150px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
     font-size: 14px;
 
 }
 .case2
 {
 	background-color:#9998b2;
-	padding:10px;
-	margin:10px;
+	padding:1vw;
+	margin:1vw;
 	border-radius:6px;
     width: 10vw;
     height: 10vw;
     font-size: 14px;
+
+}
+.nom
+{
+
+	
+	padding-left:2vw;
 
 }
 
@@ -235,8 +242,12 @@ border:none;
 .nom
 {
 	padding-bottom:0.5vw;
-	padding-left:2vw;
+	padding-left:3.5vw;
 		
+}
+.nomInter
+{
+	padding-left:3.5vw;
 }
 
 .styleCapteur

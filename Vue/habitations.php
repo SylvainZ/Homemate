@@ -7,7 +7,7 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-$habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['ID'].'\'\'1\'');
+$habitation = $bdd->query('SELECT * FROM logement WHERE IdUser = \''.$_SESSION['ID'].'\'');
 
 $nbLigne=0;
 $nbColonne=5;

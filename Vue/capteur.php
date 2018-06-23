@@ -1,4 +1,3 @@
-
 <?php
 
 //appelle la BDD homemate
@@ -109,7 +108,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
+                                                    <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionCapteur=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                         <input type="submit" value="Supprimer" class="boutonSup">
                                                     </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -151,7 +150,7 @@ $nbColonne4=5;
                                                 </div>
                                             </div>
                                             
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
+                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="70" width="70">
 
                                             <span><?php echo $donnees1['piece']?></span>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
@@ -220,7 +219,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerCapteur&id=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
+                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionCapteur=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -255,7 +254,7 @@ $nbColonne4=5;
 
 
                                             <span><?php echo $donnees1['piece']?> </span>
-										<span> Présence : </span><?php echo $donnees1['Presence']; ?>
+										<span id="trame"></span>
 										</div>
 										</td>
 										
@@ -323,7 +322,7 @@ $nbColonne4=5;
 										<td>
 										<div class="case2">
 										
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
+                                            <button class="supprimer2"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
                                             
                                             
                                             
@@ -338,7 +337,7 @@ $nbColonne4=5;
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
                                                     <div class="annulerSupprimer">
-                                                        <form method="post" action="index.php?cible=supprimerActionneur&id=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
+                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionActionneur=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
                                                             <input type="submit" value="Supprimer" class="boutonSup">
                                                         </form>
                                                         <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
@@ -366,6 +365,7 @@ $nbColonne4=5;
                                         /*fonction ajax qui permet d'envoyer à la base de donner 1 si le bouton est sur on et 2 sinon */
                                         function loadDoc<?php echo $donnees1['ID']?>() {
                                           var xhttp = new XMLHttpRequest();
+                                          /*envoie 1 si le bouton est checked*/
                                           if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
                                           xhttp.onreadystatechange = function() {
                                             if (this.readyState == 4 && this.status == 200) {
@@ -375,7 +375,7 @@ $nbColonne4=5;
                                           xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1", true);
                                           xhttp.send();
                                         }
-                                          else {
+                                          else {/*envoie 2 si pas checked*/
                                         	  xhttp.onreadystatechange = function() {
                                                   if (this.readyState == 4 && this.status == 200) {
                                                    document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
@@ -497,26 +497,10 @@ $nbColonne4=5;
 
     
 
-<!-- fonction qui permet de reduire ou agrandir une div -->
-<script>
+<script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
 
-	function afficher_cacher(id)
-{
-    if(document.getElementById(id).style.display=="none")
-    {
-        document.getElementById(id).style.display="block";
-        
-    }
-    else
-    {
-        document.getElementById(id).style.display="none";
-        
-    }
-    return true;
-}
 
-		
-</script>
+
 
 </body>
 </html>

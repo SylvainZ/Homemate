@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <head>
     <title>
-    Courbe
+        Courbe
     </title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">
 
-        </script>
+    </script>
 </head>
 <body>
 
@@ -18,101 +18,66 @@
 
 
 <script>
-google.charts.load('current', {'packages':['line', 'corechart']});
-google.charts.setOnLoadCallback(drawChart);
+    google.charts.load('current', {'packages':['line', 'corechart']});
+    google.charts.setOnLoadCallback(drawChart);
 
 
 
-function drawChart() {
+    function drawChart() {
 
-    var button = document.getElementById('change-chart');
-    var chartDiv = document.getElementById('chart_div');
+        var button = document.getElementById('change-chart');
+        var chartDiv = document.getElementById('chart_div');
 
-    var data = new google.visualization.DataTable();
-    data.addColumn('date', 'Date');
-    data.addColumn('number', "Distance de l'objet");
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', "Distance de l'objet");//légende de la courbe
 
+        /*tableau de valeur à afficher */
+        data.addRows([
 
-    data.addRows([
-    <?php
-    while($reponse=$req1->fetch()){
-        if($reponse['typeCapteur']==7) {
-            if ($reponse['dateFrame'] == date('Y-m') . '-' . (date('d') - 1)) {
-                echo '[new Date(' .
-                    $reponse['dateFrame'][0] . $reponse['dateFrame'][1] . $reponse['dateFrame'][2] . $reponse['dateFrame'][3] . ',' .    //annees
-                    $reponse['dateFrame'][5] . $reponse['dateFrame'][6] . ',' .                                                      //mois
-                    $reponse['dateFrame'][8] . $reponse['dateFrame'][9] . ',' .                                                      //jour
-                    $reponse['heure'][0] . $reponse['heure'][1] . ',' .                                                              //heure
-                    $reponse['heure'][3] . $reponse['heure'][4] . ',' .                                                              //minute
-                    $reponse['heure'][6] . $reponse['heure'][7] . '),' .                                                             //seconde
-                    hexdec($reponse['valeurCapteur']) . '],';                                                                     //valeur capteur
+            <?php
+            while($reponse=$req1->fetch()){ //boucle while qui parcourt toute les trames de la base de donnees
+                if($reponse['typeCapteur']==7) {//condition sur le type de capteur de la trame
+                    if ($reponse['dateFrame'] == date('Y-m') . '-' . (date('d') - 2)) {//condition sur la date de la trame
+                        echo '[new Date(' .
+                            $reponse['dateFrame'][0] . $reponse['dateFrame'][1] . $reponse['dateFrame'][2] . $reponse['dateFrame'][3] . ',' .    //annees
+                            $reponse['dateFrame'][5] . $reponse['dateFrame'][6] . ',' .                                                      //mois
+                            $reponse['dateFrame'][8] . $reponse['dateFrame'][9] . ',' .                                                      //jour
+                            $reponse['heure'][0] . $reponse['heure'][1] . ',' .                                                              //heure
+                            $reponse['heure'][3] . $reponse['heure'][4] . ',' .                                                              //minute
+                            $reponse['heure'][6] . $reponse['heure'][7] . '),' .                                                             //seconde
+                            hexdec($reponse['valeurCapteur']) . '],';                                                                     //valeur capteur
+                    }
+                }
             }
-        }
-    }
-    ?>
-]);
+            ?>
+        ]);
 
 
-    var materialOptions = {
-        chart: {
-            title: 'Average Temperatures and Daylight in Iceland Throughout the Year'
-        },
-        width: 900,
-        height: 500,
-        series: {
-            0: {axis: 'Temps'}
-        },
-        axes: {
-            // Adds labels to each axis; they don't have to match the axis names.
-            y: {
-                Temps: {label: 'Temps (Celsius)'}
+        var materialOptions = {
+            chart: {
+                title: 'Average Temperatures and Daylight in Iceland Throughout the Year'// titre de la courbe
+            },
+            width: 900,
+            height: 500,
+            series: {
+                0: {axis: 'Temps'}//titre de l'axe des abscisse
+            },
+            axes: {
+                //titre de l'axe des ordonnees
+                y: {
+                    Temps: {label: 'Temps (Celsius)'}
+                }
             }
+        };
+
+        function drawMaterialChart() {
+            var materialChart = new google.charts.Line(chartDiv);
+            materialChart.draw(data, materialOptions);
         }
-    };
 
-    var classicOptions = {
-        title: 'Average Temperatures and Daylight in Iceland Throughout the Year',
-        width: 900,
-        height: 500,
-        // Gives each series an axis that matches the vAxes number below.
-        series: {
-            0: {targetAxisIndex: 0},
-            1: {targetAxisIndex: 1}
-        },
-        vAxes: {
-            // Adds titles to each axis.
-            0: {title: 'Temps (Celsius)'},
-            1: {title: 'Daylight'}
-        },
-        hAxis: {
-            ticks: [new Date(2014, 0), new Date(2014, 1), new Date(2014, 2), new Date(2014, 3),
-                new Date(2014, 4),  new Date(2014, 5), new Date(2014, 6), new Date(2014, 7),
-                new Date(2014, 8), new Date(2014, 9), new Date(2014, 10), new Date(2014, 11)
-            ]
-        },
-        vAxis: {
-            viewWindow: {
-                max: 30
-            }
-        }
-    };
-
-    function drawMaterialChart() {
-        var materialChart = new google.charts.Line(chartDiv);
-        materialChart.draw(data, materialOptions);
-        button.innerText = 'Change to Classic';
-        button.onclick = drawClassicChart;
+        drawMaterialChart();
     }
-
-    function drawClassicChart() {
-        var classicChart = new google.visualization.LineChart(chartDiv);
-        classicChart.draw(data, classicOptions);
-        button.innerText = 'Change to Material';
-        button.onclick = drawMaterialChart;
-    }
-
-    drawMaterialChart();
-}
 
 </script>
 
