@@ -66,9 +66,11 @@ $nbColonne4=5;
 
 	<div id="global"><div id="grandmenu">
 	<div class="menu"> <!--bouton 1 et background-->
-		<div class="bouton">
-		<div class="bande">
-		<div class="centre">
+		<div class="bouton"><!--  -->
+		<div class="bande"><!-- couleur de la bande du bouton (comme pour toutes les classes bandes)-->
+		<div class="centre"><!-- mets le bouton au centre (comme pour toutes les classes centres)-->
+		
+		<!-- bouton qui permet de reduire ou agrandir javascript -->
 		<button id="bouton" onclick="javascript:afficher_cacher('tonDiv1');"><span class="style">Capteurs</span></button>
 		</div>
 		</div>
@@ -82,9 +84,12 @@ $nbColonne4=5;
 					</div>
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
+								<!-- tableau pour afficher les capteurs avec les quadillages invicibles -->
 	 							<?php echo 	'<table class="tableau"><tbody>
 										<tr id="ligne1">';
 										while ($donnees1 = $lumi->fetch()){
+										    
+										  /*permet de mettre à la ligne l'image s'il y a plus de nbcolonne images*/
 										  if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0){
 										      echo '</tr><tr>';
 										      $nbLigne=0;
@@ -93,11 +98,13 @@ $nbColonne4=5;
 										<td>
 										<div class="case">
 										 <div id="supModif">
+										 	<!-- bouton qui permet de supprimer -->
                                             <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button>
+                                            <!-- bouton qui permet de modifer -->
                                             <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['id']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
                                          </div>
                                             
-
+											<!-- fenetre qui saffiche quand on clique sur le bouton supprimer -->
                                             <div id="fenetreModale<?php echo $donnees1['id']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
@@ -111,6 +118,7 @@ $nbColonne4=5;
                                             </div>
 
                                             <!-- formulaire modification -->
+                                            <!-- fenetre qui saffiche quand on clique sur le bouton modifier -->
                                             <div id="fenetreModaleBis<?php echo $donnees1['id']?>">
                                                 <div class="popup-block">
                                                     <h3 class="log modiflog">Modification du capteur</h3>
@@ -142,30 +150,31 @@ $nbColonne4=5;
                                                     </div>
                                                 </div>
                                             </div>
+                                            
                                             <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="50px" width="30px">
 
                                             <span><?php echo $donnees1['piece']?></span>
 										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
-										
+										<!-- affiche les fenetres pour supprimer et modifer -->
 										<style>
+                                        
+                                        #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
+                                        {
+                    	                display: none;
+                    	                position: fixed;
+                    	                top:0; right:0; bottom:0; left:0;
+                    	                background-color: rgba(0, 0, 0, 0.5);
+                    	                z-index: 1000;}
                     
-                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
-                    
-                    </style>
-				
+                                        #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
+                                        {
+                    	                   display: block;
+                                        }
+                                        
+                                        </style>
+                    				
 
 										<?php $nbLigne++;}?>
 
@@ -192,6 +201,7 @@ $nbColonne4=5;
 										<tr id="ligne3">';
 
 										while ($donnees1 = $pres->fetch()){
+										    /*permet de mettre à la ligne l'image s'il y a plus de nbcolonne images*/
 										    $id=$donnees1['id'];
                                             if (($nbLigne3 % $nbColonne3) ==0 && $nbLigne3 !=0) {
                                                 echo '</tr><tr>';
@@ -249,22 +259,23 @@ $nbColonne4=5;
 										</div>
 										</td>
 										
+										<!-- affiche les fenetres pour supprimer et modifer -->
 										<style>
                     
-                    #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
-                    {
-	                display: none;
-	                position: fixed;
-	                top:0; right:0; bottom:0; left:0;
-	                background-color: rgba(0, 0, 0, 0.5);
-	                z-index: 1000;}
-
-                    #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
-                    {
-	                   display: block;
-                    }
+                                        #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
+                                        {
+                    	                display: none;
+                    	                position: fixed;
+                    	                top:0; right:0; bottom:0; left:0;
+                    	                background-color: rgba(0, 0, 0, 0.5);
+                    	                z-index: 1000;}
                     
-                    </style>
+                                        #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
+                                        {
+                    	                   display: block;
+                                        }
+                                        
+                                        </style>
 					
 										<?php $nbLigne3++;}?>
 										
@@ -304,6 +315,7 @@ $nbColonne4=5;
 										<?php 
 										while ($donnees1 = $inter->fetch()){
 										    $id=$donnees1['ID'];
+										    /*permet de mettre à la ligne l'image s'il y a plus de nbcolonne images*/
 										    if (($nbLigne4 % $nbColonne4) ==0 && $nbLigne4 !=0) {
 										        echo '</tr><tr>';
 										        $nbLigne4 = 0;}
@@ -321,7 +333,7 @@ $nbColonne4=5;
                                		
                                                                     
                                 
-             
+             								
                                             <div id="fenetreModale<?php echo $donnees1['ID']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
@@ -334,6 +346,7 @@ $nbColonne4=5;
                                                 </div>
                                             </div>
                                             
+                                            <!-- HTML pour l'interrupteur -->
                                             <div class="inter">
                                             <div class="onoffswitch<?php echo $donnees1['ID']?>">
                                             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc<?php echo $donnees1['ID']?>()'>
@@ -350,6 +363,7 @@ $nbColonne4=5;
 										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
                                         <script>
+                                        /*fonction ajax qui permet d'envoyer à la base de donner 1 si le bouton est sur on et 2 sinon */
                                         function loadDoc<?php echo $donnees1['ID']?>() {
                                           var xhttp = new XMLHttpRequest();
                                           if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
@@ -358,7 +372,7 @@ $nbColonne4=5;
                                              document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                             }
                                           };
-                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1111", true);
+                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1", true);
                                           xhttp.send();
                                         }
                                           else {
@@ -367,7 +381,7 @@ $nbColonne4=5;
                                                    document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                                   }
                                                 };
-                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2222", true);
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=2", true);
                                                 xhttp.send();
                                           }
                                               }
@@ -428,7 +442,7 @@ $nbColonne4=5;
                                         
                                         
                                        
-                    
+                                        /* affiche les fenetres pour supprimer et modifer */
                                         #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
                                         {
                     	                display: none;
@@ -483,7 +497,7 @@ $nbColonne4=5;
 
     
 
-
+<!-- fonction qui permet de reduire ou agrandir une div -->
 <script>
 
 	function afficher_cacher(id)

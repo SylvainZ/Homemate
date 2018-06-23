@@ -3,7 +3,7 @@
 	
 	color:#6a1b3d;
 	font-weight:bold;
-	font-size:1.5vw
+	font-size:1.5vw;
 	position: relative;
 	top:3.5vw;
 	left:6.5vw;
@@ -45,7 +45,6 @@
 }
 .adresse{
 	width:20vw;
-	pa
 	background-color:#9997b1;
 	position: relative;
 	top:3.5vw;
@@ -231,7 +230,7 @@ td
 	width: 11vw;
 
 }
-
+/*info de la maison */
 .info
 {
 	border-top: 3px solid black;
@@ -241,12 +240,14 @@ td
 	font-size: 15px;
 }
 
+/*taille image*/
 .styleHabitation
 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	height: 90px;
+	overflow:auto;
 }
 
 
@@ -265,13 +266,14 @@ td
     font-weight: bold;
     color: white;
 }
-
+/*bouton modifier*/
 .posParametre
 {
 	position: relative;
 	bottom:1vw;
 	left:5vw;
 }
+/*bouton supprimer*/
 .supprimerlog
 {
 	border-radius: 20px;
@@ -297,19 +299,8 @@ td
     position: relative;
 	bottom:1vw;
 }
-#fenetreModale, #fenetreModaleBis
-{
-	display: none;
-	position: fixed;
-	top:0; right:0; bottom:0; left:0;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 1000;
-}
 
-#fenetreModale:target, #fenetreModaleBis:target
-{
-	display: block;
-}
+/* */
 .popup-block
 {
 	background: #fff;
@@ -321,6 +312,8 @@ td
 	box-shadow: 0px 0px 20px #000;
 	border-radius: 10px;
 }
+
+
 .annulerSupprimer
 {
     display: block;
@@ -349,6 +342,14 @@ td
 	right: 0.1vw;
 	bottom: 1.2vw;
 }
-	
+
+.tailleNom
+{
+	font-family:quando;
+	font-weight:bold;
+	color:red;
+	text-align:center;
+	font-size:0.6em;
+}
 
 

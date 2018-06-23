@@ -14,10 +14,9 @@ if (isset($_GET['etat'])&&isset($_GET['id'])){
 	$req = $bdd->prepare('UPDATE actionneurs SET Etat=? WHERE ID = '.$_GET['id']);
 	$req->execute(array(
 	    $_GET['etat']
-	    
 	));
-
-
+    include('Controleur/envoieDonneesPasserelle.php');
+    envoieTrame(5,$_GET['etat']);
 }
 ?>
 

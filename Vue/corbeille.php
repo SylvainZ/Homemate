@@ -35,7 +35,7 @@
         <!--Liste des messages-->
         <section class="rectangle">
             <!--Début du formulaire-->
-            <form action="index.php?cible=gestionBoiteMail" method="post" name="F1">
+            <form action="index.php?cible=gestionCorbeille" method="post" name="F1">
                 <p>
                     <!--En-tête du bloc Liste des messages-->
                 <div class="debut">
@@ -44,10 +44,10 @@
                         <label for="selection">Pour la sélection : </label>
                         <input type='submit'/>
                         <select name="selection" id="selection">
-                            <option value="lu">Marquer comme lus</option>
-                            <option value="non_lu">Marquer comme non lus</option>
-                            <option value="supprimer">Supprimer</option>
+                            <option value="restaurer">Restaurer</option>
+                            <option value="supprimer">Supprimer définitivement</option>
                         </select><br/>
+                        </input>
 
                     </section>
                 </div>

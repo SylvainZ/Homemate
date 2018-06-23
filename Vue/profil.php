@@ -49,20 +49,33 @@
                             </tr>
                             <tr>
                                 <td> Numéro de téléphone</td>
-                                <td>: <?php echo $_SESSION['numTel'];?></td>
+                                <td>: 0<?php echo $_SESSION['numTel'];?></td>
                             </tr>
                             <tr>
                                 <td> Adresse</td>
-                                <td>: <?php echo $_SESSION['numRue'].' '; if ($_SESSION['numBis']!='NONE') {echo $_SESSION['numBis'].' ';} echo $_SESSION['prefixRue'].' '.$_SESSION['nomRueBdAve'].'<br/>';
-                                    if ($_SESSION['typeHab']=='Appartement') {echo 'Appartement '.$_SESSION['numLogement'].' Etage '.$_SESSION['numEtage'].'<br/>';}
-                                    echo $_SESSION['codePostal'].' '.$_SESSION['ville'].'<br/>';
-                                    echo $_SESSION['pays']; ?></span></td>
+                                <td>: <?php echo $_SESSION['numRue'].' '; if ($_SESSION['numBis']!='NONE') {echo $_SESSION['numBis'].' ';} echo $_SESSION['prefixRue'].' '.$_SESSION['nomRueBdAve'];?></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                 <td>
+                                      <?php if ($_SESSION['typeHab']=='Appartement') {echo 'Appartement '.$_SESSION['numLogement'].' Etage '.$_SESSION['numEtage'];} ?>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td> <?php echo $_SESSION['codePostal'].' '.$_SESSION['ville']; ?></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td> <?php echo $_SESSION['pays']; ?></td>
                             </tr>
                         </table>
+
                     </div>
                     <br>
                      <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
-                     <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
+                     <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a>
+                    <a href="index.php?cible=autorisation"><input type=button value = "Gérer les autorisations" class="boutonModifProfil"/></a><br/><br/>
                 </div>
             </div>
                  </div>
@@ -158,7 +171,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Téléphone: </td>
-                                                    <td> <input type="text" id="numTel" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=0<?php echo $_SESSION['numTel'];?>><div id="nonNum"></div>
+                                                    <td> <input type="text" id="numTel" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value="0<?php echo $_SESSION['numTel'];?>"><div id="nonNum"></div>
                                                     </td>
                                                 </tr>
                                             </table>

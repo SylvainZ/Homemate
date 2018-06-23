@@ -60,7 +60,7 @@ img{
 }
 
 /*caractÃ©ristiques des champs de texte*/
-#nom, #type, #superficie, #idPiece{
+#piece, #type, #superficie, #idPiece{
   display: block;
   width: 70%;
   height: 60%;
@@ -117,5 +117,14 @@ img{
 td
 {
   width:30vw;
+}
+
+#tailleNom
+{
+  font-family:quando;
+  font-weight:bold;
+  color:red;
+  text-align:center;
+  font-size:0.8em;
 }
 
