@@ -6,6 +6,6 @@
 
     //supprime un capteur
     $req = $bdd->query('DELETE FROM capteur WHERE id=\'' . $_GET['idSuppressionCapteur'] . '\'');
-    require('Vue/capteur.php');
+    include('Vue/capteur.php');
 
 ?>
