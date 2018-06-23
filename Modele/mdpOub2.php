@@ -8,7 +8,6 @@ if (isset($_POST["forgotPass"])) {
 
     $data = $connection->query("SELECT id FROM administrateur WHERE email='$email'");
 
-    $aze =
 
     $user = true;
 
@@ -21,11 +20,11 @@ if (isset($_POST["forgotPass"])) {
 
 
     if ($data->num_rows > 0) {
-        $str = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN"; //creation du nouveau mot de passe
+        $str = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
         $str = str_shuffle($str);
         $str = substr($str, 0, 10);
 
-        $password = sha1($str); //Cryptage
+        $password = sha1($str);
 
         if ($user) {
             $connection->query("UPDATE administrateur SET password = '$password'  WHERE email='$email'");
@@ -33,7 +32,7 @@ if (isset($_POST["forgotPass"])) {
             $connection->query("UPDATE profil  SET password = '$password'  WHERE email='$email'");
         }
 
-        //envoi de mail
+
         $to = $email;
         $subject = 'Nouveau mot de passe';
         $message = '

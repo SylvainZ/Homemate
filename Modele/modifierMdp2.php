@@ -17,10 +17,12 @@ if (isset($_POST["modifier"]))
    		$mdpA=sha1(htmlspecialchars($_POST["mdpA"]));
 
    		$req1;
+
 		//Si l'utilisateur est un Admin
 		if (isset($_SESSION['Admin'])){
             $req1 = $bdd->query('SELECT password FROM administrateur WHERE Email = \'' . $_SESSION['email'] . '\'');
 		}
+
 		//Si l'utilisateur n'est pas un Admin
 		else {
             $req1 = $bdd->query('SELECT password FROM profil WHERE Email = \'' . $_SESSION['email'] . '\'');
@@ -49,7 +51,7 @@ if (isset($_POST["modifier"]))
 
   	else
 	  	{
-	        echo "Vérifiez saisie aaa";
+            header('location: index.php?cible=modifierMdp');
 	    }
 	}
 }
