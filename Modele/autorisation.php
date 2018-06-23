@@ -4,7 +4,7 @@
 include('connexionBD.php');
 
 
-    //prend la liste des mails des utilisateurs secondaires
+    //prend la liste des utilisateurs secondaires
     $req = $bdd->query('SELECT * FROM profil WHERE Statut =  \'secondaire-'.$_SESSION['ID'].'\' ORDER BY Nom,Prenom');
     while ($donnees = $req->fetch())
     {
@@ -14,13 +14,14 @@ include('connexionBD.php');
         $emailAutor[]= $donnees['Email'];
     }
 
+    //stocke les informations dans des variables de session
     $_SESSION['idA']=$idAutor;
     $_SESSION['nomA']=$nomAutor;
     $_SESSION['prenomA']=$prenomAutor;
     $_SESSION['emailAut']= $emailAutor;
 
 
-//renvoie vers la page autorisations
+//renvoie vers la page autorisation
 include('Vue/autorisation.php');
 
 

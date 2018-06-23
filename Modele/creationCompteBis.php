@@ -33,7 +33,6 @@ if(isset($_POST['nom'])) {
             $nom = htmlspecialchars($_POST['nom']);
             $Email = htmlspecialchars($_POST['Email']);
 
-
             $req = $bdd->prepare("INSERT INTO profil(nom,prenom,Email,password) VALUES(:nom,:prenom,:Email,:password)");
             $req->execute(array(
                 'nom' => $nom,
@@ -50,6 +49,7 @@ if(isset($_POST['nom'])) {
                     $Email
                 ));
                 $_SESSION['emailA']=$Email;
+                //renvoie vers une page pour choisir l'habitation à lier avec l'utilisateur secondaire
                 header('Location:index.php?cible=habitationsAutorisation');
             }
             else {

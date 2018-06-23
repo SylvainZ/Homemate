@@ -3,6 +3,7 @@
 //appelle la BDD homemate
 include('connexionBD.php');
 
+//vérifie si l'utilisateur secondaire est déjà inscrit
 if (isset($_SESSION['emailAut']) && isset($_SESSION['indiceMail'])){
     $ind=$_SESSION['indiceMail'];
 
@@ -17,6 +18,7 @@ if (isset($_SESSION['emailAut']) && isset($_SESSION['indiceMail'])){
 
 }
 
+//vérifie si c'est pendant l'inscription de l'utilisateur secondaire
 else {
 //entre l'ID du logement à l'utilisateur en question
 $req = $bdd->prepare("UPDATE profil SET ID_logement_sec=? WHERE Statut= ?  AND Email = ?");

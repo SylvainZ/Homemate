@@ -5,6 +5,7 @@ session_start();
 if (isset($_GET['logement'])){
     $indice=$_GET['logement'];
 
+    //renvoie vers la page qui va lier un utilisateur secondaire et l'habitation
     include('Modele/lienLogSec.php');
 }
 
