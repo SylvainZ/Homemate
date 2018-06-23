@@ -192,7 +192,7 @@ $nbColonne4=6;
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
-                                        <span><?php echo $donnees2['Nom'];}?></span> <br>
+                                        <span class="nomInter"><?php echo $donnees2['Nom'];}?></span> <br>
                                   
                                		
                                     

@@ -366,6 +366,7 @@ $nbColonne4=5;
                                         /*fonction ajax qui permet d'envoyer à la base de donner 1 si le bouton est sur on et 2 sinon */
                                         function loadDoc<?php echo $donnees1['ID']?>() {
                                           var xhttp = new XMLHttpRequest();
+                                          /*envoie 1 si le bouton est checked*/
                                           if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
                                           xhttp.onreadystatechange = function() {
                                             if (this.readyState == 4 && this.status == 200) {
@@ -375,7 +376,7 @@ $nbColonne4=5;
                                           xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=1", true);
                                           xhttp.send();
                                         }
-                                          else {
+                                          else {/*envoie 2 si pas checked*/
                                         	  xhttp.onreadystatechange = function() {
                                                   if (this.readyState == 4 && this.status == 200) {
                                                    document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
@@ -497,26 +498,10 @@ $nbColonne4=5;
 
     
 
-<!-- fonction qui permet de reduire ou agrandir une div -->
-<script>
+<script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
 
-	function afficher_cacher(id)
-{
-    if(document.getElementById(id).style.display=="none")
-    {
-        document.getElementById(id).style.display="block";
-        
-    }
-    else
-    {
-        document.getElementById(id).style.display="none";
-        
-    }
-    return true;
-}
 
-		
-</script>
+
 
 </body>
 </html>
