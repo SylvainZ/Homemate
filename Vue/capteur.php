@@ -553,7 +553,7 @@ $nbColonne5=5;
         <div class="panel panel-default" style="background-color: #2f0c1b; border-radius: 10px">
             <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 10px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
             <div class="panel-body" style="background-color: #6a1b3c">
-                <!-- définition fenetre modale -->
+                <!--ton code -->
             </div>
        </div>
     </div>
