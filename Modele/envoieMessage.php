@@ -20,6 +20,12 @@ if (isset($_POST['Objet'])){
             htmlspecialchars($_POST['message']),
             $_SESSION['statut']));
 
+        $to = $_POST['destinataire'];
+        $subject = $_POST['Objet'];
+        $message = $_POST['message'];
+        $headers = 'From: domisep@isep.fr'.' '.$_SESSION['email'];
+
+        mail($to, $subject, $message, $headers);
         //renvoie l'utilisateur sur sa boîte de réception
         header('Location: index.php?cible=boiteMail');
     }

@@ -99,7 +99,7 @@
                         <div class="modal-body">
                             <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data" onsubmit="return modifProfil()">
 <!--Champs avec informations prédéfinies-->
-                                <table>
+                                <table >
                                     <tr>
                                         <td>
                                             <table>

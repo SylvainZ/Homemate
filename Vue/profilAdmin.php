@@ -23,7 +23,7 @@
 </header>
 <br /><div id="page">
     <span class="profil">Profil</span>
-
+    <!--Renseignement du profil-->
     <div class="col-xs-6 col-md-offset-3 " >
         <div class="panel panel-default" style="background-color: #2f0c1b; border-radius: 20px">
             <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 20px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
@@ -67,22 +67,23 @@
                 </div>
             </div>
             <br>
-            <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
+            <button type="button" style="margin-left: 20px;" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
             <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a><br/><br/>
         </div>
     </div>
 </div>
-
-
 </div>
+
+<!-- définition fenetre modale pour la modification du profil-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
-    <div class="modal-dialog" role="document" style="background-color: #2f0c1b">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span style="font-weight: bold">Modifier ses informations</span>
+    <div class="modal-dialog" role="document" >
+        <div class="modal-content" >
+            <div class="modal-header" style="background-color: #6a1b3d">
+                <span style="font-weight: bold; color: white">Modifier ses informations</span>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
+
                 <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data" onsubmit="return modifProfil()">
                    <table>
                        <tr>
