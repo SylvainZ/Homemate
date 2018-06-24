@@ -77,16 +77,14 @@ function analyseTrame($bdd){
     $req_valeurCapteur = $bdd->query('SELECT valeurCapteur FROM passerelle ORDER BY ID DESC LIMIT 1');
     $valeurCapteur=$req_valeurCapteur->fetch();
     if (hexdec($valeurCapteur['valeurCapteur'])>900){
-        echo "Il y a quelqu'un";
     }
 
     else{
-        echo "Rien à signaler";
     }
     //echo hexdec($valeurCapteur['valeurCapteur']);
 }
 
-include('../Modele/donneesPasserelle.php');
+include('Modele/donneesPasserelle.php');
 
 ?>
 
