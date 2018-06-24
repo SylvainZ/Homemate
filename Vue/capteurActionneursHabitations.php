@@ -32,7 +32,9 @@ $nbColonne5=5;
 	<div id="page">
 	
 	<div id="en-tete" class="entete">
-    <button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>
+
+     <?php if ($_SESSION['statut']!='secondaire')  {
+       echo '<button class="A"><a href="index.php?cible=logement" class="styleEntete"><p class="hab">Habitation(s)</p></a></button>'; } ?>
     <button class="B active"><p>Capteurs/<br>Actionneurs</p></button>
     </div>
 
