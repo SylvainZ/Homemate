@@ -1,9 +1,6 @@
 <?php
 include('Modele/connexionBD.php');
-
-
-//Selectionne les noms de capteur et actionneur de la base de donnÃ©es
-
+//Selectionne les noms de capteur et actionneur de la base de données
 $reponse_capteur = $bdd->query('SELECT * FROM typecapteuractionneur WHERE Capteur=1');
 $reponse_actionneur = $bdd->query('SELECT * From typecapteuractionneur WHERE Actionneur=1');
 $nbLigne1=0;
@@ -34,7 +31,7 @@ $nbColonne2=1;
 			<img class="profil" src="Vue/images/iconeProfil.png">
 		</div>
 
-        <!--En-tÃªte-->
+        <!--En-tête-->
 		<div class="tete">
 			<ul>
 				<li class="decoration"><span class="padding">
@@ -46,7 +43,7 @@ $nbColonne2=1;
 		</div>
 	</section>
 
-    <!--Liste des capteurs et actionneurs ajoutÃ©s-->
+    <!--Liste des capteurs et actionneurs ajoutés-->
     <section class="big">
         <div class="bloc2 bloc1">
         <div class="blocCapteur">
@@ -56,7 +53,7 @@ $nbColonne2=1;
             <table>
                 <tbody>
                     <tr>';
-            /*Ajouter une ligne Ã  chaque fois qu'un type est ajoutÃ©*/
+            /*Ajouter une ligne à chaque fois qu'un type est ajouté*/
             while ($donnees1 = $reponse_capteur->fetch()){
                 if (($nbLigne1 % $nbColonne1) ==0 && $nbLigne1 !=0){
                     echo '</tr><tr>';
