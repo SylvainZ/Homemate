@@ -19,10 +19,12 @@ $nbLigne=0;
 $nbLigne2=0;
 $nbLigne3=0;
 $nbLigne4=0;
+$nbLigne5=0;
 $nbColonne=5;
 $nbColonne2=5;
 $nbColonne3=5;
 $nbColonne4=5;
+$nbColonne5=5;
 ?>
 
 
@@ -146,7 +148,7 @@ $nbColonne4=5;
                                             <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="70" width="70">
 
                                             <span><?php echo $donnees1['piece']?></span>
-										<span> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
+										<span class = "nom2"> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
 										</div>
 										</td>
 										<!-- affiche les fenetres pour supprimer et modifer -->
@@ -469,13 +471,161 @@ $nbColonne4=5;
 	 					</div>
 	 					<div class="tondiv3" id="tondiv3">
 	 						<div class="luminosite">
-		 						<table class="tableau" border="1">
+		 						<?php	echo	'<table class="tableau" border="1">
 									<tbody>
-										<tr id="ligne2">
+										<tr id="ligne4">';?>
+										
+										<?php 
+										while ($donnees1 = $volet->fetch()){
+										    $id=$donnees1['ID'];
+										    /*permet de mettre à la ligne l'image s'il y a plus de nbcolonne images*/
+										    if (($nbLigne5 % $nbColonne5) ==0 && $nbLigne5 !=0) {
+										        echo '</tr><tr>';
+										        $nbLigne5 = 0;}
+										?>
+										<td>
+										<div class="case2">
+										
+                                          <button class="supprimer2"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
+                                            
+                                            
+                                            
+                                          <img  class="styleCapteur" src="Vue/images/volet.jpg" alt="image volet" height="75">
+                                          <span class="nom"><?php echo $donnees1['nom']?> </span><br>
+                                  
+                               		
+                                                                    
+                                
+             								
+                                            <div id="fenetreModale<?php echo $donnees1['ID']?>">
+                                                <div class="popup-block">
+                                                    <h3>Voulez-vous vraiment supprimer cet actionneur ?</h3>
+                                                    <div class="annulerSupprimer">
+                                                        <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionActionneur=<?php echo $donnees1['ID']?>&ID=<?php echo $_GET['ID']?>">
+                                                            <input type="submit" value="Supprimer" class="boutonSup">
+                                                        </form>
+                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- HTML pour l'interrupteur -->
+                                            <div class="inter">
+                                            <div class="onoffswitch<?php echo $donnees1['ID']?>">
+                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox<?php echo $donnees1['ID']?>" id="myonoffswitch<?php echo $donnees1['ID']?>" onclick='loadDoc<?php echo $donnees1['ID']?>()'>
+                                            <label class="onoffswitch-label<?php echo $donnees1['ID']?>" for="myonoffswitch<?php echo $donnees1['ID']?>">
+                                            <span class="onoffswitch-inner<?php echo $donnees1['ID']?>"></span>
+                                            <span class="onoffswitch-switch<?php echo $donnees1['ID']?>"></span>
+                                            </label>
+                                            </div>  
+                                            </div>               
+                                            
+										</div>
+										</td>
+										
+										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+                                        <script>
+                                        /*fonction ajax qui permet d'envoyer à la base de donner 3 si le bouton est sur on et 4 sinon */
+                                        function loadDoc<?php echo $donnees1['ID']?>() {
+                                          var xhttp = new XMLHttpRequest();
+                                          /*envoie 1 si le bouton est checked*/
+                                          if ($("#myonoffswitch<?php echo $donnees1['ID']?>").is(":checked")) {
+                                          xhttp.onreadystatechange = function() {
+                                            if (this.readyState == 4 && this.status == 200) {
+                                             document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
+                                            }
+                                          };
+                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=3", true);
+                                          xhttp.send();
+                                        }
+                                          else {/*envoie 2 si pas checked*/
+                                        	  xhttp.onreadystatechange = function() {
+                                                  if (this.readyState == 4 && this.status == 200) {
+                                                   document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
+                                                  }
+                                                };
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=4", true);
+                                                xhttp.send();
+                                          }
+                                              }
+                                          
+                                        
+                                        </script>
+										
+										<style>
+										/*interrupteur*/
+
+                                        .onoffswitch<?php echo $donnees1['ID']?> {
+                                            position: relative; width: 90px;
+                                            -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?> {
+                                            display: none;
+                                        }
+                                        .onoffswitch-label<?php echo $donnees1['ID']?> {
+                                            display: block; overflow: hidden; cursor: pointer;
+                                            border: 2px solid #999999; border-radius: 20px;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?> {
+                                            display: block; width: 200%; margin-left: -100%;
+                                            transition: margin 0.3s ease-in 0s;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:before, .onoffswitch-inner<?php echo $donnees1['ID']?>:after {
+                                            display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+                                            font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+                                            box-sizing: border-box;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:before {
+                                            content: "";
+                                            padding-left: 10px;
+                                            background-color: #34A7C1; color: #FFFFFF;
+                                        }
+                                        .onoffswitch-inner<?php echo $donnees1['ID']?>:after {
+                                            content: "";
+                                            padding-right: 10px;
+                                            background-color: #EEEEEE; color: #999999;
+                                            text-align: right;
+                                        }
+                                        .onoffswitch-switch<?php echo $donnees1['ID']?> {
+                                            display: block; width: 18px; margin: 6px;
+                                            background: #FFFFFF;
+                                            position: absolute; top: 0; bottom: 0;
+                                            right: 56px;
+                                            border: 2px solid #999999; border-radius: 20px;
+                                            transition: all 0.3s ease-in 0s; 
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-inner<?php echo $donnees1['ID']?> {
+                                            margin-left: 0;
+                                        }
+                                        .onoffswitch-checkbox<?php echo $donnees1['ID']?>:checked + .onoffswitch-label<?php echo $donnees1['ID']?> .onoffswitch-switch<?php echo $donnees1['ID']?> {
+                                            right: 0px; 
+                                        }
+                                        
+                                        
+                                       
+                                        /* affiche les fenetres pour supprimer et modifer */
+                                        #fenetreModale<?php echo $donnees1['ID']?>, #fenetreModaleBis<?php echo $donnees1['ID']?>
+                                        {
+                    	                display: none;
+                    	                position: fixed;
+                    	                top:0; right:0; bottom:0; left:0;
+                    	                background-color: rgba(0, 0, 0, 0.5);
+                    	                z-index: 1000;}
+                    
+                                        #fenetreModale<?php echo $donnees1['ID']?>:target, #fenetreModaleBis<?php echo $donnees1['ID']?>:target
+                                        {
+                    	                   display: block;
+                                        }
+                                        
+                    
+                                        </style>
+										<?php $nbLigne5++;}?>
+										
 										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
-									</tbody>
-								</table>
+									<?php	echo '</tbody>
+            								</table>';?>
 							</div>
 						</div>
 				</div>

@@ -7,6 +7,7 @@ if(isset($_GET['id'])&&!empty($_GET['id'])) {
 
     //supprime la pièce et ses capteurs associés
     $req4 = $bdd->query('DELETE FROM capteur WHERE idpiece ='.$_GET['id'] );
+    $req3 = $bdd->query('DELETE FROM actionneurs WHERE idpiece ='.$_GET['id'] );
     $req2 = $bdd->query('DELETE FROM piece WHERE ID=\'' . $_GET['id'] . '\'');
 
     //renvoie vers la page pièce

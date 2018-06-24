@@ -70,13 +70,7 @@ td
     font-size: 14px;
 
 }
-.nom
-{
 
-	
-	padding-left:2vw;
-
-}
 
 span
 {
@@ -242,12 +236,12 @@ border:none;
 .nom
 {
 	padding-bottom:0.5vw;
-	padding-left:3.5vw;
+	padding-left:2vw;
 		
 }
 .nomInter
 {
-	padding-left:3.5vw;
+	padding-left:2vw;
 }
 
 .styleCapteur

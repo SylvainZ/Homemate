@@ -13,6 +13,7 @@ if(isset($_GET['ID'])&&!empty($_GET['ID'])) {
       
      //supprime les capteurs appartenant aux pièces
     $req4 = $bdd->query('DELETE FROM capteur WHERE idpiece ='.$donnees1['ID'] );
+    $req5 = $bdd->query('DELETE FROM actionneurs WHERE idpiece ='.$donnees1['ID'] );
     
 }   //supprime les pièces et le logement
     $req1 = $bdd->query('DELETE FROM logement WHERE ID=\'' . $_GET['ID'] . '\'');
