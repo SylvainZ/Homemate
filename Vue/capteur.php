@@ -39,6 +39,13 @@ $nbColonne5=5;
    
 	<link rel="stylesheet" href="Vue/CSS/capteur.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -540,6 +547,25 @@ $nbColonne5=5;
 
 			<?php include("footer.php"); ?>
 
+    <!-- définition fenetre modale -->
+
+    <button style="margin-left: 20px;" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Bouton</button>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content" >
+                <div class="modal-header" style="background-color: #6a1b3d">
+                    <span style="font-weight: bold; color: white">Modifier ses informations</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                        <!--ton code tu met ici -->
+
+                </div>
+            </div>
+        </div>
+    </div>
     
 
 <script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
