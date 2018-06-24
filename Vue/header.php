@@ -31,6 +31,7 @@
         <?php
         if (isset($_SESSION['nom'])){
 
+            //Si c'est un admin
             if (isset($_SESSION['Admin'])) {
         ?>
 
@@ -64,6 +65,7 @@
 
 
             <?php  }
+            //si c'est un utilisateur
             else {  ?>
                 <div id="posMenu">
                     <div id="posNotif">

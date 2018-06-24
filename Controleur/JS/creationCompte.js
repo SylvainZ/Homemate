@@ -28,12 +28,12 @@
  
  function verifMDP(){
 	 var mdp = document.form.password.value;
-	 
-	 if (mdp.length<7){
-		 alert("Mot de passe trop court (minimum 7 caractères)");
-		 document.form.password.focus();
-		 return false;
-	 }
+     var result= /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{7,})/.test(mdp);
+     if (!result){
+         alert("Le mot de passe doit contenir au moins 7 caractères, une majuscule, une minuscule et un chiffre");
+         document.form.password.focus();
+         return false;
+     }
 	 
  }
 

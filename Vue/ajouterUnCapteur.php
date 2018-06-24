@@ -17,15 +17,10 @@
     <div id="page">
 	    	<section class="ajout">
 	        <h1>Ajouter un capteur</h1>
-	        <form method="post" action="index.php?cible=ajoutCapteur2&ID=<?php echo $_GET['ID']?>">
+	        <form method="post" action="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>">
 	        	<p> 
 					<label for="nom_du_capteur" class="nom_capteur">Nom du capteur* : </label><br/>
 					<select name="nom_du_capteur" id="nom_du_capteur" required>
-						<optgroup label="Température">
-							<option value="Temperature-thermomètre">Thermomètre</option>
-							<option value="Temperature-chaud">Chaud</option>
-							<option value="Temperature-froid">Froid</option>
-						</optgroup>
 						<optgroup label="Luminosité">
 							<option value="Luminosite-lampe_de_bureau">Lampe de bureau</option>
 							<option value="Luminosite-lustre">Lustre</option>

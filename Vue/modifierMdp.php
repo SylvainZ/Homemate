@@ -16,7 +16,7 @@
 
  			<h1>Modifier votre mot de passe</h1>
  		
-		 	<form method="post" action="index.php?cible=modifierMdp2" onsubmit="return verifMDP()">
+		 	<form method="post" action="index.php?cible=modifierMdp2" onsubmit="return modifyMdp();">
 		 		<table>
 		 			<tr>
 				       <td>Mot de passe actuel</td>
@@ -24,19 +24,19 @@
 				   </tr>
 				   <tr>
 				       <td>Nouveau mot de passe</td>
-				       <td><input id="mdp1"  class="text" type="password" name="mdp1"/></td>
+				       <td><input id="mdp1"  class="password" type="password" name="mdp1"/></td>
 				   </tr>
 
 				   <tr>
 				       <td>Confirmer nouveau mot de passe</td>
-				       <td><input id="mdp2"  class="text" type="password" name="mdp2"/></td>
+				       <td><input id="mdp2"  class="password" type="password" name="mdp2"/></td>
 				   </tr>
 
 				</table>
 
 				<br>
 
-				<input class="valider" type="submit" value="VALIDER" name="modifier">
+				<input class="valider" type="submit" value="VALIDER" name="modifier" >
 
 				<br><br>
 

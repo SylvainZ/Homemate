@@ -1,18 +1,4 @@
 <?php
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
-$temp = $bdd->query('SELECT * FROM capteur WHERE type = \'Temperature\' AND iduser =\''.$_SESSION['ID'].'\'');
-$lumi = $bdd->query('SELECT * FROM capteur WHERE type = \'Luminosite\' AND iduser=\''.$_SESSION['ID'].'\'');
-$pres = $bdd->query('SELECT * FROM capteur WHERE type = \'Presence\' AND iduser =\''.$_SESSION['ID'].'\'');
-
-$inter = $bdd->query('SELECT * FROM actionneurs WHERE type = \'Interrupteur\' AND iduser =\''.$_SESSION['ID'].'\'');
-$volet= $bdd->query('SELECT * FROM actionneurs WHERE type = \'volet\' AND iduser =\''.$_SESSION['ID'].'\'');
 
 $nbLigne=0;
 $nbLigne2=0;
@@ -89,7 +75,7 @@ $nbColonne4=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                             
                                                 <span class ="nom"><?php echo $donnees2['Nom'];}?></span> <br>
-										<span id="capteur"> Luminosité :  </span><p id="trame"></p>
+                                            <span id="trame"></span>
 										</div>
 										</td>
 				
@@ -135,7 +121,7 @@ $nbColonne4=5;
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                            
                                         <span><?php echo $donnees2['Nom']; }?></span> <br>
-										<span> Présence : </span><span id="trame"></span><?php echo $donnees1['Presence']; ?>
+										<span id="trame"></span>
 										</div>
 										</td>
 										
