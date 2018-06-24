@@ -113,6 +113,7 @@
 
 <?php include("Vue/footer.php") ?>
 
+<script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
 
 </body>
 </html>
