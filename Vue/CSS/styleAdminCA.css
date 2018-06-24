@@ -4,6 +4,7 @@
 	position: absolute;
 	top: 10vw;
 	left:20vw;
+	z-index: auto;
 }
 
 .decoration
@@ -102,10 +103,12 @@
 	overflow: auto;
 	height: 40vh;
 	border-right: white 3px solid;
+	width:15vw;
 }
 
-.blocActionneur h3{
-	margin-right: 3vw;
+.blocActionneur {
+	width:15vw;
+	overflow:auto;
 }
 
 td{
@@ -198,4 +201,6 @@ a:visited
 	color: white;
 	margin-left: 5vw;
 }
+
+
 
