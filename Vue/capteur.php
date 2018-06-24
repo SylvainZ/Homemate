@@ -84,7 +84,8 @@ $nbColonne4=5;
 						<div class="tonDiv2" id="tonDiv2">
 							<div class="luminosite">
 								<!-- tableau pour afficher les capteurs avec les quadillages invicibles -->
-	 							<?php echo 	'<table class="tableau"><tbody>
+	 							<?php echo 	'<table class="tableau">
+                                          <tbody>
 										<tr id="ligne1">';
 										while ($donnees1 = $lumi->fetch()){
 										    
@@ -124,15 +125,7 @@ $nbColonne4=5;
 
                                                     <div class="logement">
 
-
                                                         <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['id']?>">
-
-
-                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['ID']?>">
-
-                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifCapteur&ID=<?php echo $donnees1['id']?>">
-
-
                                                             <div class="form2">
                                                                 <div class="champnom ligne3">
                                                                     <label for="seuil" class="inputNom">Seuil :</label><br>
@@ -180,9 +173,9 @@ $nbColonne4=5;
 
 										 <td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td> 
 
-										</tr>
+									<?php echo 	'</tr>
 									</tbody>
-								</table>
+								</table>'?>
 							</div>
 						</div>
 				</div>
@@ -234,7 +227,7 @@ $nbColonne4=5;
 
                                                     <div class="logement">
 
-                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['ID']?>">
+                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['id']?>">
                                                             <div class="form2">
                                                                 <div class="champnom ligne3">
                                                                     <label for="seuil" class="inputNom">Seuil :</label><br>
@@ -279,9 +272,9 @@ $nbColonne4=5;
 										<?php $nbLigne3++;}?>
 										
 											<td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
-										</tr>
+									<?php echo 	'</tr>
 									</tbody>
-								</table>
+								</table>'?>
 							</div>
 	 					</div>
 	 			</div>
@@ -322,11 +315,11 @@ $nbColonne4=5;
 										<td>
 										<div class="case2">
 										
-                                            <button class="supprimer2"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
+                                          <button class="supprimer2"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['ID']?>">X</a></button>
                                             
                                             
                                             
-                                            <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px">
+                                          <img id="eteindre<?php echo $donnees1['ID']?>" class="styleCapteur" src="Vue/images/marche.png" alt="image interrupteur" height="50px">
                                           <span class="nom"><?php echo $donnees1['nom']?> </span><br>
                                   
                                		
@@ -461,7 +454,7 @@ $nbColonne4=5;
                                         <?php $nbLigne4++;}?>
 										
 
-										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>""> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 
 										 <?php	echo '</tbody>
             								</table>';?>
@@ -479,7 +472,7 @@ $nbColonne4=5;
 		 						<table class="tableau" border="1">
 									<tbody>
 										<tr id="ligne2">
-										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>""> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
+										 <td><a href="index.php?cible=ajoutActionneur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td>
 										</tr>
 									</tbody>
 								</table>

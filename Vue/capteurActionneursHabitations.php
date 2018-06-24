@@ -7,7 +7,7 @@ $nbLigne4=0;
 $nbColonne=5;
 $nbColonne2=5;
 $nbColonne3=5;
-$nbColonne4=6;
+$nbColonne4=5;
 ?>
 
 <html>
