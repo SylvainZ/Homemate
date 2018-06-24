@@ -41,7 +41,7 @@
 
                                 //boutton qui permet de supprimer un user secondaire
                                 echo '<td width="30%"><div><a href="index.php?cible=gererUserSec&action=supprimer&ind='.$i.'" ><input type=button value="Supprimer" class="bouton"/></a></div></td> ';
-                                echo '</tr>';
+                                echo '</tr>';   
                                 $i++;
                                 echo '</div>';
                             }
