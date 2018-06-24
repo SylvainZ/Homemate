@@ -20,15 +20,17 @@ while ($donnees = $req->fetch())
 	$corbeille[] = $donnees['Corbeille'];
 	$numMessage++;
 }
-//affectation des tableaux aux variables de session
-$_SESSION['sujet']=$sujet;
-$_SESSION['expediteur']=$expediteur;
-$_SESSION['date']=$date;
-$_SESSION['message']=$message;
-$_SESSION['reception']=$reception;
-$_SESSION['id']=$id;
-$_SESSION['corbeille']=$corbeille;
 
+if (!empty($id)) {
+//affectation des tableaux aux variables de session
+    $_SESSION['sujet'] = $sujet;
+    $_SESSION['expediteur'] = $expediteur;
+    $_SESSION['date'] = $date;
+    $_SESSION['message'] = $message;
+    $_SESSION['reception'] = $reception;
+    $_SESSION['id'] = $id;
+    $_SESSION['corbeille'] = $corbeille;
+}
 //redirection vers le contrôleur corbeille
 header('Location: index.php?cible=corbeille');
 ?>

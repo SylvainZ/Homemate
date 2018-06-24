@@ -11,4 +11,5 @@ if(isset($_POST['numero_de_serie'])&& isset($_POST['seuil'])){
 else{
     include('Vue/ajouterUnCapteur.php');
 }
+
 ?>
