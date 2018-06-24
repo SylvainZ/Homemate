@@ -237,7 +237,7 @@ right:100%;
 
 .inter
 {
-	margin-left:1.5vw;
+	margin-left:2vw;
 	margin-top:1vw;
 	
 }
@@ -392,7 +392,12 @@ button.active
 .nom
 {
 	
-	padding-left:3vw;
+	padding-left:2.5vw;
+}
+.nom2
+{
+	
+	padding-left:1vw;
 }
 
 
