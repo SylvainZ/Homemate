@@ -39,6 +39,13 @@ $nbColonne5=5;
    
 	<link rel="stylesheet" href="Vue/CSS/capteur.css">
 	<link rel="stylesheet" href="Vue/CSS/all.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -539,6 +546,17 @@ $nbColonne5=5;
 
 
 			<?php include("footer.php"); ?>
+
+    <!-- définition fenetre modale -->
+
+    <div class="col-xs-6 col-md-offset-3 ">
+        <div class="panel panel-default" style="background-color: #2f0c1b; border-radius: 10px">
+            <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 10px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
+            <div class="panel-body" style="background-color: #6a1b3c">
+                <!-- définition fenetre modale -->
+            </div>
+       </div>
+    </div>
 
     
 
