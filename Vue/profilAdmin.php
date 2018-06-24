@@ -89,8 +89,8 @@
                 <td><ul>
                     <li>Nom:<input type="text" name="nom" placeholder="nom" value= <?php echo $_SESSION['nom'];?> ></li>
                     <li>Email:<input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?>></li>
-                    <li>Code postal: <input type="text" id="codepostal" name="CodePostal" placeholder="Code postal" value=0<?php echo $_SESSION['codePostal'];?>></li>
-                    <li>Pays:<input type="text" id="pays" name="pays" placeholder="Pays" value=0<?php echo $_SESSION['pays'];?>></li>
+                    <li>Code postal: <input type="text" id="codepostal" name="CodePostal" placeholder="Code postal" value=<?php echo $_SESSION['codePostal'];?>></li>
+                    <li>Pays:<input type="text" id="pays" name="pays" placeholder="Pays" value=<?php echo $_SESSION['pays'];?>></li>
                 </ul></td>
 
                 <td><ul>
