@@ -1,20 +1,18 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 	<?php
 				try
 				{
-					// On se connecte Ã  MySQL
+					// On se connecte à MySQL
 					$bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 				}
 				catch(Exception $e)
 				{
-					// En cas d'erreur, on affiche un message et on arrÃªte tout
+					// En cas d'erreur, on affiche un message et on arrête tout
 				        die('Erreur : '.$e->getMessage());
 				}
-
 				// Si tout va bien, on peut continuer
-
-				// On rÃ©cupÃ¨re tout le contenu de la table jeux_video
+				// On récupère tout le contenu de la table jeux_video
                 if (isset($_POST['nomUser']))
                 {
                     $reponse = $bdd->query('SELECT * FROM profil WHERE Nom = \''.$_POST['nomUser'].'\''); /**/
@@ -22,7 +20,6 @@
                 else{
                     $reponse = $bdd->query('SELECT * FROM profil');
                 }
-
 				?>
 <head>
     <title>Administrateur - Utilisateur</title>
@@ -48,7 +45,7 @@
 				<li class="decoration" id="blue"><span class="padding">
 				<a href="index.php?cible=controleUser">
 				Comptes Utilisateurs</a></span></p>
-				<li class="decoration"><span class="padding"><a href="index.php?cible=controleCapteur2">Capteurs/Actionneurs</a></span></p></li>
+				<li class="decoration"><span class="padding"><a href="index.php?cible=controleCapteur">Capteurs/Actionneurs</a></span></p></li>
 				<li class="decoration"><span class="padding"><a href="index.php?cible=controlePerso">Personnalisation du site</a></span></p></li></ul>
 			</ul>
 		</div>
@@ -67,7 +64,7 @@
 				<table>
 					<tr>
 					       <td id="tabletete">Nom</td>
-					       <td id="tabletete">PrÃ©nom</td>
+					       <td id="tabletete">Prénom</td>
 					       <td id="tabletete">Statut</td>
 					       <td id="tabletete">Autre</td>
 					</tr>
