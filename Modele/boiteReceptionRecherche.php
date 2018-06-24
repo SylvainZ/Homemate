@@ -19,7 +19,7 @@ while ($donnees = $req->fetch())
 	$reception[] = $donnees['Reception'];
 	$id[] = $donnees['ID'];
 	$corbeille[] = $donnees['Corbeille'];
-    $consulte[] = $donnees['Consulte'];
+    $consulte[] = $donnees['notif'];
 
 }
 

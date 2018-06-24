@@ -29,7 +29,25 @@ switch($_POST["selection"]){
 	break;
 	
 	case 'supprimer':
-	
+
+        include('connexionBD.php');
+
+        // Récupération des 10 derniers messages
+
+        foreach ($_POST as $key => $value) {
+            if($key!='supprimer' && $key!='null' ){
+                try
+                {
+                    $bdd->exec('DELETE FROM `messagerie` WHERE ID='.$_SESSION['id'][$key]);
+                }
+                catch(Exception $e)
+                {
+                    echo 'Message non restauré !';
+                }
+
+            }
+
+        }
 	break;
 	
 
