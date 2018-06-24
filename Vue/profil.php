@@ -64,7 +64,7 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> <?php echo $_SESSION['codePostal'].' '.$_SESSION['ville']; ?></td>
+                                <td>  <?php echo $_SESSION['codePostal'].' '.$_SESSION['ville']; ?></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -74,7 +74,7 @@
 
                     </div>
                     <br>
-                     <button type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
+                     <button style="margin-left: 20px;" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Modifier le profil</button>
                      <a href="index.php?cible=modifiermdp"><input type=button value = "Modifier votre mot de passe" class="boutonModifProfil"/></a>
                     <a href="index.php?cible=autorisation"><input type=button value = "Gérer les autorisations" class="boutonModifProfil"/></a><br/><br/>
                 </div>
@@ -90,10 +90,10 @@
 
 <!-- définition fenetre modale pour la modification du profil-->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
-                <div class="modal-dialog" role="document" style="background-color: #2f0c1b">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span style="font-weight: bold">Modifier ses informations</span>
+                <div class="modal-dialog" role="document" >
+                    <div class="modal-content" >
+                        <div class="modal-header" style="background-color: #6a1b3d">
+                            <span style="font-weight: bold; color: white">Modifier ses informations</span>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
                         <div class="modal-body">
