@@ -552,15 +552,21 @@ $nbColonne5=5;
     <button style="margin-left: 20px;" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Bouton</button>
 
 
-    <div class="col-xs-6 col-md-offset-3 ">
-        <div class="panel panel-default" style="background-color: #2f0c1b; border-radius: 10px">
-            <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 10px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
-            <div class="panel-body" style="background-color: #6a1b3c">
-                <!--ton code -->
-            </div>
-       </div>
-    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content" >
+                <div class="modal-header" style="background-color: #6a1b3d">
+                    <span style="font-weight: bold; color: white">Modifier ses informations</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form action="index.php?cible=profilModifie" method="post" enctype="multipart/form-data" onsubmit="return modifProfil()">
+                        <!--ton code tu met ici -->
 
+                </div>
+            </div>
+        </div>
+    </div>
     
 
 <script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
