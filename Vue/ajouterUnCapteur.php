@@ -1,4 +1,7 @@
-
+<?php
+include('Modele/connexionBD.php');
+$capteur=$bdd->query('SELECT nomType FROM typecapteuractionneur WHERE Capteur=1');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,17 +24,10 @@
 	        	<p> 
 					<label for="nom_du_capteur" class="nom_capteur">Nom du capteur* : </label><br/>
 					<select name="nom_du_capteur" id="nom_du_capteur" required>
-						<optgroup label="Luminosité">
-							<option value="Luminosite-lampe_de_bureau">Lampe de bureau</option>
-							<option value="Luminosite-lustre">Lustre</option>
-							<option value="Luminosite-ampoule">Ampoule</option>
-							<option value="Luminosite-globe">Globe</option>
-						</optgroup>
-						<optgroup label="Présence">
-							<option value="Presence-mouvement">Mouvement</option>
-							<option value="Presence-bouge">Bouge</option>
-							<option value="Presence-present">Présent</option>
-						</optgroup>
+                        <?php
+                        while($donneesCapteur = $capteur->fetch()){?>
+                            <option label="<?php echo $donneesCapteur['nomType'];?>"><?php echo $donneesCapteur['nomType'];}?></option>
+
 					</select><br/><br/>
 					
 					<label for="numero_de_serie">Numéro de série* : </label><br/>
@@ -59,7 +55,7 @@ Ex: Derrière le canapé"/></textarea><br/><br/>
 	    </section>
     </div>
 
-            <?php include("Vue/footer.php") ?>
+            <?php include("Vue/footer.php"); ?>
 
     </body>
 

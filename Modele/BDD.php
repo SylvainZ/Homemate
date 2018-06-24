@@ -4,46 +4,26 @@
 include('connexionBD.php');
 
 //
-if (isset($_POST['modification']) && isset($_GET['id']))
+if (isset($_POST['ajoutCapteur'])&&!empty($_POST['ajoutCapteur']))
 {
-    $req = $bdd->prepare('UPDATE capteur SET type= ? WHERE id ='. $_GET['id'] );
+    $req = $bdd->prepare('INSERT INTO typecapteuractionneur(nomType,Capteur) VALUES(?,?)');
     $req->execute(array(
-        htmlspecialchars($_POST['modification'])
-
+        htmlspecialchars($_POST['ajoutCapteur']),
+        1
     ));
     header('Location:index.php?cible=controleCapteur2');
 }
 
-else{
-    header('Location:index.php?cible=controleCapteur2');
-}
-
-
-if (isset($_POST['ajoutCapteur']))
+elseif (isset($_POST['ajoutActionneur'])&&!empty($_POST['ajoutActionneur']))
 {
-    $req2 = $bdd->prepare('INSERT INTO capteur(type) VALUES(:type)');
+    $req2 = $bdd->prepare('INSERT INTO typecapteuractionneur(nomType,Actionneur) VALUES(?,?)');
     $req2->execute(array(
-        'type' => htmlspecialchars($_POST['ajoutCapteur'])
+        htmlspecialchars($_POST['ajoutActionneur']),
+        1
     ));
     header('Location:index.php?cible=controleCapteur2');
 }
 
-else{
-    header('Location:index.php?cible=controleCapteur2');
-}
-
-
-if (isset($_POST['ajoutActionneur']))
-{
-    $req3 = $bdd->prepare('INSERT INTO actionneurs (nom) VALUES(:nom)');
-    $req3->execute(array(
-        'nom' => htmlspecialchars($_POST['ajoutActionneur'])
-    ));
-    header('Location:index.php?cible=controleCapteur2');
-}
-else{
-    header('Location:index.php?cible=controleCapteur2');
-}
 
 ?>
 

@@ -1,4 +1,7 @@
-
+<?php
+include('Modele/connexionBD.php');
+$actionneur=$bdd->query('SELECT nomType FROM typecapteuractionneur WHERE Actionneur=1');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,10 +27,11 @@
                     <label for="nom_actionneur">Nom de l'actionneur* : </label><br/>
                     <input type="text" name="nom_actionneur" id="nom_actionneur" maxlength="10" required/><br/><br/>
 
-					<label for="type_actionneur" class="type_actionneur">Nom de l'actionneur* : </label><br/>
+					<label for="type_actionneur" class="type_actionneur">Type* : </label><br/>
 					<select name="type_actionneur" id="type_actionneur">
-							<option value="volet">Volet</option>
-							<option value="Interrupteur">Interrupteur</option>
+                        <?php
+                        while($donneesActionneur = $actionneur->fetch()){?>
+                        <option label="<?php echo $donneesActionneur['nomType'];?>"><?php echo $donneesActionneur['nomType'];}?></option>
 					</select>
 					<br/><br/>
 					
