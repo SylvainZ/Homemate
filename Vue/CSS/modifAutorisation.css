@@ -1,0 +1,50 @@
+h1
+{
+    text-align:center;
+    color:#2f0c1b;
+}
+
+h2
+{
+    color:white;
+    text-align: center;
+}
+
+#cadre
+{
+
+    background-color: #6a1b3d;
+    margin:auto;
+    padding : 2em;
+    border-radius:5px;
+    color:#2f0c1b;
+
+}
+
+table
+{
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    background-color:#917e86;
+    padding:10px;
+    border-radius: 5px;
+    text-align:left;
+
+}
+
+
+
+
+
+.bouton
+{
+    border-radius:5px;
+    height:27px;
+    background-color:#635c8e;
+    color:white;
+    background: -webkit-linear-gradient(left, #fedfdd, #625c8e, #625c8e, #fedfdd);
+    box-shadow:none;
+    font-family: Quando, sans-serif;
+
+}

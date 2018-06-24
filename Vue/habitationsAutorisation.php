@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="Vue/CSS/autorisation.css" />
+    <link rel="stylesheet" href="Vue/CSS/habitationsAutorisation.css" />
     <link rel="stylesheet" href="Vue/CSS/all.css" />
 
     <title>Liste des habitations</title>
@@ -24,9 +24,9 @@
     <!--En-tête du tableau -->
     <thead>
         <tr>
-            <td>Adresse</td>
-            <td>Nombre de pièce</td>
-            <td>Superficie</td>
+            <td width="15%">Adresse</td>
+            <td width="25%">Nombre de pièce</td>
+            <td width="15%">Superficie</td>
         </tr>
     </thead>
     <!--Corps du tableau -->
@@ -45,9 +45,9 @@
 
                             //affiche l'adresse, le nombre de pièces et la superficie de chaque habitation
                             echo '<tr>';
-                            echo '<td><a href="index.php?cible=lienLogSec&logement='.$i.'">'.$_SESSION['adresseHab'][$i]. ' </a></td> ';
-                            echo '<td><a href="index.php?cible=lienLogSec&logement='.$i.'">'.$_SESSION['pieceHab'][$i]. ' </a></td>';
-                            echo '<td><a href="index.php?cible=lienLogSec&logement='.$i.'">'.$_SESSION['superficieHab'][$i]. ' </a></td>';
+                            echo '<td width="35%"><a href="index.php?cible=lienLogSec&logement='.$i.'">'.$_SESSION['adresseHab'][$i]. ' </a></td> ';
+                            echo '<td width="25%"><a href="index.php?cible=lienLogSec&logement='.$i.'">'.$_SESSION['pieceHab'][$i]. ' </a></td>';
+                            echo '<td width="10%"><a href="index.php?cible=lienLogSec&logement='.$i.'">'.$_SESSION['superficieHab'][$i]. ' </a></td>';
                             echo ' </tr>' ;
                             $i++;
                         }
