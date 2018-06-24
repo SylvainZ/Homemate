@@ -1,6 +1,4 @@
 <?php
-session_start();
-//include('../Modele/connexion.php');
 $ch = curl_init();
 curl_setopt(
     $ch,
