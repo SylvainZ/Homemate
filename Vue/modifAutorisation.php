@@ -60,7 +60,8 @@
             <?php }  } } ?>
         </table>
     <!-- bouton permettant d'ajouter d'autre habitation-->
-    <a href="index.php?cible=modifAutorisation&act=ajouter&indice=<?php echo $ind ?>"><input type="button" value="Ajouter" class="bouton"/></a>
+    <?php if(empty($adresseHabAutor)) {
+    echo '<a href="index.php?cible=modifAutorisation&act=ajouter&indice='.$ind.'"><input type="button" value="Ajouter" class="bouton"/></a>' ; } ?>
 
     <!-- bouton permettant de retourner à la liste des utilisateurs secondaires -->
     <a href="index.php?cible=autorisation"><input type="button" value="Annuler" class="bouton"/></a>
