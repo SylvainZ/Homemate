@@ -66,7 +66,7 @@ function insererTrameBDD($data,$bdd)
                         && heure=\''.$hour.':'.$min.':'.$sec.'\'');
 
                     $reponse=$req1->fetch();
-               if (!(isset($reponse['ID']) && !empty($reponse['ID']))) {
+               if (!(isset($reponse['ID']) && !empty($reponse['ID'])) && $o=='011E' && $c!='0') {
                     $req = $bdd->prepare('INSERT INTO passerelle(typeDeTrame, numObjet, typeRequete, typeCapteur, numCapteur, valeurCapteur, numDeTrame, checksum, dateFrame, heure) VALUES(?,?,?,?,?,?,?,?,?,?)');
                     $req->execute($values);
                 }
@@ -79,7 +79,11 @@ function analyseTrame($bdd){
     $req_valeurCapteur = $bdd->query('SELECT valeurCapteur FROM passerelle ORDER BY ID DESC LIMIT 1');
     $valeurCapteur=$req_valeurCapteur->fetch();
     if (hexdec($valeurCapteur['valeurCapteur'])>900){
-        echo "Il y a quelqu'un à ".hexdec($valeurCapteur['valeurCapteur']);
+        echo "Il y a quelqu'un";
+    }
+
+    else{
+        echo "Rien à signaler";
     }
     //echo hexdec($valeurCapteur['valeurCapteur']);
 }

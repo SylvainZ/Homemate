@@ -4,7 +4,11 @@ function ajaxCall(lien, nomId){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById(nomId).innerHTML = this.responseText;
+            document.getElementById(nomId).innerHTML =this.responseText;
+           /* var elems = document.getElementsByClassName(nomClass);
+            for(var i = 0; i < elems.length; i++) {
+                elems[i].innerHTML = "blabla";
+            }*/
         }
     };
     xhttp.open("GET", lien, true);
