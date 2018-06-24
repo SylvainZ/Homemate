@@ -4,6 +4,7 @@
 	position: absolute;
 	top: 10vw;
 	left:20vw;
+	z-index: auto;
 }
 
 .decoration
@@ -200,4 +201,6 @@ a:visited
 	color: white;
 	margin-left: 5vw;
 }
+
+
 

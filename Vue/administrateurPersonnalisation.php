@@ -23,7 +23,7 @@
 				<li class="decoration" ><span class="padding">
 				<a href="index.php?cible=controleUser">
 				Comptes Utilisateurs</a></span></li>
-				<li class="decoration"><span class="padding"><a href="index.php?cible=controleCapteur">Capteurs/Actionneurs</a></span></li>
+				<li class="decoration"><span class="padding"><a href="index.php?cible=controleCapteur2">Capteurs/Actionneurs</a></span></li>
 				<li class="decoration" id="blue"><span class="padding"><a href="index.php?cible=controlePerso">Personnalisation du site</a></span></li>
 			</ul>
 		</div>
