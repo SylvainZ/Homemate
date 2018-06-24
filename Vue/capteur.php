@@ -247,7 +247,7 @@ $nbColonne4=5;
 
 
                                             <span><?php echo $donnees1['piece']?> </span>
-										<span id="trame"></span>
+										    <span id="trame"></span>
 										</div>
 										</td>
 										

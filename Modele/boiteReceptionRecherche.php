@@ -23,18 +23,18 @@ while ($donnees = $req->fetch())
 
 }
 
+if (!empty($id)) {
 //affectation des tableaux aux variables de session
-$_SESSION['sujet']=$sujet;
-$_SESSION['expediteur']=$expediteur;
-$_SESSION['nomExp']=$nomExp;
-$_SESSION['date']=$date;
-$_SESSION['message']=$message;
-$_SESSION['reception']=$reception;
-$_SESSION['id']=$id;
-$_SESSION['corbeille']=$corbeille;
-$_SESSION['consulte']=$consulte;
-
+    $_SESSION['sujet'] = $sujet;
+    $_SESSION['expediteur'] = $expediteur;
+    $_SESSION['nomExp'] = $nomExp;
+    $_SESSION['date'] = $date;
+    $_SESSION['message'] = $message;
+    $_SESSION['reception'] = $reception;
+    $_SESSION['id'] = $id;
+    $_SESSION['corbeille'] = $corbeille;
+    $_SESSION['consulte'] = $consulte;
+}
 //redirection vers le contrôleur Boite de réception
 header('Location: index.php?cible=boiteMail');
-
 ?>
