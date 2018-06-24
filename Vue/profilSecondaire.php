@@ -73,7 +73,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
     <div class="modal-dialog" role="document" style="background-color: #2f0c1b">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="background-color: #6a1b3d">
                 <span style="font-weight: bold">Modifier ses informations</span>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
