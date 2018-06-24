@@ -11,38 +11,38 @@ switch(htmlspecialchars($_POST["selection"])){
 
 	// Récupération des 10 derniers messages
 
-	foreach ($_POST as $key => $value) {
-		if($key!='supprimer'){
-			try
-			{
-				echo $key." ".$value;
-				//Place la colonne corbeille de la table à 1 pour spécifier que le message apparaitra dans la corbeille
-				$bdd->exec('UPDATE `messagerie` SET `Corbeille`=1 WHERE ID='.$_SESSION['id'][$key]);
-				
-			}
-			catch(Exception $e)
-			{
-				echo 'Message non supprimé';
-			}
-		}
-	
-	}
+        foreach ($_POST as $key => $value) {
+            if($key!='selection'){
+                try
+                {
+
+                    //Place la colonne corbeille de la table à 1 pour spécifier que le message apparaitra dans la corbeille
+                    $bdd->exec('UPDATE `messagerie` SET `Corbeille`=1 WHERE ID='.(int)($_SESSION['id'][$key]));
+
+                }
+                catch(Exception $e)
+                {
+                    echo 'Message non supprimé';
+                }
+            }
+
+        }
 	
 	break;
 
     //Le cas où l'on veut marquer un message comme lu
 	case 'lu':
         foreach ($_POST as $key => $value) {
-            if($key!='lu'){
+            if($key!='selection'){
                 try
                 {
-                    echo $key." ".$value;
-                    $bdd->exec('UPDATE `messagerie` SET `Consulte`=1 WHERE ID='.$_SESSION['id'][$key]);
+
+                    $bdd->exec('UPDATE `messagerie` SET `notif`=1 WHERE ID='.$_SESSION['id'][$key]);
 
                 }
                 catch(Exception $e)
                 {
-                    echo 'Message non supprimé';
+                    echo 'Message mis à lu';
                 }
             }
         }
@@ -51,16 +51,16 @@ switch(htmlspecialchars($_POST["selection"])){
     //Le cas où l'on veut marquer un message comme non lu
 	case 'non_lu':
         foreach ($_POST as $key => $value) {
-            if($key!='lu'){
+            if($key!='selection'){
                 try
                 {
-                    echo $key." ".$value;
-                    $bdd->exec('UPDATE `messagerie` SET `Consulte`=0 WHERE ID='.$_SESSION['id'][$key]);
+
+                    $bdd->exec('UPDATE `messagerie` SET `notif`=0 WHERE ID='.$_SESSION['id'][$key]);
 
                 }
                 catch(Exception $e)
                 {
-                    echo 'Message non supprimé';
+                    echo 'Message non non_lu';
                 }
             }
         }

@@ -17,7 +17,7 @@ if ($_SESSION['statut']=='secondaire') {
     $volet = $bdd->query('SELECT actionneurs.ID,actionneurs.nom,piece.Nom FROM actionneurs INNER JOIN piece ON actionneurs.type = \'volet\' AND actionneurs.idpiece = piece.ID INNER JOIN logement ON piece.ID_logement=logement.ID AND logement.ID=\'' . $_SESSION['ID_logement_sec'].'\'');
 
     //renvoie vers la page capteur pour les utilisateurs secondaires
-    include('Vue/capteurActionneursSecondaires.php');
+    include('Vue/capteurActionneursHabitations.php');
 }
 
 //utilisateur principal

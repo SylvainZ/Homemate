@@ -112,7 +112,7 @@
 </div>
 
 
-
+<script type="text/javascript" src="Controleur/JS/locataireproprietaire.js"></script>
 
 
 </body>

@@ -36,7 +36,10 @@ switch($action) {
     case 'supprimer':
 
         //supprime l'utilisateur de la table profil
+        $_SESSION['prenomA'][$_GET["ind"]]=null;
+        $_SESSION['nomA'][$_GET["ind"]]=null;
         $req = $bdd->query('DELETE FROM profil WHERE Email=\'' . $_SESSION['emailAut'][$ind] . '\'');
+       
 
         //renvoie vers la page autorisation
         header('Location:index.php?cible=autorisation');
