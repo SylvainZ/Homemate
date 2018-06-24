@@ -40,7 +40,7 @@ $nbColonne2=1;
 				<li class="decoration"><span class="padding">
 				<a href="index.php?cible=controleUser">
                     Comptes Utilisateurs</a></span></p></li>
-                <li class="decoration" id="blue"><span class="padding"><a href="index.php?cible=controleCapteur2">Capteurs/Actionneurs</a></span></p></li>
+                <li class="decoration" id="blue"><span class="padding"><a href="index.php?cible=controleCapteur">Capteurs/Actionneurs</a></span></p></li>
                 <li class="decoration"><span class="padding"><a href="index.php?cible=controlePerso">Personnalisation du site</a></span></p></li>
 			</ul>
 		</div>
@@ -117,7 +117,7 @@ $nbColonne2=1;
         <div class="bloc2">
             <h1>Ajouter des capteurs ou des actionneurs : </h1>
             <p class="titreType">Ajouter un capteur :</p>
-            <form action="index.php?cible=controleCapteur" method="POST">
+            <form action="index.php?cible=controleCapteur2" method="POST">
                 Type : <input type="text" name="ajoutCapteur" style="width: 10vw;" >
                 <input type="submit" value="Ajouter" class="bouton">
 

@@ -11,7 +11,7 @@ if (isset($_POST['ajoutCapteur'])&&!empty($_POST['ajoutCapteur']))
         htmlspecialchars($_POST['ajoutCapteur']),
         1
     ));
-    header('Location:index.php?cible=controleCapteur2');
+    header('Location:index.php?cible=controleCapteur');
 }
 
 elseif (isset($_POST['ajoutActionneur'])&&!empty($_POST['ajoutActionneur']))
@@ -21,7 +21,7 @@ elseif (isset($_POST['ajoutActionneur'])&&!empty($_POST['ajoutActionneur']))
         htmlspecialchars($_POST['ajoutActionneur']),
         1
     ));
-    header('Location:index.php?cible=controleCapteur2');
+    header('Location:index.php?cible=controleCapteur');
 }
 
 
