@@ -1,8 +1,3 @@
-//**************************************************************************************
-//**************************************************************************************
-//  Vous devez completer ce programme avec votre code pour qu'il soit operationnel  ****
-//**************************************************************************************
-//**************************************************************************************
 #define   SIZE_ENVOI  17
 #define   SIZE_RECEP  15
 #define MY_LEDV  2
@@ -41,8 +36,8 @@ void setup()
   TrameEnvoi[0] = '1';  // le champ TRA. choisir toujours "Trame courante = 1"
   TrameEnvoi[1] = '0';  // le champ OBJ (4 octets) = numero de groupe. ex 001A
   TrameEnvoi[2] = '1';  //
-  TrameEnvoi[3] = '1';  // mettre le chiffre du numero de groupe (ex 1)
-  TrameEnvoi[4] = 'E';  // mettre la lettre  du numero de groupe (ex A)
+  TrameEnvoi[3] = '1';  // 
+  TrameEnvoi[4] = 'E';  // 
   TrameEnvoi[5] = '1';  // champ REQ. 1= Requete en ecriture
 //  TrameEnvoi[6] = ;   // champ TYP. remplir dans la boucle (voir Doc)
   TrameEnvoi[7] = '0';  // champ NUM (2 octets). Numero du capteur
@@ -51,10 +46,10 @@ void setup()
 //  TrameEnvoi[10] = ;    // par exemple la valeur du capteur de lumiere
 //  TrameEnvoi[11] = ;
 //  TrameEnvoi[12] = ;
-  TrameEnvoi[13] = 'B'; // Champ TIM (4 octets) = heure d'envoi de la trame
-  TrameEnvoi[14] = 'A'; // Ce champ n'est pas utilisé par la passerelle; donc
-  TrameEnvoi[15] = 'B'; // on peut mettre la valeur qu'on veut
-  TrameEnvoi[16] = 'A';
+  TrameEnvoi[13] = 'R'; // Champ TIM (4 octets) = heure d'envoi de la trame
+  TrameEnvoi[14] = 'I'; // Ce champ n'est pas utilisé par la passerelle; donc
+  TrameEnvoi[15] = 'E'; // on peut mettre la valeur qu'on veut
+  TrameEnvoi[16] = 'N';
 //  TrameEnvoi[17] = ;    // premier  chiffre (poid fort)   du checksum
 //  TrameEnvoi[18] = ;    // deuxieme chiffre (poid faible) du checksum
 }
