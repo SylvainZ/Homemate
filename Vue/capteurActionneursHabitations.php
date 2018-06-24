@@ -47,53 +47,7 @@ $nbColonne5=5;
 		</div>
 		</div>
 			<div class="tonDiv1" id="tonDiv1">
-				<div class="couleur1">
-					<div class="bande2">
-					<div class="centre2">
-					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');"><span class="styleonglet">Luminosité</span></button>
-					</div>
-					</div>
-						<div class="tonDiv2" id="tonDiv2">
-							<div class="luminosite">
-	 					<?php echo 	'<table class="tableau"><tbody>
-										<tr id="ligne1">';
-										while ($donnees1 = $lumi->fetch()){
-										  if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0){
-										      echo '</tr><tr>';
-										      $nbLigne=0;
-                                          }
-                                          
-
-										?>
-										<td>
-										<div class="case">
-                                            
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="80" width="80"><br>
-
-                                         
-
-										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.id=\''.$donnees1['id'].'\'');
-                                         
-                                            while ($donnees2 = $nomPiece->fetch()){?>
-                                            
-                                                <span class ="nom"><?php echo $donnees2['Nom'];}?></span> <br>
-                                            <span id="trame"></span>
-										</div>
-										</td>
-				
-
-										<?php $nbLigne++;}?>
-
-
-										 <td id="case"></td>
-
-								<?php echo "</tbody>
-								</table>";?>
-							</div>
-						</div>
-				</div>
-
-				
+	
 				<div class="couleur1">
 				<div class="bande2">
 					<div class="centre2">
@@ -122,9 +76,14 @@ $nbColonne5=5;
                                          
                                             while ($donnees2 = $nomPiece->fetch()){?>
                                            
-                                        <span class="nom"><?php echo $donnees2['Nom']; }?></span> <br>
-										<span id="trame"></span>
+                                        <span class="nom"><?php echo $donnees2['Nom']; }?></span> <br><br>
+										<span id="trame<?php echo $donnees1['id']?>"></span>
 										</div>
+										
+										<script>
+										//recupère les données de la passerelles toutes les 5s
+										setInterval('ajaxCall("Controleur/recupDonneesPasserelle.php","trame<?php echo $donnees1['id']?>")', 5000);
+										</script>
 										</td>
 										
 										

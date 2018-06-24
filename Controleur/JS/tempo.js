@@ -17,9 +17,6 @@ function ajaxCall(lien, nomId){
 
 //mise en place d'un tempo d'appel des requêtes
 
-//recupère les données de la passerelles toutes les 5s
-setInterval('ajaxCall("Controleur/recupDonneesPasserelle.php","trame")', 5000);
-
 //controle des notifications toutes les 0.2s
 setInterval('ajaxCall("Controleur/notification.php","notification-count")', 200);
 

@@ -77,111 +77,7 @@ $nbColonne5=5;
 		</div>
 		</div>
 			<div class="tonDiv1" id="tonDiv1">
-				<div class="couleur1">
-					<div class="bande2">
-					<div class="centre2">
-					<button class="marche" id="bouton_tonDiv2" onclick="javascript:afficher_cacher('tonDiv2');"><span class="styleonglet">Luminosité</span></button>
-					</div>
-					</div>
-						<div class="tonDiv2" id="tonDiv2">
-							<div class="luminosite">
-								<!-- tableau pour afficher les capteurs avec les quadillages invicibles -->
-	 							<?php echo 	'<table class="tableau">
-                                          <tbody>
-										<tr id="ligne1">';
-										while ($donnees1 = $lumi->fetch()){
-										    
-										  /*permet de mettre à la ligne l'image s'il y a plus de nbcolonne images*/
-										  if (($nbLigne % $nbColonne) ==0 && $nbLigne !=0){
-										      echo '</tr><tr>';
-										      $nbLigne=0;
-                                          }
-										?>
-										<td>
-										<div class="case">
-										 <div id="supModif">
-										 	<!-- bouton qui permet de supprimer -->
-                                            <button class="supprimer"><a class="boutonSupprimer" href="#fenetreModale<?php echo $donnees1['id']?>">X</a></button>
-                                            <!-- bouton qui permet de modifer -->
-                                            <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['id']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
-                                         </div>
-                                            
-											<!-- fenetre qui saffiche quand on clique sur le bouton supprimer -->
-                                            <div id="fenetreModale<?php echo $donnees1['id']?>">
-                                                <div class="popup-block">
-                                                    <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
-                                                    <div class="annulerSupprimer">
-                                                    <form method="post" action="index.php?cible=supprimerCapteurActionneur&idSuppressionCapteur=<?php echo $donnees1['id']?>&ID=<?php echo $_GET['ID']?>">
-                                                        <input type="submit" value="Supprimer" class="boutonSup">
-                                                    </form>
-                                                        <a class="annuler" href="#en-tete"><button class="annuler">Annuler</button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                            <!-- formulaire modification -->
-                                            <!-- fenetre qui saffiche quand on clique sur le bouton modifier -->
-                                            <div id="fenetreModaleBis<?php echo $donnees1['id']?>">
-                                                <div class="popup-block">
-                                                    <h3 class="log modiflog">Modification du capteur</h3>
-
-                                                    <div class="logement">
-
-                                                        <form class="form1 form2" method="post"  action="index.php?cible=modifierCapteur&ID=<?php echo $donnees1['id']?>">
-                                                            <div class="form2">
-                                                                <div class="champnom ligne3">
-                                                                    <label for="seuil" class="inputNom">Seuil :</label><br>
-                                                                    <input type="number" name="seuil" id="piece" value="<?php echo $donnees1['SeuilL']?>"/>
-                                                                </div>
-                                                                <br> <br>
-                                                                <div class="valid">
-                                                                    <input type="submit" name="valider" value="Valider" class="bouton validLogement">
-
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                        <a class="annuler1" href="#en-tete"><button class="annuler1">Annuler</button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <img class="styleCapteur" src="Vue/images/luminosité.png" alt="image capteur de luminosité" height="70" width="70">
-
-                                            <span><?php echo $donnees1['piece']?></span>
-										<span class = "nom2"> Luminosité : </span><?php echo $donnees1['Luminosite']; ?>
-										</div>
-										</td>
-										<!-- affiche les fenetres pour supprimer et modifer -->
-										<style>
-                                        
-                                        #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
-                                        {
-                    	                display: none;
-                    	                position: fixed;
-                    	                top:0; right:0; bottom:0; left:0;
-                    	                background-color: rgba(0, 0, 0, 0.5);
-                    	                z-index: 1000;}
-                    
-                                        #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
-                                        {
-                    	                   display: block;
-                                        }
-                                        
-                                        </style>
-                    				
-
-										<?php $nbLigne++;}?>
-
-
-										 <td><a href="index.php?cible=ajouterUnCapteur&ID=<?php echo $_GET['ID']?>"> <input name="bu" class="bouton1" id="bu" type="button" value="+"></a></td> 
-
-									<?php echo 	'</tr>
-									</tbody>
-								</table>'?>
-							</div>
-						</div>
-				</div>
-				
 				<div class="couleur1">
 				<div class="bande2">
 					<div class="centre2">
@@ -249,8 +145,14 @@ $nbColonne5=5;
 
 
                                             <span><?php echo $donnees1['piece']?> </span>
-										    <span id="trame"></span>
+										    <span id="trame<?php echo $donnees1['id']?>"></span>
 										</div>
+										
+										<script>
+										//recupère les données de la passerelles toutes les 5s
+										setInterval('ajaxCall("Controleur/recupDonneesPasserelle.php","trame<?php echo $donnees1['id']?>")', 5000);
+										</script>
+										
 										</td>
 										
 										<!-- affiche les fenetres pour supprimer et modifer -->
@@ -641,6 +543,7 @@ $nbColonne5=5;
     
 
 <script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
+<script src="Controleur/JS/tempo.js" type="text/javascript"></script>
 
 
 
