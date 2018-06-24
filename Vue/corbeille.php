@@ -27,8 +27,8 @@
             <p>
                 <a href="index.php?cible=messagerie"><input type="button" value="Nouveau message" class="nouveau"/>
                 </a>
-            <div><a href="index.php?cible=boiteMailReception" class="active">Liste des messages</a></div><br/>
-            <div><a href="index.php?cible=corbeilleRecherche" class="nonActive">Corbeille</a></div>
+            <div><a href="index.php?cible=boiteMailReception" class="nonActive">Liste des messages</a></div><br/>
+            <div><a href="index.php?cible=corbeilleRecherche" class="active">Corbeille</a></div>
             </p>
         </section>
 
