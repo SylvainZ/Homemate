@@ -549,6 +549,9 @@ $nbColonne5=5;
 
     <!-- définition fenetre modale -->
 
+    <button style="margin-left: 20px;" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Bouton</button>
+
+
     <div class="col-xs-6 col-md-offset-3 ">
         <div class="panel panel-default" style="background-color: #2f0c1b; border-radius: 10px">
             <div class="panel-heading" style="background-color: #2f0c1b; border-radius: 10px" ><h3 style="color: white">Informations sur l'utilisateur</h3></div>
