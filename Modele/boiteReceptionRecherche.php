@@ -36,5 +36,5 @@ if (!empty($id)) {
     $_SESSION['consulte'] = $consulte;
 }
 //redirection vers le contrôleur Boite de réception
-header('Location: index.php?cible=boiteMail');
+include('Vue/boiteMail.php');
 ?>
