@@ -146,7 +146,7 @@ $nbColonne5=5;
                                             
                                              <div id="fenetreModaleTiers<?php echo $donnees1['id']?>">
                                                 <div class="popup-block2">
-                                                   <?php include('Controleur/courbeStatistique.php')?>
+                                                   <?php include('Controleur/courbeStatistique.php');?>
 
                                                    <a class="annuler2" href="#en-tete"><button >X</button></a>
                                                 </div>
@@ -551,29 +551,6 @@ $nbColonne5=5;
 
 			<?php include("footer.php"); ?>
 
-
-
-<<<<<<< HEAD
-    
-=======
-
-
-    <!-- définition fenetre modale -->
-    <button style="margin-left: 20px;" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Courbe</button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
-        <div class="modal-dialog" role="document" >
-            <div class="modal-content" >
-                <div class="modal-header" style="background-color: #6a1b3d">
-                    <span style="font-weight: bold; color: white">Modifier ses informations</span>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body"> <?php  include('Controleur/courbeStatistique.php'); ?> </div>
-            </div>
-        </div>
-    </div>
->>>>>>> 32538224869ec6d859bc22389d1eab93491f9704
 
 <script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
 <script src="Controleur/JS/tempo.js" type="text/javascript"></script>
