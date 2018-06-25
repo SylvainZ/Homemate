@@ -100,7 +100,8 @@ $nbColonne5=5;
                                              <div class="posParametre"><a href="#fenetreModaleBis<?php echo $donnees1['id']?>"><img class="parametre" src="Vue/images/parametre.png" alt="image parametre"></a></div>
                                             </div>
                                          
-                                            <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50px">
+                                            <a href="#fenetreModaleTiers<?php echo $donnees1['id']?>"><img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50"></a>
+                                            
                                             <div id="fenetreModale<?php echo $donnees1['id']?>">
                                                 <div class="popup-block">
                                                     <h3>Voulez-vous vraiment supprimer ce capteur ?</h3>
@@ -137,6 +138,20 @@ $nbColonne5=5;
                                                     </div>
                                                 </div>
                                             </div>
+                                            
+                                            
+                                            
+                                            <!-- Graphique -->
+                                            
+                                            
+                                             <div id="fenetreModaleTiers<?php echo $donnees1['id']?>">
+                                                <div class="popup-block2">
+                                                   <?php include('Controleur/courbeStatistique.php')?>
+
+                                                   <a class="annuler2" href="#en-tete"><button >X</button></a>
+                                                </div>
+                                            </div>
+                                            
 
 
                                             <span><?php echo $donnees1['piece']?> </span>
@@ -153,7 +168,7 @@ $nbColonne5=5;
 										<!-- affiche les fenetres pour supprimer et modifer -->
 										<style>
                     
-                                        #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>
+                                        #fenetreModale<?php echo $donnees1['id']?>, #fenetreModaleBis<?php echo $donnees1['id']?>,#fenetreModaleTiers<?php echo $donnees1['id']?>
                                         {
                     	                display: none;
                     	                position: fixed;
@@ -161,7 +176,7 @@ $nbColonne5=5;
                     	                background-color: rgba(0, 0, 0, 0.5);
                     	                z-index: 1000;}
                     
-                                        #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target
+                                        #fenetreModale<?php echo $donnees1['id']?>:target, #fenetreModaleBis<?php echo $donnees1['id']?>:target, #fenetreModaleTiers<?php echo $donnees1['id']?>:target
                                         {
                     	                   display: block;
                                         }
@@ -533,10 +548,14 @@ $nbColonne5=5;
 
 			<?php include("footer.php"); ?>
 
+
+
     
 
 <script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
 <script src="Controleur/JS/tempo.js" type="text/javascript"></script>
+
+
 
 
 
