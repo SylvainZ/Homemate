@@ -43,7 +43,7 @@ if(isset($_POST['nom'])) {
 
             $to = $Email;
             $subject = 'inscription';
-            $message = 'Votre code de confirmation est'.' '.$code;
+            $message = 'Votre code de confirmation est'.' '.$code.'.';
             $headers = 'From: domisep@isep.fr';
 
             //envoi d'un mail
@@ -64,9 +64,10 @@ if(isset($_POST['nom'])) {
                     'secondaire-'.$_SESSION['ID'],
                     $Email
                 ));
+
                 $_SESSION['emailA']=$Email;
                 //renvoie vers une page pour choisir l'habitation à lier avec l'utilisateur secondaire
-                header('Location:index.php?cible=habitationsAutorisation');
+                header('Location:index.php?cible=confirmationSec');
             }
             else {
                 //renvoie vers le formulaire de la 2e étape de l'inscription
