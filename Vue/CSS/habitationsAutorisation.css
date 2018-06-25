@@ -62,3 +62,12 @@ tr
     font-family: Quando, sans-serif;
 
 }
+
+#messageErreur
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+    margin-top: 5%;
+}

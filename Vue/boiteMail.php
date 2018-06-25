@@ -87,7 +87,7 @@
                             if ($_SESSION['corbeille'][$i] == 0) {
                                 ?>
                                 <div class="message">
-                                    <input type="checkbox" class="messagecheck" name="<?php echo $i?>"/>
+                                    <input type="checkbox" class="messagecheck" name="1<?php echo $i?>"/>
                                     <table>
                                         <tbody>
                                         <tr>

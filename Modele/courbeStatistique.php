@@ -2,8 +2,6 @@
 
 include('connexionBD.php');
 
-insererTrameBDD($data,$bdd);
-analyseTrame($bdd);
 
     $req1 = $bdd->query('SELECT * FROM passerelle');/* WHERE typeDeTrame=\''.$t.'\'
                         && numObjet=\''.$o.'\'
