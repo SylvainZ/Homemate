@@ -18,5 +18,5 @@ analyseTrame($bdd);
     $reponse=$req1->fetch();
 
 
-include('../Vue/courbeStatistique.php');
+include('Vue/courbeStatistique.php');
 ?>
