@@ -39,6 +39,21 @@ if(isset($_POST['nom'])) {
         $Email = htmlspecialchars($_POST['Email']);
 
 
+        //génerer un code de confirmation
+        $code = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
+        $code = str_shuffle($code); //On crée une combinaison de VARCHAR
+        $code = substr($code, 0, 10);
+
+        $_SESSION['cod']=$code;
+
+        $to = $Email;
+        $subject = 'Inscription';
+        $message = 'Votre code de confirmation est'.' '.$code.'.';
+        $headers = 'From: domisep@isep.fr';
+
+        //envoi d'un mail
+        mail($to, $subject, $message, $headers);
+
         $req = $bdd->prepare("INSERT INTO administrateur(nom,prenom,Email,password) VALUES(:nom,:prenom,:Email,:password)");
         $req->execute(array(
             'nom' => $nom,
@@ -46,6 +61,7 @@ if(isset($_POST['nom'])) {
             'Email' => $Email,
             'password' => $password,
         ));
+        header('Location:index.php?cible=confirmationAdmin');
     }
 }
 
