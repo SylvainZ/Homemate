@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div id="chart_div"></div>
+<div id="chart_div<?php echo $donnees1['id']?>"></div>
 
 
 
@@ -25,7 +25,7 @@
 
     function drawChart() {
 
-        var chartDiv = document.getElementById('chart_div');
+        var chartDiv = document.getElementById('chart_div<?php echo $donnees1['id']?>');
 
         var data = new google.visualization.DataTable();
         data.addColumn('date', 'Date');
