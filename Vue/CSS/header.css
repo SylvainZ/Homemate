@@ -90,6 +90,7 @@ img{
 {
     left: auto; /* Repositionnement normal */
     min-height: 0; /* Corrige un bug sous IE */
+    z-index: 1;
 }
 
 #posNotif

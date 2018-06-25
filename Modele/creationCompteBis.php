@@ -33,6 +33,19 @@ if(isset($_POST['nom'])) {
             $nom = htmlspecialchars($_POST['nom']);
             $Email = htmlspecialchars($_POST['Email']);
 
+            $code = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
+            $code = str_shuffle($code); //On crée une combinaison de VARCHAR
+            $code = substr($code, 0, 10);
+
+            $_SESSION['cod']=$code;
+
+            $to = $Email;
+            $subject = 'inscription';
+            $message = 'Votre code de confirmation est'.' '.$code;
+            $headers = 'From: domisep@isep.fr';
+
+            mail($to, $subject, $message, $headers);
+
             $req = $bdd->prepare("INSERT INTO profil(nom,prenom,Email,password) VALUES(:nom,:prenom,:Email,:password)");
             $req->execute(array(
                 'nom' => $nom,
@@ -54,7 +67,7 @@ if(isset($_POST['nom'])) {
             }
             else {
                 //renvoie vers le formulaire de la 2e étape de l'inscription
-                header('Location:index.php?cible=locataireProprietaire');
+                header('Location:index.php?cible=confirmation');
             }
         }
 }
