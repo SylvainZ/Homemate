@@ -7,6 +7,9 @@
 	z-index: auto;
 }
 
+::-webkit-scrollbar {
+	display:none;
+}
 .decoration
 {
 	background-color: #5c5684;

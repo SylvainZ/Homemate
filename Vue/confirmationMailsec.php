@@ -14,7 +14,7 @@
 
 <div class="bloc">
 
-    <form method="post" action="index.php?cible=confirm">
+    <form method="post" action="index.php?cible=confirmSec">
 
         <h2>Confirmation</h2>
 

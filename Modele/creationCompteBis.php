@@ -33,6 +33,8 @@ if(isset($_POST['nom'])) {
             $nom = htmlspecialchars($_POST['nom']);
             $Email = htmlspecialchars($_POST['Email']);
 
+
+            //génerer un code de confirmation
             $code = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
             $code = str_shuffle($code); //On crée une combinaison de VARCHAR
             $code = substr($code, 0, 10);
@@ -41,9 +43,10 @@ if(isset($_POST['nom'])) {
 
             $to = $Email;
             $subject = 'inscription';
-            $message = 'Votre code de confirmation est'.' '.$code;
+            $message = 'Votre code de confirmation est'.' '.$code.'.';
             $headers = 'From: domisep@isep.fr';
 
+            //envoi d'un mail
             mail($to, $subject, $message, $headers);
 
             $req = $bdd->prepare("INSERT INTO profil(nom,prenom,Email,password) VALUES(:nom,:prenom,:Email,:password)");
@@ -61,9 +64,10 @@ if(isset($_POST['nom'])) {
                     'secondaire-'.$_SESSION['ID'],
                     $Email
                 ));
+
                 $_SESSION['emailA']=$Email;
                 //renvoie vers une page pour choisir l'habitation à lier avec l'utilisateur secondaire
-                header('Location:index.php?cible=habitationsAutorisation');
+                header('Location:index.php?cible=confirmationSec');
             }
             else {
                 //renvoie vers le formulaire de la 2e étape de l'inscription

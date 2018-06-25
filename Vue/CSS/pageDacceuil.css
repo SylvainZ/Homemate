@@ -33,6 +33,9 @@
     overflow: auto;
     border-radius: 10px;
 }
+::-webkit-scrollbar {
+    display:none;
+}
 
 /*bloc adresse et contact*/
 .titre3{
