@@ -13,6 +13,15 @@
     <p>Conditions générales d'utilisations</p>
     <p>Mentions légales</p>
 </footer>
+
+<!-- La session expire au bout de 10 min-->
+<script language="javascript" type='text/javascript'>
+    function session(){
+        window.location="index.php?cible=deconnexion"; //page de déconnexion
+    }
+    setTimeout("session()",600000);
+</script>
+
 </body>
 </html>
 
