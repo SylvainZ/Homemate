@@ -84,7 +84,7 @@ $nbColonne5=5;
 										
 										<script>
 										//recupère les données de la passerelles toutes les 5s
-										setInterval('ajaxCall("Controleur/recupDonneesPasserelle.php","trame<?php echo $donnees1['id']?>")', 5000);
+										setInterval('ajaxCall("index.php?cible=recupDonneesPasserelle","trame<?php echo $donnees1['id']?>")', 5000);
 										</script>
 										</td>
 										
