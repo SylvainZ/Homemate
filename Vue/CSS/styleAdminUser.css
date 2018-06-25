@@ -13,6 +13,10 @@ body
 	src: url('quando/Quando-Regular.ttf') ;
 }
 
+::-webkit-scrollbar {
+	display:none;
+}
+
 #blocs
 {
 	display: flex;
