@@ -338,6 +338,19 @@ button.active
 	border-radius: 10px;
 }
 
+.popup-block2
+{
+	background: #fff;
+	padding: 20px;
+	border: 20px solid #ddd;
+	position: relative;
+	margin-top:5vw;
+	margin-left:10vw;
+	width: 70%;
+	box-shadow: 0px 0px 20px #000;
+	border-radius: 10px;
+}
+
 .annulerSupprimer
 {
     display: block;
@@ -356,6 +369,17 @@ button.active
     height: 30px;
 }
 
+.annuler2
+{
+	border-radius: 20px;
+	background: red;
+    box-shadow: none;
+    border: none;
+    height:20px;
+    position: relative;
+	top:-33.8vw;
+	left:68.9vw;
+}
 
 
 

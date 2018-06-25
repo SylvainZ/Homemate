@@ -71,8 +71,22 @@ $nbColonne5=5;
 										?>
 										<td>
 										<div class="case">
+										
+										<!-- Graphique -->
                                             
-                                            <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50"><br>
+                                            
+                                   
+                                            
+                                            <a href="#fenetreModaleTiers<?php echo $donnees1['id']?>"> <img class="styleCapteur" src="Vue/images/presence.png" alt="image capteur de presence" height="50"></a><br>
+                                            
+                                            
+                                                      <div id="fenetreModaleTiers<?php echo $donnees1['id']?>">
+                                                <div class="popup-block2">
+                                                   <?php include('Controleur/courbeStatistique.php');?>
+
+                                                   <a class="annuler2" href="#en-tete"><button >X</button></a>
+                                                </div>
+                                            </div>
                                             
 										<?php $nomPiece= $bdd->query('SELECT piece.Nom FROM piece INNER JOIN capteur ON piece.ID=capteur.idpiece AND capteur.id=\''.$donnees1['id'].'\'');
                                          
@@ -88,6 +102,23 @@ $nbColonne5=5;
 										</script>
 										</td>
 										
+										<style>
+                    
+                                        #fenetreModaleTiers<?php echo $donnees1['id']?>
+                                        {
+                    	                display: none;
+                    	                position: fixed;
+                    	                top:0; right:0; bottom:0; left:0;
+                    	                background-color: rgba(0, 0, 0, 0.5);
+                    	                z-index: 1000;}
+                    
+                                        #fenetreModaleTiers<?php echo $donnees1['id']?>:target
+                                        {
+                    	                   display: block;
+                                        }
+                                        
+                                        </style>
+					
 										
 					           <?php $nbLigne3++;}?>
 
