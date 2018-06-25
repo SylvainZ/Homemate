@@ -21,11 +21,10 @@
     google.charts.load('current', {'packages':['line', 'corechart']});
     google.charts.setOnLoadCallback(drawChart);
 
-
+//setInterval('drawChart()',2000);
 
     function drawChart() {
 
-        var button = document.getElementById('change-chart');
         var chartDiv = document.getElementById('chart_div');
 
         var data = new google.visualization.DataTable();

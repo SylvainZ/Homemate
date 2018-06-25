@@ -1,4 +1,5 @@
 <?php
+//include('../Modele/connexion.php');
 $ch = curl_init();
 curl_setopt(
     $ch,
@@ -9,8 +10,6 @@ curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
 curl_close($ch);
-
-
 /*function tableauLog($data)
 {
     $data_tab = str_split($data, 33);
@@ -23,9 +22,6 @@ curl_close($ch);
 /**
  * @param $data
  * @return array*/
-
-
-
 function insererTrameBDD($data,$bdd)
 {
     $data_tab = str_split($data, 33);
@@ -35,7 +31,6 @@ function insererTrameBDD($data,$bdd)
         list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
             sscanf($trame, "%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s"); // 19(Trame) + 14 (date)
         /*echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");*/
-
         $values = array(
             $t,//type de trame
             $o,//numero d'objet
@@ -49,10 +44,10 @@ function insererTrameBDD($data,$bdd)
             $hour.':'.$min.':'.$sec
         );
         $maintenant = date('H:i:s');//"11:20:00";
-        $ilYADixMinutes = date("H:i:s", strtotime("-10 minute", strtotime($maintenant)));
-        if ($year.'/'.$month.'/'.$day==date('Y/m').'/'.(date('d')-1)) {//&& $hour==date('h')
-            if(($hour.':'.$min.':'.$sec)>=$ilYADixMinutes) {
-                    $req1 = $bdd->query('SELECT * FROM passerelle WHERE typeDeTrame=\''.$t.'\'
+        $ilYADixMinutes = date("H:i:s", strtotime("-40 minute", strtotime($maintenant)));
+        if ($year.'/'.$month.'/'.$day==date('Y/m/d')){/*date('Y/m').'/'.(date('d')-1)*/ //&& $hour==date('h')
+            if(true||($hour.':'.$min.':'.$sec)>=$ilYADixMinutes) {
+                $req1 = $bdd->query('SELECT * FROM passerelle WHERE typeDeTrame=\''.$t.'\'
                         && numObjet=\''.$o.'\'
                         && typeRequete=\''.$r.'\'
                         && typeCapteur=\''.$c.'\'
@@ -62,9 +57,8 @@ function insererTrameBDD($data,$bdd)
                         && checksum=\''.$x.'\'
                         && dateFrame=\''.$year.'-'.$month.'-'.$day.'\'
                         && heure=\''.$hour.':'.$min.':'.$sec.'\'');
-
-                    $reponse=$req1->fetch();
-               if (!(isset($reponse['ID']) && !empty($reponse['ID'])) && $o=='011E' && $c!='0') {
+                $reponse=$req1->fetch();
+                if (!(isset($reponse['ID']) && !empty($reponse['ID'])) && $o=='011E' && $c!='0') {
                     $req = $bdd->prepare('INSERT INTO passerelle(typeDeTrame, numObjet, typeRequete, typeCapteur, numCapteur, valeurCapteur, numDeTrame, checksum, dateFrame, heure) VALUES(?,?,?,?,?,?,?,?,?,?)');
                     $req->execute($values);
                 }
@@ -72,19 +66,18 @@ function insererTrameBDD($data,$bdd)
         }
     }
 }
-
 function analyseTrame($bdd){
     $req_valeurCapteur = $bdd->query('SELECT valeurCapteur FROM passerelle ORDER BY ID DESC LIMIT 1');
     $valeurCapteur=$req_valeurCapteur->fetch();
     if (hexdec($valeurCapteur['valeurCapteur'])>900){
+        echo "Il y a quelqu'un";
     }
-
     else{
+        echo "Rien à signaler";
     }
     //echo hexdec($valeurCapteur['valeurCapteur']);
 }
 
+
 include('Modele/donneesPasserelle.php');
-
 ?>
-

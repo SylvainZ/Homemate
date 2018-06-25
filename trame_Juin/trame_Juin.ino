@@ -64,9 +64,9 @@ void loop()
   // lire ici le capteur et mettre la valeur dans la variable valcapt
     if(valcapt<900){
       delay(5000);
-    //Envoi_Trame_fictif();
+    Envoi_Trame_fictif();
     //digitalWrite(barreGraph34,LOW);
-    digitalWrite(pinMoteur1,LOW); //moteur
+    digitalWrite(pinMoteur1,HIGH); //moteur
     digitalWrite(pinMoteur2,LOW);
   }
 
@@ -105,13 +105,17 @@ void Analyse_Trame(int i, char TrameRecep[])
 //---------------------------------
 {
           
-  if(TrameRecep[6]=='7' && i==14){
-       Serial.println("une led est allumée");
-       Serial.println("le moteur est en marche");
+  if(TrameRecep[5]=='2' && TrameRecep[6]=='4' && TrameRecep[9]=='3' && TrameRecep[10]=='3' && TrameRecep[11]=='3' && TrameRecep[12]=='3'){
        //digitalWrite(barreGraph34,HIGH);
        digitalWrite(pinMoteur1,LOW); //le moteur se lance
        digitalWrite(pinMoteur2,HIGH);
           }
+
+  if(TrameRecep[5]=='2' && TrameRecep[6]=='4' && TrameRecep[9]=='4' && TrameRecep[10]=='4' && TrameRecep[11]=='4' && TrameRecep[12]=='4'){
+       //digitalWrite(barreGraph34,LOW);
+       digitalWrite(pinMoteur1,HIGH); //le moteur se lance
+       digitalWrite(pinMoteur2,LOW);
+          }        
    
  /* else if(TrameRecep[6]=='A' && i==14){
        Serial.println("LA et MI détecté");
@@ -121,11 +125,11 @@ void Analyse_Trame(int i, char TrameRecep[])
        digitalWrite(MY_LEDV,HIGH);
           }  */
 
-  else if(TrameRecep[5]=='2' && TrameRecep[9]=='1' && TrameRecep[10]=='1' && TrameRecep[11]=='1' && TrameRecep[12]=='1'){
+  else if(TrameRecep[5]=='2' && TrameRecep[6]=='5' &&  TrameRecep[9]=='1' && TrameRecep[10]=='1' && TrameRecep[11]=='1' && TrameRecep[12]=='1'){
        digitalWrite(barreGraph34,HIGH); 
   }
 
-  else if(TrameRecep[5]=='2' && TrameRecep[9]=='2' && TrameRecep[10]=='2' && TrameRecep[11]=='2' && TrameRecep[12]=='2'){
+  else if(TrameRecep[5]=='2' && TrameRecep[6]=='5' &&  TrameRecep[9]=='2' && TrameRecep[10]=='2' && TrameRecep[11]=='2' && TrameRecep[12]=='2'){
        digitalWrite(barreGraph34,LOW); 
   }
 }
