@@ -44,15 +44,15 @@ function insererTrameBDD($data,$bdd)
             $hour.':'.$min.':'.$sec
         );
         $maintenant = date('H:i:s');//"11:20:00";
-<<<<<<< HEAD
+       
         $ilYADixMinutes = date("H:i:s", strtotime("-10 minute", strtotime($maintenant)));
         if ($year.'/'.$month.'/'.$day==date('Y/m').'/'.(date('d')-1)) {//&& $hour==date('h')
             if(($hour.':'.$min.':'.$sec)>=$ilYADixMinutes) {
-=======
+
         $ilYADixMinutes = date("H:i:s", strtotime("-40 minute", strtotime($maintenant)));
         if ($year.'/'.$month.'/'.$day==date('Y/m/d')){/*date('Y/m').'/'.(date('d')-1)*/ //&& $hour==date('h')
-            if(true||($hour.':'.$min.':'.$sec)>=$ilYADixMinutes) {
->>>>>>> 32538224869ec6d859bc22389d1eab93491f9704
+            if(($hour.':'.$min.':'.$sec)>=$ilYADixMinutes) {
+
                 $req1 = $bdd->query('SELECT * FROM passerelle WHERE typeDeTrame=\''.$t.'\'
                         && numObjet=\''.$o.'\'
                         && typeRequete=\''.$r.'\'
@@ -72,29 +72,26 @@ function insererTrameBDD($data,$bdd)
         }
     }
 }
+    }
+}
 function analyseTrame($bdd){
-    $req_valeurCapteur = $bdd->query('SELECT valeurCapteur FROM passerelle ORDER BY ID DESC LIMIT 1');
+    $req_valeurCapteur = $bdd->query('SELECT * FROM passerelle ORDER BY ID DESC LIMIT 1');
     $valeurCapteur=$req_valeurCapteur->fetch();
-    if (hexdec($valeurCapteur['valeurCapteur'])>900){
+    
+    $maintenant = date('H:i:s');//"11:20:00";
+    $ilYADixMinutes = date("H:i:s", strtotime("-10 minute", strtotime($maintenant)));
+    
+    if ($valeurCapteur['dateFrame']==date("Y-m-d") && $valeurCapteur['heure']>=$ilYADixMinutes && hexdec($valeurCapteur['valeurCapteur'])>900){
         echo "Il y a quelqu'un";
     }
     else{
-<<<<<<< HEAD
+
         echo "Rien à signaler";
     }
     //echo hexdec($valeurCapteur['valeurCapteur']);
 }
-include('../Modele/donneesPasserelle.php');
-?>
-
-
-=======
-        echo "Rien Ã  signaler";
-    }
-    //echo hexdec($valeurCapteur['valeurCapteur']);
-}
-
-
 include('Modele/donneesPasserelle.php');
+    
 ?>
->>>>>>> 32538224869ec6d859bc22389d1eab93491f9704
+
+     
