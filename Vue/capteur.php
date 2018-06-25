@@ -160,7 +160,7 @@ $nbColonne5=5;
 										
 										<script>
 										//recupère les données de la passerelles toutes les 5s
-										setInterval('ajaxCall("Controleur/recupDonneesPasserelle.php","trame<?php echo $donnees1['id']?>")', 5000);
+										setInterval('ajaxCall("index.php?cible=recupDonneesPasserelle","trame<?php echo $donnees1['id']?>")', 5000);
 										</script>
 										
 										</td>
@@ -251,6 +251,9 @@ $nbColonne5=5;
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- fenetre modale pour le graphe -->
+
                                             
                                             <!-- HTML pour l'interrupteur -->
                                             <div class="inter">
@@ -447,7 +450,7 @@ $nbColonne5=5;
                                              document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                             }
                                           };
-                                          xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=3", true);
+                                          xhttp.open("GET", "index.php?cible=modifierActionneur&idVolet=<?php echo $donnees1['ID']?>&etatVolet=3", true);
                                           xhttp.send();
                                         }
                                           else {/*envoie 2 si pas checked*/
@@ -456,7 +459,7 @@ $nbColonne5=5;
                                                    document.getElementById("myonoffswitch<?php echo $donnees1['ID']?>").innerHTML = this.responseText;
                                                   }
                                                 };
-                                                xhttp.open("GET", "index.php?cible=modifierActionneur&id=<?php echo $donnees1['ID']?>&etat=4", true);
+                                                xhttp.open("GET", "index.php?cible=modifierActionneur&idVolet=<?php echo $donnees1['ID']?>&etatVolet=4", true);
                                                 xhttp.send();
                                           }
                                               }
@@ -550,7 +553,27 @@ $nbColonne5=5;
 
 
 
+<<<<<<< HEAD
     
+=======
+
+
+    <!-- définition fenetre modale -->
+    <button style="margin-left: 20px;" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Courbe</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content" >
+                <div class="modal-header" style="background-color: #6a1b3d">
+                    <span style="font-weight: bold; color: white">Modifier ses informations</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"> <?php  include('Controleur/courbeStatistique.php'); ?> </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> 32538224869ec6d859bc22389d1eab93491f9704
 
 <script src="Controleur/JS/agrandirReduire.js" type="text/javascript"></script>
 <script src="Controleur/JS/tempo.js" type="text/javascript"></script>

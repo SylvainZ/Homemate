@@ -14,8 +14,7 @@ if (isset($_POST['seuil'])&&isset($_GET['ID'])){
 	       $req = $bdd->prepare('UPDATE capteur SET seuilT=? WHERE ID = '.$_GET['ID']);
 	       $req->execute(array(
 	           htmlspecialchars($_POST['seuil'])
-	    
-	           ));
+	       ));
 	    }
 	    if ($donnees1['type'] == "Luminosite" ){ //capteur de luminosité
 	        $req = $bdd->prepare('UPDATE capteur SET SeuilL=? WHERE ID = '.$_GET['ID']);
