@@ -19,6 +19,30 @@
     border-radius: 10px;
 }
 
+.bar{
+    background-color: #471229;
+    height:27vw;
+    width:70vw;
+    position: relative;
+    left:15%;
+    top:10%;
+    border-radius: 60px;
+    padding-top: 1px;
+}
+.br{
+    margin-top:10%;
+    margin-left:10vw;
+    color:white;
+    font-size:1.4em;
+}
 
+.iconeProfil
+{
+    position: absolute;
+    left:38%;
+    width:8vw;
+    height:8vw;
+    top: 12%;
+}
 
 

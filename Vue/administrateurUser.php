@@ -1,18 +1,18 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<?php
 				try
 				{
-					// On se connecte à MySQL
+					// On se connecte ï¿½ MySQL
 					$bdd = new PDO('mysql:host=localhost;dbname=homemate;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 				}
 				catch(Exception $e)
 				{
-					// En cas d'erreur, on affiche un message et on arrête tout
+					// En cas d'erreur, on affiche un message et on arrï¿½te tout
 				        die('Erreur : '.$e->getMessage());
 				}
 				// Si tout va bien, on peut continuer
-				// On récupère tout le contenu de la table jeux_video
+				// On rï¿½cupï¿½re tout le contenu de la table jeux_video
                 if (isset($_POST['nomUser']))
                 {
                     $reponse = $bdd->query('SELECT * FROM profil WHERE Nom = \''.$_POST['nomUser'].'\''); /**/
@@ -64,7 +64,7 @@
 				<table>
 					<tr>
 					       <td id="tabletete">Nom</td>
-					       <td id="tabletete">Prénom</td>
+					       <td id="tabletete">Prï¿½nom</td>
 					       <td id="tabletete">Statut</td>
 					       <td id="tabletete">Autre</td>
 					</tr>
