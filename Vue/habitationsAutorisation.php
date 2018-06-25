@@ -57,15 +57,22 @@
                             $flag2=false;
                         }
                     }
-                } ?>
+                }
+
+                ?>
 
     </tbody>
 </table>
 
+<div id="messageErreur">
+        <?php
+            if (isset($messageErreur)){
+                echo $messageErreur;
+            }?>
+</div>
 
-<footer>
     <?php include("Vue/footer.php") ?>
-</footer>
+
 
 </body>
 </html>

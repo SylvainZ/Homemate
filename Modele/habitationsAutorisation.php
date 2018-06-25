@@ -14,11 +14,17 @@ while ($donnees = $habitation->fetch())
     $superficieHab[] = $donnees['Superficie'];
 }
 
-//stocke les tableaux dans des variables de session
-$_SESSION['idHab']=$idHab;
-$_SESSION['adresseHab']=$adresseHab;
-$_SESSION['pieceHab']=$pieceHab;
-$_SESSION['superficieHab']=$superficieHab;
+if (empty($idHab)){
+    $messageErreur="Veuillez créer vos habitations avant d'ajouter un utilisateur secondaire";
+}
+
+else {
+    //stocke les tableaux dans des variables de session
+    $_SESSION['idHab'] = $idHab;
+    $_SESSION['adresseHab'] = $adresseHab;
+    $_SESSION['pieceHab'] = $pieceHab;
+    $_SESSION['superficieHab'] = $superficieHab;
+}
 
 //renvoie vers la page qui affiche la liste des habitations
 include('Vue/habitationsAutorisation.php');

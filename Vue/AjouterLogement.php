@@ -49,12 +49,12 @@
 			
 			<div class="champnom ligne3">			
 				<label for="piece" class="inputNom">Nombre de pièces</label><br>
-				<input type="text" name="piece" id="piece"/>
+				<input type="number" name="piece" id="piece"/>
 			</div>
 			
 			<div class="champnom ligne3 colonne2">			
 				<label for="superficie" class="inputNom">Superficie</label><br>
-				<input type="text" name="superficie" id="superficie"/>
+				<input type="number" name="superficie" id="superficie"/>
 			</div>
 			
 			
