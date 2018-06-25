@@ -5,7 +5,8 @@
         <link rel="stylesheet" href="Vue/CSS/miseEnPageProfil.css" />
         <link rel="stylesheet" href="Vue/CSS/all.css" />
         <title>Profil</title>
-
+        <?php session_start();
+        ?>
     </head>
 
     <body>
