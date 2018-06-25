@@ -23,7 +23,7 @@ if (isset($_POST['Objet'])){
         $to = $_POST['destinataire'];
         $subject = $_POST['Objet'];
         $message = $_POST['message'];
-        $headers = 'From: domisep@isep.fr'.' '.$_SESSION['email'];
+        $headers = 'From:'.' '.$_SESSION['email'];
 
         mail($to, $subject, $message, $headers);
         //renvoie l'utilisateur sur sa boîte de réception
