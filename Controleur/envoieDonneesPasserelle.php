@@ -11,7 +11,7 @@ function envoieTrame($TYP1, $ValeurAns1)
     $NUM1 = "0";
     $NUM2 = "1";
 
-    $ValeurAns="".$ValeurAns1;
+    $ValeurAns="".$ValeurAns1;  //
 
     $ANS1 = $ValeurAns;
     $ANS2 = $ValeurAns;

@@ -42,13 +42,13 @@
                             </p>
                             </div>
                             <div>
-                            <img class="image" src="Vue/images/sharp.jpg"><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <img class="image" src="Vue/images/sharp.jpg"><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                             <p>
                                 Ceci est un capteur de distance infrarouge, son prix varie entre 3 et 4€.
                             </p>
                             </div>
                             <div>
-                            <img class="image" src="Vue/images/moteur.jpg"><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <img class="image" src="Vue/images/moteur.jpg"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                             <p>
                                 Ceci est un moteur à courant continu avec réducteur, son prix varie entre 3 et 8€.
                             </p>
