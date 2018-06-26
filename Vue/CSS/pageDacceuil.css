@@ -29,7 +29,8 @@
     font-size: 1em;
     padding-top: 0.5px;
     text-align: left;
-    margin-left: 20px;
+    margin:auto;
+    padding-right:7vw;
     overflow: auto;
     border-radius: 10px;
 }
@@ -81,9 +82,13 @@
     border-radius: 10px;
 }
 .image{
-    width:35vw;
-    height:20vw;
+    width:30vw;
+    height:18vw;
     border-radius:10px;
     float:left;
 
+}
+p{
+    position:relative;
+    top:12vh;
 }

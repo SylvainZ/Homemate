@@ -27,6 +27,8 @@ if (isset($_POST['nom'])){
 		    htmlspecialchars($_POST['prefixeRueBdAve']),
 		    $_SESSION['email']
 		));}
+
+
 	else{
 		$req->execute(array(htmlspecialchars($_POST['nom']),
             htmlspecialchars($_POST['prenom']),
@@ -44,6 +46,7 @@ if (isset($_POST['nom'])){
             $_SESSION['email']
 		));
 	}
+	$_SESSION['email']= htmlspecialchars($_POST['email']);
 	$req->closeCursor();
 	echo 'vous avez bien enregistré les modifications';
 

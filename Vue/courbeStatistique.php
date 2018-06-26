@@ -35,6 +35,7 @@
         data.addRows([
 
             <?php
+
             while($reponse=$req1->fetch()){ //boucle while qui parcourt toute les trames de la base de donnees
                 if($reponse['typeCapteur']==7) {//condition sur le type de capteur de la trame
                     if (true|| $reponse['dateFrame'] == date('Y-m') . '-' . (date('d') - 1)) {//condition sur la date de la trame
