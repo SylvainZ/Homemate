@@ -12,12 +12,12 @@ switch(htmlspecialchars($_POST["selection"])){
 	// Récupération des 10 derniers messages
 
         foreach ($_POST as $key => $value) {
-            if($key!='selection'){
+            if($key!='selection' && $key!='null' ){
                 try
                 {
 
                     //Place la colonne corbeille de la table à 1 pour spécifier que le message apparaitra dans la corbeille
-                    $bdd->exec('UPDATE `messagerie` SET `Corbeille`=1 WHERE ID='.(int)($_SESSION['id'][$key]));
+                    $bdd->exec('UPDATE `messagerie` SET `Corbeille`=1 WHERE ID='.$_SESSION['id'][$key]);
 
                 }
                 catch(Exception $e)
@@ -25,6 +25,8 @@ switch(htmlspecialchars($_POST["selection"])){
                     echo 'Message non supprimé';
                 }
             }
+            
+            
 
         }
 	
@@ -33,7 +35,7 @@ switch(htmlspecialchars($_POST["selection"])){
     //Le cas où l'on veut marquer un message comme lu
 	case 'lu':
         foreach ($_POST as $key => $value) {
-            if($key!='selection'){
+            if($key!='selection' && $key!='null' ){
                 try
                 {
 
@@ -51,7 +53,7 @@ switch(htmlspecialchars($_POST["selection"])){
     //Le cas où l'on veut marquer un message comme non lu
 	case 'non_lu':
         foreach ($_POST as $key => $value) {
-            if($key!='selection'){
+            if($key!='selection' && $key!='null' ){
                 try
                 {
 
