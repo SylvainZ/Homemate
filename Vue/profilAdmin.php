@@ -90,13 +90,13 @@
                 <td><ul>
                     <li>Nom:<input type="text" name="nom" placeholder="nom" value= <?php echo $_SESSION['nom'];?> ></li>
                     <li>Email:<input type="text" name="email" placeholder="email" value=<?php echo $_SESSION['email'];?>></li>
-                    <li>Code postal: <input type="text" id="codepostal" name="CodePostal" placeholder="Code postal" value=<?php echo $_SESSION['codePostal'];?>></li>
+                    <li>Code postal: <input type="text" id="codePostal" name="codePostal" placeholder="Code postal" value=<?php echo $_SESSION['codePostal'];?>> <div id="nonPostal"></div></li>
                     <li>Pays:<input type="text" id="pays" name="pays" placeholder="Pays" value=<?php echo $_SESSION['pays'];?>></li>
                 </ul></td>
 
                 <td><ul>
                     <li>Prénom:<input type="text" name="prenom" placeholder="prÃ©nom" value="<?php echo $_SESSION['prenom'];?>"/></li>
-                    <li>Téléphone: <input type="text" id="numTel" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=0<?php echo $_SESSION['numTel'];?>></li>
+                    <li>Téléphone: <input type="text" id="numTel" name="numTel" placeholder="numÃ©ro de tÃ©lÃ©phone" value=0<?php echo $_SESSION['numTel'];?>> <div id="nonNum"></div></li>
                     <li>Adresse:<input type="text" id="adresse" name="adresse" placeholder="Adresse" value=<?php echo $_SESSION['adresse'];?>></li>
                     <li>Ville:<input type="text" id="ville" name="ville" placeholder="Ville" value=<?php echo $_SESSION['ville'];?>></li>
                 </ul></td>
