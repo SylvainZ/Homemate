@@ -35,24 +35,26 @@
                         </div>
                             <br>
                         <div class="titre4" id="titre4">
-                            <div>
-                            <img class="image" src="Vue/images/micro.jpg"><br/><br/><br/><br/><br/>
-                            <p>
-                                Ceci est le capteur sonore, c'est un microphone à électret. Son prix varie aux alentours de 1€.
-                            </p>
-                            </div>
-                            <div>
-                            <img class="image" src="Vue/images/sharp.jpg"><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                            <p>
-                                Ceci est un capteur de distance infrarouge, son prix varie entre 3 et 4€.
-                            </p>
-                            </div>
-                            <div>
-                            <img class="image" src="Vue/images/moteur.jpg"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                            <p>
-                                Ceci est un moteur à courant continu avec réducteur, son prix varie entre 3 et 8€.
-                            </p>
-                            </div>
+                            <ul>
+                                <div class="titre4">
+                                    <img class="image" src="Vue/images/micro.jpg">
+                                    <p>
+                                        Ceci est le capteur sonore, c'est un microphone à électret. Son prix varie aux alentours de 1€.
+                                    </p>
+                                </div>
+                                <div class="titre4">
+                                    <img class="image" src="Vue/images/sharp.jpg">
+                                    <p  class="1">
+                                        Ceci est un capteur de distance infrarouge, son prix varie entre 3 et 4€.
+                                    </p>
+                                </div>
+                                <div class="titre4">
+                                    <img class="image" src="Vue/images/moteur.jpg">
+                                    <p class="2">
+                                        Ceci est un moteur à courant continu avec réducteur, son prix varie entre 3 et 8€.
+                                    </p>
+                                </div>
+                            </ul>
                         </div>
                     </td>
 
